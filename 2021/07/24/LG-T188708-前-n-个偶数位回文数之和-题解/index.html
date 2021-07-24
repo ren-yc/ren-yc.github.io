@@ -819,7 +819,7 @@
 		repo: 'blog-comments',
 		owner: 'ren-yc',
 		admin: ['ren-yc'],
-		id: location.pathname,
+		id: decodeURI('{{ page.url }}'),
 		distractionFreeMode: false
 	})
 	gitalk.render('gitalk-container');
