@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+
+<html class="article-header-style-default">
+<head>
+	
+	<title>LG - T188699 微信（1） - 题解 - 任宇宸的个人博客</title>
+	<meta charset="utf-8">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<meta name="description" content="此文章需输入密码查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LG - T188699 微信（1） - 题解">
+<meta property="og:url" content="https://ren-yc.github.io/2021/07/22/LG-T188699-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/index.html">
+<meta property="og:site_name" content="任宇宸的个人博客">
+<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-22T13:31:40.000Z">
+<meta property="article:modified_time" content="2021-07-24T05:49:01.002Z">
+<meta property="article:author" content="任宇宸">
+<meta property="article:tag" content="洛谷">
+<meta name="twitter:card" content="summary">
+
+	<meta name="theme-color" content="#5e72e4">
+	<meta name="theme-color-rgb" content="94,114,228">
+	<meta name="theme-color-origin" content="#5e72e4">
+	<meta name="argon-enable-custom-theme-color" content="true">
+	<meta name="theme-card-radius" content="4">
+	<meta name="theme-version" content="1.0.1">
+	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
+	
+<link rel="stylesheet" href="/assets/argon_css_merged.css">
+
+	
+<link rel="stylesheet" href="/style.css">
+
+	
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Open+Sans:300,400,600,700|Noto+Serif+SC:300,600&display=swap.css">
+
+	
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+	
+<script src="/assets/argon_js_merged.js"></script>
+
+	
+<script src="/assets/js/argon.min.js"></script>
+
+	
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+	
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+	<script>
+		var argonConfig = {
+			language: "zh_CN",
+			
+				zoomify: {
+					duration: 200,
+					easing: "cubic-bezier(0.4,0,0,1)",
+					scale: 0.9
+				},
+			
+			pangu: "false",
+			
+				lazyload: {
+					threshold: 800,
+					effect: "fadeIn"
+				},
+			
+			disable_pjax: false,
+			headroom: false
+		}
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "false";
+		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		function toggleDarkmodeByTime(){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			let hour = new Date().getHours();
+			if (hour < 7 || hour >= 22){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		if (darkmodeAutoSwitch == 'time'){
+			toggleDarkmodeByTime();
+		}
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1){
+			$("html").addClass("using-safari");
+		}
+	</script>
+
+	
+		
+<script src="/assets/vendor/smoothscroll/smoothscroll1.js"></script>
+
+	
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+<style id="themecolor_css">
+	
+	:root{
+		--themecolor: #5e72e4;
+		--themecolor-dark0: #5368E2;
+		--themecolor-dark: #485FE0;
+		--themecolor-dark2: #324CDD;
+		--themecolor-dark3: #233DD2;
+		--themecolor-light: #8A98EB;
+		--themecolor-rgbstr: 94,114,228;
+		--themecolor-gradient: linear-gradient(150deg,var(--themecolor-light) 15%, var(--themecolor) 70%, var(--themecolor-dark0) 94%);
+
+	}
+</style>
+<style id="theme_cardradius_css">
+	:root{
+		--card-radius: 4px;
+	}
+</style>
+
+<body>
+<div id="toolbar">
+	<header class="header-global">
+		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
+			<div class="container">
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="/">任宇宸的个人博客</a>
+				<div class="navbar-collapse collapse" id="navbar_global">
+					<div class="navbar-collapse-header">
+						<div class="row">
+							<div class="col-6 collapse-brand"></div>
+							<div class="col-6 collapse-close">
+								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<ul id="navbar_search_btn_mobile" class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" style="padding-left: 5px;">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+					
+							<ul class='navbar-nav navbar-nav-hover align-items-lg-center'>
+								
+										<li class='nav-item'>
+											<a href='/home' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>首页</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/archives' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>归档</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/categories' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>分类</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/tags' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>标签</span>
+											</a>
+											
+										</li>
+									
+							</ul>
+						
+					<ul class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li class="nav-item" data-toggle="modal" data-target="#argon_search_modal" id="navbar_search_btn_pc">
+							<a class="nav-link nav-link-icon">
+								<i class="fa fa-search"></i>
+								<span class="nav-link-inner--text d-lg-none">搜索</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div id="navbar_menu_mask" data-toggle="collapse" data-target="#navbar_global"></div>
+			</div>
+		</nav>
+	</header>
+</div>
+<div class="modal fade" id="argon_search_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">搜索</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<!-- TODO -->
+<div class="form-group mb-3">
+	<div class="input-group input-group-alternative">
+		<div class="input-group-prepend">
+			<span class="input-group-text"><i class="fa fa-search"></i></span>
+		</div>
+		<input id="local-search-input" class="form-control" placeholder="搜索什么..." type="text"  autocomplete="off" data-search.path="search.xml" data-config.root="/">
+	</div>
+	<div id="local-search-result"></div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Banner-->
+<section id="banner" class="banner section section-lg section-shaped">
+	<div class="shape shape-style-1 shape-primary">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	
+	<div id="banner_container" class="banner-container container text-center">
+		
+			<div class="banner-title text-white"><span class="banner-title-inner">任宇宸的个人博客</span>
+		
+		</div>
+	</div>
+	
+		<style>
+			section.banner{
+				background-image: url(/assets/img/banner.jpg) !important;
+			}
+		</style>
+	
+</section>
+
+
+	<style>
+		#content:before {
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(/assets/img/banner.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+		html.darkmode #content:before{
+			filter: brightness(0.65);
+		}
+		
+			#content:after {
+				content: '';
+				display: block;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: -2;
+				background: url(/assets/img/banner.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+			html.darkmode #content:after {
+				opacity: 1;
+			}
+			html.darkmode #content:before {
+				opacity: 0;
+			}
+		
+		
+			#banner, #banner .shape {
+				background: transparent !important;
+			}
+		
+	</style>
+
+
+
+
+<div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
+	<button id="fabtn_toggle_sides" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip-move-to-left="移至左侧" tooltip-move-to-right="移至右侧">
+		<span class="btn-inner--icon fabtn-show-on-right"><i class="fa fa-caret-left"></i></span>
+		<span class="btn-inner--icon fabtn-show-on-left"><i class="fa fa-caret-right"></i></span>
+	</button>
+	<button id="fabtn_back_to_top" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Back To Top" tooltip="回到顶部">
+		<span class="btn-inner--icon"><i class="fa fa-angle-up"></i></span>
+	</button>
+	<button id="fabtn_go_to_comment" class="btn btn-icon btn-neutral fabtn shadow-sm d-none" type="button" <-% theme.fab_show_gotocomment_button ? "" : "style='display: none;'"  aria-label="Comment" tooltip="评论">
+		<span class="btn-inner--icon"><i class="fa fa-comment-o"></i></span>
+	</button>
+	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_darkmode_button ? "" : "style='display: none;'"  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
+		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
+	</button>
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" <-% theme.fab_show_settings_button ? "" : "style='display: none;'"  aria-label="Open Blog Settings Menu" tooltip="设置">
+		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
+	</button>
+	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
+		<div id="close_blog_settings"><i class="fa fa-close"></i></div>
+		<div class="blog-setting-item mt-3">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_darkmode_and_amoledarkmode" tooltip-switch-to-darkmode="切换到夜间模式" tooltip-switch-to-blackmode="切换到暗黑模式"><span>夜间模式</span><span>暗黑模式</span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_darkmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">字体</div>
+			<div>
+				<button id="blog_setting_font_sans_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">Sans Serif</button><button id="blog_setting_font_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">Serif</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">阴影</div>
+			<div>
+				<button id="blog_setting_shadow_small" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-left">浅阴影</button><button id="blog_setting_shadow_big" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-right">深阴影</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3 mb-3">
+			<div style="flex: 1;">滤镜</div>
+			<div id="blog_setting_filters" class="ml-3">
+				<button id="blog_setting_filter_off" type="button" class="blog-setting-filter-btn ml-0" filter-name="off">关闭</button>
+				<button id="blog_setting_filter_sunset" type="button" class="blog-setting-filter-btn" filter-name="sunset">日落</button>
+				<button id="blog_setting_filter_darkness" type="button" class="blog-setting-filter-btn" filter-name="darkness">暗化</button>
+				<button id="blog_setting_filter_grayscale" type="button" class="blog-setting-filter-btn" filter-name="grayscale">灰度</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mb-3">
+			<div id="blog_setting_card_radius_to_default" style="cursor: pointer;" tooltip="恢复默认">圆角</div>
+			<div style="flex: 1;margin-left: 20px;margin-right: 8px;transform: translateY(2px);">
+				<div id="blog_setting_card_radius"></div>
+			</div>
+		</div>
+		
+			<div class="blog-setting-item mt-1 mb-3">
+				<div style="flex: 1;">主题色</div>
+				<div id="theme-color-picker" class="ml-3"></div>
+			</div>
+		
+	</div>
+	<button id="fabtn_open_sidebar" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Open Sidebar Menu" tooltip="菜单">
+		<span class="btn-inner--icon"><i class="fa fa-bars"></i></span>
+	</button>
+	<button id="fabtn_reading_progress" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip="阅读进度">
+		<div id="fabtn_reading_progress_bar" style="width: 0%;"></div>
+		<span id="fabtn_reading_progress_details">0%</span>
+	</button>
+</div>
+
+<div id="content" class="site-content">
+
+
+<!-- 音频播放 -->
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<div class="page-information-card-container">
+	
+</div>
+
+<div id="sidebar_mask"></div>
+<aside id="leftbar" class="leftbar widget-area" role="complementary">
+		
+		<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+			<div class="leftbar-banner card-body">
+				<span class="leftbar-banner-title text-white">任宇宸的个人博客</span>
+				
+				
+			</div>
+			
+			
+				<ul id='leftbar_part1_menu' class='leftbar-menu'>
+					<li class='leftbar-menu-item'><a href='/home'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li>
+				</ul>
+			
+			<div class="card-body text-center leftbar-search-button">
+				<button id="leftbar_search" class="btn btn-secondary btn-lg active btn-sm btn-block border-0" role="button" data-toggle="modal" data-target="#argon_search_modal" >
+					<i class="menu-item-icon fa fa-search mr-0"></i> 搜索
+				</button>
+			</div>
+		</div>
+		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
+			<div id="leftbar_part2_inner" class="card-body">
+				
+				<div class="nav-wrapper" style="padding-top: 5px;">
+	                <ul class="nav nav-pills nav-fill" role="tablist">
+						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
+						<li class="nav-item sidebar-tab-switcher">
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+						</li>
+	                </ul>
+				</div>
+				<div>
+					<div class="tab-content" style="padding: 10px 10px 0 10px;">
+						
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
+							<h6 id="leftbar_overview_author_name">任宇宸的个人博客</h6>
+							<nav class="site-state">
+								<div class="site-state-item site-state-posts">
+									<a href="/archives">
+										<span class="site-state-item-count">5</span>
+										<span class="site-state-item-name">文章</span>
+									</a>
+								</div>
+								<div class="site-state-item site-state-categories">
+									<a data-toggle="modal" data-target="#blog_categories">
+										<span class="site-state-item-count">1</span>
+										<span class="site-state-item-name">分类</span>
+									</a>
+								</div>      
+								<div class="site-state-item site-state-tags">
+									<a data-toggle="modal" data-target="#blog_tags">
+										<span class="site-state-item-count">1</span>
+										<span class="site-state-item-name">标签</span>
+									</a>
+								</div>
+							</nav>
+							
+									<div class="site-author-links">
+										
+											<div class='site-author-links-item'>
+												<a href="https://www.luogu.com.cn/user/250291" rel='noopener' target='_blank'>Luogu</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://www.codeforces.com/profiles/renyuchen" rel='noopener' target='_blank'>Codeforces</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://www.github.com/ren-yc" rel='noopener' target='_blank'>Github</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://www.zhihu.com/people/ren-yc-64" rel='noopener' target='_blank'>Zhihu</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="https://space.bilibili.com/2019108871" rel='noopener' target='_blank'>Bilibili</a>
+											</div>
+										
+											<div class='site-author-links-item'>
+												<a href="mailto:ldfx_ryc@163.com" rel='noopener' target='_blank'>Email</a>
+											</div>
+										
+									</div>
+								
+							
+									<div class='site-friend-links'>
+										<div class='site-friend-links-title'><i class='fa fa-fw fa-link'></i> Links</div>
+										<ul class='site-friend-links-ul'>
+											
+												<li class='site-friend-links-item'>
+													<a href='mailto:ldfx_liyj@163.com' rel='noopener' target='_blank'>VictorLi</a>
+												</li>
+											
+										</ul>
+									</div>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</aside>
+<div class="modal fade" id="blog_categories" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">分类</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/categories/%E9%A2%98%E8%A7%A3/" rel="tag">题解 <span class="tag-num">4</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="blog_tags" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">标签</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a class="badge badge-secondary tag" href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag">洛谷 <span class="tag-num">4</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+		
+			
+	<article class="post post-full card bg-white shadow-sm border-0 ">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2021/07/22/LG-T188699-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/">LG - T188699 微信（1） - 题解</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2021-7-22 21:31:40 | 编辑于 2021-7-24 13:49:01">2021-7-22 21:31
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							4.5k 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							15 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content" id="post_content">
+		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
+  <script id="hbeData" type="hbeData" data-hmacdigest="ce1f9633511623316c6dbcd5efc055e82d51f012e9e73c724e8f9e9acf739923">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c1063b9248d7b001af0175f55219c6208f3573cacc4b9ea6a1881851fa3163028a7c7664c6c12124836c16b800b652e9129698243673217f617f15c6e870eaa668f3971388880d0c8a738fb93f8b473087f0332314ccff845ed80aa5cfdc6abb80d63f28cd75f44728268d597b005925222373eeb03019cc0c947ee85e105a6c609ff233cb020d0cba9694d0d403f9606dba242661d61638eb188aa74297d950fdd6dce857769063acd449641712fbc1e4a8fa384d02c38c3d6c576db61297fbaaa923bdd8e7f891e917585abbe4b4e39a433f0e6b357b5a1796dc38698a8be36d140adff00a590cc0f8cc3895dced6e67ed3a986cfddd38e7695651f832a9b6f19243a64a2de3a0d6c0cd7384eac03249f0b93d38fa49afb18fb4712ad688e801290599c5cd962df580f065704dfe43c7133aa70d81526983baeb18e7ea362121de3ab4270963dd694e11c095719c091c164815f06a0afcf8a38394d9db1ed7299ee671fcaca19730f3b40b0a2ea4dee50dbc582d9a41722ac31fb2287b2bfbf621e9d3456d2b38b85e6bb83c88ac5500b72c3c25a2c9e4f0c0d626f68d0bd86e7b34965a7a9e81f92260d73b6af3b437055de195ad3bde22ae3ddd999c0efa459aed5e0df61e7284adf14242effacd320219de35fa3334031a8b330018f988c8d0aa3e8719e48b55b407f3a35c4ef7f5552b2885fa46c083a558a8deee9e8d53c57d3f330bbe02961e14ad0fd4a8d38ef947b9e9528d52e1ed57f2f1f11a67ea6b686d34dc423aa60b6003091e4678cd9166fcbf3ea169fdb363e43158fa93535c0873ed8f6cbfceb7a643022aa28314effc0fad075db37c12150838c59ade0f809c8d9c85f1f64a2258e2098471f77d5ff4933e247372bbfce22116fa698fc0d9b080d19b46cf241aa14a3f3ac7a4aee045c12dc368e45cb9291f1fdf0fd347a7bf0dfecff9a32f5bacb5a69d1e3136536443c7fa095ac5fb0af781c03e0de92de4c98cb7a1bceafcef4734ec01126fca2271880d11c8fcc7c5c9b9090076797114b283915193f2fceecde7196974cbd197b037c1830ad0d546dae9841c88d976bdc09cf8188a483887d4802934c74a3d60a59f54e29e4276e3cdfe5ebeaa107c02010d72a2176539e8ea4248bc9a7a798862a76a04e59905bdd958281e0543f8b2f23b5e0d6b5ec79987feb6bfdbc6f3ee7b86b7fef0353c1588dff7e02075f2d34124916714a323f53da95b82f7a1528e1bb15bee1f79aff43fb2f8fc53f990b393501471bc53d8237237efa7b9ae77824c7196b78bb0a2d1e5f4f7d4bd531364478d2fdadbcc18071156036d38001be84c12d53c1fdf456438163ae56f1bfda1fd415a29caeab81e164372c5f1d43b04bf4059f9b30cacc0c6801e360ee82e863a5170cf60c17be7daad0d69497ee3a187af632d8faceff066da24e8616aaac379ed6342c4ce87632b8f25e2262fded55c08001cf3e755caee9ae970ff766e7e27eb0954d2af216949eb3e21cdfd206890e26676808ff77095e2bf0700036a3e6ed9821d7b0cebab6e5e435acc3afdca7807ba2ded2bf94d357c53ffa4f9dd128368c23a734e179e0fdd677c60d74a1e5c23daf3304d0b7733d96d77872e63a3189eb5fdf1e572e75a26e7d1611e70483ffee9d1aab506eeba506b39684824d02020673e279d8616c1b41a1b7d975dfc2158e52cf60b97f029840e825e629905ba1489be75487501bc458ec965d623a1fae51acb0ed836c17aec8b013414b8c6c08357ebe545a72bf7be2a175140c766a69dedd88c8bf7b1f8d6449f5d5577514617640729724872d18d59ce2d53f2a42e70ed1afc26584b87835af4b8dddbd0cd5b6d4abbf42662a797f89904852c5909c082b74ca1d961e207a6c15764898ebf847718b8bc60da86085d785b1873edf803632b4849239e72d15e73228f20e491c31c6d8e25e0f0bff8b6c70caded8b7576340e3105affb0faac0bf49407d28033e9e3a55b6c0f8ce4d624330b45cf0b46d5d22267dfd837942131089829f30c6becfe7a867047fbb10ad2092cd2e9908d3333ec7a2a2177cebd27b5e6807e54b47467a7df99f736a03313eba72b0c3fd6b386fe418a717ea9a96ce27fd970e741af5b0165a58b7340837a590bd83b2b08eb4439ca57786b510e461f334c0dc5eca9e62b14caf9b34387e8e0f1c7a74a8cb2b5c96886de40e92c07a4310c5fbc3c279cb0cb2bc59583d661fb6f86a13dfd4fe74cae641388ea923606f66b36c58768bbc3906b2071888157f4ebe00fa0611101f64bf36071dc264a89f068a73175aabc5ef75b3bc07e906920f1389da24ecb27b5a1850c1adc10a423b38085bbdc09de75a07346ae34cd4d4a7da0b9ec77355ed0ceee7e096cb0a9e774ebda1be25adc7a8d967ac5560f2ad0129b4a402ed745c9a4ade8afde77f5c20db1d7d5d46412034f4a84b86c9dd761c596e027141ccc964cc864c0cdbb47c97f3f549d01b1a7f3bb2aebaab172d2fa5b3cabb953faf4d0656ccbe1153460966227f320b09b06194323bf00522bede090173ab1adacdd2e0e8daaf840652839fa5b34880d11695897d463ab1e1a8e4cae5552c7b242c2a8c639882f2af8224d00efedf3c5f15190fabbdd306b0640a3177ee83e16f3c0f5a992119f5b1853189a664bf49c41866a7a7affed51fe2b8e4fa887134cade38053ce585a6ecf7764f153df400409aebe4926e20618d64d7dd194b42fae93cfa4d2e386927a6dfa00bec2afdd99469fe03ebc359b1fcac41aa8af074c9ea261230bb631c5cea0105e89c009dd51ea58a54ace384437bd8281f49d50b0a3bc6f8aad064925d0b444f7b75fadc98cfd0c53ae6774f0cb226ed67c0b1844055b36375cd7740bbe9637dd7c331d496e2e5a89af7879af1d0d6f0df64599705e9760934ac8c43d258d926754994fbacb034ce8f61a496b52a0f656f0535b981fbefc4dd35a6074864c072776cb3af550d63f28516a4d3213ca48a1f89157116c348e5253f81c3cd9a1a564eeda56bb8ff498f3028e80619b08949f63cebe95bc8411ae80bdfde2dd8322bacdd8fe85410855f8ef8792a9397de1b903ab2f62b60c9c690e08b8b18bbfa6cee4d9742fea88945ff98e3dabc4cab993bdd845441c6c8657068b735e9e094039694209b68bd65675d25f8f6ed39456e76e667de210efa9e1f6dbc44e556a6961f317fe0c2c0132697a26e3e02ad4268fbd46dcf5997a0b857d28535d696e1b639a608c6c079c2759fa239f68c4b214fc135a4f70e895cd2bf5a87818a0a568d14d24d66805a356f8474976b88b528c5e519e24343b41ab93264f517b26713d64fe2d772ee1bbdc78bc142a53bdb76315d6e7984f2ba1c4d0f0d825a7e8f72c222c8ad836b4bab3a89528b3a92673e6e30019cfe44c8ed0617a18ef04861d0964e09d6c08a68d4be5e50424fa6e2f6aed123cdf029a2545aa3da73b70c77d6ce0af1d5e00a84a4e1a6c6fe8ad07982511501d0cb9592926aee1c68f0112fca8f4016a66b1359c2b041d4977385dcb8eb7b5a6c75ab26be0a96e91ea873c13a8e3e73d682ea7c1cd12ed732b152d4b2a60fed279fe410ed25c18ac68fc98031d802c0ea33b7f473d24d307dbac2f7a9fd7329431ab7ad9bd9b6f8d191a412c69b2727d6689720172c06d4fe41680ebf8f6966a90d464993e2d048683d88aeff74561e2412f8e3daa56ac6fbf87fc291fa4e96f775c58cc4d4bae3cac38fb3740ba8e76d41ab2caecb9791548ba0f8b302f9e500938c0de3018c4b84918db34d085afbbddd00c4cecb26e1807798cada56ce16a5ff6918165f314c49f0e40f1679ed4931e9af7495be69842ec14acb80fad02874a584b79c4f91ecfc2ee649199a57c61efe5904c5910c4edc91baf6d9edebfc9d43fdac51fd8c4602b0e7832d57f113aa862fe11465ef0ef5bb3c8cf055e4893efbcfdcc13903927419ce2642b5a9e1289de095a11e4d7b360863056047f674390ec4959700934358cb5fbc147a55f326e5ac13055e61f72d44c11c8eaa4cb7b6515fb164a07744a4c012f5eb8507f025c000bbdc51b0354de346553ddd97af364161830219953a924dd564896d9edc7cca639112646120bafb2bab91b722862c6772730ce3169ae67d6b4cbc3d2991ee67b00dc1926e9f5ca3aba67d968f426a13444f3ba921df79af59cf5b6d3de136937369b3224abf9114a66936530af68333e9c01199c5d2700afa5d6ba8280d2e7b64ebc59661147a59f796a6be66b6e551ad2d6f8d5c47f455205a66864434eea7109e343317af10cb7178232aacf006f04a4aed84817134fd4f556a3220afc2f6973106689cff328f304a9bbddd0c0c331eac0d2f9179510a71a1a74cf03d8f84ce8e054116a4c545e5bfe1d50f0890aed0883033a210867eb1752c796bd3ae12b12bc4237f4a82c7ac2994d72b74209ed1ff0aaff8d27c23dc258d1322b780e1ba5053f50ea80a9cf50e98afce252d8595b8de9d409023116749cb3e93677b44966781e1a09aa8ade9496f474c7aa806346af34f6c8cc3cbd6e0fd4c0dc99e4c796414404c0124c3f75b4d63145d7d3c16e0a68d60da4de5b218c8560ae687dd08938a4508eb204a347facc315342a4547571024119c3aa544af7a937498ea54fbc199fbdfe78b75dc6d7c7002e0b7f8b9d7a4d232419479f609de6cdc0c4f7cd5a210e3735e9c862978b3c8a8a10819062c491eddd59705e317e0c7d92ed756ebc746e8cb9a50d4e779c90fc9ad0a5e1baf4658c48da822e9ca7aaccc736dc</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+	</div>
+
+	
+
+	
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/%E6%B4%9B%E8%B0%B7/" rel="tag">洛谷</a>
+		</div>
+	
+</article>
+
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2021/07/22/LG-T188699-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/&text=LG - T188699 微信（1） - 题解" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : 'LG - T188699 微信（1） - 题解',
+	    description : '
+  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://ren-yc.github.io/2021/07/22/LG-T188699-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2021/07/22/LG-T188700-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/" rel="prev"> LG - T188700 微信（2） - 题解</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/07/22/LG-T183183-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-%E9%A2%98%E8%A7%A3/" rel="next"> LG - T183183 王者荣耀 - 题解</a></div></div>
+
+
+
+		
+		
+		
+		
+
+					<footer id="footer" class="site-footer card shadow-sm border-0">
+						
+						<div>Theme <a target="_blank" rel="noopener" href="https://github.com/solstice23/hexo-theme-argon"><strong>Argon</strong></a> | Powered by Hexo</div>
+						<span id="busuanzi_container_site_uv">
+							本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+						</span>
+					</footer>
+				</main>
+			</div>
+		</div>
+		
+<script src="/argontheme.js"></script>
+
+		
+			<script>
+				window.MathJax = {
+					tex: {
+						inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+						displayMath: [['$$','$$']],
+						processEscapes: true,
+						packages: {'[+]': ['noerrors']}
+					},
+					options: {
+						skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+						ignoreHtmlClass: 'tex2jax_ignore',
+						processHtmlClass: 'tex2jax_process'
+					},
+					loader: {
+						load: ['[tex]/noerrors']
+					}
+				};
+			</script>
+			<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" id="MathJax-script" async></script>
+		
+		
+		
+
+		
+
+	</div>
+</div>
+<noscript>
+	<style>
+		article img.lazyload[src^="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg"]{display: none;}
+		.comment-item-text .comment-sticker.lazyload{display: none;}
+	</style>
+</noscript>
+</body>
+
+
+
+</html>
+
