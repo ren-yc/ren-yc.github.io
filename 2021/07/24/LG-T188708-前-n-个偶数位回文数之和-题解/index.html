@@ -8,12 +8,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="洛谷题目地址 题目解析 这道题目就不淼了，变成沝了。 写几个函数就不行了。 真 简 单 250lht：呜呜呜这是比赛赛题，我保龄。 代码分析 输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。 这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。 代码 123456789101112131415161">
+	<meta name="description" content="洛谷题目地址题目解析这道题目就不淼了，变成沝了。 写几个函数就不行了。 真 简 单 250lht：呜呜呜这是比赛赛题，我保龄。 代码分析输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。 这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。 代码#include &lt;bits&#x2F;stdc++.h&amp;g">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - T188708 前 n 个偶数位回文数之和 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/07/24/LG-T188708-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="洛谷题目地址 题目解析 这道题目就不淼了，变成沝了。 写几个函数就不行了。 真 简 单 250lht：呜呜呜这是比赛赛题，我保龄。 代码分析 输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。 这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。 代码 123456789101112131415161">
+<meta property="og:description" content="洛谷题目地址题目解析这道题目就不淼了，变成沝了。 写几个函数就不行了。 真 简 单 250lht：呜呜呜这是比赛赛题，我保龄。 代码分析输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。 这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。 代码#include &lt;bits&#x2F;stdc++.h&amp;g">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-24T10:45:27.000Z">
 <meta property="article:modified_time" content="2021-07-25T03:21:47.616Z">
@@ -461,6 +461,9 @@
 <script type="text/javascript" src="/dist/APlayer.min.js"></script>
 <script type="text/javascript" src="/dist/music.js"></script>
 
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+
 <div class="page-information-card-container">
 	
 </div>
@@ -663,7 +666,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							845 字
+							664 字
 						</div>
 					
 						
@@ -671,7 +674,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							3 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -679,22 +682,113 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="洛谷题目地址"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T188708">洛谷题目地址</a></h4>
-<h3 id="题目解析">题目解析</h3>
-<p><s>这道题目就不淼了，变成沝了。</s></p>
+		<h4 id="洛谷题目地址"><a href="#洛谷题目地址" class="headerlink" title="洛谷题目地址"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T188708">洛谷题目地址</a></h4><h3 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h3><p><del>这道题目就不淼了，变成沝了。</del></p>
 <p>写几个函数就不行了。</p>
-<p><s>真 简 单</s></p>
-<p><s>250lht：呜呜呜这是比赛赛题，我保龄。</s></p>
-<h3 id="代码分析">代码分析</h3>
-<p>输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 <code>weishu</code> 和函数 <code>huiwen</code>，则加到计数器。</p>
+<p><del>真 简 单</del></p>
+<p><del>250lht：呜呜呜这是比赛赛题，我保龄。</del></p>
+<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 <code>weishu</code> 和函数 <code>huiwen</code>，则加到计数器。</p>
 <p>这时有人就会问了，<code>huiwen</code> 函数中的 <code>_itoa_s()</code> 是神马东西，请看<a target="_blank" rel="noopener" href="https://blog.csdn.net/smcrystal/article/details/71191335?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.base&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.base">这里</a>。</p>
-<h3 id="代码">代码</h3>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">huiwen</span><span class="params">(<span class="keyword">int</span> g)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="keyword">char</span> b[<span class="number">1001</span>];</span><br><span class="line">	_itoa_s(g, b, <span class="number">10</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="built_in">strlen</span>(b) - <span class="number">1</span>; i &lt; j; i++, j--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (b[i] != b[j]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (i == j) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">weishu</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">		x /= <span class="number">10</span>;</span><br><span class="line">		cnt++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> cnt % <span class="number">2</span> == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> n, i = <span class="number">1</span>, sum = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">weishu</span>(i) &amp;&amp; <span class="built_in">huiwen</span>(i)) &#123;</span><br><span class="line">			n--;</span><br><span class="line">			sum += i;</span><br><span class="line">		&#125;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code class="lang-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+bool huiwen(int g) &#123;
+    int i, j;
+    char b[1001];
+    _itoa_s(g, b, 10);
+    for (int i = 0, j = strlen(b) - 1; i &lt; j; i++, j--) &#123;
+        if (b[i] != b[j]) return false;
+    &#125;
+    if (i == j) return false;
+    return true;
+&#125;
+
+bool weishu(int x) &#123;
+    int cnt = 0;
+    while (x != 0) &#123;
+        x /= 10;
+        cnt++;
+    &#125;
+    return cnt % 2 == 0;
+&#125;
+
+int main() &#123;
+    long long n, i = 1, sum = 0;
+    cin &gt;&gt; n;
+    while (n != 0) &#123;
+        if (weishu(i) &amp;&amp; huiwen(i)) &#123;
+            n--;
+            sum += i;
+        &#125;
+        i++;
+    &#125;
+    cout &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+&#125;
+</code></pre>
 <p>以上代码交到洛谷上会 <strong><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/54096300">CE</a></strong>，你谷居然无法使用 <code>stdlib.h</code> 的 <code>_itoa_s()</code> ???</p>
 <p><strong>偷懒失败</strong>，只好自己写转换函数。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">int_to_string</span><span class="params">(<span class="keyword">char</span> s[], <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>, k, n;</span><br><span class="line">	<span class="keyword">char</span> temp;</span><br><span class="line">	<span class="keyword">if</span> (m &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		s[i] = <span class="string">&#x27;-&#x27;</span>;</span><br><span class="line">		m = -m;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (m &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		n = m % <span class="number">10</span>;</span><br><span class="line">		m /= <span class="number">10</span>;</span><br><span class="line">		s[i] = n + <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	s[i] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">	<span class="keyword">if</span> (s[<span class="number">0</span>] == <span class="string">&#x27;-&#x27;</span>) k = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> k = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j = k; j &lt; i / <span class="number">2</span>; j++) &#123;</span><br><span class="line">		temp = s[j];</span><br><span class="line">		s[j] = s[i - j - <span class="number">1</span> + k];</span><br><span class="line">		s[i - j - <span class="number">1</span> + k] = temp;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">huiwen</span><span class="params">(<span class="keyword">int</span> g)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="keyword">char</span> b[<span class="number">1001</span>];</span><br><span class="line">	<span class="built_in">int_to_string</span>(b, g);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="built_in">strlen</span>(b) - <span class="number">1</span>; i &lt; j; i++, j--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (b[i] != b[j]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (i == j) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">weishu</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">		x /= <span class="number">10</span>;</span><br><span class="line">		cnt++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> cnt % <span class="number">2</span> == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> n, i = <span class="number">1</span>, sum = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">weishu</span>(i) &amp;&amp; <span class="built_in">huiwen</span>(i)) &#123;</span><br><span class="line">			n--;</span><br><span class="line">			sum += i;</span><br><span class="line">		&#125;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>$$END$$</p>
+<pre><code class="lang-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
 
+void int_to_string(char s[], int m) &#123;
+    int i = 0, k, n;
+    char temp;
+    if (m &lt; 0) &#123;
+        s[i] = &#39;-&#39;;
+        m = -m;
+        i++;
+    &#125;
+    while (m &gt; 0) &#123;
+        n = m % 10;
+        m /= 10;
+        s[i] = n + &#39;0&#39;;
+        i++;
+    &#125;
+    s[i] = &#39;\0&#39;;
+    if (s[0] == &#39;-&#39;) k = 1;
+    else k = 0;
+    for (int j = k; j &lt; i / 2; j++) &#123;
+        temp = s[j];
+        s[j] = s[i - j - 1 + k];
+        s[i - j - 1 + k] = temp;
+    &#125;
+&#125;
+
+bool huiwen(int g) &#123;
+    int i, j;
+    char b[1001];
+    int_to_string(b, g);
+    for (int i = 0, j = strlen(b) - 1; i &lt; j; i++, j--) &#123;
+        if (b[i] != b[j]) return false;
+    &#125;
+    if (i == j) return false;
+    return true;
+&#125;
+
+bool weishu(int x) &#123;
+    int cnt = 0;
+    while (x != 0) &#123;
+        x /= 10;
+        cnt++;
+    &#125;
+    return cnt % 2 == 0;
+&#125;
+
+int main() &#123;
+    long long n, i = 1, sum = 0;
+    cin &gt;&gt; n;
+    while (n != 0) &#123;
+        if (weishu(i) &amp;&amp; huiwen(i)) &#123;
+            n--;
+            sum += i;
+        &#125;
+        i++;
+    &#125;
+    cout &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+&#125;
+</code></pre>
+<script type="math/tex; mode=display">END</script>
 	</div>
 
 	
@@ -764,12 +858,10 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - T188708 前 n 个偶数位回文数之和 - 题解',
-	    description : '洛谷题目地址
-题目解析
-这道题目就不淼了，变成沝了。
+	    description : '洛谷题目地址题目解析这道题目就不淼了，变成沝了。
 写几个函数就不行了。
 真 简 单
-250lht...',
+250lht：呜...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/07/24/LG-T188708-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/'
