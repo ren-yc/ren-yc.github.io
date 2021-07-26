@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>LG - T189610 开关灯 - 题解</title>
+      <link href="/2021/07/26/LG-T189610-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/07/26/LG-T189610-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="洛谷题目地址"><a href="https://www.luogu.com.cn/problem/T189610">洛谷题目地址</a></h4><h3 id="题目解析">题目解析</h3><p>一个循环搞定。</p><h3 id="代码分析">代码分析</h3><p>一个嵌套循环 + 检查灯的状态的循环。</p><h3 id="代码">代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> n, x, y, a[<span class="number">10001</span>] = &#123;<span class="number">0</span>&#125;, sum = <span class="number">0</span>;</span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = x; j &lt;= y; j++) &#123;</span><br><span class="line"><span class="keyword">if</span> (a[j] == <span class="number">1</span>) &#123;</span><br><span class="line">a[j] = <span class="number">0</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">a[j] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000</span>; i++) &#123;</span><br><span class="line"><span class="keyword">if</span> (a[i] == <span class="number">1</span>) &#123;</span><br><span class="line">sum++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>$$END$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 洛谷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LG - T189243 古老的 A + B - 题解</title>
+      <link href="/2021/07/26/LG-T189243-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/07/26/LG-T189243-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="洛谷题目地址"><a href="https://www.luogu.com.cn/problem/T189243">洛谷题目地址</a></h4><h3 id="题目解析">题目解析</h3><p><s>This is the waterest problem I had ever seen.</s></p><p>好吧 A + B 最 water。</p><p>没啥好讲的，就一个循环。</p><h3 id="代码分析">代码分析</h3><p>直接读入然后来个循环，注意输出格式。</p><p>时间复杂度 $O©$，空间复杂度 $O(1)$。</p><h3 id="代码">代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> a, b, c;</span><br><span class="line">cin &gt;&gt; c;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= c; i++) &#123;</span><br><span class="line">a = i;</span><br><span class="line">b = c - i;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; <span class="string">&quot;*&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;=&quot;</span> &lt;&lt; a * b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>$$END$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 洛谷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LG - T189069 排序 - 题解</title>
+      <link href="/2021/07/26/LG-T189069-%E6%8E%92%E5%BA%8F-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/07/26/LG-T189069-%E6%8E%92%E5%BA%8F-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="洛谷题目地址"><a href="https://www.luogu.com.cn/problem/T189069">洛谷题目地址</a></h4><h3 id="题目解析">题目解析</h3><p>这是一道炒鸡淼的 C++ <code>if</code> 语句题（?）。</p><p>太淼了就不解释了</p><h3 id="代码分析">代码分析</h3><p>全读入完来个函数判断就行了。</p><h3 id="代码">代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">6</span>], b[<span class="number">6</span>], cnt1, cnt2, tot1, tot2;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mysort</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (cnt1 &gt; cnt2) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cnt1 == cnt2) &#123;</span><br><span class="line"><span class="keyword">if</span> (tot1 &gt; tot2) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (tot1 &lt; tot2) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">cin &gt;&gt; a[i];</span><br><span class="line">cnt1 += a[i];</span><br><span class="line"><span class="keyword">if</span> (a[i] == <span class="number">50</span>) tot1++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">cin &gt;&gt; b[i];</span><br><span class="line">cnt2 += b[i];</span><br><span class="line"><span class="keyword">if</span> (b[i] == <span class="number">50</span>) tot2++;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; <span class="built_in">mysort</span>() &lt;&lt; endl;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>$$END$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 洛谷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LG - T189422 生小虫子 - 题解</title>
       <link href="/2021/07/25/LG-T189422-%E7%94%9F%E5%B0%8F%E8%99%AB%E5%AD%90-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/07/25/LG-T189422-%E7%94%9F%E5%B0%8F%E8%99%AB%E5%AD%90-%E9%A2%98%E8%A7%A3/</url>
