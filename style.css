@@ -1868,7 +1868,8 @@ html.darkmode.amoled-dark .comment-item-text .comment-sticker:active{
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
-	word-break: normal;
+	word-break: break-all;
+	word-wrap: break-word;
 	tab-size: 4;
 	hyphens: none;
 	color: #5e6687;
