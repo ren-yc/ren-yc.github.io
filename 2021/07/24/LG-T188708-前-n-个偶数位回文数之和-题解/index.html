@@ -10,12 +10,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="洛谷题目地址 题目解析 这道题目就不淼了，变成沝了。 写几个函数就不行了。 真 简 单 250lht：呜呜呜这是比赛赛题，我保龄。 代码分析 输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。 这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。 代码 #include &lt;bits&#x2F;stdc++">
+	<meta name="description" content="洛谷题目地址 题目解析 这道题目就不淼了，变成沝了。 写几个函数就不行了。 真 简 单 250lht：呜呜呜这是比赛赛题，我保龄。 代码分析 输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。 这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。 代码  #include &lt;bits&#x2F;stdc+">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - T188708 前 n 个偶数位回文数之和 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/07/24/LG-T188708-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="洛谷题目地址 题目解析 这道题目就不淼了，变成沝了。 写几个函数就不行了。 真 简 单 250lht：呜呜呜这是比赛赛题，我保龄。 代码分析 输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。 这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。 代码 #include &lt;bits&#x2F;stdc++">
+<meta property="og:description" content="洛谷题目地址 题目解析 这道题目就不淼了，变成沝了。 写几个函数就不行了。 真 简 单 250lht：呜呜呜这是比赛赛题，我保龄。 代码分析 输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。 这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。 代码  #include &lt;bits&#x2F;stdc+">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-24T10:45:27.000Z">
 <meta property="article:modified_time" content="2021-07-25T03:21:47.616Z">
@@ -694,6 +694,7 @@
 <p>输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 <code>weishu</code> 和函数 <code>huiwen</code>，则加到计数器。</p>
 <p>这时有人就会问了，<code>huiwen</code> 函数中的 <code>_itoa_s()</code> 是神马东西，请看<a target="_blank" rel="noopener" href="https://blog.csdn.net/smcrystal/article/details/71191335?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.base&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.base">这里</a>。</p>
 <h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
 <pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
@@ -733,6 +734,7 @@ int main() &#123;
 </code></pre>
 <p>以上代码交到洛谷上会 <strong><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/54096300">CE</a></strong>，你谷居然无法使用 <code>stdlib.h</code> 的 <code>_itoa_s()</code> ???</p>
 <p><strong>偷懒失败</strong>，只好自己写转换函数。</p>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
 <pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
