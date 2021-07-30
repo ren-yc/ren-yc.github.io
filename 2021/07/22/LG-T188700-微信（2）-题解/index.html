@@ -10,12 +10,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="洛谷题目地址 题目解析 这是一道典型的 C++ 结构体排序题。 要点：题目要求从大到小排序，$a$ 一样的按 $name_0$（字符串首） 的 ASCII 码从小到大排序，所以我们还要自己写 cmp 函数，来比较两结构体。 代码分析 输入正整数 $n$，然后循环输入 $a_i$。 建议使用 sort 函数偷懒，写一个 cmp。 出题人 NB！！！不卡我们 long long 了 代码  #incl">
+	<meta name="description" content="洛谷题目地址题目解析这是一道典型的 C++ 结构体排序题。 要点：题目要求从大到小排序，$a$ 一样的按 $name_0$（字符串首） 的 ASCII 码从小到大排序，所以我们还要自己写 cmp 函数，来比较两结构体。 代码分析输入正整数 $n$，然后循环输入 $a_i$。 建议使用 sort 函数偷懒，写一个 cmp。 出题人 NB！！！不卡我们 long long 了 代码  #include">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - T188700 微信（2） - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/07/22/LG-T188700-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="洛谷题目地址 题目解析 这是一道典型的 C++ 结构体排序题。 要点：题目要求从大到小排序，$a$ 一样的按 $name_0$（字符串首） 的 ASCII 码从小到大排序，所以我们还要自己写 cmp 函数，来比较两结构体。 代码分析 输入正整数 $n$，然后循环输入 $a_i$。 建议使用 sort 函数偷懒，写一个 cmp。 出题人 NB！！！不卡我们 long long 了 代码  #incl">
+<meta property="og:description" content="洛谷题目地址题目解析这是一道典型的 C++ 结构体排序题。 要点：题目要求从大到小排序，$a$ 一样的按 $name_0$（字符串首） 的 ASCII 码从小到大排序，所以我们还要自己写 cmp 函数，来比较两结构体。 代码分析输入正整数 $n$，然后循环输入 $a_i$。 建议使用 sort 函数偷懒，写一个 cmp。 出题人 NB！！！不卡我们 long long 了 代码  #include">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-22T13:45:33.000Z">
 <meta property="article:modified_time" content="2021-07-25T01:26:58.265Z">
@@ -220,7 +220,7 @@
 							<ul class='navbar-nav navbar-nav-hover align-items-lg-center'>
 								
 										<li class='nav-item'>
-											<a href='/home' class='nav-link' >
+											<a href='/' class='nav-link' >
 												<i class='ni ni-book-bookmark d-lg-none'></i>
 												<span class='nav-link-inner--text'>首页</span>
 											</a>
@@ -463,9 +463,6 @@
 <script type="text/javascript" src="/dist/APlayer.min.js"></script>
 <script type="text/javascript" src="/dist/music.js"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
-
 <div class="page-information-card-container">
 	
 </div>
@@ -482,7 +479,7 @@
 			
 			
 				<ul id='leftbar_part1_menu' class='leftbar-menu'>
-					<li class='leftbar-menu-item'><a href='/home'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
 				</ul>
 			
 			<div class="card-body text-center leftbar-search-button">
@@ -668,7 +665,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							232 字
+							229 字
 						</div>
 					
 						
@@ -684,46 +681,42 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="洛谷题目地址"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T188700">洛谷题目地址</a></h4>
-<h3 id="题目解析">题目解析</h3>
-<p>这是一道典型的 C++ <strong>结构体</strong>排序题。</p>
+		<h4 id="洛谷题目地址"><a href="#洛谷题目地址" class="headerlink" title="洛谷题目地址"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T188700">洛谷题目地址</a></h4><h3 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h3><p>这是一道典型的 C++ <strong>结构体</strong>排序题。</p>
 <p>要点：题目要求<strong>从大到小</strong>排序，$a$ 一样的按 $name_0$（字符串首） 的 ASCII 码<strong>从小到大</strong>排序，所以我们还要自己写 <code>cmp</code> 函数，来比较两结构体。</p>
-<h3 id="代码分析">代码分析</h3>
-<p>输入正整数 $n$，然后循环输入 $a_i$。</p>
-<p>建议使用 <code>sort</code> 函数<s>偷懒</s>，写一个 <code>cmp</code>。</p>
-<p><s>出题人 NB！！！不卡我们 long long 了</s></p>
-<h3 id="代码">代码</h3>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>输入正整数 $n$，然后循环输入 $a_i$。</p>
+<p>建议使用 <code>sort</code> 函数<del>偷懒</del>，写一个 <code>cmp</code>。</p>
+<p><del>出题人 NB！！！不卡我们 long long 了</del></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+
+<pre><code class="lang-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 struct node &#123;
-	string name;
-	int a;
+    string name;
+    int a;
 &#125; wx[101];
 
 bool cmp(node a, node b) &#123;
-	if (a.a == b.a) &#123;
-		return a.name[0] &lt; b.name[0];
-	&#125;
-	return a.a &gt; b.a;
+    if (a.a == b.a) &#123;
+        return a.name[0] &lt; b.name[0];
+    &#125;
+    return a.a &gt; b.a;
 &#125;
 
 int main() &#123;
-	int n;
-	cin &gt;&gt; n;
-	for (int i = 0; i &lt; n; i++) &#123;
-		cin &gt;&gt; wx[i].name &gt;&gt; wx[i].a;
-	&#125;
-	sort(wx, wx + n, cmp);
-	for (int i = 0; i &lt; n; i++) &#123;
-		cout &lt;&lt; wx[i].name &lt;&lt; endl;
-	&#125;
-	return 0;
+    int n;
+    cin &gt;&gt; n;
+    for (int i = 0; i &lt; n; i++) &#123;
+        cin &gt;&gt; wx[i].name &gt;&gt; wx[i].a;
+    &#125;
+    sort(wx, wx + n, cmp);
+    for (int i = 0; i &lt; n; i++) &#123;
+        cout &lt;&lt; wx[i].name &lt;&lt; endl;
+    &#125;
+    return 0;
 &#125;
 </code></pre>
-<p>$$END$$</p>
-
+<script type="math/tex; mode=display">END</script>
 	</div>
 
 	
@@ -793,10 +786,8 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - T188700 微信（2） - 题解',
-	    description : '洛谷题目地址
-题目解析
-这是一道典型的 C++ 结构体排序题。
-要点：题目要求从大到小排序，$a$ ...',
+	    description : '洛谷题目地址题目解析这是一道典型的 C++ 结构体排序题。
+要点：题目要求从大到小排序，$a$ 一样...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/07/22/LG-T188700-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/'
