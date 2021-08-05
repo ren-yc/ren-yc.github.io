@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>WFR - 如何使用 Warfarin</title>
+      <link href="/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/"/>
+      <url>/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="什么是-Warfarin">什么是 Warfarin</h3><p>Warfarin 是一个由 C++ 编写而成的解释型语言。</p><p>Warfarin 具有一下特点：</p><ul><li><p>变量，支持数字、字符串、布尔、数组（允许使用 <code>a[&quot;test&quot;]</code> 这样的语法）；</p></li><li><p>函数定义、调用与递归、高阶函数、<code>lambda</code> 表达式；</p></li><li><p>键盘与文件的 I/O 操作；</p></li><li><p><code>if for while</code> 语句；</p></li><li><p>大量内置函数，以及一部分操作系统 API（仅支持Windows）；</p></li><li><p>点语法操作，即 <code>a.test</code> 等价于 <code>a[&quot;test&quot;]</code>；</p></li><li><p>编译成特定格式的 <code>.ff0</code> 文件，支持 <code>import</code>；</p></li><li><p>支持伪代码和普通代码混写 （打开 <code>-p</code> 开关）；</p></li><li><p>支持反编译成 JavaScript（一部分内置函数不会给出对应的实现）；</p></li><li><p>支持 DLL 文件调用。</p></li></ul><p>具体信息请看<a href="https://www.luogu.com.cn/discuss/show/334473">这里</a></p><h3 id="如何使用-Warfarin">如何使用 Warfarin</h3><p>Warfarin 最新版本：<strong>3.17</strong></p><p>$1.$ <strong>下载</strong> Warfarin C++ 源文件（如本站下载，请解压，跳过第 $2$ 步），</p><p>$2.$ 使用 g++ 编译成 exe 文件，</p><p>$3.$ <strong>加入环境变量</strong>（不会的请百度）。</p><p>Warfarin 的源文件扩展名为 <code>.wfr</code>，</p><p>使用 <code>Warfarin.exe</code> 编译时请在该文件夹下的命令行输入 <code>Warfarin 文件名.wfr -cr/crj/crjp</code>，</p><p>会编译出一个 <code>.ff0</code> 文件，相当于 C++ 的 <code>.exe</code> 文件，请<strong>不要删除</strong>，</p><p>关于 <code>cr/crj/crjp</code> $3$ 个参数请看<a href="https://www.luogu.com.cn/blog/Warfarin/ff0-faq">此处</a>。</p><h3 id="相关链接">相关链接</h3><p><a href="https://ren-yc.github.io/assets/ff0/Warfarin.zip">本站下载链接（自带 exe）</a></p><p><a href="https://github.com/WarfarinBloodanger/ff0-script">作者 GitHub 仓库（需要翻 Great Wall）</a></p><p><a href="https://www.luogu.com.cn/discuss/show/334473">作者发布帖</a></p><p><a href="https://marketplace.visualstudio.com/items?itemName=ren-yc.vscode-warfarin">VSCode 插件</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Warfarin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LG - T190529 买二送一 - 题解</title>
       <link href="/2021/07/31/LG-T190529-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/07/31/LG-T190529-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/</url>
