@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>LG - T189807 Hands - 题解</title>
+      <link href="/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="洛谷题目地址"><a href="https://www.luogu.com.cn/problem/T189807">洛谷题目地址</a></h4><h3 id="题目解析">题目解析</h3><p>这题看上去很难，但分析后就可以一个循环解决。</p><p>每次取牌如果有一个连续的大于 $0$ 的数列，那就全部取出，取到其中的某一个数等于 $0$。</p><h3 id="代码分析">代码分析</h3><p>边输入边累加，记住当 $x - last &lt; 0$ 时，就不要累加。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int ans = 0, n, x, last;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; x;ans += max(0, x - last);last = x;&#125;cout &lt;&lt; ans &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><p>本文链接 <a href="https://ren-yc.github.io/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/05/LG-T189807-Hands-题解/</a> 文章转载需注明出处</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>WFR - 如何使用 Warfarin</title>
       <link href="/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/"/>
       <url>/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="什么是-Warfarin">什么是 Warfarin</h2><p>Warfarin 是一个由 C++ 编写而成的解释型语言。</p><h3 id="Warfarin-的特点">Warfarin 的特点</h3><ul><li><p>变量，支持数字、字符串、布尔、数组（允许使用 <code>a[&quot;test&quot;]</code> 这样的语法）；</p></li><li><p>函数定义、调用与递归、高阶函数、<code>lambda</code> 表达式；</p></li><li><p>键盘与文件的 I/O 操作；</p></li><li><p><code>if for while</code> 语句；</p></li><li><p>大量内置函数，以及一部分操作系统 API（仅支持Windows）；</p></li><li><p>点语法操作，即 <code>a.test</code> 等价于 <code>a[&quot;test&quot;]</code>；</p></li><li><p>编译成特定格式的 <code>.ff0</code> 文件，支持 <code>import</code>；</p></li><li><p>支持伪代码和普通代码混写 （打开 <code>-p</code> 开关）；</p></li><li><p>支持反编译成 JavaScript（一部分内置函数不会给出对应的实现）；</p></li><li><p>支持 DLL 文件调用。</p></li></ul><p>具体信息请看<a href="https://www.luogu.com.cn/discuss/show/334473">这里</a></p><h2 id="如何使用-Warfarin">如何使用 Warfarin</h2><p>Warfarin 最新版本：<strong>3.17</strong></p><h3 id="下载-配置">下载 &amp; 配置</h3><p>$1.$ <strong>下载</strong> Warfarin C++ 源文件，</p><p>$2.$ 使用 g++ 编译成 exe 文件，</p><p>$3.$ <strong>把 exe 文件加入环境变量</strong>（不会的请百度）。</p><h3 id="编译-运行">编译 &amp; 运行</h3><p>运行程序有 $2$ 种方法：</p><ul><li><p>直接运行 <code>Warfarin.exe</code></p></li><li><p>编译运行 <code>.wfr</code> 源文件（请看下文）</p></li></ul><p>Warfarin 的源文件扩展名一般为 <code>.wfr</code>，</p><p>使用 <code>Warfarin.exe</code> 编译时请在该文件夹下的命令行输入 <code>Warfarin 文件名 -cr/crj/crjp</code>，</p><p>此命令会编译出一个 <code>.ff0</code> 文件，相当于 C++ 的 <code>.exe</code> 文件，<s>但不能双击运行</s>，请<strong>不要删除</strong>。</p><p>关于 <code>cr/crj/crjp</code> $3$ 个编译参数请看<a href="https://www.luogu.com.cn/blog/Warfarin/ff0-faq">此处</a>。</p><h3 id="相关链接">相关链接</h3><p><a href="https://ren-yc.github.io/assets/ff0/Warfarin.zip">本站下载链接（自带 exe）</a></p><p><a href="https://github.com/WarfarinBloodanger/ff0-script">作者 GitHub 仓库</a></p><p><a href="https://raw.githubusercontent.com/WarfarinBloodanger/ff0-script/main/user.txt">英文帮助文档</a></p><p><a href="https://www.luogu.com.cn/discuss/show/334473">作者发布帖</a></p><p><a href="https://marketplace.visualstudio.com/items?itemName=ren-yc.vscode-warfarin">VSCode 插件</a></p><p>本文链接 <a href="https://ren-yc.github.io/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/">https://ren-yc.github.io/2021/08/05/WFR-如何使用-Warfarin/</a> 文章转载需注明出处</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="什么是-Warfarin">什么是 Warfarin</h2><p>Warfarin 是一个由 C++ 编写而成的解释型语言。</p><h3 id="Warfarin-的特点">Warfarin 的特点</h3><ul><li><p>变量，支持数字、字符串、布尔、数组（允许使用 <code>a[&quot;test&quot;]</code> 这样的语法）；</p></li><li><p>函数定义、调用与递归、高阶函数、<code>lambda</code> 表达式；</p></li><li><p>键盘与文件的 I/O 操作；</p></li><li><p><code>if for while</code> 语句；</p></li><li><p>大量内置函数，以及一部分操作系统 API（仅支持Windows）；</p></li><li><p>点语法操作，即 <code>a.test</code> 等价于 <code>a[&quot;test&quot;]</code>；</p></li><li><p>编译成特定格式的 <code>.ff0</code> 文件，支持 <code>import</code>；</p></li><li><p>支持伪代码和普通代码混写 （打开 <code>-p</code> 开关）；</p></li><li><p>支持反编译成 JavaScript（一部分内置函数不会给出对应的实现）；</p></li><li><p>支持 DLL 文件调用。</p></li></ul><p>具体信息请看<a href="https://www.luogu.com.cn/discuss/show/334473">这里</a></p><h2 id="如何使用-Warfarin">如何使用 Warfarin</h2><p>Warfarin 最新版本：<strong>3.17</strong></p><h3 id="下载-配置">下载 &amp; 配置</h3><p>$1.$ <strong>下载</strong> Warfarin C++ 源文件，</p><p>$2.$ 使用 g++ 编译成 exe 文件，</p><p>$3.$ <strong>把 exe 文件加入环境变量</strong>（不会的请百度）。</p><h3 id="编译-运行">编译 &amp; 运行</h3><p>运行程序有 $2$ 种方法：</p><ul><li><p>直接运行 <code>Warfarin.exe</code></p></li><li><p>编译运行 <code>.wfr</code> 源文件（请看下文）</p></li></ul><p>Warfarin 的源文件扩展名一般为 <code>.wfr</code>，</p><p>使用 <code>Warfarin.exe</code> 编译时请在该文件夹下的命令行输入 <code>Warfarin 文件名 -cr/crj/crjp</code>，</p><p>此命令会编译出一个 <code>.ff0</code> 文件，相当于 C++ 的 <code>.exe</code> 文件，<s>但不能双击运行</s>，请<strong>不要删除</strong>。</p><p>关于 <code>cr/crj/crjp</code> $3$ 个编译参数请看<a href="https://www.luogu.com.cn/blog/Warfarin/ff0-faq">此处</a>。</p><h2 id="相关链接">相关链接</h2><p><a href="https://ren-yc.github.io/assets/ff0/Warfarin.zip">本站下载链接（自带 exe）</a></p><p><a href="https://github.com/WarfarinBloodanger/ff0-script">作者 GitHub 仓库</a></p><p><a href="https://raw.githubusercontent.com/WarfarinBloodanger/ff0-script/main/user.txt">英文帮助文档</a></p><p><a href="https://www.luogu.com.cn/discuss/show/334473">作者发布帖</a></p><p><a href="https://marketplace.visualstudio.com/items?itemName=ren-yc.vscode-warfarin">VSCode 插件</a></p><p>本文链接 <a href="https://ren-yc.github.io/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/">https://ren-yc.github.io/2021/08/05/WFR-如何使用-Warfarin/</a> 文章转载需注明出处</p>]]></content>
       
       
       <categories>
