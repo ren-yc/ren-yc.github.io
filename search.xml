@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LG - T190532 公交车站 - 题解</title>
+      <link href="/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="洛谷题目地址"><a href="https://www.luogu.com.cn/problem/T190532">洛谷题目地址</a></h4><h3 id="题目解析">题目解析</h3><p>题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。</p><h3 id="代码分析">代码分析</h3><p>本题要点：</p><p>要定义结构体，结构体中要有总时间如 <code>TOT</code></p><p>输入的时候记得用 <code>scanf()</code>，这个函数可以无视中间的 <code>:</code></p><p><code>scanf()</code> 的参数是指针类型</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;struct NODE &#123;int HH, MM, TOT;&#125; a[1001], s[10001], t[10001];int main() &#123;int n, m, tmp, d[1001] = &#123;0&#125;;cin &gt;&gt; n &gt;&gt; m;tmp = n;for (int i = 0; i &lt; n; i++) &#123;scanf(&quot;%d:%d %d&quot;, &amp;a[i].HH, &amp;a[i].MM, &amp;d[i]);//输入记得带格式a[i].TOT = a[i].HH * 60 + a[i].MM;&#125;for (int i = 0; i &lt; m; i++) &#123;scanf(&quot;%d:%d %d:%d&quot;, &amp;s[i].HH, &amp;s[i].MM, &amp;t[i].HH, &amp;t[i].MM);//同上s[i].TOT = s[i].HH * 60 + s[i].MM;t[i].TOT = t[i].HH * 60 + t[i].MM;for (int j = 0; j &lt; n; j++) &#123;if (s[i].TOT &lt;= a[j].TOT &amp;&amp; t[i].TOT &gt;= a[j].TOT &amp;&amp; d[j] != 0) &#123;cout &lt;&lt; a[j].TOT - s[i].TOT &lt;&lt; endl;d[j]--;goto END;&#125; else if (tmp != 1) &#123;//敲黑板tmp--;&#125; else &#123;cout &lt;&lt; &quot;Leave&quot; &lt;&lt; endl;tmp = n;//记得重置goto END;//goto跳转到结尾，也可以用break&#125;&#125;END:;&#125;return 0;&#125;</code></pre><p>$$END$$</p><p>本文链接 <a href="https://ren-yc.github.io/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/06/LG-T190532-公交车站-题解/</a> 文章转载需注明出处</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LG - T189807 Hands - 题解</title>
       <link href="/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/</url>

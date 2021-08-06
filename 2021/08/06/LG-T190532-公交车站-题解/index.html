@@ -5,19 +5,22 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
-	<title>标签 : Warfarin - 任宇宸的个人博客</title>
+	<title>LG - T190532 公交车站 - 题解 - 任宇宸的个人博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="a personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="任宇宸的个人博客">
-<meta property="og:url" content="https://ren-yc.github.io/tags/Warfarin/index.html">
+	<meta name="description" content="洛谷题目地址 题目解析 题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。 代码分析 本题要点： 要定义结构体，结构体中要有总时间如 TOT 输入的时候记得用 scanf()，这个函数可以无视中间的 : scanf() 的参数是指针类型 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  struct NODE &amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LG - T190532 公交车站 - 题解">
+<meta property="og:url" content="https://ren-yc.github.io/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="a personal blog">
+<meta property="og:description" content="洛谷题目地址 题目解析 题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。 代码分析 本题要点： 要定义结构体，结构体中要有总时间如 TOT 输入的时候记得用 scanf()，这个函数可以无视中间的 : scanf() 的参数是指针类型 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  struct NODE &amp;#">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-06T05:53:20.000Z">
+<meta property="article:modified_time" content="2021-08-06T06:03:16.257Z">
 <meta property="article:author" content="任宇宸">
+<meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -462,19 +465,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">标签 : Warfarin </h3>
-		
-			<p class="text-black mt-3 mb-0 opacity-8">
-				<i class="fa fa-file-o mr-1"></i>
-				1 篇文章
-			</p>
-		
-	</div>
-</div>
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -501,18 +491,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">任宇宸的个人博客</h6>
 							<nav class="site-state">
@@ -617,19 +628,17 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-		
 			
-	<article class="post card bg-white shadow-sm border-0 ">
+	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/">WFR - 如何使用 Warfarin</a>
+		<a class="post-title" href="/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">LG - T190532 公交车站 - 题解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-5 13:59:32 | 编辑于 2021-8-5 20:16:20">2021-8-5 13:59
+							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-6 14:03:16">2021-8-6 13:53
 							</time>
 						</div>
 					
@@ -638,14 +647,14 @@
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Programming-Languages/">Programming Languages</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
 						</div>
 					
 						
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
 								阅读<span id="busuanzi_value_page_pv"></span>次
 							</span>
@@ -656,7 +665,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							198 字
+							470 字
 						</div>
 					
 						
@@ -664,48 +673,209 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							2 分钟
 						</div>
 					
 		</div>
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				什么是 Warfarin
-Warfarin 是一个由 C++ 编写而成的解释型语言。
-Warfarin 的特点
+	<div class="post-content" id="post_content">
+		<h4 id="洛谷题目地址"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T190532">洛谷题目地址</a></h4>
+<h3 id="题目解析">题目解析</h3>
+<p>题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。</p>
+<h3 id="代码分析">代码分析</h3>
+<p>本题要点：</p>
+<p>要定义结构体，结构体中要有总时间如 <code>TOT</code></p>
+<p>输入的时候记得用 <code>scanf()</code>，这个函数可以无视中间的 <code>:</code></p>
+<p><code>scanf()</code> 的参数是指针类型</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
 
+struct NODE &#123;
+	int HH, MM, TOT;
+&#125; a[1001], s[10001], t[10001];
 
-变量，支持数字、字符串、布尔、数组（允许使用 a[&quot;test&quot;] 这样的语法）；
+int main() &#123;
+	int n, m, tmp, d[1001] = &#123;0&#125;;
+	cin &gt;&gt; n &gt;&gt; m;
+	tmp = n;
+	for (int i = 0; i &lt; n; i++) &#123;
+		scanf(&quot;%d:%d %d&quot;, &amp;a[i].HH, &amp;a[i].MM, &amp;d[i]);//输入记得带格式
+		a[i].TOT = a[i].HH * 60 + a[i].MM;
+	&#125;
+	for (int i = 0; i &lt; m; i++) &#123;
+		scanf(&quot;%d:%d %d:%d&quot;, &amp;s[i].HH, &amp;s[i].MM, &amp;t[i].HH, &amp;t[i].MM);//同上
+		s[i].TOT = s[i].HH * 60 + s[i].MM;
+		t[i].TOT = t[i].HH * 60 + t[i].MM;
+		for (int j = 0; j &lt; n; j++) &#123;
+			if (s[i].TOT &lt;= a[j].TOT &amp;&amp; t[i].TOT &gt;= a[j].TOT &amp;&amp; d[j] != 0) &#123;
+				cout &lt;&lt; a[j].TOT - s[i].TOT &lt;&lt; endl;
+				d[j]--;
+				goto END;
+			&#125; else if (tmp != 1) &#123;//敲黑板
+				tmp--;
+			&#125; else &#123;
+				cout &lt;&lt; &quot;Leave&quot; &lt;&lt; endl;
+				tmp = n;//记得重置
+				goto END;//goto跳转到结尾，也可以用break
+			&#125;
+		&#125;
+		END:;
+	&#125;
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<p>本文链接 <a href="https://ren-yc.github.io/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/06/LG-T190532-公交车站-题解/</a> 文章转载需注明出处</p>
 
-
-函数定义、调用与递归、高阶函数、lambda 表达式；
-
-
-键盘与文件的 I/O 操作；
-
-
-if for while 语句；
-...
-			
-		
 	</div>
+
+	
+
+	
 
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Warfarin/" rel="tag">Warfarin</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
 		</div>
 	
 </article>
 
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/&text=LG - T190532 公交车站 - 题解" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : 'LG - T190532 公交车站 - 题解',
+	    description : '洛谷题目地址
+题目解析
+题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。
+代码...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://ren-yc.github.io/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+<div id="post_comment" class="card shadow-sm">
+	<div id="gitalk-container"></div>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+		clientID: 'aea63c24701c1f7f0815',
+		clientSecret: '3f33573a77bf4349dbee91c4897f9ac37bbf16e5',
+		repo: 'blog-comments',
+		owner: 'ren-yc',
+		admin: ['ren-yc'],
+		id: decodeURI('{{ page.url }}'),
+		distractionFreeMode: false
+	})
+	gitalk.render('gitalk-container');
+</script>
+
+</div>
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/" rel="next"> LG - T189807 Hands - 题解</a></div></div>
 
 
 
-
+		
+		
 		
 		
 
