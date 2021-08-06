@@ -5,19 +5,22 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
-	<title>归档 : 2021 - 任宇宸的个人博客</title>
+	<title>LG - T191905 MC 之吃牛肉 - 题解 - 任宇宸的个人博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="a personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="任宇宸的个人博客">
-<meta property="og:url" content="https://ren-yc.github.io/archives/2021/index.html">
+	<meta name="description" content="此文章需输入密码查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LG - T191905 MC 之吃牛肉 - 题解">
+<meta property="og:url" content="https://ren-yc.github.io/2021/08/06/LG-T191905-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="a personal blog">
+<meta property="og:description" content="此文章需输入密码查看">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-06T09:25:39.000Z">
+<meta property="article:modified_time" content="2021-08-06T09:43:59.085Z">
 <meta property="article:author" content="任宇宸">
+<meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -470,14 +473,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">归档 : 2021 </h3>
-		
-	</div>
-</div>
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -504,18 +499,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">任宇宸的个人博客</h6>
 							<nav class="site-state">
@@ -620,9 +636,8 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-				
-	<article class="post card bg-white shadow-sm border-0 ">
+			
+	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
 		<a class="post-title" href="/2021/08/06/LG-T191905-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/">LG - T191905 MC 之吃牛肉 - 题解</a>
@@ -647,7 +662,7 @@
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
 								阅读<span id="busuanzi_value_page_pv"></span>次
 							</span>
@@ -673,13 +688,24 @@
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				此文章需输入密码查看
-			
-		
+	<div class="post-content" id="post_content">
+		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
+  <script id="hbeData" type="hbeData" data-hmacdigest="103db8b55760b9398141878aa400cf22ce3907daec12fc1e0545f888e339f2ea">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c1063b9248d7b001af0175f55219c6208f3573cacc4b9ea6a1881851fa3163028a7c711e647d224f2ef01b42de90b445c15995ae4b3bb490bbfe7cad4bd239542e46f5dfa02b0d3ae60545109a8558aa09b26cf6a442835bee97872823b86c7ff6234322a6ac5e80701bd9c7c574cec849e26906353802f7ec3bc6c722c5587694959134836d5ad38ca9f6403705db322b7df4690060bfe4da5b7a55efe6543b836a4c91ea4e4e65e5955402ee2ade50ee3ee2e0570e6bf3b4ed4dc076d81b2e3dca85c71fa56cdbea29774f2490bd38cc660cd49f1c68c0bf361fd1cd78f369af1e58b80fe086b3681c0c1951509fc10253cdb2cefeba051099f2da797a13be5200937616d3c02d83a5734cec05943d84d62a8f3944395ecea35a89021c78654ad1fb7ff76ada682cf3df35331db0c3b02a988d60d043c574e305c99318acc84997dc4986e7d95ba6564aca28ed192ca0f9144f1d101f94afca0306e7354e9c7c022bb0f0dc1adfa7f5ff21b9201c0ed3ea0c51646c34ee4b251daef29805fd1cd15ca2902131a945d331b2bc33ed77d99fe7ed9bad497a7f16bb093358a204d24d0dbad575ea039362a337b8217e8ebd7a1ea06281e1c50a4519799a50c12df125ed794f2ec0c29f0bcfb316f9f2e8d2f206de330f12729f1a4c6ae6b495cc1906c608ba8c9e171dae5e26a21ff1ff60e67a2ee4a7c299bd79abcd6f4640e80f3f9b0cddbd457eb1cd67d7a865dba51d9044af441d19e78d09a10a3936021f3a529102464e2861eb201ec333a23ce43239c09043f7833cfbff058ad46eedd5e2c9f9831d0bf419d6cc1dd4d5b747815a7c10e94863a5450ab0d8345742c84b966546435a8dc5bbf502fb343bb260ccec9b671a8a887f089a6a17eecdda3d9175d3cdc33ba71603ab45951d405feb2744f0873c7ef7e0681574836b483c6f5abef641c2fe2223d0a204f51924a623d076a0796f2a86d94412981e7b7396000389b98b0f31423e71e7eb871ad1b127cc716c35be6dfdab2f68ac519cb8bae37f5da57221dd835c8ef2fd2da5dceef20067eaaf416924da8d61a9673b5b7e91829500732eae1d40bbd7d87db92a093ee26f289a3bc9554888c477032d7371ce3fdddc0a6bd3d5fbd956e355a72c9ca120936d94040eb6d7a4335c2173c587b6f91204e6d9b935eb8bb813b6d1328ea3b937a14f190b789778f15c9d2f24b6e73e87d653ab6684fcbbea64d207c7398b708a38546b6dc06a803b19998baae307b9ee792bab199665cdf43fa3db5e59968416d6bdf230e5825a41c682bb25d830c5c393e4985ce88dc15331c16699b16033b39a4791070452d07f2ac2008d4ea0eed7040514faf747dcd1ebbd4f93261feeb46706beaec4d78045f0b498c0a961bf507387025b65b111a5a761cb818edfe105d94c3aa645fa1e82d804ce5f1cb113f36f9ac79d992ea82e8d1d61c990b5bafd9f2a89065caeafcf24e9e9e72164e063aec7fdf86b0572af8319cf64149464851254287a05edef2c260497fd8509a29d36ed23094e7e26c3d3f47135122d40358a894c11ce22ffd68fa5257e24363d82e4d122f75033d5a03961ec46691db74fe8c4d70a9e415387f318665a46ba313e4ae9108bee65c74d55aa768685738eafe4a4c16c24e6ad113b15f3ecee36f1731af976a0ca51514b25af3b133ba5016999d46b27fb1acdf0983799f988a4e7cb9a92c02b12baf08192aed94576aa51a96fa0cc94c820d0e01bed2da1ed5d15905141b746c61eb9990c9a6ecba4be4e841a0f898433829933847bbb611b651ac43cc969798cb2527523382d008ce2b236588419ed9293a47f6f66a17667faf99605cda5fec4ec480315af3d4dc709716f22b70b84fd086a23e3c26f9b2ebe658b1743cd06c4b4c9d190fd79bc0be4f9f5ddf5d83b35893175919b5d155e00913702cfad823f5436243eaf62577694b6fb6240184f8cfc534ad54b54c4e62c8fc8ef1baf1ae19904b2a1c24064a4c26bd3256454504ffa987b57f7a595182adb9c6b11c21ea12a36ccb0f5c84ef441c1d5a6453f9b0320e2897e54ff0eeb7af6fa3dda18889f1898bb97705c746911df37de682b8901eb0fe2903afb976402de446be6fb03f117df325ab1f9d5522a86d5e30943f223881f88d326e95ac741b3073d88de4d6ec687c153e2b7179397b44fc5ff6d8794b47cb0d12bad84937790068ea1188287fb60c1bbdf40506e34017d6180a78c6194ae8f530f14ba4baffe4c6923fda70cbe68d13caec01d9628bb8723a6d7b90b0166be85fc3c84ea65f37e165c21f997230647ea0edde69f752678c9d268a81d6d6a348c84707641f08a978632630fecb2e7cb7ac24e3bf4486c7184f5a287ad10d26cbe21451283b52bb75101a80ad0b3ab8cd2e8397079e79a69f6cda83fad4c5d6f439652e74153fbf286d711f2f7a13be745d1cb6226cf6fbeac23c5381bc9e018f4899c0bceda78a4dc531bb3084689c3bf589753ec0475ac1527674bb9869f17d16b38b9008b483260d241ac95d0329dd3bdbaa7adf3d4d1313d5f48bc9f75d1527ca9d38aeeb7bdaa222355356bc21419344c5063b89686cedff7f69508055442585355293e26b5b18ee7b490578d254097a2ffea45f5dda2d39fd690e667740763fea9c8780cf94a953bce9b6309cb336ada3175c4cfb4bd2d947a0477b28bba4af1c658e3c56c5fd2405bbabd6c877c6aa74b16e551880b31bf067958862c929f05f8e2937f09c66ac1eab5061b3e37803b35fd928c224ae4ed17d783f643c34988b1e8eee3eda008042b1dc4a73a41987fb234ce2437888db28a98fcf218bfa50a81a0304cecbe2fff73b2c575d8a1369a033c2d706794fabf3b5016b6a6b40e6a30e8cef38198e84628dbd7f6d276840066368bed90facbca56aba4495aa2090bf407ebd47d671353ebf00a534356b6f1986cdd77f04fb12ac37067a2e2e845aaa596f53b0d34f7b1d8f214e14741ff38eacd09d72bc5af28ecc9cd5bd0ea4aa766174a94f383ddc613339e53833ed0fcf5ffea9431395839f02d138bb7e8dbea9ff4987a1047fa6bdd1806f01b295547edfa7afd6fd25c74da44c4e0a400d1746ecf74b952e5189825ef9dd29c4d6c5974e338b406d12dcd5697d67bc1a3bfd60a46df060638cf451a7875448ad7d62e0f15e623ee6697c4df20094549167e23ef1c247889687e02734f2bdfdab8dcfcdf5e845da4e3090731874a5a0e693ba002e95f91fc9834c4f0268902bb409e90ec1faeb7662289e6002dffc090cbdf809396d4bb16f60881a36eb8fdc4fcedd2211517e36dfb96cb093177bca411d933fee528e07d33545c958a48754ef0edbcacfe987e173eee9f0e4172e8d1a434f8beada62873637bd177b772048787d741956dc142205d0551a735961eb112ac5c864d9d69292aa2d0d5fcb3fc9cd6c88566d41f31aa4616c62dfcb4042edb64801bf1c65c2aebab23c2dc73912b0ca7b95fa0f90f6954c5a3b983b61f766b9861e455e741ad38c40a876a36043ee1c2565117965553008b74403134d5076ffae4b95ed6f48bb4563f440b5316e147c521dd26503a471bb7636873b3788fb1e9e72ef39a72a70d4c4aa2f78ba2ae1493827fe36d2360e0713e5f913e102c7c2d80f2d34447786f2459745b1a6167ad07f9ad287cc95287b21e8cb5036fcd18a6cb90d93f776f70fff5492ed789a81583e4a1e7fc6ee6fec2717296974cb2ed23b4f7d7f87ac9e7038490931b2baaa19919eeaa8b9d43182e00389c7ac61d5eae3a0d80754dedb318e7b55db7e4ab8562eccc6600b550af29288a1bd82b1538b3f25eb3450f45a269f699ea05eb12863c0c780889151d3af6e58b2465e35c1c1dfa52fc595ed2d82053329d32c88a8eedfb7fb0512c563ea60e8e45974786bf6e71bdf92d84e33b50c20a7ca202e6a5626bf11d50461103d</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
 	</div>
+
+	
+
+	
 
 	
 		<div class="post-tags">
@@ -689,683 +715,135 @@
 	
 </article>
 
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">LG - T190532 公交车站 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-6 17:44:09">2021-8-6 13:53
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.6k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							12 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				此文章需输入密码查看
-			
-		
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2021/08/06/LG-T191905-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/&text=LG - T191905 MC 之吃牛肉 - 题解" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
 	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : 'LG - T191905 MC 之吃牛肉 - 题解',
+	    description : '
+  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://ren-yc.github.io/2021/08/06/LG-T191905-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
 
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
+
+<div id="post_comment" class="card shadow-sm">
+	<div id="gitalk-container"></div>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+		clientID: 'aea63c24701c1f7f0815',
+		clientSecret: '3f33573a77bf4349dbee91c4897f9ac37bbf16e5',
+		repo: 'blog-comments',
+		owner: 'ren-yc',
+		admin: ['ren-yc'],
+		id: decodeURI('{{ page.url }}'),
+		distractionFreeMode: false
+	})
+	gitalk.render('gitalk-container');
+</script>
+
+</div>
 
 
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/" rel="next"> LG - T190532 公交车站 - 题解</a></div></div>
+
+
+
 		
-		<a class="post-title" href="/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/">LG - T189807 Hands - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-5 20:48:04 | 编辑于 2021-8-6 12:53:44">2021-8-5 20:48
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							144 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
 		
-	</header>
-
-	<div class="post-content">
-		
-			
-				洛谷题目地址题目解析这题看上去很难，但分析后就可以一个循环解决。
-每次取牌如果有一个连续的大于 $0$ 的数列，那就全部取出，取到其中的某一个数等于 $0$。
-代码分析边输入边累加，记住当 $x - last &lt; 0$ 时，就不要累加。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace st...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/">WFR - 如何使用 Warfarin</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-5 13:59:32 | 编辑于 2021-8-5 20:16:20">2021-8-5 13:59
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Programming-Languages/">Programming Languages</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							194 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				什么是 WarfarinWarfarin 是一个由 C++ 编写而成的解释型语言。
-Warfarin 的特点
-变量，支持数字、字符串、布尔、数组（允许使用 a[&quot;test&quot;] 这样的语法）；
-
-函数定义、调用与递归、高阶函数、lambda 表达式；
-
-键盘与文件的 I/O 操作；
-
-if for while 语句；
-
-大量内置函...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Warfarin/" rel="tag">Warfarin</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/31/LG-T190529-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/">LG - T190529 买二送一 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-31 19:28:13 | 编辑于 2021-8-5 19:14:16">2021-7-31 19:28
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							198 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				洛谷题目地址题目解析
-凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。
-
-可以使用排序来做。
-代码分析排序，建议偷懒使用 sort 函数，But 是降序排序，所以要写炒鸡简单的 cmp() 函数。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/31/LG-T190528-%E6%96%B9%E8%88%B1%E5%8C%BB%E9%99%A2-%E9%A2%98%E8%A7%A3/">LG - T190528 方舱医院 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-31 19:25:09 | 编辑于 2021-8-5 19:14:08">2021-7-31 19:25
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							99 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				洛谷题目地址题目解析这是炒鸡淼的小学一年级数学应用题（（（
-代码分析由于本题过于淼所以不分析。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int main() &#123;
-    int a, b, c;
-    cin &gt;&gt; a &gt;&gt; b &gt;&...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/26/LG-T189610-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/">LG - T189610 开关灯 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-26 12:49:30 | 编辑于 2021-8-6 17:44:21">2021-7-26 12:49
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.5k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							8 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				此文章需输入密码查看
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/26/LG-T189243-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/">LG - T189243 古老的 A + B - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-26 12:40:31 | 编辑于 2021-8-5 19:13:28">2021-7-26 12:40
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							174 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				洛谷题目地址题目解析This is the waterest problem I had ever seen.
-好吧 A + B 最 water。
-没啥好讲的，就一个循环。
-代码分析直接读入然后来个循环，注意输出格式。
-时间复杂度 $O(c)$，空间复杂度 $O(1)$。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-usi...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/26/LG-T189069-%E6%8E%92%E5%BA%8F-%E9%A2%98%E8%A7%A3/">LG - T189069 排序 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-26 12:36:10 | 编辑于 2021-8-5 19:13:22">2021-7-26 12:36
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							293 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				洛谷题目地址题目解析这是一道炒鸡淼的 C++ if 语句题（?）。
-太淼了就不解释了
-代码分析全读入完来个函数判断就行了。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int a[6], b[6], cnt1, cnt2, tot1, tot2;
-
-int mysort() &#...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/25/LG-T189422-%E7%94%9F%E5%B0%8F%E8%99%AB%E5%AD%90-%E9%A2%98%E8%A7%A3/">LG - T189422 生小虫子 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-25 15:39:02 | 编辑于 2021-8-5 19:13:55">2021-7-25 15:39
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							209 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				洛谷题目地址题目解析这道题其实就在检验 for() 循环的应用。
-代码分析读入一切信息后，
-写一个循环 $z$ 次的 for 循环，如果满足条件 k == x，小虫子数量增加，反之 s1 = 0。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int main() &#123;
- ...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-
-<nav><ul class="pagination"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/archives/2021/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/archives/2021/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/archives/2021/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/archives/2021/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/archives/2021/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/archives/2021/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
-
-			
 		
 		
 

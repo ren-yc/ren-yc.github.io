@@ -10,15 +10,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="洛谷题目地址 题目解析 题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。 代码分析 本题要点： 要定义结构体，结构体中要有总时间如 TOT 输入的时候记得用 scanf()，这个函数可以无视中间的 : scanf() 的参数是指针类型 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  struct NODE &amp;#">
+	<meta name="description" content="此文章需输入密码查看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - T190532 公交车站 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="洛谷题目地址 题目解析 题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。 代码分析 本题要点： 要定义结构体，结构体中要有总时间如 TOT 输入的时候记得用 scanf()，这个函数可以无视中间的 : scanf() 的参数是指针类型 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  struct NODE &amp;#">
+<meta property="og:description" content="此文章需输入密码查看">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-06T05:53:20.000Z">
-<meta property="article:modified_time" content="2021-08-06T06:03:16.257Z">
+<meta property="article:modified_time" content="2021-08-06T09:44:09.788Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
@@ -537,7 +537,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">20</span>
+										<span class="site-state-item-count">21</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -611,7 +611,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">18</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">19</span></a>
 			</div>
 		</div>
 	</div>
@@ -626,7 +626,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">18</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
+				<a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">19</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -646,7 +646,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-6 14:03:16">2021-8-6 13:53
+							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-6 17:44:09">2021-8-6 13:53
 							</time>
 						</div>
 					
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							470 字
+							3.6k 字
 						</div>
 					
 						
@@ -681,7 +681,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							12 分钟
 						</div>
 					
 		</div>
@@ -689,56 +689,18 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="洛谷题目地址"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T190532">洛谷题目地址</a></h4>
-<h3 id="题目解析">题目解析</h3>
-<p>题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。</p>
-<h3 id="代码分析">代码分析</h3>
-<p>本题要点：</p>
-<p>要定义结构体，结构体中要有总时间如 <code>TOT</code></p>
-<p>输入的时候记得用 <code>scanf()</code>，这个函数可以无视中间的 <code>:</code></p>
-<p><code>scanf()</code> 的参数是指针类型</p>
-<h3 id="代码">代码</h3>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-struct NODE &#123;
-	int HH, MM, TOT;
-&#125; a[1001], s[10001], t[10001];
-
-int main() &#123;
-	int n, m, tmp, d[1001] = &#123;0&#125;;
-	cin &gt;&gt; n &gt;&gt; m;
-	tmp = n;
-	for (int i = 0; i &lt; n; i++) &#123;
-		scanf(&quot;%d:%d %d&quot;, &amp;a[i].HH, &amp;a[i].MM, &amp;d[i]);//输入记得带格式
-		a[i].TOT = a[i].HH * 60 + a[i].MM;
-	&#125;
-	for (int i = 0; i &lt; m; i++) &#123;
-		scanf(&quot;%d:%d %d:%d&quot;, &amp;s[i].HH, &amp;s[i].MM, &amp;t[i].HH, &amp;t[i].MM);//同上
-		s[i].TOT = s[i].HH * 60 + s[i].MM;
-		t[i].TOT = t[i].HH * 60 + t[i].MM;
-		for (int j = 0; j &lt; n; j++) &#123;
-			if (s[i].TOT &lt;= a[j].TOT &amp;&amp; t[i].TOT &gt;= a[j].TOT &amp;&amp; d[j] != 0) &#123;
-				cout &lt;&lt; a[j].TOT - s[i].TOT &lt;&lt; endl;
-				d[j]--;
-				goto END;
-			&#125; else if (tmp != 1) &#123;//敲黑板
-				tmp--;
-			&#125; else &#123;
-				cout &lt;&lt; &quot;Leave&quot; &lt;&lt; endl;
-				tmp = n;//记得重置
-				goto END;//goto跳转到结尾，也可以用break
-			&#125;
-		&#125;
-		END:;
-	&#125;
-	return 0;
-&#125;
-</code></pre>
-<p>$$END$$</p>
-<p>本文链接 <a href="https://ren-yc.github.io/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/06/LG-T190532-公交车站-题解/</a> 文章转载需注明出处</p>
-
+		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
+  <script id="hbeData" type="hbeData" data-hmacdigest="1197735f59537f99d700fdac5056606118151cb2433b4b1e21af1a47c3f81527">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c1063b9248d7b001af0175f55219c6208f3573cacc4b9ea6a1881851fa3163028a7c711e647d224f2ef01b42de90b445c15995ae4b3bb490bbfe7cad4bd239542e46f5dfa02b0d3ae60545109a8558aa09b26cf6a442835bee97872823b86c7ff6234322a6ac5e80701bd9c7c574cec849e26906353802f7ec3bc6c722c5587694959134836d5ad38ca9f6403705db322b7dff5093aeea4178d1d96f56ea4eb263d3df04f41881bb14ceb425955fd2ef4e444add67396cb26d43c47c6d6b0d98b6774258d663fa60e49c7e08e3c73bc12251010398d0ce89ba44408685267ba2412b0e21ac7b3c312183d3ecfd5718c08d70901fc74b395f68df3785278cd7bc4ee8be68f172f99204793f3e0db136da86fe3eff7c9ebe6ed65b8d2f659ef51772dd16a5b4997da9ff4594e050fe495e38b50165189706b019c66fc6393e8464e65b19f7350313154452d4a73a185e754d59a65aadbd23b32dd9df09c2487d000a20453145cc990bc7363108db6f470878d024aafeec998c0e7e3090c72314602c6bb19d3a12f29bb3df48d85dd2fb936a63a5def1908921da66459e45f04bea994079894dc569df463941cddd735316b28e7b5a3cc3c358862d8265a08729cf29b87bba628e9fbfc6ff4608320fbf41584886384e8e98808b24339fb509225f081f9e95af75cb6aec184ad39eeb8e466ef94388ee1a981bda469c8be189ad065b05245d51f77388341bea403651e7e6fb6ef41330cf2431be1c6cdd784b2565aa2fd97dc330b8a85b09af632cb90447d65d3e2167a43e10de62dc6b32369792318750929e7447d20dce34b1e5f94a63526810558fb332f476888410518df2ef885f3ee2f4ee7249cbcc550834f3b9ef79d1af1769673e58d31c1f4779cdcb1dc07f1ecb005bb36fc23616543cf61cee58e19348c81116497d3c813b9fff0a9622a1ae8d29b1b6c0bfb6c3a3c41f3432edc1073709e612001bbc3d1acced9ed4eea9222374e585d5ca0bf80f9bfa99dc24e1881dcef1452ee60466a90d71234472bb0be86143cab2790fc0333c8a0a7fda46cd5b0201811d902a95f40f0fd9d60947d136a9a2e04736e53f8584c4b1449b2d22ca6193414e02b86cf08f6e9b17b237301cb04db6ec03563f555969829e484fd5dc6e7c8803ec8a2a435b7f99a24dcc837d54627318de77c7427f583f14a0660743341ca651bd829e30acc975725f62cc7cbb10ae7aea9b0c7f0f7f477e175faa2bae0d9d0dc9bd3b8e09b572b1f13bdc00658392cd1d583a46d83a4b5a414037aced057e3b7a33f1bd1263298b8d00b22563e903b8bad9f7a811ef6bd9ef244da03b274f07295dad4f8be00d9024df2bca9a29d9b8e85f4a9212c53d77942cbbb1a8f2f1a79ff69a8b14dddb7ec62b64966a7b5c96a96cc3eebea4741fadc2aaebe8f410cba1c326085bda376df81b81e42e602bc2566b3613a3cf5fdb789e60f9711d0555c6892f929a886c6d20f8c679781b9a9226f1bfa12a4e45846a780575b2ce3a1e5ac4df1c0d57ae1880eb24e920b200e047903338c102dfd4f01e000f145f466b6ff2084f6586a5fb4c48d6806cdb9224c90643b7d07bdb0b61d8bd725613b9ce25587b6d7e8fe26c16e44580361430c71859cb48c82987f5f6842ab2ee350ebc8c31747a8a5e4934d683e382c409cd21c6b62522575e609544bd06b81337a2421306a86a9a8c813fb72baef7f58a66a236c467a19e352fa05b54f253bdae3091bc3a0288b442e0d9d75da89d36caeef0fb929d2b50f0bca081b57c135e9aea1c0bdaf2614bb79700815c10982dd6e706b5f70a8c701f29b5511a31a24053068443faa3418e8e7ed8d1d51f5fc24d30c8a5bf2327425489b82c88f26f9dad4c6ecad353f10627902c51f661eaf331ede45c31da79bcc0eafc245e0ec49c0a9ad62657bffeb7278f3ba3fb10c17c8696a452dcc395e773f04328d4520e71cd6e01d39fc93c2b54f0a273051bc582764714226e15af58839105dbb2026117439385bb77b210dc99e7e546b070769d8ea7c3f7d8dfe6234ca11bd01589a6c71cf39455b3dc5e7d9de6f9e9ae43681ba69992448e6ff6309cd27a2efbc90e61ad0603d79fbb771e9eb212125e45f21be38fff1ca60058f7dd19a5c6a4950bb0b8abd92594c2236689cd9b31f5268aae668fa60c75fb6023f4d287ff61663b1822b64d9b06f2dd826ae136593ee17512b04674459a8ef0252c8480933d7dfb58b2429f06ca5ef682e5e92e71abe070707f081114ccbcbcb5e2bcd84dde36df29370e92ddbcebee2e9cac5e5ee48f5a0ce6d1ffe37fef60b0a68f886fcc10435a25e45000a7b315a9f147a33605bb4ce67754565905383cf5f9a41a69efd913d11c2e7f65db60d4ccd04df09793fca284018dbbb56a452f47fb8460e2bdd1d20e8a3c92a986425cb879c3c559f1f3e68fc3840b3521ae9add929c3e898a09b7f1e6732debbab7948cfdeef9fa06c87c5ca5939a2a883e84d9e3d8260a42fa69d8451cb7f9c4e19a0f6ffbe82a4d978948df2af3d4a2d2dbd8c1e6206aff0bdc50e4620e0203133e437a78bc8d85fa0fe4d598b83627fd11e337e073401414621d0cb1311f635f405d084bbd7a5de41bf84444e409a0eaa5994227f94f0a5e50cfaa5199026144cdb9468d7aa9c0dbb4ad998d9c9104c5e858678582cbf491e4cb59899dfc23997e4e7f20ce3a5f3b2e9f3bbe23cd6d1d051fda6e5c5332442c50f6d3839d5368440a508bf71b96fb3a3a6623e904c1e7668efde09e60e6d80a26cda8c3ad79daa62d0a51be4e44af85531c180986c6549d242b3dc4e3653a5cd641dc0f68cc685215e843a9c13981946078859d83fdf362a9fc94814efd303779e996286507047063d3e7b7d44ceca557a95ecc63c5cc876f1172d21e4c5e9fcde66c9440c4277774f661abadc9e3bd5228e3489ccf6cfd6dc283c3070abd6a374f7ccaa9b8ce9e01287226cb35eb173137d42c9d4916bb728a74c01088ed4650334c908d24fdf15b5b552d1bcb7dd1d005de690d2162d50587a1335cae7725028efdaf39fa8fa38f521bf59e4259d27ea8f065663d3f0e7e824f1c7e6f37f7d13ef662346a917e72df7884fcea7c169eec20d0f929024c36f46189533a8d5ec273e96788eb2784b41b402bbffc3ee191e6b17172bd8c3783fc826261329fe6cf1412460a6a8e53a69e7c6c6fd410ca080b67a904004cc25f7a0542ebd0dbd7c83b795b62da7cb5923bfdf4509aae0d27fe2e745c224af3055e492814278e25482636de805355b46d13feb3b20adcbef923997043f9e5bea3ae5094d514becf86a2150fe3df9a345e871c52cca3c48d2ab15e7ca8ac1209b1ea9bbb2c16fd2d0dcbda4562a76c6d3ee8d0d4013c5ceac488efd9e6b37d641cc57c40e5e6b01ab1465ddbe8b6fb011003e1cf84f03677eff4af12194d3957925c164c735d4c2016eb585870d2a0f9a356d43112ab69c6e38f528d7d0f7b25aef41c0566fd08c55a4cb3b59534d21c0111e31fa20d87ea23d05ca6a2adde2934fbab6973363e5bf5bb22c7d958e80f72e50b8081c471c7d7ca57e51f683a3c6ab5661257630eb2e63d311d49f48add05a183d8235b90dae16fbaa02cc97e67a01fe461a8b9aa9df0ac632b36dd0510aa5e5c7d5cca4c1744ff14b0e186f331f3b44f7d12fd7ce11f3617abcfba0dab7f3c0e0c7ac70fbf84ecb2846375ac8d41ba85154c478f9d475579e40c1b2cba123e63e081bb7f8e3b15304d903ab934ffffa8dd4ea72</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
 	</div>
 
 	
@@ -808,10 +770,8 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - T190532 公交车站 - 题解',
-	    description : '洛谷题目地址
-题目解析
-题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。
-代码...',
+	    description : '
+  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/06/LG-T190532-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/'
@@ -878,7 +838,7 @@ int main() &#123;
 </div>
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/" rel="next"> LG - T189807 Hands - 题解</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2021/08/06/LG-T191905-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/" rel="prev"> LG - T191905 MC 之吃牛肉 - 题解</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/05/LG-T189807-Hands-%E9%A2%98%E8%A7%A3/" rel="next"> LG - T189807 Hands - 题解</a></div></div>
 
 
 

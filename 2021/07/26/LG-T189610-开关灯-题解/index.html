@@ -10,15 +10,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="洛谷题目地址 题目解析 一个循环搞定。 代码分析 一个嵌套循环 + 检查灯的状态的循环。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	int n, x, y, a[10001] &#x3D; &amp;#123;0&amp;#125;, sum &#x3D; 0; 	cin &gt;&gt; n; 	for (int i &#x3D;">
+	<meta name="description" content="此文章需输入密码查看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - T189610 开关灯 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/07/26/LG-T189610-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="洛谷题目地址 题目解析 一个循环搞定。 代码分析 一个嵌套循环 + 检查灯的状态的循环。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	int n, x, y, a[10001] &#x3D; &amp;#123;0&amp;#125;, sum &#x3D; 0; 	cin &gt;&gt; n; 	for (int i &#x3D;">
+<meta property="og:description" content="此文章需输入密码查看">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-26T04:49:30.000Z">
-<meta property="article:modified_time" content="2021-08-05T11:14:02.816Z">
+<meta property="article:modified_time" content="2021-08-06T09:44:21.956Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
@@ -537,7 +537,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">20</span>
+										<span class="site-state-item-count">21</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -611,7 +611,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">18</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">19</span></a>
 			</div>
 		</div>
 	</div>
@@ -626,7 +626,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">18</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
+				<a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">19</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -646,7 +646,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-26 12:49:30 | 编辑于 2021-8-5 19:14:02">2021-7-26 12:49
+							<time title="发布于 2021-7-26 12:49:30 | 编辑于 2021-8-6 17:44:21">2021-7-26 12:49
 							</time>
 						</div>
 					
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							241 字
+							2.5k 字
 						</div>
 					
 						
@@ -681,7 +681,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							8 分钟
 						</div>
 					
 		</div>
@@ -689,41 +689,18 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="洛谷题目地址"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T189610">洛谷题目地址</a></h4>
-<h3 id="题目解析">题目解析</h3>
-<p>一个循环搞定。</p>
-<h3 id="代码分析">代码分析</h3>
-<p>一个嵌套循环 + 检查灯的状态的循环。</p>
-<h3 id="代码">代码</h3>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int main() &#123;
-	int n, x, y, a[10001] = &#123;0&#125;, sum = 0;
-	cin &gt;&gt; n;
-	for (int i = 1; i &lt;= n; i++) &#123;
-		cin &gt;&gt; x &gt;&gt; y;
-		for (int j = x; j &lt;= y; j++) &#123;
-			if (a[j] == 1) &#123;
-				a[j] = 0;
-			&#125; else &#123;
-				a[j] = 1;
-			&#125;
-		&#125;
-	&#125;
-	for (int i = 1; i &lt;= 10000; i++) &#123;
-		if (a[i] == 1) &#123;
-			sum++;
-		&#125;
-	&#125;
-	cout &lt;&lt; sum &lt;&lt; endl;
-	return 0;
-&#125;
-</code></pre>
-<p>$$END$$</p>
-<p>本文链接 <a href="https://ren-yc.github.io/2021/07/26/LG-T189610-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/26/LG-T189610-开关灯-题解/</a> 文章转载需注明出处</p>
-
+		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
+  <script id="hbeData" type="hbeData" data-hmacdigest="35532562762892239e28c420ff53dd8224a549ff4bd8b615f564d5acf3679ce6">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c1063b9248d7b001af0175f55219c6208f3573cacc4b9ea6a1881851fa3163028a7c711e647d224f2ef01b42de90b445c15995ae4b3bb490bbfe7cad4bd239542e46f5dfa02b0d3ae60545109a8558aa09b26cf6a442835bee97872823b86c7ff6234322a6ac5e80701bd9c7c574cec849e26906353802f7ec3bc6c722c5587694959134836d5ad38ca9f6403705db322b7dfef16202eb73f0613ec6f6a45c27351601f7c2791b2ba2571ac4b5eb8bac197637cc989911b641399e61fa372c093c40bc2866982172287f9b681207a9f87167d275200b814d9945adf4745495921d81299529e5fba3fab60fed88550bb05db5dc2552ba52639e5fb5f852e2ea351d76606d09d82502eab4b665c9d3a0a31c5f2b8280e55139867928d53c932e100159d7d577d99429d29654e16a9daf17d4b2ab56581223be4aa19ab0442dde353d206b836ebede392740915ef8121357631c1b39f367fa2e983330c0238c59c3e3422efad5f653941260d321621ef894f9e56601c644723f8fb2445b80903827c82c477723baeaa719edfecd5209d35abfc5b89919539e5c6b9e6c8528e800c9f49dc061f69438ff6a1e8b100e83b833c99a316d6c13213bc2055ff2ba0937c5a0b8b725d8920af34b5dad7229db0cdb92882d7d394285d64fe670cc75003ce02acadedcf62d0ebdc23e1c4c36d2524f93cca953726c98537edcfb23fa225940ae5b014af60397f6d11a7fb1658f223a395f7d87c8d5e5c4acb044e41145aa8adc056b80457f844ef96d810da5317b1185f60782f7ee9178b25ffa97779621b44badd5f7f68560d6905672f21821a2457c4ed5405f45a03eea3ef535a3e3308e6e9bfd962d4737e8a2a8ee3da79e1bcf3b8aa60c7b692b8e80f809acf3e1559b3c669eb88d4d80963e5259478c7a79c3b8f2af2f0b3a5b5253fc6fe40bb6a440446eb634d97073cc307258fc6fbd887327dd537c443a8b205ea66a1afe33bae62e7df4e8302bc74cbda55c2ba7b24492eb3395ef69b5eee6b218aa709f42fb655154ede8830c7ab9e1fd3102bd567b4af8e299bc1e71c81da20704e500ff68ed5c44740fbfaa71b62396bac8d4bb7a0160872bdad5a6d76754ccdcbec4589d83f6aea91c09d9e009df3f9032bb35b0ce6909e22f50577ec7a09c332878248f471f04476cb98922c35d48b6c7568c07cc6795bd4f53389d5b89f0e2070bcf59dc36d53b565db260713a4bfd7b0e43f5c9fdf4437cc6886bdc9835e74f677223dc6601db4622b4a7a65bced242e95e6fdcc0b1a76d787eef626e9581aaec02eecf25de77886ccb78a028011d575f510c5fb86037825717b37f639b15a1cbd1585e8ac7abed98daf751e566073cfc7b655c831bd8531bed63b2e42d10c01889e3b356ba000c957365496ea0e2a28cee9e991711e0c8f7e9275592f11c425f3ff2edb457cee1511cd0e505262668b4ff37c6dcbb1fe8a003eb4b2277877b088edba73f404dab5e1acf1ebc31f4d124dfc893cd0e545e66baef33994709ebb4de8188cadc113635e79959ff8da3f22612c3f6152fb59b6674eb67cfddbc2aaa3c59fb27b2a553a2cf59fbb09d2c0b4adddffa87f3c8910a84a0c29e282a5a676310d5e0d753e53c742a91d3b03e2fe894af30dd44c12007dea6f82684b14849917bd8523c9c397dd64114e74adb48ea6473fc68fafb3110dd153bba3b368bb4370c8aed290078aaeb99db95e8a4b30a08c9d39a427f6165c997935c815a2b4dc08e932a7c711335f0c74a11cd68304d4de59280b091be788e6be59e9499b3de202e87669c3aeaa41ce9bcf06b3c904e603cc023cbaa3c24a96f0908828536e10671a45169bc8e9a74218352ab88468fcdf19f4edd27dfc1b890d927f81a0a3e511db491e709778cf71c82912f5210decb5896f75f822cdc74e368181060677f70b1cf1f7ac84271c8e2528d17cb6faa51c9638d509508f590eb578b2b95a9fe0a1029ab6ca3782ea6bd407dcf055aafaa55e707b77a3fb8c53e22794959cc299dfae9736af03c14e66530e36289585da3e938ac1849a6fba8f46d60401c4548dc095d7f29c222d215b2c9233d39508aa0e859bdddc8d668554f218bc1f9887bdbb9c00da9be7f417db0decd18bb54111d78d97b4065585e18a0c75766ce325f19e2acecc957096b96b404819f884773be46acae9accf6ae5d51b61ce35e3c4178cdec0dc74ba26552bb69c10af24ed751d8a9d610aa22c1fa5208469ec3e552cb773c43116988d8ce1651b1203db2f25d20bac2407fcb2f482d8c0a64ef61aa8cb01a754c269c8a50548e311503932331110789792206c767b9c5c9081a5a8cff17a8737ebcf5d5cc7bfc0e915c339a221b9f848735689d811bc5eb0758d0b8f1eb3ac4caf70555a53d144506c88870c3c2830e9f0</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
 	</div>
 
 	
@@ -793,14 +770,8 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - T189610 开关灯 - 题解',
-	    description : '洛谷题目地址
-题目解析
-一个循环搞定。
-代码分析
-一个嵌套循环 + 检查灯的状态的循环。
-代码
-
-#...',
+	    description : '
+  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/07/26/LG-T189610-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/'
