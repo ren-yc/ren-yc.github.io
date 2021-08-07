@@ -10,12 +10,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="洛谷题目地址题目解析 凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。  可以使用排序来做。 代码分析排序，建议偷懒使用 sort 函数，But 是降序排序，所以要写炒鸡简单的 cmp() 函数。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int n, a[100001], ans">
+	<meta name="description" content="洛谷题目地址 题目解析  凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。  可以使用排序来做。 代码分析 排序，建议偷懒使用 sort 函数，But 是降序排序，所以要写炒鸡简单的 cmp() 函数。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int n, a[100001], a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - T190529 买二送一 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/07/31/LG-T190529-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="洛谷题目地址题目解析 凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。  可以使用排序来做。 代码分析排序，建议偷懒使用 sort 函数，But 是降序排序，所以要写炒鸡简单的 cmp() 函数。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int n, a[100001], ans">
+<meta property="og:description" content="洛谷题目地址 题目解析  凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。  可以使用排序来做。 代码分析 排序，建议偷懒使用 sort 函数，But 是降序排序，所以要写炒鸡简单的 cmp() 函数。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int n, a[100001], a">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-31T11:28:13.000Z">
 <meta property="article:modified_time" content="2021-08-05T11:14:16.048Z">
@@ -537,7 +537,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">21</span>
+										<span class="site-state-item-count">22</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -611,7 +611,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">19</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">20</span></a>
 			</div>
 		</div>
 	</div>
@@ -673,7 +673,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							198 字
+							200 字
 						</div>
 					
 						
@@ -689,35 +689,39 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="洛谷题目地址"><a href="#洛谷题目地址" class="headerlink" title="洛谷题目地址"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T190529">洛谷题目地址</a></h4><h3 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h3><blockquote>
+		<h4 id="洛谷题目地址"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/T190529">洛谷题目地址</a></h4>
+<h3 id="题目解析">题目解析</h3>
+<blockquote>
 <p>凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。</p>
 </blockquote>
 <p>可以使用排序来做。</p>
-<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>排序，建议偷懒使用 <code>sort</code> 函数，<strong>But</strong> 是降序排序，所以要写炒鸡简单的 <code>cmp()</code> 函数。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
-<pre><code class="lang-cpp">#include &lt;bits/stdc++.h&gt;
+<h3 id="代码分析">代码分析</h3>
+<p>排序，建议偷懒使用 <code>sort</code> 函数，<strong>But</strong> 是降序排序，所以要写炒鸡简单的 <code>cmp()</code> 函数。</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int n, a[100001], ans = 0;
 
 bool cmp(int x, int y) &#123;
-    return x &gt; y;
+	return x &gt; y;
 &#125;
 int main() &#123;
-    cin &gt;&gt; n;
-    for (int i = 1; i &lt;= n; i++) &#123;
-        cin &gt;&gt; a[i];
-    &#125;
-    sort(a + 1, a + n + 1, cmp);
-    for (int i = 1; i &lt;= n; i += 3) &#123;
-        ans += a[i] + a[i + 1];
-    &#125;
-    cout &lt;&lt; ans &lt;&lt; endl;
-    return 0;
+	cin &gt;&gt; n;
+	for (int i = 1; i &lt;= n; i++) &#123;
+		cin &gt;&gt; a[i];
+	&#125;
+	sort(a + 1, a + n + 1, cmp);
+	for (int i = 1; i &lt;= n; i += 3) &#123;
+		ans += a[i] + a[i + 1];
+	&#125;
+	cout &lt;&lt; ans &lt;&lt; endl;
+	return 0;
 &#125;
 </code></pre>
-<script type="math/tex; mode=display">END</script><p>本文链接 <a href="https://ren-yc.github.io/2021/07/31/LG-T190529-买二送一-题解/">https://ren-yc.github.io/2021/07/31/LG-T190529-买二送一-题解/</a> 文章转载需注明出处</p>
+<p>$$END$$</p>
+<p>本文链接 <a href="https://ren-yc.github.io/2021/07/31/LG-T190529-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/31/LG-T190529-买二送一-题解/</a> 文章转载需注明出处</p>
 
 	</div>
 
@@ -788,8 +792,10 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - T190529 买二送一 - 题解',
-	    description : '洛谷题目地址题目解析
-凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各...',
+	    description : '洛谷题目地址
+题目解析
+
+凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/07/31/LG-T190529-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/'
