@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/a11y-light.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	
-	<title>任宇宸的个人博客</title>
+	<title>分类 : Solution - 任宇宸的个人博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 	<meta name="description" content="a personal blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="任宇宸的个人博客">
-<meta property="og:url" content="https://ren-yc.github.io/index.html">
+<meta property="og:url" content="https://ren-yc.github.io/categories/Solution/page/3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
 <meta property="og:description" content="a personal blog">
 <meta property="og:locale" content="zh_CN">
@@ -470,6 +470,19 @@
 
 <div class="page-information-card-container">
 	
+		
+<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
+	<div class="card-body">
+		<h3 class="text-black">分类 : Solution </h3>
+		
+			<p class="text-black mt-3 mb-0 opacity-8">
+				<i class="fa fa-file-o mr-1"></i>
+				23 篇文章
+			</p>
+		
+	</div>
+</div>
+	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -484,7 +497,7 @@
 			
 			
 				<ul id='leftbar_part1_menu' class='leftbar-menu'>
-					<li class='leftbar-menu-item current'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/tools'>工具</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/tools'>工具</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
 				</ul>
 			
 			<div class="card-body text-center leftbar-search-button">
@@ -611,17 +624,21 @@
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		
+		
+		
+		
+		
 			
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/">LG - 万恶的试卷 - 题解</a>
+		<a class="post-title" href="/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/">LG - 微信（2） - 题解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-7 17:58:57 | 编辑于 2021-8-7 18:02:41">2021-8-7 17:58
+							<time title="发布于 2021-7-22 21:45:33 | 编辑于 2021-8-7 16:58:51">2021-7-22 21:45
 							</time>
 						</div>
 					
@@ -648,7 +665,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							242 字
+							253 字
 						</div>
 					
 						
@@ -667,17 +684,12 @@
 		
 			
 				题目解析
-既然题目说了 $a_i$ 可能很大，就是高精度了，但我懒得写高精，得用个不同的排序方法。
+这是一道典型的 C++ 结构体排序题。
+要点：题目要求从大到小排序，$a$ 一样的按 $name_0$（字符串首） 的 ASCII 码从小到大排序，所以我们还要自己写 cmp 函数，来比较两结构体。
 代码分析
-这题难就难在两个输出循环怎么搞，为了避免溢出，要先输出一半再输出一半。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-string a[1001];
-
-bool cmp(s...
+输入正整数 $n$，然后循环输入 $a_i$。
+建议使用 sort 函数偷懒，写一个 cmp。
+出题人 NB！！！不卡我们 lon...
 			
 		
 	</div>
@@ -694,13 +706,13 @@ bool cmp(s...
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/">LG - 捕食关系 - 题解</a>
+		<a class="post-title" href="/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/">LG - 微信（1） - 题解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-7 17:25:28 | 编辑于 2021-8-7 17:27:37">2021-8-7 17:25
+							<time title="发布于 2021-7-22 21:31:40 | 编辑于 2021-8-7 16:53:37">2021-7-22 21:31
 							</time>
 						</div>
 					
@@ -727,7 +739,7 @@ bool cmp(s...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							252 字
+							213 字
 						</div>
 					
 						
@@ -746,18 +758,15 @@ bool cmp(s...
 		
 			
 				题目解析
-水题一道，输入后循环查找 $a_i$ $&gt;$ $b_j$。
+这是一道典型的 C++ 排序题。
+要点：题目要求从大到小排序，所以我们要自己写 cmp 函数，来判断升序。
 代码分析
-时间复杂度 $O(nm)$
-空间复杂度 $O(n + m)$
+输入正整数 $n$，然后循环输入 $a_i$。
+建议使用 sort 函数偷懒，写一个 cmp。
+注意本题数据范围 $10^{18}$，卡 long long
 代码
 
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int main() &#123;
-	int n, m, s = 0;
-	cin &gt...
+#include &lt;bits/stdc++.h&g...
 			
 		
 	</div>
@@ -774,13 +783,13 @@ int main() &#123;
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/">LG - 负二进制 - 题解</a>
+		<a class="post-title" href="/2021/07/22/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-%E9%A2%98%E8%A7%A3/">LG - 王者荣耀 - 题解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-7 17:09:31 | 编辑于 2021-8-7 17:11:40">2021-8-7 17:09
+							<time title="发布于 2021-7-22 20:31:44 | 编辑于 2021-8-7 16:59:04">2021-7-22 20:31
 							</time>
 						</div>
 					
@@ -807,7 +816,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							225 字
+							107 字
 						</div>
 					
 						
@@ -826,539 +835,15 @@ int main() &#123;
 		
 			
 				题目解析
-板子题。
+这是一道典型的 C++ 语言入门题。
 代码分析
-一个函数 baseNeg2()
+直接输入正整数 $n$ 再输出 $n \times 10$。
+或者输入字符串 $n$ 再输出 $n + ‘0’$。
+注意本题数据范围 $10^{18}$，卡 long long（使用方法 2 可无视）
 代码
 
 #include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-string baseNeg2(int N) &#123;
-	if (0 == N) &#123;
-		return &quot;0&quot;;
-	&#125;
-	stri...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/">LG - 行程码 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-7 11:10:41 | 编辑于 2021-8-7 17:01:44">2021-8-7 11:10
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.7k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							12 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				此文章需输入密码查看
-			
-		
-	</div>
-
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/06/LG-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/">LG - MC 之吃牛肉 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-6 17:25:39 | 编辑于 2021-8-7 17:01:21">2021-8-6 17:25
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.8k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							9 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				此文章需输入密码查看
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">LG - 公交车站 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-7 17:00:33">2021-8-6 13:53
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.9k 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							9 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				此文章需输入密码查看
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/05/LG-Hands-%E9%A2%98%E8%A7%A3/">LG - Hands - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-5 20:48:04 | 编辑于 2021-8-7 17:01:28">2021-8-5 20:48
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							139 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-这题看上去很难，但分析后就可以一个循环解决。
-每次取牌如果有一个连续的大于 $0$ 的数列，那就全部取出，取到其中的某一个数等于 $0$。
-代码分析
-边输入边累加，记住当 $x - last &lt; 0$ 时，就不要累加。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin/">WFR - 如何使用 Warfarin</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-5 13:59:32 | 编辑于 2021-8-5 20:16:20">2021-8-5 13:59
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Programming-Languages/">Programming Languages</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							198 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				什么是 Warfarin
-Warfarin 是一个由 C++ 编写而成的解释型语言。
-Warfarin 的特点
-
-
-变量，支持数字、字符串、布尔、数组（允许使用 a[&quot;test&quot;] 这样的语法）；
-
-
-函数定义、调用与递归、高阶函数、lambda 表达式；
-
-
-键盘与文件的 I/O 操作；
-
-
-if for while 语句；
-...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Warfarin/" rel="tag">Warfarin</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/">LG - 买二送一 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-31 19:28:13 | 编辑于 2021-8-7 16:59:52">2021-7-31 19:28
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							192 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-
-凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。
-
-可以使用排序来做。
-代码分析
-排序，建议偷懒使用 sort 函数，But 是降序排序，所以要写炒鸡简单的 cmp() 函数。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-i...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/31/LG-%E6%96%B9%E8%88%B1%E5%8C%BB%E9%99%A2-%E9%A2%98%E8%A7%A3/">LG - 方舱医院 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-31 19:25:09 | 编辑于 2021-8-7 17:00:41">2021-7-31 19:25
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							94 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-这是炒鸡淼的小学一年级数学应用题（（（
-代码分析
-由于本题过于淼所以不分析。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int main() &#123;
-	int a, b, c;
-	cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
-	co...
+using name...
 			
 		
 	</div>
@@ -1373,12 +858,8 @@ int main() &#123;
 
 
 
-<nav><ul class="pagination"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
+<nav><ul class="pagination"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item"><a aria-label="Previous Page" class="page-link" href="/categories/Solution/page/2/"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li><li class="page-item"><a class="page-link" href="/categories/Solution/">1</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item active"><span class="page-link" style="cursor: default;">3</span></li></ul></nav>
 
-		
-		
-		
-		
 		
 
 					<footer id="footer" class="site-footer card shadow-sm border-0">

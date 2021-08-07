@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>LG - 万恶的试卷 - 题解</title>
+      <link href="/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>既然题目说了 $a_i$ 可能很大，就是高精度了，<s>但我懒得写高精</s>，得用个不同的排序方法。</p><h3 id="代码分析">代码分析</h3><p>这题难就难在两个输出循环怎么搞，为了避免溢出，要先输出一半再输出一半。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;string a[1001];bool cmp(string a, string b) &#123;if (a.size() == b.size()) return a &gt; b;return a.size() &gt; b.size();&#125;int main() &#123;long long n;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; a[i];&#125;sort(a + 1, a + n + 1, cmp);for (int i = 1; i &lt;= n; i += 2) &#123;cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;&#125;for (int i = (n / 2) * 2; i &gt;= 1; i -= 2) &#123;cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;&#125;return 0;&#125;</code></pre><p>$$END$$</p><p>本文链接 <a href="https://ren-yc.github.io/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-万恶的试卷-题解/</a> 文章转载需注明出处</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LG - 捕食关系 - 题解</title>
+      <link href="/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>水题一道，输入后循环查找 $a_i$ $&gt;$ $b_j$。</p><h3 id="代码分析">代码分析</h3><p>时间复杂度 $O(nm)$</p><p>空间复杂度 $O(n + m)$</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, m, s = 0;cin &gt;&gt; n &gt;&gt; m;int a[20001] = &#123;0&#125;, b[20001] = &#123;0&#125;;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; a[i];&#125;for (int i = 1; i &lt;= m; i++) &#123;cin &gt;&gt; b[i];&#125;for (int i = 1; i &lt;= n; i++) &#123;for (int j = 1; j &lt;= m; j++) &#123;if (a[i] &gt; b[j]) &#123;s++;&#125;&#125;&#125;cout &lt;&lt; s &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><p>本文链接 <a href="https://ren-yc.github.io/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-捕食关系-题解/</a> 文章转载需注明出处</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LG - 负二进制 - 题解</title>
+      <link href="/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>板子题。</p><h3 id="代码分析">代码分析</h3><p>一个函数 <code>baseNeg2()</code></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;string baseNeg2(int N) &#123;if (0 == N) &#123;return &quot;0&quot;;&#125;string res(&quot;&quot;);int count = 0;while (N) &#123;int tmp = N % 2;res += (tmp + '0');if (1 == count % 2) &#123;N += tmp;&#125;N /= 2;count++;&#125;reverse(res.begin(), res.end());for (int i = 0; i &lt; res.size(); i++) &#123;if (res[i] == '/') res[i] = '1';&#125;return res;&#125;int main() &#123;int n;cin &gt;&gt; n;cout &lt;&lt; baseNeg2(n) &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><p>本文链接 <a href="https://ren-yc.github.io/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-负二进制-题解/</a> 文章转载需注明出处</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LG - 行程码 - 题解</title>
       <link href="/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/</url>
