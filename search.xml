@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LG - 光头强砍树 - 题解</title>
+      <link href="/2021/08/08/LG-%E5%85%89%E5%A4%B4%E5%BC%BA%E7%A0%8D%E6%A0%91-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/08/LG-%E5%85%89%E5%A4%B4%E5%BC%BA%E7%A0%8D%E6%A0%91-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>很淼，读入后循环判断输出就行了。</p><h3 id="代码分析">代码分析</h3><p>时间复杂度 $O(n)$</p><p>空间复杂度 $O(n)$</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, k, a[101] = &#123;0&#125;;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; a[i];&#125;cin &gt;&gt; k;for (int i = 0; i &lt; n; i++) &#123;if (a[i] != k) cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;&#125;cout &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><p>本文链接 <a href="https://ren-yc.github.io/2021/08/08/LG-%E5%85%89%E5%A4%B4%E5%BC%BA%E7%A0%8D%E6%A0%91-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/08/LG-光头强砍树-题解/</a> 文章转载需注明出处</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LG - 不存在的 1 + 1 = 1 - 题解</title>
       <link href="/2021/08/08/LG-%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84-1-1-1-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/08/08/LG-%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84-1-1-1-%E9%A2%98%E8%A7%A3/</url>
@@ -277,7 +302,7 @@
       <link href="/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><blockquote><p>凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。</p></blockquote><p>可以使用排序来做。</p><h3 id="代码分析">代码分析</h3><p>排序，建议偷懒使用 <code>sort</code> 函数，<strong>But</strong> 是降序排序，所以要写炒鸡简单的 <code>cmp()</code> 函数。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, a[100001], ans = 0;bool cmp(int x, int y) &#123;return x &gt; y;&#125;int main() &#123;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; a[i];&#125;sort(a + 1, a + n + 1, cmp);for (int i = 1; i &lt;= n; i += 3) &#123;ans += a[i] + a[i + 1];&#125;cout &lt;&lt; ans &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><p>本文链接 <a href="https://ren-yc.github.io/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/31/LG-买二送一-题解/</a> 文章转载需注明出处</p>]]></content>
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">  <script id="hbeData" type="hbeData" data-hmacdigest="b463159533534c38989735b2e2277d4ff42e1fe1e0106cd604cc86f2b4ac4a43">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c2f13af0f31a29ab62941722a1d1e58cc913994d61e26f80d5a2022ff1583750399acc50922d3047c95c1d158acdaec732c968259352af055866eddee426e32f3d0e6fa697c7de2cf709584ad3e5f1db9bb5e9c873c904bba0cd5238d8f55f19b47ce10abd11d8ffe04961184a64ef65436652d6d40b712ef4fe4f43fbc37f5d5c471031a9dde408522ec9d3caa93c03ed29de24b85464e8e2dbd7f8f0e2d4b9d0e4da22c53c3cb907e1bb9c0887d2fdbd5736f76fdfbca3893aea9aa77f99de8cbba19d277ef3a2456247d097109cfd535682634197abb716d3db1dc98a9820114fa3f0d453b425867539928f05989fa36d8551b739950a20b971e13deeb23332bdccc7325eca5d2920e25253012a27d9960423971e566faa84e0f33e04857214f53fb085908451967df0b88be41451c75083e1b7dec99d0035bf4f0acaa4c15fb2635e9957810ff0cf4abc65d5bb2ff7bb65d1f09568406e4a0894f294255458009ec23399a8f856bd004a58403f010efde1196c2b6f29d0e2d74efab605f301c1e934a4c18b5dbc4e413ce84f3ab3e7f710a6084434c83d1b6ced82f88514e548f668853f539d3f4d23945b9b2b977322d10a3c701cbcca638ae1694764dd4e480c0fac6c5b6302aa0c6af260c6146c0cc1a00a82baee82fcebda62072f22fce166589a1a2ae9231c627b576f7f7b61317bc55de40d3f851727a9ce9ccf6130a47406710f822599580f7d7bc02691043f177c599f2eee3a66d3b52484c9d8212339b5f459f4ebc0c58aa33f5ed2ad1274039ede019ac771ddcc7e7dccdc2cdd132e1df894099621f57d5251fd96e4865c96010cda340e62d0dfc3aecf37ba06f30640ef681e3d9ba7dac6c6de45af29891af30ce1580bc2c90db7f136815454a4efa7d8397c453bea6f62ff534b2190bd93e63f30089cf190aaab1ad92e0dd12549df78e0abe789d94654b0c5ebb5cd1ecfe3b73e88697373045293ca7f2bd09e7d3075f4bab6d9c98d94165883d0f081bfd5f0f845e3984760b7dfddf954fc192661a639a6fc3e9a351a3af298959f908ec81c8434d966b8370d9b2f012e783a726691a22bd44651c55e86c859d9d1b529c8d3bdbdeab8ab14843028b3c321392cac44ede0b5db794778aca1d08e5f3bb95983f01839c735514df399cf7f7cef22c72cf56464a47ca14d088a421171f816dee878f23fa2e345b900976728c3b8ebf009501ba7f93e38cb68b23f2f211836729e61ecdfd8d78cfea9e9e1bad177a9d6a7c8e5237704a61aadf244ac6336ec3a9008ec9d6db13fb82a0ba65a79295300954e16f3897e73f4c0794bb55c29b3f1bbffa6591feecb0d5d705fe4a73ab481ad2e1a06ca1a17fe6bb06ec942b7a5ba98f23bb610058772cb9a9ffe2cfd968c78109c6582995347188c990530cd7159017486b3810b94cbbd0bd147fa2f8a62ac890bb7921f34bedf6ef3d8cb1859716928bea7077e3480cf62d736ebacb5ed02da056804162050355001a5ccc85312d45158d1bb8ebbbec5a41e2f227d8355b12e963a94463bf60f0fc94cb39bdac2337c07d529155a8c2d063cbe9934b2e8faa671a3467c86cc923261bc9819ea721ce25cfcad5f5bfe3c564e0b4edd714687936182557ed23134890219e17cc10d88bfa642e82af658189a8d1b4ca52c9b8f6506aa1c5bf7ba74f3ec7bc7f6557e61242ee23bd6e07579cc2faecefd7649006a3f1fceefebe2a5a7817ac05af855c412874586af217e8bd575973ba3ca49f53fb63a0d154c75aaefcf751992bdac32abb1666165462f9f96d1144d5a68322e8f3e9e11454bac992e1dada44b649a78ffc80d52d666fae9ba37711eeebe151d3fcf667b39ec18fcc059b0ecd56d915abedde94405297ac6742ff7314d16d921f048213aad5b92457e1da1f9e99a86d151568f346732d9aa34a92c0</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
