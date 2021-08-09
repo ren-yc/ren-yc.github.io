@@ -4,7 +4,39 @@
 #endif
 using namespace std;
 
-const string VERSION = "Warfarin script 3.17";
+const string CUR_VER = "3-31";
+const string VERSION = "FF0 script 3.31";
+void checkUpdate() {
+	string command;
+	string ver;
+	
+	system("curl https://warfarinbloodanger.github.io/ff0-script/readme.md -o version.txt -s");
+	
+	ifstream fcin("version.txt");
+	if(!fcin) return;
+	
+	getline(fcin, ver);
+	if(ver != CUR_VER) {
+		cout << "New FF0 script version availdable." << endl;
+		cout << "Current: " << CUR_VER << endl;
+		cout << "Newest: " << ver << endl;
+		ifstream newest(("ff0-" + ver + ".cpp").c_str());
+		if(newest) {
+			cout << "You have downloaded the newest version of ff0 script." << endl;
+		}
+		else {
+			cout << endl;
+			cout << "Downloading source code from github..." << endl;
+			for(int i = 0; i < ver.length(); i++) if(ver[i] == ' ') ver[i] == '-';
+			system(("curl https://warfarinbloodanger.github.io/ff0-script/ff0-" + ver + "/FF0.cpp -o ff0-" + ver + ".cpp").c_str());
+			cout << "Update Finished." << endl;
+			cout << "The new source file: ff0-" << ver << ".cpp." << endl; 
+		}
+	}
+	
+	fcin.close();
+	system("del version.txt"); 
+}
 
 bool mParse = true;
 bool mCompile = false;
@@ -1184,7 +1216,7 @@ Value execBlock(VS);
 void setVarRef(String, Value);
 void registFunc(String func, VS list, VS ptype, VS block);
 
-void gc() {
+void gc(Value v) {
 	BEGINL
 	bool canVisit[ARRCNT];
 	memset(canVisit, false, sizeof(canVisit));
@@ -1194,6 +1226,7 @@ void gc() {
 			canVisit[val.refVal / ARR_GROW] = true;
 		}
 	}
+	if(v.type == T_REF) canVisit[v.refVal / ARR_GROW] = true;
 	vector<String> allIndex = usedLocalVar[usedLocalVar.size() - 1];
     for(int i = 0; i < allIndex.size(); i++) {
     	String local = callStack[callStack.size() - 1] + allIndex[i];
@@ -1494,8 +1527,9 @@ Value callFunc(Value func, vector<Value> allParameter, bool level) {
             returnVal = execBlock(block);
         }
         catch(Value retException) {
-            returnVal = retException;
-            gc();
+            returnVal = retException; 
+            gc(returnVal);
+            
    			callStack.pop_back();
    			usedLocalVar.pop_back();
             return returnVal;
@@ -1505,7 +1539,7 @@ Value callFunc(Value func, vector<Value> allParameter, bool level) {
         returnVal = execBlock(block);
     }
 
-    gc();
+    gc(returnVal);
     callStack.pop_back();
     usedLocalVar.pop_back();
     return returnVal;
@@ -2588,6 +2622,7 @@ int main(int argc, char ** argv) {
 	int retval = 0;
     init();
     initUncompile();
+    checkUpdate();
     vector<Value> args;
     if(argc == 1) {
         cout << VERSION << endl;
