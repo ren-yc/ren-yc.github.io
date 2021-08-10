@@ -11,12 +11,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目解析 这是一道炒鸡淼的 C++ 模拟题，也不卡 long long。 代码分析 输入正整数 $n$，然后循环输入 $x$ 和 $y$。 一边输入一边计算，速度快 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	int n, x, y, z; 	cin &gt;&gt; n; 	for (in">
+	<meta name="description" content="题目解析这是一道炒鸡淼的 C++ 模拟题，也不卡 long long。 代码分析输入正整数 $n$，然后循环输入 $x$ 和 $y$。 一边输入一边计算，速度快 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123;     int n, x, y, z;     cin &gt;&gt; n;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 斗罗大陆之武魂融合技 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/07/25/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E6%AD%A6%E9%AD%82%E8%9E%8D%E5%90%88%E6%8A%80-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="题目解析 这是一道炒鸡淼的 C++ 模拟题，也不卡 long long。 代码分析 输入正整数 $n$，然后循环输入 $x$ 和 $y$。 一边输入一边计算，速度快 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	int n, x, y, z; 	cin &gt;&gt; n; 	for (in">
+<meta property="og:description" content="题目解析这是一道炒鸡淼的 C++ 模拟题，也不卡 long long。 代码分析输入正整数 $n$，然后循环输入 $x$ 和 $y$。 一边输入一边计算，速度快 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123;     int n, x, y, z;     cin &gt;&gt; n;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-25T01:29:59.000Z">
 <meta property="article:modified_time" content="2021-08-07T09:00:52.914Z">
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							132 字
+							130 字
 						</div>
 					
 						
@@ -694,29 +694,26 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目解析">题目解析</h3>
-<p>这是一道炒鸡淼的 C++ 模拟题，也不卡 <code>long long</code>。</p>
-<h3 id="代码分析">代码分析</h3>
-<p>输入正整数 $n$，然后循环输入 $x$ 和 $y$。</p>
+		<h3 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h3><p>这是一道炒鸡淼的 C++ 模拟题，也不卡 <code>long long</code>。</p>
+<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>输入正整数 $n$，然后循环输入 $x$ 和 $y$。</p>
 <p><strong>一边输入一边计算，速度快</strong></p>
-<h3 id="代码">代码</h3>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+
+<pre><code class="lang-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main() &#123;
-	int n, x, y, z;
-	cin &gt;&gt; n;
-	for (int i = 0; i &lt; n; i++) &#123;
-		cin &gt;&gt; x &gt;&gt; y;
-		z = (x + y) * 2;
-		cout &lt;&lt; z &lt;&lt; endl;
-	&#125;
-	return 0;
+    int n, x, y, z;
+    cin &gt;&gt; n;
+    for (int i = 0; i &lt; n; i++) &#123;
+        cin &gt;&gt; x &gt;&gt; y;
+        z = (x + y) * 2;
+        cout &lt;&lt; z &lt;&lt; endl;
+    &#125;
+    return 0;
 &#125;
 </code></pre>
-<p>$$END$$</p>
-<p>本文链接 <a href="https://ren-yc.github.io/2021/07/25/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E6%AD%A6%E9%AD%82%E8%9E%8D%E5%90%88%E6%8A%80-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/25/LG-斗罗大陆之武魂融合技-题解/</a> 文章转载需注明出处</p>
+<script type="math/tex; mode=display">END</script><p>本文链接 <a href="https://ren-yc.github.io/2021/07/25/LG-斗罗大陆之武魂融合技-题解/">https://ren-yc.github.io/2021/07/25/LG-斗罗大陆之武魂融合技-题解/</a> 文章转载需注明出处</p>
 
 	</div>
 
@@ -787,10 +784,8 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 斗罗大陆之武魂融合技 - 题解',
-	    description : '题目解析
-这是一道炒鸡淼的 C++ 模拟题，也不卡 long long。
-代码分析
-输入正整数 $n...',
+	    description : '题目解析这是一道炒鸡淼的 C++ 模拟题，也不卡 long long。
+代码分析输入正整数 $n$，...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/07/25/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E6%AD%A6%E9%AD%82%E8%9E%8D%E5%90%88%E6%8A%80-%E9%A2%98%E8%A7%A3/'
