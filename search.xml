@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LG - 李白的酒 - 题解</title>
+      <link href="/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>淼题，只需要逆推累加出结果。</p><h3 id="代码分析">代码分析</h3><p>循环逆推。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n;double tot = 0;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;tot++;tot /= 2;&#125;cout &lt;&lt; fixed &lt;&lt; setprecision(5) &lt;&lt; tot &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><p>本文链接： <a href="https://ren-yc.github.io/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/14/LG-李白的酒-题解/</a><br>作者：ren-yc<br>本文采用 CC BY-NC-SA 4.0 协议</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LG - 满二叉树 - 题解</title>
       <link href="/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/</url>
