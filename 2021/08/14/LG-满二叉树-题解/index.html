@@ -6,21 +6,22 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/press.js"></script>
 	
-	<title>工具 - 任宇宸的个人博客</title>
+	<title>LG - 满二叉树 - 题解 - 任宇宸的个人博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="Minecraft 相关 Minecraft 联机全教程 Fabric 官网 OI 相关 OI Wiki 冬日绘板">
-<meta property="og:type" content="website">
-<meta property="og:title" content="工具">
-<meta property="og:url" content="https://ren-yc.github.io/tools/index.html">
+	<meta name="description" content="此文章需输入密码查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LG - 满二叉树 - 题解">
+<meta property="og:url" content="https://ren-yc.github.io/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="Minecraft 相关 Minecraft 联机全教程 Fabric 官网 OI 相关 OI Wiki 冬日绘板">
+<meta property="og:description" content="此文章需输入密码查看">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-27T10:14:04.000Z">
-<meta property="article:modified_time" content="2021-08-12T04:11:41.500Z">
+<meta property="article:published_time" content="2021-08-14T01:13:10.000Z">
+<meta property="article:modified_time" content="2021-08-14T01:19:49.310Z">
 <meta property="article:author" content="任宇宸">
+<meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -495,7 +496,7 @@
 			
 			
 				<ul id='leftbar_part1_menu' class='leftbar-menu'>
-					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/friends'>友链</a></li><li class='leftbar-menu-item current'><a href='/tools'>工具</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/friends'>友链</a></li><li class='leftbar-menu-item'><a href='/tools'>工具</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
 				</ul>
 			
 			<div class="card-body text-center leftbar-search-button">
@@ -507,18 +508,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">任宇宸的个人博客</h6>
 							<nav class="site-state">
@@ -620,18 +642,25 @@
 		
 		
 			
-
 	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/tools/index.html">工具</a>
+		<a class="post-title" href="/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/">LG - 满二叉树 - 题解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-27 18:14:04 | 编辑于 2021-8-12 12:11:41">2021-7-27 18:14
+							<time title="发布于 2021-8-14 9:13:10 | 编辑于 2021-8-14 9:19:49">2021-8-14 9:13
 							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
 						</div>
 					
 						
@@ -649,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							17 字
+							2.1k 字
 						</div>
 					
 						
@@ -657,7 +686,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							6 分钟
 						</div>
 					
 		</div>
@@ -665,19 +694,157 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="Minecraft-相关">Minecraft 相关</h4>
-<p><a target="_blank" rel="noopener" href="https://ak-ioi.com/227-remote-minecraft/">Minecraft 联机全教程</a></p>
-<p><a target="_blank" rel="noopener" href="https://fabricmc.net">Fabric 官网</a></p>
-<h4 id="OI-相关">OI 相关</h4>
-<p><a target="_blank" rel="noopener" href="https://next.oi-wiki.org">OI Wiki</a></p>
-<p><strong>冬日绘板</strong></p>
+		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
+  <script id="hbeData" type="hbeData" data-hmacdigest="dbc7719662978ccca590051e7828cc523cc64a674cef5352c3199e75c7f535b7">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c2f13af0f31a29ab62941722a1d1e58cca9b149f4324a384c55dc7e1d9305aaa34b0fa2aadb210bcf0dbcfb3a92282493108464d848f48602032cb6d6a737601d6cf10d95dea0fd637ebb9e302c544b35cfe920b596b5de1684c530ed348910a8c33db845cbaa2483715f11d1e0e8ddd2c17a2556eebb480fd005ce45f0fad862b3d262d4583dbedf9ebb2903f570fa5ece27dcc29e748f6be714ed2ce643d73099a8f25aba6b64a2e6180914c70a42db4ffe8164d77f2f76709bfe4df86c0a2e52a793ef37e654c9b7690eb5dfdeb80b3f8709e6152fe14ab5b535c905bef21b231ec914a0d8bea690ed607e301af5bb80142a4f6133649320b67de7d844bbac9402f6adb5ea0a1d7571fb2b3f0075d75993749cd282757eeaaa88a781fc164dc282cc9de14cd8c5a8e1b4f86f457007f3e7ee1c149edfa55389e2ee0f9b643d29c0aeba0d82a57f13879862977eef33390a8d937d849a9dca6dad0f8cdedebd2087815e480d268b8f50b1ce280d2ee1b64f9bf5c617b8588fb964a2138d6b0d97ed98f2480835ebc6368daa00c1a89d11c63d3639229c133f46df578197bdc041d289a431b5b881a16dce34da2a349aeb7d9778721e6919eac3d9a69779735f9c116252550bf2b0c18aa7b8808d2ee7115ca53b8e14a9acbd8347d7259f3bbd57e78bf7becf0b8fba75776c3d18bd54a40a49c78cb404f8ae254d2eb36821f90b7f12ebeb0b9687d404e70523449c719641dcce72517e2e654bd5f685ba03be4d44df520a90902af93db7daaefd38ef2f3016e088025cbd63feb97d8570777c12fea28b7a8205ab5dd4d081902e8042d710ede7e0320e248710705ae9b583630bbb29f70d9fb3b4014e4795700f1170299e0e72c4b41523e02fb683ac6d69d0c9753368a68a0ba55c7b61e72f63b81a0d5b5667705a8a227b6faff06984c1eab7559c6b044b75e59fe045670c8fb6329807c5016f38d21c2cc5c5d7343dbbf832020f1e25bfb36c826c851ce763c0dd718de53a5708166a5ee274d1bdd369afb018c41f84bfa884ab9950aac404da29ae36747e8f5a1e2199d6236874609851d1a19429aaa73874a8f1834401d63309b63ebaa3f1cb760f7f989891284eb39935854a5561881bc0fbd3fe94d9542d35f591fcb55668601d4ba6cced4090e9751a64994794836be5677656550d19853d01630ae344cda3d00045acce51925032b2a111ef5bae71dd48c150d490318ee8882f3d6c3b23de27f6439ffe55d689ba50a88883fb463312af38f1724e6ab97350267302f5eeed5f13acc4bd98e1a1eefe1b3be1103192c15e098c2d6bc947f6033208b840cc298981cea8cafa16899d8b1bb8719f9e249615586420b92039b2a6125a7c2cfa818521e8c4c599217c335462e4a0832135db70fe1471321c0cb1bebe53f64737359adec6131981b32fc91814fe0642369592a3c7417830a7759ecb9f42b83416044bce297459f8464cd07423e01b9d6dfc000a014c085d9c61b8ff3309a9004559a92101b5526a1149d980c71119f59042678377e2a01fb94be1b4cc8aea7ebcb64b5fc4e2d2bfd3b5588fc3cccb40f84ce249175c57e5b166fca10d248598d4be1803cb03fa5a25a0e99ba3df1e4bb06e331a0660b4cf606b53e4881de3711041f51b0893e830d8b1685bc1c73fc4c4f51d4b5128c767e49a9f6998217d6baffddf2be6d1de87e697e23961a1e63227a2d76c83ed54b2e7fedffc7d38c7b997cf861b0d51e65bb7f83b27182c1d540adb39c9ee71acdbeba09b793c7129c70c13572fecd960c52e928dc0ea766241a7a149db54a8e778c59ab56181b7a4af7390c7c3a93cc8d0e9c9a0780f5b50cc2fdc8e43d2896afe8aed1bb1a986a09ddd0c97fbf513508a7f13d7bae7124b8c399095d304fe718dc829a84d9553279a7f825705bf7832db6b32c860b58936f997abd1482d7af01276436b340db4d05b0b76f7aabd16f73b750cda</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+	</div>
 
-<div class="bilibili">
-	<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=843549010&bvid=BV1J54y147Cu&cid=276954140&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" danmaku = 0> </iframe>
+	
+
+	
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
+		</div>
+	
+</article>
+
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/&text=LG - 满二叉树 - 题解" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : 'LG - 满二叉树 - 题解',
+	    description : '
+  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://ren-yc.github.io/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+<div id="post_comment" class="card shadow-sm">
+	<div id="gitalk-container"></div>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+		clientID: 'aea63c24701c1f7f0815',
+		clientSecret: '3f33573a77bf4349dbee91c4897f9ac37bbf16e5',
+		repo: 'blog-comments',
+		owner: 'ren-yc',
+		admin: ['ren-yc'],
+		id: decodeURI('{{ page.url }}'),
+		distractionFreeMode: false
+	})
+	gitalk.render('gitalk-container');
+</script>
+
 </div>
 
-	</div>
-</article>
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/12/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-IDM/" rel="next"> TLS - 如何使用 IDM</a></div></div>
+
 
 
 		
