@@ -11,15 +11,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目解析 题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。 代码分析 本题要点： 要定义结构体，结构体中要有总时间如 TOT 输入的时候记得用 scanf()，这个函数可以无视中间的 : scanf() 的参数是指针类型 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  struct NODE &amp;#123; 	i">
+	<meta name="description" content="此文章需输入密码查看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 公交车站 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="题目解析 题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。 代码分析 本题要点： 要定义结构体，结构体中要有总时间如 TOT 输入的时候记得用 scanf()，这个函数可以无视中间的 : scanf() 的参数是指针类型 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  struct NODE &amp;#123; 	i">
+<meta property="og:description" content="此文章需输入密码查看">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-06T05:53:20.000Z">
-<meta property="article:modified_time" content="2021-08-10T08:10:28.714Z">
+<meta property="article:modified_time" content="2021-08-14T01:41:09.212Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
@@ -651,7 +651,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-10 16:10:28">2021-8-6 13:53
+							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-14 9:41:09">2021-8-6 13:53
 							</time>
 						</div>
 					
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							476 字
+							2.9k 字
 						</div>
 					
 						
@@ -686,7 +686,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							9 分钟
 						</div>
 					
 		</div>
@@ -694,57 +694,18 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目解析">题目解析</h3>
-<p>题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。</p>
-<h3 id="代码分析">代码分析</h3>
-<p>本题要点：</p>
-<p>要定义结构体，结构体中要有总时间如 <code>TOT</code></p>
-<p>输入的时候记得用 <code>scanf()</code>，这个函数可以无视中间的 <code>:</code></p>
-<p><code>scanf()</code> 的参数是指针类型</p>
-<h3 id="代码">代码</h3>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-struct NODE &#123;
-	int HH, MM, TOT;
-&#125; a[1001], s[10001], t[10001];
-
-int main() &#123;
-	int n, m, tmp, d[1001] = &#123;0&#125;;
-	cin &gt;&gt; n &gt;&gt; m;
-	tmp = n;
-	for (int i = 0; i &lt; n; i++) &#123;
-		scanf(&quot;%d:%d %d&quot;, &amp;a[i].HH, &amp;a[i].MM, &amp;d[i]);//输入记得带格式
-		a[i].TOT = a[i].HH * 60 + a[i].MM;
-	&#125;
-	for (int i = 0; i &lt; m; i++) &#123;
-		scanf(&quot;%d:%d %d:%d&quot;, &amp;s[i].HH, &amp;s[i].MM, &amp;t[i].HH, &amp;t[i].MM);//同上
-		s[i].TOT = s[i].HH * 60 + s[i].MM;
-		t[i].TOT = t[i].HH * 60 + t[i].MM;
-		for (int j = 0; j &lt; n; j++) &#123;
-			if (s[i].TOT &lt;= a[j].TOT &amp;&amp; t[i].TOT &gt;= a[j].TOT &amp;&amp; d[j] != 0) &#123;
-				cout &lt;&lt; a[j].TOT - s[i].TOT &lt;&lt; endl;
-				d[j]--;
-				goto END;
-			&#125; else if (tmp != 1) &#123;//敲黑板
-				tmp--;
-			&#125; else &#123;
-				cout &lt;&lt; &quot;Leave&quot; &lt;&lt; endl;
-				tmp = n;//记得重置
-				goto END;//goto跳转到结尾，也可以用break
-			&#125;
-		&#125;
-		END:;
-	&#125;
-	return 0;
-&#125;
-</code></pre>
-<p>$$END$$</p>
-<p>本文链接： <a href="https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/06/LG-公交车站-题解/</a><br>
-作者：ren-yc<br>
-本文采用 CC BY-NC-SA 4.0 协议</p>
-
+		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
+  <script id="hbeData" type="hbeData" data-hmacdigest="a00af104eebee4595aa94ccc5291c9d5ce509148f307eaddfe96e46e2cd1a544">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c2f13af0f31a29ab62941722a1d1e58cc3bd371f049ef504a3c48130505d3f692d241d7fcd45db58d6d2f131d4d17a99d732dad59161cb1c9bd1d571afdef6e6a6f9b421b6554029c4e3fdce1ca6556ec3c93a9bd1e558ec2eacbb417b8d73e8dd6bcec263181b9903bde5cced9289c21e41baa3ae5fa595ca4cdfb56dff44c56d7d56e411350d7139ea3d00bf7c1663e2a68c0943d4d100415f6fe2e3b5e38b31d3c31a08f79127d964a8cdca20e1e4b862fe7ea67ea2bcbec7b4c9c40e2bec5d96c662104258c95f7673f05ef6365f39c651013922ee4ece0bbaf26c2985c214041c97b7942c8c6bb7c2250957ffc7c4c4a4ea81a5d577741e96115bb36d728c3bfb0b27379b17c5f23f3d6ade6a7112e056c1f1f1093328ca0e58c6e4d38181deae0aabe34dfb8bddb6207a74853a3013794b10828d08fbdb5e9ffaced2a5b842bc4561fd2f4fe7c52ad56b3b1fa29bc7012d8dc4c8813d7aec3bcf6ca4467d0eb52f9e4b2ba9b52025d920401172279528ba1f10712f8bcf80eb4b945b1e3ae402d0c7afb59e19e59bbac24be72a984bfe7ee74a1bc63fbd889e87e1cee607ee91f44f2d090b99e7c91b7bbc390572927d2c87580389f0063b2c5e3adbbfddc762027f4bc60bc39fa98746e08d9b5eca5190699c97d5a3796e936ca0f894a39c7a75ca4679828913366c98bdc18cde8e41ff0d7b778987d2cdd67f5051d726bd720a0a135e4e222c8ff57851cfa2133f7a3256940c1c0e21f855a0738732368124f1f2b3494e746371f55ade9ae98b82a61d8439675b91dd6764c427bc262b9b1db24593f9a56a14b5831ab4274f0b9349091f54c3aa8b71a3c56cc190fed05943d0f068bc11eb375fb681390421ebce6db004a623bb2e0708de794f753e84a185417b45a14c9e058a9fc157851e5ec16f9f7f2f5fc4482fd59b4e7f4129433e6b276c04c7fc2506fb5a2baaa005807d9076f57dae41b6543e4949ad8f0cd739f16ad9f6a8c9689789e75e21db6b3756a9550ac6ab1ebfbf2596443fa8354f944a32a438fdf46fcb055130150e7a73fb7880aed50acef5f3b13070e253234bbf42ce27dc3d222412ac83906a77edfbd7f1515380e4b1882ef7ed65d68610890fa05a67bbd6ded9fe4913cb6e2a3b38c90580f8dcc04481ed6219985d014357a3a1e6882e324fdf8b746236573fa1f9d58f77fd78b9ba86b111fdbecc62ae81a985db7961fba1056f1c771cb990cb0d7455a23f128449c78d7264ca4fe2fa19e79600c66c935ae6bab724fecaf44f91718c3d2e319fe7e7f5fc25cdedf0e2f5c858af103e46f971f511e8aaceee273181acc003d30d45977606d835b2f5a51d73210393dc12627f7e3379e60d49fd3a54e5b04c573912c311aee5bfbd8e34929764f0493c43bc879253f24ff85c2cdf654501160443e39e4d4bb0c9c5872fc47bc7971f754d90a34ca1f253509313ff892238b0d12cd511e55cc3c7615eb480ad96887a5ac717593be8f62e2f48e6bfc3a55edc71d840fe45a725b7c529ae147b021548a060b56fc6df0455689923514164ecb669af03e7a0fdadb258f788f20380ab285296d64362778a8f152755d2079d8854ad218cebc2dc8f0cc45d0ceb8bb0ee141a17978f7d4a6d3e658b54c6cef13a33ea01b2629278097632c03cd244c52994da3d7e997e1bfdf216740ad8897748e4ff0427f7683593fee15376d327ca6caa60adef81c2cc7d94faf92632d9422d7a63332d43e24e729e00761b0f37f3e34bd6779dc61e0d7a4bd40968afe087544693af2433fb30af1d6bce555adf82e46c272c68a526024091435e2737746fc4b4684924fd9de09175f94046f4ad1dbecbc5c7e1708b5ec8714c6eb16d0678bbbc39ec0bacf8479f9df6391613ebe7f7b39d0654ce01593b15f6902b79730684ba261fe2c19c6980fb68723ab662c0fcaf2bb945048de6e7f867caea056fc6f4b888cc778ca1bd460156bbad81f42e988f84a1c459d6fb2fb24f5a8cc725ddaf2dcb169f4644964c750ee091ba86a81fcbfe945b79f399f8a8e3805134f53ccdf1327b6f82c9bf5c84e7b8a27a9cd2d4f7e6e9ccc4fc072a154fd11105e9a54ac2156e6683a5506bf5a2671f114bfa1a5102079d09068efc3539bdda1a3cd581423dbc1fc8c2cf5f0a44bf8dcc454c1c20bec959ce24dcfe37a90f0e5e2a3a6cafb3c8d8ab80c9f0960c7fe42303289e2859139bd093d84eb15c472db802ca56aa68d0c5e2bb81194f168ddeb55fae67b3939c45326272a59afdd2df73e24aa9491bfb5df1c851164295e32201144d1f7108af5d9f7a1fb7e2b5906a41b3006f0113f18bc2c1db6cb662713cca150afc631f17268134668ddee7f61c9ae73e08424d79064ceae63e625965695482f46eabf8a961b502e9149d47ad31044520ecba7d3999d9ba2d247e111d91e2e223692166056031911ab3ca91399c22bd8722dc9b5d07b8ee69aa6267a52281bd0497a0c0955abec3942afce4caf68680137df28ee326f99e786f8372e5cd929d549966db46f012fa55cdc733d95c8dc9a5c1c34de569f7fdab2a880128bda10dbb6b11ca02832cfd691bb391dbb073986a44f2ba3c8df82831ea4e09c273f5cc8db15999de7caeb65658f6b7a653ac49c148ab9868767b7ee22d7afcab363710bd1c65ec67ab00b825681ac39ccbaf8ba756fc28f068e101d00877521c5f9da15726217aac6ac305d6db4e5dbb9896a4b208a43c75eea302c94fa795cc289535c3dd659e78021121af8d3335e6f5933c1e6346cf45b95c911710b8b7d1960744d4e89c51e11eaf9ee2a7236ad3c67ee95768346f012bfea42909fdaa3fcf869fdd18232e0edf1f8e5731b697d04f8e845a9a345a7652758acc04572f82641e4fe77aa65c148647a8f84d9f34d898acfa2db85c2187e1b6eba9479c4088775b16bdd60325af90ff6636486c67bfdc59c1d996bca1c1e26b6e6c8a46fc690b4</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
 	</div>
 
 	
@@ -814,10 +775,8 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 公交车站 - 题解',
-	    description : '题目解析
-题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。
-代码分析
-本题要点...',
+	    description : '
+  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/'
