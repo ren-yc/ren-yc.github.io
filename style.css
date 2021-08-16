@@ -10,12 +10,12 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @charset "utf-8";
 
 :root{
-	--themecolor: #5e72e4;
+	--themecolor: #0026ff;
 	--card-radius: 4px;
 }
 html.themecolor-toodark.darkmode{
-	--themecolor: #5e72e4 !important;
-	--themecolor-light: #8a98eb !important;
+	--themecolor: #0026ff !important;
+	--themecolor-light: #0026ff !important;
 }
 
 body{
