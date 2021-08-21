@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LG - Killer Queen - 题解</title>
+      <link href="/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>搜索题，在上下左右都搜一遍就好了。</p><h3 id="代码分析">代码分析</h3><p>先全部读入然后标记二维数组。</p><p>然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} = 2$，则输出 <code>YES</code>，反之输出 <code>NO</code>。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int t, n, qx, qy, kx, ky, tx, ty, a[1001][1001];void f(int p, int q) &#123;int k1[] = &#123;0, 0, 1, -1, 1, -1, -1, 1&#125;;int k2[] = &#123;1, -1, 0, 0, 1, -1, 1, -1&#125;;a[p][q] = 2;for (int i = 0; i &lt; 8; i++) &#123;int xx = p + k1[i], yy = q + k2[i];if (xx &gt;= 1 &amp;&amp; xx &lt;= n &amp;&amp; yy &lt;= n &amp;&amp; yy &gt;= 1 &amp;&amp; a[xx][yy] == 0) &#123;f(xx, yy);&#125;&#125;&#125;int main() &#123;cin &gt;&gt; t;while (t--) &#123;cin &gt;&gt; n &gt;&gt; qx &gt;&gt; qy &gt;&gt; kx &gt;&gt; ky &gt;&gt; tx &gt;&gt; ty;for (int j = n; j &gt;= 1; j--) &#123;a[j][qy] = 1;a[qx][j] = 1;&#125;int k = qx, l = qy;while (k &gt;= 1 &amp;&amp; l &gt;= 1) &#123;a[k][l] = 1;k--;l--;&#125;k = qx;l = qy;while (k &lt;= n &amp;&amp; l &lt;= n) &#123;a[k][l] = 1;k++;l++;&#125;k = qx;l = qy;while (k &lt;= n &amp;&amp; l &gt;= 1) &#123;a[k][l] = 1;k++;l--;&#125;k = qx;l = qy;while (k &gt;= 1 &amp;&amp; l &lt;= n) &#123;a[k][l] = 1;k--;l++;&#125;f(kx, ky);if (a[tx][ty] == 2) &#123;cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125;memset(a, 0, sizeof(a));&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LG - 李白的酒 - 题解</title>
       <link href="/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/</url>

@@ -6,20 +6,20 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/press.js"></script>
 	
-	<title>LG - 木棍 - 题解 - 任宇宸的个人博客</title>
+	<title>LG - Killer Queen - 题解 - 任宇宸的个人博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目解析 题目说  Bob 想知道至少他需要去掉多少根。  所以我们可以利用 “三角形两边之和大于第三边” 的性质来做。 代码分析 不解释。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	long long n, tmp, a &#x3D; 1, b &#x3D; 2; 	cin &gt;&gt; n; 	if">
+	<meta name="description" content="题目解析 搜索题，在上下左右都搜一遍就好了。 代码分析 先全部读入然后标记二维数组。 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} &#x3D; 2$，则输出 YES，反之输出 NO。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int t, n, qx, qy, kx, ky, tx, ty, a[1001][1001]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LG - 木棍 - 题解">
-<meta property="og:url" content="https://ren-yc.github.io/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/index.html">
+<meta property="og:title" content="LG - Killer Queen - 题解">
+<meta property="og:url" content="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="题目解析 题目说  Bob 想知道至少他需要去掉多少根。  所以我们可以利用 “三角形两边之和大于第三边” 的性质来做。 代码分析 不解释。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	long long n, tmp, a &#x3D; 1, b &#x3D; 2; 	cin &gt;&gt; n; 	if">
+<meta property="og:description" content="题目解析 搜索题，在上下左右都搜一遍就好了。 代码分析 先全部读入然后标记二维数组。 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} &#x3D; 2$，则输出 YES，反之输出 NO。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int t, n, qx, qy, kx, ky, tx, ty, a[1001][1001]">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-07T12:48:45.000Z">
-<meta property="article:modified_time" content="2021-08-07T12:50:53.797Z">
+<meta property="article:published_time" content="2021-08-21T03:49:43.000Z">
+<meta property="article:modified_time" content="2021-08-21T03:53:29.282Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
@@ -645,13 +645,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/">LG - 木棍 - 题解</a>
+		<a class="post-title" href="/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/">LG - Killer Queen - 题解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-7 20:48:45 | 编辑于 2021-8-7 20:50:53">2021-8-7 20:48
+							<time title="发布于 2021-8-21 11:49:43 | 编辑于 2021-8-21 11:53:29">2021-8-21 11:49
 							</time>
 						</div>
 					
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							183 字
+							602 字
 						</div>
 					
 						
@@ -686,7 +686,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -695,39 +695,79 @@
 
 	<div class="post-content" id="post_content">
 		<h3 id="题目解析">题目解析</h3>
-<p>题目说</p>
-<blockquote>
-<p>Bob 想知道至少他需要去掉多少根。</p>
-</blockquote>
-<p>所以我们可以利用 “三角形两边之和大于第三边” 的性质来做。</p>
+<p>搜索题，在上下左右都搜一遍就好了。</p>
 <h3 id="代码分析">代码分析</h3>
-<p>不解释。</p>
+<p>先全部读入然后标记二维数组。</p>
+<p>然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} = 2$，则输出 <code>YES</code>，反之输出 <code>NO</code>。</p>
 <h3 id="代码">代码</h3>
 <p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
 <pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
+int t, n, qx, qy, kx, ky, tx, ty, a[1001][1001];
+
+void f(int p, int q) &#123;
+	int k1[] = &#123;0, 0, 1, -1, 1, -1, -1, 1&#125;;
+	int k2[] = &#123;1, -1, 0, 0, 1, -1, 1, -1&#125;;
+	a[p][q] = 2;
+	for (int i = 0; i &lt; 8; i++) &#123;
+		int xx = p + k1[i], yy = q + k2[i];
+		if (xx &gt;= 1 &amp;&amp; xx &lt;= n &amp;&amp; yy &lt;= n &amp;&amp; yy &gt;= 1 &amp;&amp; a[xx][yy] == 0) &#123;
+			f(xx, yy);
+		&#125;
+	&#125;
+&#125;
+
 int main() &#123;
-	long long n, tmp, a = 1, b = 2;
-	cin &gt;&gt; n;
-	if (n &lt; 3) &#123;
-		cout &lt;&lt; 0 &lt;&lt; endl;
-		return 0;
+	cin &gt;&gt; t;
+	while (t--) &#123;
+		cin &gt;&gt; n &gt;&gt; qx &gt;&gt; qy &gt;&gt; kx &gt;&gt; ky &gt;&gt; tx &gt;&gt; ty;
+		for (int j = n; j &gt;= 1; j--) &#123;
+			a[j][qy] = 1;
+			a[qx][j] = 1;
+		&#125;
+		int k = qx, l = qy;
+		while (k &gt;= 1 &amp;&amp; l &gt;= 1) &#123;
+			a[k][l] = 1;
+			k--;
+			l--;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &lt;= n &amp;&amp; l &lt;= n) &#123;
+			a[k][l] = 1;
+			k++;
+			l++;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &lt;= n &amp;&amp; l &gt;= 1) &#123;
+			a[k][l] = 1;
+			k++;
+			l--;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &gt;= 1 &amp;&amp; l &lt;= n) &#123;
+			a[k][l] = 1;
+			k--;
+			l++;
+		&#125;
+		f(kx, ky);
+		if (a[tx][ty] == 2) &#123;
+			cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;
+		&#125; else &#123;
+			cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;
+		&#125;
+		memset(a, 0, sizeof(a));
 	&#125;
-	for (int i = 2; a + b &lt;= n; i++) &#123;
-		long long c = a + b;
-		a = b;
-		b = c;
-		tmp = i;
-	&#125;
-	cout &lt;&lt; n - tmp - 1 &lt;&lt; endl;
 	return 0;
 &#125;
 </code></pre>
 <p>$$END$$</p>
 <blockquote>
 <p>本文作者：ren-yc<br>
-本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-木棍-题解/</a><br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-题解/</a><br>
 版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</p>
 </blockquote>
 
@@ -782,7 +822,7 @@ int main() &#123;
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/&text=LG - 木棍 - 题解" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/&text=LG - Killer Queen - 题解" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -799,16 +839,15 @@ int main() &#123;
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : 'LG - 木棍 - 题解',
+	    title : 'LG - Killer Queen - 题解',
 	    description : '题目解析
-题目说
-
-Bob 想知道至少他需要去掉多少根。
-
-所以我们可以利用 “三角形两边之和大于第...',
+搜索题，在上下左右都搜一遍就好了。
+代码分析
+先全部读入然后标记二维数组。
+然后上下左右搜...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://ren-yc.github.io/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/'
+	    source : 'https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -872,7 +911,7 @@ Bob 想知道至少他需要去掉多少根。
 </div>
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2021/08/08/LG-%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84-1-1-1-%E9%A2%98%E8%A7%A3/" rel="prev"> LG - 不存在的 1 + 1 = 1 - 题解</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/" rel="next"> LG - 苹果树 - 题解</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/" rel="next"> LG - 李白的酒 - 题解</a></div></div>
 
 
 
