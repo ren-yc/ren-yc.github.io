@@ -522,7 +522,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">34</span>
+										<span class="site-state-item-count">35</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -592,7 +592,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Other/" rel="tag">Other <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">30</span></a><a class="badge badge-secondary tag" href="/categories/Tools/" rel="tag">Tools <span class="tag-num">1</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Other/" rel="tag">Other <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">31</span></a><a class="badge badge-secondary tag" href="/categories/Tools/" rel="tag">Tools <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -607,7 +607,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">30</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
+				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">31</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -617,6 +617,82 @@
 	<main id="main" class="site-main" role="main">
 		
 			
+	<article class="post card bg-white shadow-sm border-0 ">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2021/07/23/LG-gcd-%E4%B8%8E-lcm-%E9%A2%98%E8%A7%A3/">LG - gcd 与 lcm - 题解</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2021-7-23 8:35:49 | 编辑于 2021-8-7 17:01:37">2021-7-23 8:35
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							253 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目解析
+这是一道典型的数论题。
+题目要求我们求某两个数的最大公约数或最小公倍数。
+代码分析
+输入字符串 $mode$，然后输入两个正整数 $a$ 和 $b$。
+判断 $mode$ 是否为 gcd 或 lcm。
+写一个求最大公约数的函数。
+（算法库里有 int 的：__gcd，不过本题卡 long long）
+注意本题数据范围 $10^{10}$，...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
+		</div>
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
@@ -653,7 +729,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							258 字
+							260 字
 						</div>
 					
 						
@@ -671,11 +747,13 @@
 	<div class="post-content">
 		
 			
-				题目解析这是一道典型的 C++ 结构体排序题。
+				题目解析
+这是一道典型的 C++ 结构体排序题。
 要点：题目要求从大到小排序，$a$ 一样的按 $name_0$（字符串首） 的 ASCII 码从小到大排序，所以我们还要自己写 cmp 函数，来比较两结构体。
-代码分析输入正整数 $n$，然后循环输入 $a_i$。
+代码分析
+输入正整数 $n$，然后循环输入 $a_i$。
 建议使用 sort 函数偷懒，写一个 cmp。
-出题人 NB！！！不卡我们 long ...
+出题人 NB！！！不卡我们 lon...
 			
 		
 	</div>
@@ -725,7 +803,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							218 字
+							220 字
 						</div>
 					
 						
@@ -743,14 +821,16 @@
 	<div class="post-content">
 		
 			
-				题目解析这是一道典型的 C++ 排序题。
+				题目解析
+这是一道典型的 C++ 排序题。
 要点：题目要求从大到小排序，所以我们要自己写 cmp 函数，来判断升序。
-代码分析输入正整数 $n$，然后循环输入 $a_i$。
+代码分析
+输入正整数 $n$，然后循环输入 $a_i$。
 建议使用 sort 函数偷懒，写一个 cmp。
 注意本题数据范围 $10^{18}$，卡 long long
 代码
 
-#include &lt;bits/stdc++.h&gt;...
+#include &lt;bits/stdc++.h&g...
 			
 		
 	</div>
@@ -800,7 +880,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							112 字
+							114 字
 						</div>
 					
 						
@@ -818,14 +898,16 @@
 	<div class="post-content">
 		
 			
-				题目解析这是一道典型的 C++ 语言入门题。
-代码分析直接输入正整数 $n$ 再输出 $n \times 10$。
+				题目解析
+这是一道典型的 C++ 语言入门题。
+代码分析
+直接输入正整数 $n$ 再输出 $n \times 10$。
 或者输入字符串 $n$ 再输出 $n + ‘0’$。
 注意本题数据范围 $10^{18}$，卡 long long（使用方法 2 可无视）
 代码
 
 #include &lt;bits/stdc++.h&gt;
-using namesp...
+using name...
 			
 		
 	</div>
@@ -867,7 +949,7 @@ using namesp...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							143 字
+							144 字
 						</div>
 					
 						
