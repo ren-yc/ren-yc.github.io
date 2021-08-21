@@ -11,15 +11,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="题目解析 题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。 代码分析 本题要点： 要定义结构体，结构体中要有总时间如 TOT 输入的时候记得用 scanf()，这个函数可以无视中间的 : scanf() 的参数是指针类型 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  struct NODE &amp;#123; 	i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 公交车站 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="题目解析 题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。 代码分析 本题要点： 要定义结构体，结构体中要有总时间如 TOT 输入的时候记得用 scanf()，这个函数可以无视中间的 : scanf() 的参数是指针类型 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  struct NODE &amp;#123; 	i">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-06T05:53:20.000Z">
-<meta property="article:modified_time" content="2021-08-14T01:41:09.212Z">
+<meta property="article:modified_time" content="2021-08-21T03:16:42.511Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
@@ -651,7 +651,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-14 9:41:09">2021-8-6 13:53
+							<time title="发布于 2021-8-6 13:53:20 | 编辑于 2021-8-21 11:16:42">2021-8-6 13:53
 							</time>
 						</div>
 					
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.7k 字
+							479 字
 						</div>
 					
 						
@@ -686,7 +686,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							12 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -694,18 +694,59 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c189d0095b4a04aadd2ecca4a486f706ee02b8b356ab1351a5a885eeb3dd1810">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c8c666749fbc83ffaf7511ffd578a80674fff5a280016d0c6c49da1c0ed09f1d54855aff47fba760e32ef95120bc85709290db79f0149afdf4cdfa8511d3441d454ed82390949c180090bd6663974785fb6b3b576ea60763c09fc4c17d83ec7fa25191b7aa4b7a5ae2313827bc2fe372014c26b15d5fa4dcdac1831e8f4c34e96ea8d2238bdda560308c953c3e554643562b1d8fd1b7d699b2801b2c848e79216163370116c3cc0aff7e0146ef11b0bde12870813ea772f593d908beefe3b45f9c10c1b5f2b25431af82da79307ac726ecca17e8c3335fb2f78fecd30f041323f327409d7c2a06c319cbfed2c38028399eac2e6c8dce3ae675d84fbdcdc91de4314364889acd4e857d32420e87202dd98ebc68b99f8faf18eeed41ed51e660a4de0e53e575bdd19f00e5e7209bf85bfc8cb75a3f4efc2bc30ad614ded095a79c178a38562faf4dd67872eda56d0b3399d716f01ca8e409917be67784267786b8aa83ed0a41583d0a04f8f88e041dd991df9b3a094772cb4b2c06dac68fc7614c5069bc2b9ce8a6f8c025d250405665d8e451e418df5b74c36a74ecc4f6ae154e3a8a397ebc37c85f9b5b35bd03276ac5206c26d1ab2494e960ffbcc8c8ebdbc05371d383382067fdaf8904eb4ce617b2d386ec9969983672e28b10453f3375c4461b9a490e7e82a366e03bce77e0fed6ccfc7fd4ee89eb167da7d4c27e1817f9872000db04e66c3e45fa4a639b772939f88ec09d6459976fa67aca247467a38950dbf9974a6d1d0f5c761098468648164bd35a7341b7a9d632d55b9cad54af1e909e7a19242c809a8351b457caca5a878d135f20da253fdb282feca3b74298105b5f6d94e748eed61a91bf8824240cdf5fa67e5b7965061d5a687dee604f2bc562cac1e2967a0842902f11ccc1ed67eac1a22841600700d6ac270d62637425499ca0adb374b033059ceacafb7be14c6cb5c6d6dfa0210976d858f5350273d9a6826a206903aaba81781035cbf7de70a03d5e2ac658fdbe8e664db000e9d2796c1e83187c2a01bb3329f5adf80e1b6feae52c732b243c05dc025bd38f4a1b7f42cfc424d07ca9093af27189b0dfb485ac3bd765b9db35807ec3cb0886ad6db29a5f7f14002d132f311ead508cd53931b5758719fcdf92f72b7ce15cd2f714fef0de774cad2bb526ea6af24fea4ce8f8e2eb504072d4252b8b2ef50d567eac371ae34c1e810e6f318219ea06c4fc65b5910932c648778a94b3cf27bdd38816bc3e4131224be209d8cc3db2b33671ea7aa7d1ed17b55d3d56272f34d52a3f82b47b2ab03eb96e8817b0f0631464394b5655b86adc5b26babef7a1537e0c744bba1a42bf650f62f0b61cb4c7369d834869c826bca3f8ac3d87857733c5c98802369bdbf19cfa4635975eb96ea2bdd41a2188acec5d43b747fcf16ab9442e32121758b4b9db69c8f42e36e743c04f31fd50f9bf672a7ea69d26e69a590062114593abd0c7076323330906db6e3a558db5f930f5b896bbc4ffaff5c8d984a657106670b218ed255bc1ed8a955a1f850aad3519b5627539a5fb61806880adce66e2e0a761aef2ceac6425b316cc5b3842191558055b48ef1a6d02890fb2553602f1231f0aa0a776da4e4f717625f33e7e835773f2244554a4fd5fe0e0d02104e64bec3b715b6af709669a77cd7aacb0bc48ec29c7b62ba8ef7987ff4d720c83609ffaf026849a2c9b46551b00a9728b1632f65442660866bc3643aa689aa3b327fb35a603b740c330da3e5ca319090173b839923a423707ec6f3222fa7e49e1c17563a635a26536147b71512ceb4009f345f7d093e015b9a4ef2165d7f8f1049404cea3de72a0bdf8e6a69728ead7a9511b421f00fa0fa7e56f7137dc7af43a77161b7a9ac8464027faa87bab80fa8966b063e0a7c10015c0c6bdcae0e6cbff052896f7985789920d93044cf946f69925a72461c99ebfd72649b772f2653e3ed79ecf06e9c97307c77d5a66380345501cef44d6454d97579bebe3222d0016522dce7095eb0b5cb1368b1741b0be3ff4d83bb02489cc4a16ccc9835e834804cd228c14d34a0e5c54036407c955e58dec9aea07f1291473537b9d8f0296c1bd54caa05d58b9caee90ca9aaac167283780111caad0e92700dc16cd2b038bf1854a22c378c6753ddb8868ff81446f13046e05d23760339b8befe4bb74f3dc00e7c6c48104a4e9d984e8afec504e924445cca32f8b777ef6cee7a0883aa2a29c67f1ff690ff59b854777aeb0a99e9dbc56bece4a8aa0db031f1822a2f3138a1c102644480802917b7ccca3e8e1852dcea36b074609b20d088ee6a63ea5d2d718956ecf9f1101fcf892343554ba673af371b56c28bc245337a5915ab8e207705359b86a8c120a387838a7d914c47946ed39741d3a004bc573f954907a8111acbb3f04a0528bc2f720c9e458cf3c776dcea5b3bd095fdb3c6e6ca02ec0fda33a1da98bf1b12c9d7391bb6988de123258b07891ee1df0dc3ac355d31495e4e665272f53580d5f63644e26a57b994560edaece602bac290c5d94a80da2afea183894210ede43680bb1fcf62bb064f1f05c208f0066eb8e3019d635f75be1c02bdc67cdeb68b62565b1b80bc69bf1ea1f46615b5b79f8a5ad64941781d17c21a111f8957cf0bd2f5fd416abaa338bd174d558295380989716bd690a73a070e2704ea4afc29b06f979d3e262f5a1c25a92b1912ff97b5d834b966dc17019c61c76f86e6bbef5953dddbf2772673f09f0e758c12ccff4308007bec3da4185bfe890bd287bf4e20ecb6f99bc62538f2da1a2a17f45db782ba052e9105dd1304e46fbc4212fe721990d4fac2739655916d7cc1fc50ab4e681346ad96e041f41e7dea9ca400797715cf4d74d579a5e85f16e840fe9b64852b4fcd39481a60c9280d0ad3d7803251fc1feaa20bfb2b01aa2704c6826eb1db40c5f9d04dbe3273953fa238c3155d25b16feff1534901a96409b784749fc31fe964a458da69ad0f4ee922034c07aa6f7d350f3ebbba301184cbfd2c6ee0b5cb61cba8932711d807836929fa7a36afd6233fcba9ad608bda6742fd2ff8304523ca2614c41fdb5a6d90ddacd94ef5d09b16918d3197380ef4a4c294b3097c2a8d072f3c307a013952b6d383b639ba9028fecb9212c714f52019aba2874fd621accc50238dc384503f3e95b3b5022cda9ea7b151d3a79d29152642a04955061badd2ccae838b13c1c41099e4365e66b7b5afdf63ca055e51c03acd2174179536be3a353f17fe467e0798ae327904a5b5242ebb1372bbb244738165b20de8ad3a7bbb05719c4b139245ce00831ab92f2ba4776fd53eb6334073fe84ba9ef1afb60ee04caa081611f6fb8f9b812385e06c69b20fa503b5f840b727489547baa204ad5498f8fc605068a028aa41c9943fd329f1aee9f6f1eeb2b46f2e3782e0af9e8dae4151d9f48e81ac84057962dfb502e8652d2d43742be9e3780daefa7777342c980afb93b7a8edf5f562ff4d0d3e06071ef62b42dac55a6877c489ee9ef91c46fd5515d02663389157dac5d80a5b374d331efa9301f90ea4d7e15e8d96c8eb5697997430191ff742f875cdd53687ea96be8f97b5f80470d8827c0fa30298f215c66f3ab0b956426e9cbfefaf6dfa4cf1556ae3037c8b1fc89ecb8f7d5e9087e5c70808ffc9905950ff8ee32a43057ed11c52a7219c6b4df091ed7faa3ff6e83aa201e12b1dd7d4ec36b1939d6136c5f8800f7301a81920428f26172540526fd411d58721</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="题目解析">题目解析</h3>
+<p>题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。</p>
+<h3 id="代码分析">代码分析</h3>
+<p>本题要点：</p>
+<p>要定义结构体，结构体中要有总时间如 <code>TOT</code></p>
+<p>输入的时候记得用 <code>scanf()</code>，这个函数可以无视中间的 <code>:</code></p>
+<p><code>scanf()</code> 的参数是指针类型</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+struct NODE &#123;
+	int HH, MM, TOT;
+&#125; a[1001], s[10001], t[10001];
+
+int main() &#123;
+	int n, m, tmp, d[1001] = &#123;0&#125;;
+	cin &gt;&gt; n &gt;&gt; m;
+	tmp = n;
+	for (int i = 0; i &lt; n; i++) &#123;
+		scanf(&quot;%d:%d %d&quot;, &amp;a[i].HH, &amp;a[i].MM, &amp;d[i]);//输入记得带格式
+		a[i].TOT = a[i].HH * 60 + a[i].MM;
+	&#125;
+	for (int i = 0; i &lt; m; i++) &#123;
+		scanf(&quot;%d:%d %d:%d&quot;, &amp;s[i].HH, &amp;s[i].MM, &amp;t[i].HH, &amp;t[i].MM);//同上
+		s[i].TOT = s[i].HH * 60 + s[i].MM;
+		t[i].TOT = t[i].HH * 60 + t[i].MM;
+		for (int j = 0; j &lt; n; j++) &#123;
+			if (s[i].TOT &lt;= a[j].TOT &amp;&amp; t[i].TOT &gt;= a[j].TOT &amp;&amp; d[j] != 0) &#123;
+				cout &lt;&lt; a[j].TOT - s[i].TOT &lt;&lt; endl;
+				d[j]--;
+				goto END;
+			&#125; else if (tmp != 1) &#123;//敲黑板
+				tmp--;
+			&#125; else &#123;
+				cout &lt;&lt; &quot;Leave&quot; &lt;&lt; endl;
+				tmp = n;//记得重置
+				goto END;//goto跳转到结尾，也可以用break
+			&#125;
+		&#125;
+		END:;
+	&#125;
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/06/LG-公交车站-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</p>
+</blockquote>
+
 	</div>
 
 	
@@ -775,8 +816,10 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 公交车站 - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '题目解析
+题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。
+代码分析
+本题要点...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/'

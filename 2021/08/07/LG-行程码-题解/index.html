@@ -11,17 +11,19 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="题目解析 这就是个简单的模拟题，细节特别多，我调了半天才 AC  毒瘤大模拟 代码分析 本题要点： 要俩结构体 计算月份，由于题目中说  所有时间均在 $2021$ 年。  直接打表 输入字符串最好不要用 scanf() 注意处理重复的城市 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int month[13] &#x3D; &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 行程码 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="题目解析 这就是个简单的模拟题，细节特别多，我调了半天才 AC  毒瘤大模拟 代码分析 本题要点： 要俩结构体 计算月份，由于题目中说  所有时间均在 $2021$ 年。  直接打表 输入字符串最好不要用 scanf() 注意处理重复的城市 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int month[13] &#x3D; &amp;#123;">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xn--9zr.tk/kk">
 <meta property="article:published_time" content="2021-08-07T03:10:41.000Z">
-<meta property="article:modified_time" content="2021-08-15T01:12:14.038Z">
+<meta property="article:modified_time" content="2021-08-21T03:16:29.099Z">
 <meta property="article:author" content="任宇宸">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xn--9zr.tk/kk">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -650,7 +652,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-7 11:10:41 | 编辑于 2021-8-15 9:12:14">2021-8-7 11:10
+							<time title="发布于 2021-8-7 11:10:41 | 编辑于 2021-8-21 11:16:29">2021-8-7 11:10
 							</time>
 						</div>
 					
@@ -677,7 +679,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							4.6k 字
+							658 字
 						</div>
 					
 						
@@ -685,7 +687,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							15 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -693,18 +695,94 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="942e9f8a941f6ea5b549f155e66ab6567db01d7ff045c490dbeadd1d5f6aa9a8">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c8c666749fbc83ffaf7511ffd578a80674fff5a280016d0c6c49da1c0ed09f1d54855aff47fba760e32ef95120bc85709290db79f0149afdf4cdfa8511d3441d454ed82390949c180090bd6663974785fb6b3b576ea60763c09fc4c17d83ec7faedaa4259942de8772ffb248874bc8625c78ab4856d829b262483956de4413fde9590b3c3bc28a1ee047575e9acd8d852752e5bde07f73ebd1948c122f4b7675ade58365c2a8234bfd5a2cd81b787a72441172efd17d99a2abaee4c595a80c911b8203d3a3a51d3361e1131a783fde79ae60a31f67e7e24cb2a412df8861c13d4b9705c5fcb63e1178aecc495906726d309a2889e8b4ab20073b1c86ec06d409db56bc16d0a1b8e9a555d464eaff6edda59b30ea0440fdc5e878907f208a785290b6db0b8ab0ff16f6eef4543671cf108ea649f4abcec24b0bdb5d6f4d4f9e7e72b7c7cf1b6d3d714ab7c3ad42a59259b75806a6bf510a1c2678de285599f2b4825cc98122a3bdd36c7b29c5bd8fbd305518355efd09949e5f9957ac913193934b40aa4f7ac5a297255802dd46a1b30c8fd274e4461e5973b689d171db2ec47cc6bf740fd5a3d9f4be6113bf91e0b84793aaf4674d595ea1882aecfe443382abf319a61f8dc7b07199088d0da5eaad7217fe7792cb0ed614b2fc1a743ec0ff4d3ed793a419da423431f216900608129129a4bbee9d6b6ce61ecd89e7db50705d023a8fa2ad9685552ecb1f60a5766207201bdeba34d874a6b33f3b51d38dd2cdd09ab6059d0a64e7b2945643767ca60888f67a17491b4fc78edab95dcd61342dae5c23f0af8f7df270618596067e6194e06c40fa4c8b70e6a5401119bcd4d04b0bd55fc164eb67f7da90b4fdd1441f979d727a3b9411fafd934dc667cc5ac715cd9a06ecc28fdfd0446098df820b5088ec64ac24a6be7ff2c8c03aae616546b2077125bb9344b98139a615e28305c9f8007a5d50e6d2846696e6d8082f53ace2a7e8f37ccfbde413ea80bbd57772f09e60b73bc6399a179ca30552941c36be76dd22c2b1369f76c47a7ea0e9321995d5093253215cc1a9b2ebb58df8a587351a5b20e9257ddc64f479d9db464f51ddcbcb23c9d0ca466fed92e0c86a15cd740bebce9e32a00cf20bb92d69eca22b285dcc550023d270dfb286c95495c1ba7b1c844944d15f345826177165cf95de5c25dddc2f5ec21ab69ce282d090fb2cb0e772fbb94e17f13ce35e7e95fd751b97470ce888b199c84f9d90eac0cc08841cd20f4e0e6709cdf0d08c9d533bb7f2ffda0fd16ed727da2d1bd438539aaea200a9f106de573db79780b697edc8a48a7d658cb39c3310d04bbeac5994d71545f1d4bbeda53ce9e2415a9e4cabce4ec278a503da094ec20353450b50fc147b53630a99ee394ee8695c32e3aebdc3ebad9ec1e6e799153df4967e524e5e1be3bb46539fc987c2baa65190cd8fe7fcba0767d6130de7afe32e7e9ae02724102573f92068228388ec203201af9d4aa1676477c958508548c83381435efd223cfb9484da71b1788e0ef52a66492322f1b3129d5ef39ffb3ac8839350cfdd95d42ef2d6c7f3cd46f6c1b504b77445431d4d8b87248b68d58b3533f00830b147d372fd3f08481cac6e095e5308f2c572a9269407e1ab2b488819f1293578c4ea604902ea622bcdc852920491dea1a1bd9d2d03257b9d2607cb4c3807c391808fdd82a21936819bac9d2082293c7e644ac1cdb1c7917921348683c33e15008e96a082d54a53795df5e60485c0afc09d7cdcf400ceffa5926516c19683276d29b9195c6bebb94fc1d533a4c6f63d39129eeddd8755422b694f1c62440936715f5b2fbb9235b841ede503b6826d0a15c05dee959859ac5dc76cfa56e3f8db61d8eb7304dfe3a70badb854f7af9bd9254a7b781699ac336f48b9825eeae9d1d520533355bc37d74bfe2b8b07a54a7b0ac5d641b27cfad280f8c6526d245b130774799f4170075db2ce023a84aa83373986833d94c889c14e1922f1177b8adaba3caef19df1ede8dd5e42a47f4c53b0272ee50e5e6a622905b9c3da1f55279d676b1a26e373bc0a7811e877712275098daa894e0fca457afb5ebe7c1c5d682989656da32eb6921ef437b82ebd270c0f1d75f9c7cc358ac4ef4da24bbcfc53730d62d692ff94be0750e7cb9857d8bf8d0de07b635a4c740c3422cf0a07977e30f4eb951822e6fdff4c85d0890e52581f112673d5c0f86e08677b7aee4c8fef562230f0c0128f748e711c6c2167a4ab7fda2b58707fa2135eae67f394315d2a24ce53153ffdf85923ff28d95d46f7f654c3e1f86c2a98a440729d98579fea4c62e858157c4c53ec9ad2ff71543f0f927e63d4c90a89398a020ccedef6b012dbbd6574e5532c38cdacbf01fb24c7ca93732e3150777f14a17879d480aa07755fc6d0bf4f7b26562c96c2da721990c8e3ab3fe341ffafd2967150a6f079042d310b9848712ceff70f61e8b150c2d5de6326bf719aa392422435ce74708a8c79923942dc32a982df5250a253b19c80dfa5f56f3940d94300a409918358313941d5564cdbdb857275b61ecdaf8fb052e77a64eb14933ec0eea6eb5eb979a0969d94bd6a1534f55dcfade1fbb419ec4c754983de3511568d1bb34aa1b7430b398261957191e440452a471016558c31237f7169162c37ca255dd228f8efc7f181c94fde9caf1f0447f7131b2b7e0eda0a267be406787cba9cc848df6434c11ca1912561821b0eceecc4617980642270c080b9525972f5beddaba590a3419500b53690e3b58b49e66dc728e8b444119810d70f128d955e3f16b9541f80385ac9274e8942a896dc040a3bc79cab9ea8265699654d8264438992a0c147e30eaeaf2f9f3609e246980e12e82768e36fdca960e365bff8e0d8f20c33080e456550ca9657a09fe1efffd829ee46b3b04d166501da9901d7373495780717c8b76e109ebc6f46f13b6e0c00cb25adf5e64f4a585d891369626f797e270126cfee2cfd52c825c76f31734d3f2b51c775e5ef9ec7e56dfe8a2dbb8c28522d70e493ad2f5b9eb8c413678ee62da4d445b1a7708fe61fbf26789f3164e8ca9edc2d6bcd2c938dc2c63846988bcd2a210187879e27918f07fc699f2302fd814f8a312412b3459c93f70a88ba1a8c03108a40eaca1fe0d9bb0fe021fc699e3850bcfc3bded3786eb80f5da0ba410a2e1d645dda2696fd1ed027ff8040f5ad5eb5d7a1daef794b00fbd833bb625daaa39ab80e04d78ae8e17126c6fe02fc9eab96d709c47fa2810e9b547e8b954dd220ba7adb61062470607a356579e0a4143af575f53dcf93cb828c635a28a9303ad93012517c4b1c55cdcb5569223a9fcd1a9f4fbb1c6d0d1130c0f3dac2f560a2ad8d0fce3ab16e79121be4ef91de4bcc9a86ae63027af5c46e046df6a5393653bf74e25085f5ee519621955e9728f23c7094d866e9fd44767b85a1a5b8c000138cdc9d6cdb86e26f4b2ceecb532baf05d676ba9706b2e3dade56d66d259d240bd23a1b21dc1447092521c3b9800a620372e25e7e1f7fe4f3c90b656484250a6bc77071641a0e853655a9342b0da04005cdbe9716dc5aafae674384e12cf9e266597aae1698500e9de818795f7b3b48679f1ce157e2a253dfaff54687d94e29020d912736b36e8425bf10d6c21f70d955cd9140dcbd18e590810bae642d74caed74e5314816538a3f5e458ecc34f71a635fb3042c242824485deb68a1e3da292bec023d80dad33374b4e5c8d8098c189c7938e235309ee9d02f2783192d055bc9f7554c2b70a4df5faadbbafe014b24b5b92cb0755ca6a85b87c4b14e988916e6526fcce9e721de272d955ec4142d929a8bd5ecb52ff53a021ff5a874335b6cf5a6e31ae8153f7229e33829f3414d3eaee0a3fcd36f5c75a7e32755b19c86af87a47b83597d6178d470564d2b6a81c62088115da81a9fa46add71f191d5b839e790faf2333a8535df33eec8c821d3d710aaf10e80a46fd17fe814fb1d0f3906ad8b728407f5300353a817cabc7c681b886369d4317c01b0e66953343abed4ad5a653c5360f7eaf51265a9553dd5d3f50635466f00a498ef69df5f14901a54fe1acb5ce38851fc309a12797370d2e8494d34e53899a50ac39b8c8018489d9efebcbd0f2945e1cca34f91d17b55aa061d9418a22badbc9794e5510821c06c65df2188875f48ba12f52cf374ff351058c6a94f9fb9acca1f82a870bef3482ad14a799a7609fe57dbca89b4b0da18f004147ec86982e7e0845227dc702afcf746cbc022c8a6b3e078ecf8d5cb05d6ed7738bdebcdc6af645fadbfca8309b0f30b6ab4f256827240619da600e97bce843d027967f28c8ca4ce5cfb6561aa1d12d77b9cd7956e6db3128dcb731e2ddfc550acf6c8780ed057061236a08c5054f2a9b50aac44630145e0c54395a55f0570ffe4ec83d2e9012fb7f5b123c3802e78edebaf25a605e1f0b6657367d93cb2115c702146ea6c5e7e5bcb9290a0deed86c7d366e9b98b494bd8e84445fd7d8f37b24be655ea60c4920f8e861007e64ebd4100ac9d35980814322900b58f0e481292ed8b249b105531da4dbb3a7d83c71974f54645d71306278644e73044e982c70095a44cea32c58ce667d064bf8a68696a414d0e2691ab555d93c5e25673bb3bc13d8eeb19070cf6de9d7a44ebb47fccd24d97a87421c489850fadd1942a5a5793a672c7d14c39236836614c666121f0caeacc221be819e993d39b34b564835310b31d351e7549bc8e805e1231e20062135322867dc539ecc5306d633742e5f8d30050dfc2a9367</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="题目解析">题目解析</h3>
+<p>这就是个<s>简单的</s>模拟题，细节特别多，我调了半天才 AC <img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://xn--9zr.tk/kk" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="/kk"></p>
+
+<p><strong><s>毒瘤大模拟</s></strong></p>
+<h3 id="代码分析">代码分析</h3>
+<p>本题要点：</p>
+<p>要俩结构体</p>
+<p>计算月份，由于题目中说</p>
+<blockquote>
+<p>所有时间均在 $2021$ 年。</p>
+</blockquote>
+<p>直接打表</p>
+<p>输入字符串最好不要用 <code>scanf()</code></p>
+<p>注意处理重复的城市</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int month[13] = &#123;-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31&#125;;
+
+struct NODE1 &#123;
+	string name;
+	char state;//状态
+&#125; a[11];
+
+struct NODE2 &#123;
+	int MM, DD, tot;
+	string name;
+&#125; b[101];
+
+int f(int n, int m) &#123;//计算日期
+	int tot = 0;
+	for (int i = 1; i &lt; n; i++) &#123;
+		tot += month[i];
+	&#125;
+	tot += m;
+	return tot;
+&#125;
+
+int main() &#123;
+	int n, m, flag = 0;
+	string name, tmp = &quot;&quot;;
+	cin &gt;&gt; n;
+	for (int i = 0; i &lt; n; i++) &#123;
+		cin &gt;&gt; a[i].name &gt;&gt; a[i].state;
+	&#125;
+	cin &gt;&gt; m;
+	for (int i = 0; i &lt; m; i++) &#123;
+		scanf(&quot;%d-%d&quot;, &amp;b[i].MM, &amp;b[i].DD);
+		cin &gt;&gt; b[i].name;
+		b[i].tot = f(b[i].MM, b[i].DD);//统一
+	&#125;
+	int MM, DD, tot;
+	scanf(&quot;%d-%d&quot;, &amp;MM, &amp;DD);
+	tot = f(MM, DD);//同上
+	for (int i = m - 1; i &gt;= 0; i--) &#123;
+		if (tot - b[i].tot &lt;= 14) &#123;
+			if (tmp.find(b[i].name) != string::npos) &#123;//查找
+				goto END;//goto大法
+			&#125; else &#123;
+				tmp += b[i].name;//记录
+			&#125;
+			cout &lt;&lt; b[i].name;
+			for (int j = 0; j &lt; n; j++) &#123;
+				if (a[j].name == b[i].name) &#123;
+					cout &lt;&lt; '(' &lt;&lt; a[j].state &lt;&lt; ')';
+					if (a[j].state == 'M') flag = 1;
+					if (a[j].state == 'H') flag = 2;
+				&#125;
+			&#125;
+			cout &lt;&lt; ',';
+		&#125;
+		END:;
+	&#125;
+	if (flag == 1) cout &lt;&lt; &quot;Yellow&quot; &lt;&lt; endl;
+	else if (flag == 2) cout &lt;&lt; &quot;Red&quot; &lt;&lt; endl;
+	else cout &lt;&lt; &quot;Green&quot; &lt;&lt; endl;
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-行程码-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</p>
+</blockquote>
+
 	</div>
 
 	
@@ -769,8 +847,12 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 行程码 - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '题目解析
+这就是个简单的模拟题，细节特别多，我调了半天才 AC 
+毒瘤大模拟
+代码分析
+本题要点：
+...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/'

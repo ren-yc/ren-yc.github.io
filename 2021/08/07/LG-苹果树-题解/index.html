@@ -11,15 +11,15 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="题目解析 典型的 $Fibonacci$ 数列题，题目居然写出来了… 代码分析 板子题。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	int n, i &#x3D; 0, a, b &#x3D; 1, s &#x3D; 2; 	cin &gt;&gt; n; 	if (n &gt;&#x3D; 2) &amp;#123; 		n -&#x3D; 2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 苹果树 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="题目解析 典型的 $Fibonacci$ 数列题，题目居然写出来了… 代码分析 板子题。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	int n, i &#x3D; 0, a, b &#x3D; 1, s &#x3D; 2; 	cin &gt;&gt; n; 	if (n &gt;&#x3D; 2) &amp;#123; 		n -&#x3D; 2">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-07T12:16:31.000Z">
-<meta property="article:modified_time" content="2021-08-14T01:31:26.140Z">
+<meta property="article:modified_time" content="2021-08-21T03:16:38.309Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
@@ -651,7 +651,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-7 20:16:31 | 编辑于 2021-8-14 9:31:26">2021-8-7 20:16
+							<time title="发布于 2021-8-7 20:16:31 | 编辑于 2021-8-21 11:16:38">2021-8-7 20:16
 							</time>
 						</div>
 					
@@ -678,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.2k 字
+							196 字
 						</div>
 					
 						
@@ -686,7 +686,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							7 分钟
+							1 分钟
 						</div>
 					
 		</div>
@@ -694,18 +694,42 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="b6fba4260224edc9cb11fa63fd7a577778e819a045a58eb7ba4177bf2a39f500">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c8c666749fbc83ffaf7511ffd578a80674fff5a280016d0c6c49da1c0ed09f1d54855aff47fba760e32ef95120bc85709290db79f0149afdf4cdfa8511d3441d454ed82390949c180090bd6663974785fb6b3b576ea60763c09fc4c17d83ec7fa742190fc874e4a5ccc430fb1612106d21f36a34c2089db6848e048d4332d86bdf3549f7d7b9ba61dee71a19dcb50afb02e2e2059181414dde5ba7e4e3a4c5301cdb5ef8d71e72c1daf982fd0785412df264cd774b716521f0c2aee0c9a0d7b027256a8700a5f3dfbe414662fd1def8b64798a4adc18db735852ab37950e13aa40b689ae52b157d05f14b91f12ed10c3b5d39c3e1c99cdcc63312d126bf8c4e1cafbc64091e90a0e060bccbe4c296b0d9158dc61107f55c72129e4b487b1496523c6d1c8849444f7b04b7bb78095f85bac4eaaaa46e27a891d5c65d43d984916acf405bbd7078bb8a9d352afc5fe94fb84e244febfb9425b5ba84ce97ad8f8e479df946bf48b61b225f72245f02ac33d9a083051204565078a0f21323056214573d223ab32f31678ee9b68fb8e42cc8ac8aba3d1b493b731f352de7a88b622627fa83b4336e42f0f0cb995dbd851d755c63dbdcd53b82db927868d3a355bcc997eb660e838fae6e3e766d8f1b6bf57eea6716917e8eede411799b116ac5dd6ebe38850a7abf535d47421e31a4796f4c0572d465f2d04ff1425fa97e6f98d698bcac0bf4be7f0b5302081c404c75285e08fde650bfd217351396d838a59a25049507f02828b640e8f20f3aa36ca44857e41b877c523b6a568cfdb9aaf35ce219f3c41f0912fbecb065ee9e1e6d12f631cee425a2a7ac01ed535e1e2f6895104b13b42f1b797ba48f6da7852f4d7817595239c89da347fed5caf85754160e30b157588e902d660fd9bd7bfff3a3482f979822c9a303b578824aa5505e0773abb85d5da96570ce7feafd6e8eec62ce0cbba26efd4c43338ab5a0b25cf75ebc5907bd213a54680d6c48328e95d552e16d4f85cdbb32eee72c04588f81bad84c66717086128cb15df5fdcc2702041847f232b55706e5a5ea1fc08d1cf3932811a842e3e46582d64cfac34123bd10f5fae4c278a6bb8b01a1d4219687be4e128e92174b9d45aca3a2646494073570bd34942bb12d75ec99adfecd9fb6ab999923bfc9dee07d02a0720a63d7d8745927c9a5debd2bf2cf15edd0bdf880c1e05a36ff65d0efce55aa9baf55c026bb88a2cf7dd8dc0a3f1abe6a57a148c2301ac0c0088e13d4e5ffa15333a4d967486a18d729745304d378f343b48b62418214511962d8a45b58e25302c4ebccbb9b32f3d86ea7e9df3dc53d3badcf616edf54838ede3017aac802d1bbc9b9f12a537102207f2196334b35666b0ec6377a673cd8db12518253af53d5278207f063e1878cd9d1eb24b7cbdf5b233b7f1f2c6cb5b8de255707e68647c9c1fd4e852d7909c1237f9be5fbd68fca21e13b3259706f6a5b0de137edade1bb66fa9f5727e608623ff7b1297c2cd7ff4ddefec23fd62ffeb130af0689763e19fc4732bd020979d457b885cec29885edd675c4af14a3b54f56412f6908b5a95cb85e297a51ce15cb371b140006b3487fe3a2537dd85dfeb8cbdaef576d0ef05b3ad6e42b5e5e842d383f6d1d4fd1390f31a5f26eb5e13dce9b09034c274feedab5d1de1e842464fbf781a1c6462db829880bf4e3118728fc5b6d7a3ca539416f16eb2816ec8a122f8da715b5f83c1448ea5d7e89a7645fc11dfbeee0d351cf6d95667b186141720c9a85b41d771dd006dd70d1c7a5e7a0faa27dd76f5bf2bd3a5bed11a42a37ad9a59b760ac8a8fd1b95829550fed4d76897e3029c25656ecefbe04d47947d317b977c4eb25dd01e3b592263be856e4983f25abb756ca6048e21e1f68c3c5cad613ed00f8038271af960ac774219e3ad0abee0c5e998146bd6a4d9537777ed793ee7c819bcbdec7399bb1d26b30d55d1524ef95555f2c813f7fbc6813fd83f329a794c05b51878d0b770d78f1d09010e5b8926daa9f5bf60d5e8d7cf48228c84578bd4269aa48c2bd4508e70bf989ff0549f053edb629a3730d5a921217c32b9f4ebd3c899f8399218a24ad5ca4db932bed11bd110bc82b655950bbe7dc311f1af7c76820902aa862b0d5dcec4c9dd60840d6406e36d738577161ba3daf2b082d159d54c009</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="题目解析">题目解析</h3>
+<p>典型的 $Fibonacci$ 数列题，题目居然写出来了…</p>
+<h3 id="代码分析">代码分析</h3>
+<p>板子题。</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main() &#123;
+	int n, i = 0, a, b = 1, s = 2;
+	cin &gt;&gt; n;
+	if (n &gt;= 2) &#123;
+		n -= 2;
+		i += 2;
+	&#125; else &#123;
+		cout &lt;&lt; 1 &lt;&lt; endl;
+		return 0;
+	&#125;
+	while (n &gt; 0) &#123;
+		n -= s;
+		i % 2 == 0 ? a = s : b = s;
+		s = a + b;
+		i++;
+	&#125;
+	cout &lt;&lt; i &lt;&lt; endl;
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-苹果树-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</p>
+</blockquote>
+
 	</div>
 
 	
@@ -775,8 +799,13 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 苹果树 - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '题目解析
+典型的 $Fibonacci$ 数列题，题目居然写出来了…
+代码分析
+板子题。
+代码
+
+#...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/'
