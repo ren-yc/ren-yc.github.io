@@ -11,21 +11,18 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目解析 板子题。 代码分析 打表出奇迹 由于数据出锅，本题题解使用了大佬 @wangwls 的代码（不要脸） 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int n, p2[50] &#x3D; &amp;#123;1, -2, 4, -8, 16, -32, 64, -128, 256, -512, 1024, -2048, 4096, -8">
+	<meta name="description" content="此文章需输入密码查看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 负二进制 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="题目解析 板子题。 代码分析 打表出奇迹 由于数据出锅，本题题解使用了大佬 @wangwls 的代码（不要脸） 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int n, p2[50] &#x3D; &amp;#123;1, -2, 4, -8, 16, -32, 64, -128, 256, -512, 1024, -2048, 4096, -8">
+<meta property="og:description" content="此文章需输入密码查看">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xn--9zr.tk/fad">
-<meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-07T09:09:31.000Z">
-<meta property="article:modified_time" content="2021-08-10T10:04:48.076Z">
+<meta property="article:modified_time" content="2021-08-22T23:40:01.897Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xn--9zr.tk/fad">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -654,7 +651,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-7 17:09:31 | 编辑于 2021-8-10 18:04:48">2021-8-7 17:09
+							<time title="发布于 2021-8-7 17:09:31 | 编辑于 2021-8-23 7:40:01">2021-8-7 17:09
 							</time>
 						</div>
 					
@@ -681,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							339 字
+							2.6k 字
 						</div>
 					
 						
@@ -689,7 +686,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							8 分钟
 						</div>
 					
 		</div>
@@ -697,56 +694,18 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目解析">题目解析</h3>
-<p>板子题。</p>
-<h3 id="代码分析">代码分析</h3>
-<p><s>打表出奇迹</s></p>
-<p>由于数据出锅，本题题解使用了大佬 @<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/341650">wangwls</a> 的代码（不要脸）<img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://xn--9zr.tk/fad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt=""></p>
-
-<h3 id="代码">代码</h3>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int n, p2[50] = &#123;1, -2, 4, -8, 16, -32, 64, -128, 256, -512, 1024, -2048, 4096, -8192, 16384, -32768, 65536, -131072, 262144, -524288&#125;;
-
-void fun(int x) &#123;
-	int ws[50], c = 0;
-	while (x) &#123;
-		ws[++c] = x % 2;
-		x /= 2;
-	&#125;
-	for (int i = c; i &gt;= 1; i--) &#123;
-		cout &lt;&lt; ws[i];
-	&#125;
-	cout &lt;&lt; endl;
-&#125;
-
-int main() &#123;
-	cin &gt;&gt; n;
-	for (int k = 0; k &lt; (1 &lt;&lt; 12); k++) &#123;
-		int s = 0;
-		for (int i = 0; i &lt; 12; i++) &#123;
-			if (k &amp; (1 &lt;&lt; i)) &#123;
-				s += p2[i];
-			&#125;
-		&#125;
-		if (s == n) &#123;
-			fun(k);
-			return 0;
-		&#125;
-	&#125;
-	return 0;
-&#125;
-</code></pre>
-<p>$$END$$</p>
-<blockquote>
-<p>本文作者：ren-yc<br>
-本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-负二进制-题解/</a><br>
-版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
-
-</blockquote>
-
+		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
+  <script id="hbeData" type="hbeData" data-hmacdigest="bfd80e894189546d713a82eac798b09cc818dbfcdcdcc6d07b7571ec00075e07">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c2f13af0f31a29ab62941722a1d1e58cce1cc1f0fbc27e1d52fb73555db5b68ca124bdad7eaba8fbc9bee8bd54ce067cfb63b48a6ed0a33595d2cca444e77366b20e5e2e399f9d03b04de0f3bf234f5522ed793dac5329152312ed814378bccc43aa9c314b88e20a603b3e0242602fafe53af23138d68928cfa5c1c6e7b6cb6838e03d3f791ea4b8702812d48711fb1b3ade8135daf7f692c1f3f739acd52594bfb8b72c52349d2feaad114b10f8503edebb2691d0fc9b148a508ef9ac6859fd9d03f816553f65b403641db8837c2630334b82b450fe88f483956dde0315c6bc7e271f355ec74f6f0d547356288ce6fe82b08dc8aa62385d22a6ed70472566d12bdc63ee2e0955a04c267328a8ba5a588bb09439f96b8ac7a9a6793437e58fc8d8d380f425ca801d783bfd3fc99c8bd507e70777d472f555aa40950ab453fb887baaf81e00080ec5cc5bc8e62c5e231d7e12d60b319980b115ff04aa258652ee497b926e0bde66281dd952874c77fcbe0566b8ee25f88e5d3846f52780061fea72bdaa07a9faaf706be78c25b0c1375cce519bbf9880c7e48d9c8cf40eb5419ed361445a2a8b997af03e784d66165b8f2be8109b8efaa62554b2c6c1fefe131c25bee8e625db416ed9bf78aeed2b4665413f828af6ad53535f466ac551670831c98fa3fde4c5163f4c3034a5f598a998465b447cbec79f25a51685cfce1a8387b241e894b949ac28b1cfeabde08730af0ed5807f3d9fdfe6c2e4c18a0216909e43695cc0c304a1c4a083e819b43671bd5272e90ab94fa5734e346dd6d53f106800fb36da72b23abe0ef57e15dfbc8c10dee7bfc8f861c8b5d5eedd201b1055353829c97dc7582bb58b400c5162b24b52c5f81354fbfea637b50a20d0706fb958416c934d0ab74e09e226602e2d5a74405e9087390466f19e5d898a5a919a2c207ae7911ba5f12345ee44cb9596ed903c4f9f9a64bc848651d00240af48ebc9704a5d67743d46aeb32694cfe1c0e47462afcc7866b856e51fb46fca51feab910556fd62e80c3feb49e1fab108c520fbe06d856d32684965a417a7bf6aad380229a5d73df740a9b8e48cdaeaeb2d66ee4eb1a5419b515a6ecb6e8316ca7e9f109bebfff78f0b7c28c27e9f27e83048687f52ea6ff46714fdc5e1d993bd203c5541aa08c8db22c46613364875a1a2d22c9b548e5dfb810a8fe29fdfc6117f694a7932f4e0f9e859e04013ed296f28f5d6a99d6c2cf7920d83c9d8bc98dc2eceda4a6cb7d3f2ba0d995c94ca25fec0bea4ec5ca4d30ae00db9abc8f171c62579867db086763a88227baca497f199f398cabfc92bb06d90f0c6544d0be7688e460bfeb0dcc495d48cb5d27807ab921690a666d618a2c952c9b943265817ea0fc5f0df4acc1326263b79e4ebfa0a78659a8ac15cf9e46377afd1765196066136ed6295fa672277411f793c314f0bc5532b347b50d9f0cb80a964d07a8aecc023bed028596a5beb516328d008a36265b562413f9c42a52278925765c69f46c1434e223f96e3b667862497a2b41a9272456ed04017aaeb90c331f4d0f37dcce21ea31c82e65292a55b0a9e7b86f179edd621b113e1009fd1c775b31bb299e770497b75285bfa64f6e64806d8dde81008aae70716b850454f75fbcd18dc1e10a074e10d5bb50e7c79d64feeaed34f3c94978969a24674dceb0e30c368b33d40c57d825fa496fc46e27bbea063d3d5951cc493ba7d7230faea39bb02f6d1295a6323b82c8b838a863fcf8700e009feef32b73812cc9d84e492cd660e3759b4afc458c6060fb297e2a5a3829da76d786ebdefaccab4d2732f751a982eeb7f9fd87822071bb5b8ff33f20dcdb8b8627a07e5ecc78f79b9ecfd347b1f62541ecbddbef36cd99107c1364dce0c20d9660bc7d409e1b785da1a465bc3d50e373e6d271511394fb7d322ecc04d1d0604b5b95fb6a81504cb4a8e75c250ba4fc9a1f5339cfcce66cb37a53163613609f33ad192d7d4796c669f1b700c6a5e849aa3eacdc5dc37b7bfc72b91fde515e7b4f7b704bed71924e8c3533f09782c36cd4a20fff6a553635b071af6e3695274576f5a5837ea154bdf9ae1e2d051de95ea7b6e006be9d997f70c711f1e4f5d1f2c4185f0277e6d1bb7cb75a7a19abdadff9a3b180c088c516f504666445d7e735c4742b99c7e55d168b6932a5139034ca43352df7bc2c6612527c6cf53505ac756a50dfb4dd522ec7c8bf8934626d52ca24d80bb5b9bc4e1d09d65ec76ff3f00bdec46d328ec70837586c03fb1966ef7bb2d5b80910772254aab3a52b3911e1cdf675ffb4c721cb5f1a794a644f9b5a16c7fe1197a8887491032d0d1d22afa789f7fdb174db11fb13b45310a2b92006f85ecabb061cacb4c2933c8f89090997cf32ba28cd2e204da0d00a83989d68523fd13ef7e3584dcc897681a7700754a3e822fd88b0603ed6a18380de9b58df163b1fd0f1f8e52ce47bf6606420a68e77546925b8bdb91b1f5cae8f1073816600ab2d918e8ae524bcb688dd5c8fc5b93f296d10ffa091c12a4c29afc0814fc27de4c8c49fb4bd8472f437</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
 	</div>
 
 	
@@ -816,11 +775,8 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 负二进制 - 题解',
-	    description : '题目解析
-板子题。
-代码分析
-打表出奇迹
-由于数据出锅，本题题解使用了大佬 @wangwls 的代码...',
+	    description : '
+  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/'
