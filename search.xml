@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>LG - 愚公移山 - 题解</title>
+      <link href="/2021/08/23/LG-%E6%84%9A%E5%85%AC%E7%A7%BB%E5%B1%B1-%E9%A2%98%E8%A7%A3/"/>
+      <url>/2021/08/23/LG-%E6%84%9A%E5%85%AC%E7%A7%BB%E5%B1%B1-%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">  <script id="hbeData" type="hbeData" data-hmacdigest="dd7915d3d2e1fa03939f5f91bf8902011094163b6c33d91aa6d27b1ab382776a">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c2f13af0f31a29ab62941722a1d1e58ccde8e7bf39cf21058937676cda16fa723b0b4eb38a7fb1846cc94a68a94069eefe834a9452b7de6ec3ee553fafd36141d7979976d973159aa889cdb2010bf7e4bb7446a986fc4e29d30a0460e9a122e8f7e08b69d883319a6d6f6aa2804362ad9177acf1e4f35f489539fb9b93e407c02ed22470d5fdd5775f01587da6cca46420317d2a10424efc74172838b0112f0c87c9c7844bba0fb6da0981dd8b77c4e4bee702de250ee85daee22a2dfd8a427c9a3e46ab3fdf83cf22221c9f18e20343825f916a020dd7ec0784d72605f65db1eb93159f3c01ab79e00ee16f0b36d3be30a7f25e4b7e96fbfdc3299104c05b6e4c332b6da97fcea0d98dda4cef9eb3e0dc2c8fad3fbca16c9051dd5712f95fb57519af770be44a65c6368a28f03f2ccebc1a02bf581e9f1a4b739c90839f7c94a5bc6bb9713d702681945e5d0ccf2482166e8c05c25885abb035c0c95487573794132ceb8384760ed472433f507628b213e570ad93f089d77e1db87d43f73a680762336dab33f6888814ebb63858a38ff9c626a14ae1b3645ac533caa16efd0df93e645f834a7b182d6749e3549bfa3d0e06a3826628519d809fc24136480460fd372dfdf6d53039d5d032b137513d4db5d440df6a821bf4c74739cb9467097d2f649aa7d7f0211289011a22d01e61e37af890c5f380f2df4f89cc3a5c252b7c228cd9ed9c7d5170a6709cc253f64ea913adf6ca16b583cd41be1a6d44bb0c807ee21aaa56f9b54c40ac25aca07cf9d238bd2a9ccc2c3b43ca1a34a22be1077fe5926db61d4ad6fb596e0aad32a030b35663b099745814f2059564d19e43790a0a18d5e1e8b6c78a91a218aaa5b1bb4b4d43ee4edd971bd88fd6baee200c73749c90df4a932deb15cd03e513a8c4ca20e37679d8e7bc33fd43f1c17e427bc243b596c5d57c3e2cd2485769738772c2e22fa2d0116831ce07a458049015320f31a993d30981dcae5851747bccf18790d11574a80cad1a999272ab1ad246e58dd795fac384f71c5f12d17aea0e6672af0f868bae3f3189beeb61fd3b3757b01b2ed215593dcb18f34e677b3d43fa1ff43654de6fa46d21ba0302117b236e26c256b1f1bf5d4b308269a8190badc0c9e1ca9d2147506a68f754385eb4a275c429b2ab44a1cc317c462686c1e61d7bcbbf1c4ce83c7059f53f525a247387f01dedb66900a616651e4cdfa24b8ee8150178fe17bb640b2ded9631c0cdb5c6dd61430164d1047bda69fcb1bc5f8ab544afbcad658d4a7468ba4d805e4222d32a83bdf7a5e564e376617fb5bdc06cc3b7f7c366e2f9cd1f59dc979b9a507df78ca2bcad4f75c490033af95cedc80063c088a82946cd3a141244e8f2fb21b05045273cc4f943812fd2711ba480b7f610c9957cb2d66b2235c0a4fb056a68ac093bb44393f4f0390e1227f74db150c0bf786cb924954eb27dcbae0c66c218b9970dc99be404ec0d299421524722dbc5bb79eedfad1c5abe42103aa42f482acd8eeec0b77e227a79b1f84bc8ffc746652167c9ef1ff81d962b38bcdfbe5feace68f9aacf0caecac34ac9cb9e8fb7f926f11e2955273284a53823ae72d126874ab4819014195dedf4464c234f716592381ab77ff403256e2467699e76124b87e418234ffa4615bf8604618196f53cd6a0645174fc224ce7efe6f1642bc14f8537bb2bb42cd93617ae4fbc0c204a0f73198d5ac69457020c0c87c28ad6c067c66a0be76ff55a6a288293f4ae45ee995fe733a95236eb7</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』LG - SP13388 MAY99_3 - Easy Jug</title>
+      <link href="/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-SP13388-MAY99-3-Easy-Jug/"/>
+      <url>/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-SP13388-MAY99-3-Easy-Jug/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目分析">题目分析</h3><p>通过观察<s>样例</s>题目，我们可以得知：</p><p>只要 $z$ 能整除 $\gcd(x,y)$，且 $x$ $or$ $y$ $\ge$ $z$<s>（废话）</s></p><p>就能够操作出 $z$。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int T, x, y, z;//定义cin &gt;&gt; T;while (T--) &#123;cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;int gcd = __gcd(x, y);//偷懒（划掉）if (z % gcd == 0 &amp;&amp; (x &gt;= z || y &gt;= z)) cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;//if 里面 x&gt;=z||y&gt;=z一定要带括号else cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125;return 0;//完结撒花&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-sp13388">洛谷博客</a></strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-SP13388-MAY99-3-Easy-Jug/">https://ren-yc.github.io/2021/08/23/『题解』LG-SP13388-MAY99-3-Easy-Jug/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - SP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Luogu - SP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LG - 听取 WA 声一片 - 题解</title>
       <link href="/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/"/>
       <url>/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/</url>
