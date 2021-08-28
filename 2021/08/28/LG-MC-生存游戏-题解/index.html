@@ -6,21 +6,22 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/press.js"></script>
 	
-	<title>工具 - 任宇宸的个人博客</title>
+	<title>LG - MC 生存游戏 - 题解 - 任宇宸的个人博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="Minecraft 相关 Minecraft 联机全教程 Fabric 官网 OI 相关 OI Wiki 文章相关 营销号生成器（初级版） 营销号生成器（高级版） 洛谷相关 冬日绘板">
-<meta property="og:type" content="website">
-<meta property="og:title" content="工具">
-<meta property="og:url" content="https://ren-yc.github.io/tools/index.html">
+	<meta name="description" content="此文章需输入密码查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LG - MC 生存游戏 - 题解">
+<meta property="og:url" content="https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="Minecraft 相关 Minecraft 联机全教程 Fabric 官网 OI 相关 OI Wiki 文章相关 营销号生成器（初级版） 营销号生成器（高级版） 洛谷相关 冬日绘板">
+<meta property="og:description" content="此文章需输入密码查看">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-27T10:14:04.000Z">
-<meta property="article:modified_time" content="2021-08-26T11:55:08.476Z">
+<meta property="article:published_time" content="2021-08-28T04:03:55.000Z">
+<meta property="article:modified_time" content="2021-08-28T04:11:45.787Z">
 <meta property="article:author" content="任宇宸">
+<meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -495,7 +496,7 @@
 			
 			
 				<ul id='leftbar_part1_menu' class='leftbar-menu'>
-					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/friends'>友链</a></li><li class='leftbar-menu-item current'><a href='/tools'>工具</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/friends'>友链</a></li><li class='leftbar-menu-item'><a href='/tools'>工具</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
 				</ul>
 			
 			<div class="card-body text-center leftbar-search-button">
@@ -507,18 +508,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">任宇宸的个人博客</h6>
 							<nav class="site-state">
@@ -620,18 +642,25 @@
 		
 		
 			
-
 	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/tools/index.html">工具</a>
+		<a class="post-title" href="/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/">LG - MC 生存游戏 - 题解</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-27 18:14:04 | 编辑于 2021-8-26 19:55:08">2021-7-27 18:14
+							<time title="发布于 2021-8-28 12:03:55 | 编辑于 2021-8-28 12:11:45">2021-8-28 12:03
 							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
 						</div>
 					
 						
@@ -649,7 +678,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							23 字
+							3.4k 字
 						</div>
 					
 						
@@ -657,7 +686,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							11 分钟
 						</div>
 					
 		</div>
@@ -665,23 +694,157 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h4 id="Minecraft-相关">Minecraft 相关</h4>
-<p><a target="_blank" rel="noopener" href="https://ak-ioi.com/227-remote-minecraft/">Minecraft 联机全教程</a></p>
-<p><a target="_blank" rel="noopener" href="https://fabricmc.net">Fabric 官网</a></p>
-<h4 id="OI-相关">OI 相关</h4>
-<p><a target="_blank" rel="noopener" href="https://next.oi-wiki.org">OI Wiki</a></p>
-<h4 id="文章相关">文章相关</h4>
-<p><a target="_blank" rel="noopener" href="https://iamazing.cn/page/baidu-style-generator">营销号生成器（初级版）</a></p>
-<p><a target="_blank" rel="noopener" href="https://maorx.cn/yxh/">营销号生成器（高级版）</a></p>
-<h4 id="洛谷相关">洛谷相关</h4>
-<p><strong>冬日绘板</strong></p>
+		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
+  <script id="hbeData" type="hbeData" data-hmacdigest="86caf766b1e54d6fc2bfb7c66e1e5e6d19376aaabff53087e9f42522a0a9670d">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c2f13af0f31a29ab62941722a1d1e58ccdd0cc6955c9a521f3f73ba1ef23130e9f5a03d58ec0e875e9e1824f289438cf3f906962409f0e329246a5069beba33560c7f6bdbc520054c94d48bd9f2bb4434dce35499b678c7d9e31791423b881bfbfd3dedd8a159f847d37755d1a5ee3b0132b1920fa3058e5b9ab530e5936a235b2920707aa164bbb414a4d7b0d610a14929211f3e11cb138103e7069d3e7936888d72a4d4b319b16db76115c8814fc3e14a73211f38cbf48cd18775ad7cb5c6755053b8142040b5d446762f1a0a8dcf0c9837c068a3ae91b3c744a140657a00b5e5043f5e474b104e1237aca2e2e7315554024233bc7e7c05b0e6c7489ddecda13ea9539851c4b65162a448ca9ff6cecb7db3c6738b2c4fee1f8e7a509e0045850c615317546a24e928dd2660b893492ed01a50361bbb942e4feadafae0e23745ad19e8f9ebc8563bee2e9ceaf5a4d5184d7b01fd51ab5fbe6b181e8b2b2594f9be4d97d94da74bc1390286b7b08b33fef1600c471797fd6a65cfc4d2c2904b799d551317eff5624c224e013e3845edd225451fe462f1e047bb15ff35ef653fdddea21e7c3caabbdccb56bdbae5f94babac41d486e4dfd6c7d53b34a221d6e007c9f25ff43273f52e4af061f05a899027414c28605a2d388c4c490964048d9d37b4f25489b352f3887704abc25f43f250145db5f340a54458b6d864e1245bbf853ba582046b2bb2142cf46faa41d7a95fec576b943f86f9fff19dbd3493dbd0f2010386a02f9050a73f8e3ea5533fe6954ad012209c84a17e03eda2b1eeda237858b54585e7e3136bbe2c1f5236029caad6efa04051d7d7836a3c55d670e5965eff746d52c182ae648d359cf3214dfde5950e28a6437c2cef02911a956b5abb57572024ce80d9eb14d6c83edbcbaa477808eb3d44cf9e3da8486e76f915e00020691b34a6be26fbb101074b404d95200e76ffbe9b89bb17bb4fd784b6adf259f950e3d9e116c04e1bcca105a69cac0730fddf84245464281b832201b12295acec13764c6fa2b232ded9bc807240b81d6f6f97a21bef5e0913e11c9ee3a7de34bfd04f7b5b805073d68678bddf24772ce305f8d60d7ba1e08b4e6e7d7dfefb1d1b6dcfa52842b4f76142361fdb4d35f4a19f4524b3c3d58cbb06b9eafe735c722127412c32831a4c602a454f10234eeed0afe3e959e50b6ac42a16382ef3f8cfed63375eb4ea4798dac5d6e4f81baba7912da6b30923065c1b27c44de2d4c6192dd61e246390a87ed53f9293f470abb8d8bf95c59f9181dcf2a884e71c9273e652701aa9ca56212d726d264f70df923ec5bcfa7db082f89fffa6ba3b252fcbcd46d7657a2ae86d8b5b4b80fc1ff5916475ace5437073ebcfef02b2ff8f6b2d0e46e4bac54809dd56f34ffeb04dbc03d845af21ffa200c749408dce1445180ad6630ffb6157abaeed9b4571da26696f0b91c9e4820a49b4d56d74a15cc863ef56a4de199d0ac2275a5f8e480e77159774335e8e767f85ccde376a725fa05a0fbdfa511a205475e32fcceb4bebd77137cf2170e6d066549b4eac791632f203d875cd6167029c7ca2d62c6647b5859024262600792049f118d6ea4a4676768b77440d781fd312b13329f17009708c9b544c06137542a165ca5c35434ce30ae4f88ca527cbd790766ca973aaac8ab6816d01363a4fb7ab8f3d49ea913c4d7615d7e1b6998e72ebf8441ad0c7cafef3a3085b76e0c744f21dec46e69943a46498513e739248701528a7fa5234944d81a7f2901d3cb3052d0fdb3d86cd4df3c46524c6029126107ece7186e579823b781590d6f9d95a08605da37443fdc6110a96b0f34ccac9e7d0c65fc4c4562df0146622d7667563fd368877e181ce47702818c2c531924a01a7d8abd4787d340688417cc494ddd3c293856b1a9f30f9ca79bbe710eac4183ff2b4b9bc32fb0e51e4acaf285858936b46fa9f74f4e1df02d4dff9dc9a3dd4563c1609ac92144690b5e6b4c35517cc518e062a28ce25f36f243067a88addef1153a4fd6f3554416db7ccdf4fe6c316ff9a7ee03b39b5d299596556dce15da1d90c4ba9f3b6efd3b943a318982b91388d1be3dcc5ee2abd7ff328e8f7b4c3c7ae1d1f8b11f624c45cd2766f510df65af5cdae8ea72e42f33442cc5ff0aef7fb423e32879c0a14c31e7af3477e5c06cdd5513d09e7482d560a1545dff8069d05184cee29947b7e1817cdae9557d576b3789badcd408aaf97717ee2507fe538be2092ac39120609088eb64e1d78547fe0911fe0ba328a9927c59822219634c5fc04642dae5cfb6ad9c3430f56f20181c0be4c1109fabc6c5dfac2deaea1ef3c085e803fecf2ea57694555bc8ddf1b45d04d122e6552b56ef01a7c58bcadcc3a10163a063afdb63cce4cca8ec49326256e69e065acaf9e73c67172d72117ae5a48919339ca09641471e45aaecd726a8d341a078eb37f78e06c4899ca7f883b724a07baa30f84b11d8ef37c4cd5cf9fb2cd55fc55e93a8bb9f96efbf294b999df117be8802a2f1d3fd917ad6d53a9c9c5403502438315c2fb59106417eee0348ffc0e91eaa9201964c327272a00e8d64f6fd86dd2fa1fe3f86ea16821584c95472cac9e50ce188e38e96ea1816892d273810b16f93c5aef007045684f9539719ecea98aa86f84d20f4841260b3e41a599236f7ceda468b582c39ed8605e3bb57e940503be11f62bd9932d8e58cd573c61173cb2191f851dcb5282b0d885738bfbc30a32ceba3db3b4726adeb99773a3dfd9e57ac2b51b1aee8bd1ec80c93a4a4d6d7b60af33ab8ffedcb01091e14fc1cea0f4d315b8dc387a24996712b7277ca04f0be3f7a57ae6fbcbc043803b9749261ab0b4e7ef6ff4ab80eaf6f5a6d30d8b1c6403d30d1d5abca182cefd0542e0d6d61a6e646e3c35ab6b5dcc4cfe249bd0f1bfb40808f68e081768c19f68b6158f7acf360d67069bd0cd939f62ace1be0ab1fcf8380cf74bea70ab32f1e5eb4e48fe9bf59c5691481def6b0616cd969af2f97daaf69857749763fd2fd81b68f7999332d73efb72c22c4547a21e1bcb57787afd497527fb26bccc27851357514e7298a2806df9cd8a9c9eb677534e06c8bbbd33b9c486d54ba51074889a591a75783f180302032042523adee8bb6796673ae1b94a826fe6842fa70df1f4062419caa05ca284cccaa5a61e0ddb62644bb2e63024e9c1f1c5f56b00752adb1db75bafb22b3be9986b354ba7d6d9cb13306807182f20ab914e61fcd9c1f5c898276a121dd744ee6fbcae241cc51e62a788c44e9c50de0bab982025bccc84263298bce3008240fe91c508b5fb8ed4f94ef60b82eeeef9add28dff21b2c868185feef6f7a28a9757983c1af3332c4286d69b533ce8ce86f8ea7c6f8ed81975474edf6181b82346f640f12c727720f0fbb8f09a8aa822eb0058e4bb45b1e54181a3cae3bf39054a24209f8580a3cfb23dea76a032c29c1af26534b8aa507e2f35eac033564c4f74ca099d6fa76673439af0d56e8e73ffb709b63d6c2994d64cae4f17ac491cb3425ab7be4f7ade6594ef4d8ce8b29955238fedaaebdb3e05ab9ee168e3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+	</div>
 
-<div class="bilibili">
-	<iframe class="bilibili" src="//player.bilibili.com/player.html?aid=843549010&bvid=BV1J54y147Cu&cid=276954140&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" danmaku = 0> </iframe>
+	
+
+	
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
+		</div>
+	
+</article>
+
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/&text=LG - MC 生存游戏 - 题解" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : 'LG - MC 生存游戏 - 题解',
+	    description : '
+  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+<div id="post_comment" class="card shadow-sm">
+	<div id="gitalk-container"></div>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+		clientID: 'aea63c24701c1f7f0815',
+		clientSecret: '3f33573a77bf4349dbee91c4897f9ac37bbf16e5',
+		repo: 'blog-comments',
+		owner: 'ren-yc',
+		admin: ['ren-yc'],
+		id: decodeURI('{{ page.url }}'),
+		distractionFreeMode: false
+	})
+	gitalk.render('gitalk-container');
+</script>
+
 </div>
 
-	</div>
-</article>
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/" rel="next"> LG - 爱数学的 ac 做因式分解（弱化版） - 题解</a></div></div>
+
 
 
 		
