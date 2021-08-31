@@ -486,7 +486,7 @@
 		
 			<p class="text-black mt-3 mb-0 opacity-8">
 				<i class="fa fa-file-o mr-1"></i>
-				36 篇文章
+				37 篇文章
 			</p>
 		
 	</div>
@@ -535,7 +535,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">42</span>
+										<span class="site-state-item-count">43</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -605,7 +605,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Other/" rel="tag">Other <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">36</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Tools/" rel="tag">Tools <span class="tag-num">2</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Other/" rel="tag">Other <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">37</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Tools/" rel="tag">Tools <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -620,7 +620,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">37</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
+				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">38</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -634,6 +634,84 @@
 		
 		
 			
+	<article class="post card bg-white shadow-sm border-0 ">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2021/08/05/LG-Hands-%E9%A2%98%E8%A7%A3/">LG - Hands - 题解</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2021-8-5 20:48:04 | 编辑于 2021-8-21 11:16:33">2021-8-5 20:48
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							146 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目解析
+这题看上去很难，但分析后就可以一个循环解决。
+每次取牌如果有一个连续的大于 $0$ 的数列，那就全部取出，取到其中的某一个数等于 $0$。
+代码分析
+边输入边累加，记住当 $x - last &lt; 0$ 时，就不要累加。
+代码
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
+		</div>
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
@@ -1309,84 +1387,6 @@ using namespace std;
 int main() &#123;
 	int n, x, y, z;
 ...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/07/24/LG-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/">LG - 前 n 个偶数位回文数之和 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-24 18:45:27 | 编辑于 2021-8-7 16:59:36">2021-7-24 18:45
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							672 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							3 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-这道题目就不淼了，变成沝了。
-写几个函数就不行了。
-真 简 单
-250lht：呜呜呜这是比赛赛题，我保龄。
-代码分析
-输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。
-这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。
-代码
-
-#incl...
 			
 		
 	</div>
