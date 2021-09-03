@@ -11,18 +11,20 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="题目解析 深度优先搜索题（DFS），在上下左右都搜一遍就好了。 代码分析 先全部读入然后标记二维数组。 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} &#x3D; 2$，则输出 YES，反之输出 NO。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int t, n, qx, qy, kx, ky, tx, ty, a[10">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - Killer Queen - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="题目解析 深度优先搜索题（DFS），在上下左右都搜一遍就好了。 代码分析 先全部读入然后标记二维数组。 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} &#x3D; 2$，则输出 YES，反之输出 NO。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int t, n, qx, qy, kx, ky, tx, ty, a[10">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-21T03:49:43.000Z">
-<meta property="article:modified_time" content="2021-08-26T06:39:04.991Z">
+<meta property="article:modified_time" content="2021-09-03T11:56:03.670Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -631,7 +633,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">38</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
+				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">39</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -651,7 +653,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-21 11:49:43 | 编辑于 2021-8-26 14:39:04">2021-8-21 11:49
+							<time title="发布于 2021-8-21 11:49:43 | 编辑于 2021-9-3 19:56:03">2021-8-21 11:49
 							</time>
 						</div>
 					
@@ -678,7 +680,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.4k 字
+							597 字
 						</div>
 					
 						
@@ -686,7 +688,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							11 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -694,18 +696,84 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c74177d141e6f637b8d32708d8d51fa937fe481fc83652bda69d3660dbed8033">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c2f13af0f31a29ab62941722a1d1e58ccaa6885f8ac6b9c2096f2c5720d5e186599d241d983a798af7d3a46530b6945401ba8d2cbc6ce6881b6a8b581bee33c7fe1802de903fc5d86f9d4e4a35f88211b01fd26f720d0cbcc8a3243e7b031a39bc0f1abdef9be2d15aba4f7afb7289370a4920ea6164516156ed2f0b7129c1ec1fdd90e9a06572948e2dfd6d232fa0ff4a5a2626b00cce020e8bd4dbe5bda9abfec54fb96caf7471a7804e15d9f5d9c9b84c519605514e5379c543027067d50dc864c60b1954783e96a7bf83c67c18f1fc09a8f67b1f63bf1e6e658ff2e2353776914ced0d93d5cba4afadb201e213f4f7481b13096a756bb40d4ac7c1f3d8f02ed2425fcd34b6415fd3363af24049f66f32710c7a52e5a1e9851462d981b1680e01aa2edaf9e73c5a4528926a9c07ba2a10ea1c5ce9145ccdcee1c3a11504f8ed939f72db23f1490660acd17de259b655e36a010e410288b6547238c55a7704ad93f4ff4e1ec8cc783b94e5892b1a95571e3fe12dc559b7b1af593bae7a4d8a62d46b89f1185af62503aac9f52e382786468b337052aa1f401734e893e23df952a08ca0dfaa90a714576e5b26425f9d6dc60a29fa3d0fe57e8b411113e25ad25ed2b0939e5a45981947a5c39c9c9bf59119b306974e71e399b1df7d8a0c201e4a009eceaf54572d54f50f64b5dc95646fea52be5ac5a8f92596f3c39ed940b23dbde1b6582da51c2f3ca7c02e194bde7374b816804bc333cdc7ad5ed8a9c29877bf1092f184a12608e1e58b85b67fb8784ce36f1f63e3300dbaf0440624ab296306e91ab300287093725feafb9a479b822ab2483c48a9c60cf7009173cbf6df47e4d76f15af7c137b8c58dcf96c015a38348f06ffdf93e944ce31ce5760840f072aa785ec411724c5f3488af1a49c21cb890dfe7585a6fb6387e27cbbd0d67d0b0f47e11c6d400c46d5f55b4a52a09affaff0ba9a7c5c5a045e0def49c865f9c285b9158140e34581bfbc410d215f23d7f5070d7947c65aa25a2b54106e9952bc70df06e66090a7e3819f48e68c627b7d70136c5abda291d9f5a0c60bd27fd6a216e2c3653a29ae56cc411aea0b07bd4a6059ddf1fe4e1e31d094d929277ac0b81c488c3fd26328f1ba9469047014fd2c515632fbbeb3a617fd2271b0f00ca6bd0816c664b30a0fab6bf7a1ebbacba693ac9da532ecc263658637b45e0bb0c8beccb3c79207d46066f9973a760a0e4708ae97b57957354bb1d597ca878f5297492e9e5619599f4b375f35245dd499d65f6e7b57fc8bbfbf9eb14f463eefdc9e88f9b912dabe66f88fda5b076ff88505e247d1fd49fe5c53d3a0f64b8b2f353042eb85b317456906d657917b05d3f23cd963ec786e8e738a2e267b5973977df3d61c517a6ec13e27736e3f0874c6cdf5604a4fdd1aa268c429794448d68ab1d9d14af38ebedcf62649e55a19b101a37878864f8810c6755762e6286e24cfa55e011fa78bf1fb2ddf0a0b0a68fc2104f582a1cf0053a6ef25df57c0c856f97bdd9e69faa42c92cfcb819f91daaeeeed41de9a07393d9d539c54c7614fecc1c63af58f2193ee5311969f9caec1650678d1fb400b9dc145fda86fdf8a478c43926995fe98a1cf715d6b97de0d45afe43f9a5ccde3528a4f31cf9730d62b2905e61d002f6fb0b13fb7931cf46d6f932a2c1dcebdf4ce540086a98cba39a4677f73f9b3222c14fd1ce02aba93bd96c0054ca272c595b4ffa547a90920ac169057e5418d0ab961a199bd8eda3bbf66ac26b7c394264db4efe04b2ef482f3727ab4efff662195c7e2ad6a81ca737deaaf6c4e6fac3dc3477ba2b461be37703b4bb590bd7f123e0e65f09ed82b973e0e41b1b9f15e2c3128ef2b1babfa1c7468b2c60b598a8b961a27303748144ae9e4d806c16accc8f8638b357db1a232e8784af40137f75930cf3868dbf3d4f9127c7d7ff02db61a249bbf7f776b206eb85bdceae0989d038f1dd1d1a40b12c2f65facd0d070a3ac851ef9b89a5c836d511acb9b1a1aa4927ef43f3eb32c38f2cf99e080bb359cab50110b211bf1cd6ab0bf10184e6cd393d1e2a7ba8ffe10a40780df38a4f6217ccd352106b6b63269835599d2886fdef278f5d5355527fd2f7d857ca4ba49e7c6ef702b909e14be5a6d7e6b409165050d9046bd522814cf92c869711a897e9c766c6e7cb6cee68d8053af24120f413288fcef385e8a8e62a1c86499ebded3601d4baf159ab2008ac09233b6ff7deb3d59cded6e324a385084f7f98e69bef659a8f741b857ab6257ddac9440b67134d5214253092aa6d805e5a77a4d911c1bc3df2b993e6c7d4324ebe587de5ce849225fe8673629235764ac3f7f681ef23597559c5b3c4da37c616654deffbb8d0cfc45f5544b3e188824697e22a1cb10b3fa8f86aab5bfaa929ff54009da5847de160a15624856d4f6de2366e9a951d5a7b4ea19c74fe3c75a6880e84cce103e909e458a2ff63409cfc8bf23822c1f7e970bbcaeb4a81319a7b89d5bf1d7248ce5a415f732009809b7fbafdf734ddd39ca49d6e4e2a3790b7f90b249ebd57751e026427d474ccc9f166a60e6a6eb5e51be205f4a17a04c4cfac72152b818669391f3456bfed5ac1377ec47bd1ca2fe74b1380bb1b084876f5c8ab03a89da8474089493dc517b44f64a3f352d570951a7ba6e07e9162d5152e5de5c2a20181f318174d7a3ab719725794c1b510565b1b183067ca448f0103a2ab7dc226c372e5d8e59e999eb3d86be7163453d5f4ebdbefc48408f3d7edb13da13530def4e19609d4e63ef04e4db144f23c7f7af24459b6ca10cd0fd0508e9136cdf268c7cbe7c09243c10c4ea0c9dcc22990c020af63c56de5ee2ee5bb248dc1377a04f659c6c7f8d531b5f1281f04df1a2ac317a8c2226f2782a05b6bd31c24c7e32090930eb1ff1be5dd172385a8c7711a44b5289a1828ebb25a750ac032dcfd84b4dbc0fe6d7f541d4e85eadaa2f06c87d3a0ae87d8dba7f422123c238e4c767bf8e18516fc36d0d300ba7bc784433c7bb359397768c32e449b0312e850f04fab340c913e14bdc784f0d22e535b74f24df0fd8f9ec0d10f2b140007bd3a0dd4f6691e3c5739f3cb67c4b4d9dba8f893f846b3ee25ea65da4e1a00a705ddcff72af767455bce5fa396962a96f712cdfa7973aebf0160f20646f894e8b7dd62f24320b4b63188bf44873ebe46f40724bb8cbf414c1d39eaab93e7b95b4af4a55a8afb4812cdd1bd167fe606590678ad21a75cd22491046ae5b9af4eb8d6b09a6285cf4cc7b14c668b0991f92658fa2dd6b52772287c527061db939e4933ca01541bdfb90f7f81b3c25c0b556f873903a97027a44d0ff6a2c7a9ce277a6120f89d501ad38e205fd5004d9ca764f3db2484a58ef6aa6a50bfd331b8004883423a12afa34a49cb5eacc5ee264861ecd30c8c9cef55d3aefa5abebccb20c01b4309e15c5fd4bdb623f21943bba8f12d614e86ce1eb3f753036872ed1c71a0644ece37ad6bcfdc2721d71afd88eaf3663a249caf67d192071b4f48e64636e354903a347c79df46d64ee4fd0b58d4b573cff9be0cbee79dc8c840</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="题目解析">题目解析</h3>
+<p>深度优先搜索题（<strong>DFS</strong>），在上下左右都搜一遍就好了。</p>
+<h3 id="代码分析">代码分析</h3>
+<p>先全部读入然后标记二维数组。</p>
+<p>然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} = 2$，则输出 <code>YES</code>，反之输出 <code>NO</code>。</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int t, n, qx, qy, kx, ky, tx, ty, a[1001][1001];
+
+void dfs(int p, int q) &#123;
+	int k1[8] = &#123;0, 0, 1, -1, 1, -1, -1, 1&#125;;
+	int k2[8] = &#123;1, -1, 0, 0, 1, -1, 1, -1&#125;;
+	a[p][q] = 2;
+	for (int i = 0; i &lt; 8; i++) &#123;
+		int xx = p + k1[i], yy = q + k2[i];
+		if (xx &gt;= 1 &amp;&amp; xx &lt;= n &amp;&amp; yy &lt;= n &amp;&amp; yy &gt;= 1 &amp;&amp; a[xx][yy] == 0) &#123;
+			f(xx, yy);
+		&#125;
+	&#125;
+&#125;
+
+int main() &#123;
+	cin &gt;&gt; t;
+	while (t--) &#123;
+		cin &gt;&gt; n &gt;&gt; qx &gt;&gt; qy &gt;&gt; kx &gt;&gt; ky &gt;&gt; tx &gt;&gt; ty;
+		for (int j = n; j &gt;= 1; j--) &#123;
+			a[j][qy] = 1;
+			a[qx][j] = 1;
+		&#125;
+		int k = qx, l = qy;
+		while (k &gt;= 1 &amp;&amp; l &gt;= 1) &#123;
+			a[k][l] = 1;
+			k--;
+			l--;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &lt;= n &amp;&amp; l &lt;= n) &#123;
+			a[k][l] = 1;
+			k++;
+			l++;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &lt;= n &amp;&amp; l &gt;= 1) &#123;
+			a[k][l] = 1;
+			k++;
+			l--;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &gt;= 1 &amp;&amp; l &lt;= n) &#123;
+			a[k][l] = 1;
+			k--;
+			l++;
+		&#125;
+		dfs(kx, ky);
+		if (a[tx][ty] == 2) &#123;
+			cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;
+		&#125; else &#123;
+			cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;
+		&#125;
+		memset(a, 0, sizeof(a));
+	&#125;
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+
+</blockquote>
+
 	</div>
 
 	
@@ -775,8 +843,10 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - Killer Queen - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '题目解析
+深度优先搜索题（DFS），在上下左右都搜一遍就好了。
+代码分析
+先全部读入然后标记二维数组...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/'

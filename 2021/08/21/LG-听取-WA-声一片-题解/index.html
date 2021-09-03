@@ -11,18 +11,20 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="题目解析 膜你模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，又不能跳 $0$ 格。 代码分析 双重循环膜你模拟就行了。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	int n, sum &#x3D; 0, maxn &#x3D; 0; 	string s; 	cin &gt;&gt; n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 听取 WA 声一片 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="题目解析 膜你模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，又不能跳 $0$ 格。 代码分析 双重循环膜你模拟就行了。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;#123; 	int n, sum &#x3D; 0, maxn &#x3D; 0; 	string s; 	cin &gt;&gt; n">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-21T08:44:43.000Z">
-<meta property="article:modified_time" content="2021-08-21T08:53:02.034Z">
+<meta property="article:modified_time" content="2021-09-03T11:56:15.939Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -631,7 +633,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">38</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
+				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">39</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -651,7 +653,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-21 16:44:43 | 编辑于 2021-8-21 16:53:02">2021-8-21 16:44
+							<time title="发布于 2021-8-21 16:44:43 | 编辑于 2021-9-3 19:56:15">2021-8-21 16:44
 							</time>
 						</div>
 					
@@ -678,7 +680,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.3k 字
+							211 字
 						</div>
 					
 						
@@ -686,7 +688,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							7 分钟
+							1 分钟
 						</div>
 					
 		</div>
@@ -694,18 +696,46 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="16783c8ea370fa03c2a733b27c5cb42db545295467564aa7b48bc00c7e63fe86">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c2f13af0f31a29ab62941722a1d1e58cc14db3c95bd80164544e733d5d0b786a6dfe96ebae7851c287a7d1d36f18e1da08f2fb956c5b0c60263fdb2d80ee27d1fca2ee688ce7bc5fc9c448d1f71c6814ed090838911cf32f86a13f02d2185fb3f5ab745f5d4ec57e08bb6d337873502e93cd9fe8b4c974b0087ddc58671873986c27b653a28c5c6d38d58a825d7e642335c12134b6e200b639f391c0856aa7cd73d3b85b8f89b1e4e6d4447e4e2eed709bdd321441108504910b3315a5cc8b59ab4705743a9195de2326b83b9d62b2d40d9b614eb654778e8d63170b76dc0c714a8defb08f315bb543828786ef3c707159bf50f861928b5baca828f3184ee43804dc08ff3c9d31f2878cec77f956c161317cf553b00906be2701363f40ae785a6f93ab2a5bcbc338ede7cfa74092be8c726536188462fde01755a29984fc34736b66e2e4798620f7947514d04c665144fdd41cc8c3c8397229d51f5f69f4ad3bec4c8565f75f79622be1db98dfc17e349d9eb4ab53af8284c9d778fed3e43b662d6a2a399e908e5260c6a10fe034015b2cbec5be13089016b1087d8514ab4468a1d6919757384498031c88ae963d40293fe2c39f90646a9942091e278d7f599f2374c348a08b2ab6be24d973ea919dd18465c7aabf0a50fc324cd62456db4d9df6708873fd055db56adcb3887ecbac407fbb56af703bf29193e5e95af2fc9e95b1e73da70007a4e88d2468c64f8ac1ace83b542a31d34070e1463e6dd24391800ddb0ed35b1b4ea4513591d37c970e096bb4fdcefe676e5acfaf94afd991697c6595e3eaaeedfe7c5de9d7f7cf9cb3d307ce3b1f5147e4db7dfcf07ec021201cb9a5680ece0ed7cd0ede89032a035a08c49a2bdb8575212a1ec4e2653fa251dbc989547ad5d174a82b42235cd78205d8bbfe7d7a9f03f6c08299ec83ad02554b0c1f93adaaf4820bc986519c3f73e48457e285fabcac1411bd7b89ac87355888c72a634651f9896e29e14520a5365bc2f5ebab5c4243c533d7b901361d652a97abe25b837d2172b3279866e94fba1b895ffa513d939de5435a1c45781d468cca3462f24cd3a3f35f64de3af73935732136428a2ac5d3fec2d2b49b10fff211de17dd8861f70ab5a18337f939711a7eb22ca0bf62323b5a75e65f220dcb3d2c0f9101ddc166ce3c8b4c2286bae32361348fca7670e67100f2e35a4874d89034c591773d7ea4747f1615f5fd92b0de5edd2b61831ff0690c8c38c37e0ef65358b57fb2f969a63c0fc32f486250514bd60f5aa2a3f6684c2289665f2c78b3ef11d1e6d27c6e235a6d57dbbc0a2112736b817296bc46f3ad8969c5a2e37f4ab0688b9d15d6d370345b9a8a2c306f82eaddeb1ca7a6bf4e0dfb6cf0f3863cfdd128d9cea5c6e5150aeb3cf0e8fd5d3ac85e8fa7fdc620542af45c3ccd372839dd45fcd0147a519c4c5051ff31c5279ed0178b752ab6bdda500cbf37bd1e323392fed0a54a6c7b5dd6fae1886acf5f39278c5de3cdc09bfba869efbecef452ffed619b752711722851ecd50d152ccf9351c21d27e174f8cf528b2f357c31342eaad903e2397756a4c24c8d84a2c1a1b071797f4199b8204aec89cd50403267c1817492ba2b23beb58a37407204b315c0099e8cf508e50810e4c97633eb67472fe6192082c66ba52a60feb36c95a89cac64f2d43612bacb4fed8817bdba62eb05139c8ca0b7524775e9d3896adc1c35181bd5271063464c3d96945c5d1865c0bd26f72d2d89e74d313210769a4bab577079ae30062261d9e808a0f6755797138de9cca4ebfb03a4852bd9e4bd12240eb4287fbb8ccc8f78322fdd4e4b9a5061097caaceabf291640641508a7b579fbf6bf7b464b858d251eac54317abea749c28a498b7a6fcbce0678921c9761800a7214dee8dd2cfe6c998dd5bf44fc2c6d6923905f3ccb4bbe06d45eb31f73aa294b5d0697b3c93236c6e96533c604129903e635dcf7455e30f013dbf45a5a6cd87700078d7b1c2a4fac085049a592e41e728aa2c8336bd4803118f4c0c0e206849470fbdeb9a2e140f5efee1067b2db35a2ba403df53ab59dd228cfd2e3931ef3572382fbe69347512be511f88b7d807da262a3df3cfc706f63e2eab6a70dba16a718ca5dc1dccf2393825152f95f1f3a847540085fe7b3a69175a9d137a07be9ffb5f9cb05bebac2656c0987765625b148ff690f30e2b706eb378793028a275794d34fc20b67dd1b290bbd72523588141f930194993c2f99023e7342fb0d3f098829667ab0</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="题目解析">题目解析</h3>
+<p><s>膜你</s>模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，<s>又不能跳 $0$ 格。</s></p>
+<h3 id="代码分析">代码分析</h3>
+<p>双重循环<s>膜你</s>模拟就行了。</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main() &#123;
+	int n, sum = 0, maxn = 0;
+	string s;
+	cin &gt;&gt; n;
+	while (n--) &#123;
+		cin &gt;&gt; s;
+		for (int j = 0; j &lt; s.size(); j++) &#123;
+			if (s[j] == 'L') &#123;
+				sum++;
+				for (int k = j + 1; k &lt; s.size(); k++) &#123;
+					if (s[k] == 'L') sum++;
+					else break;
+				&#125;
+				maxn = max(maxn, sum);
+				sum = 0;
+			&#125;
+		&#125;
+		cout &lt;&lt; maxn + 1 &lt;&lt; endl;
+		maxn = 0;
+	&#125;
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/21/LG-听取-WA-声一片-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+
+</blockquote>
+
 	</div>
 
 	
@@ -775,8 +805,8 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 听取 WA 声一片 - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '题目解析
+膜你模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，又不能跳 $0$...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/'
