@@ -1029,7 +1029,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-7-24 18:45:27 | 编辑于 2021-8-7 16:59:36">2021-7-24 18:45
+							<time title="发布于 2021-7-24 18:45:27 | 编辑于 2021-9-12 17:13:17">2021-7-24 18:45
 							</time>
 						</div>
 					
@@ -1056,7 +1056,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							672 字
+							738 字
 						</div>
 					
 						
@@ -1074,17 +1074,24 @@ int main() &#123;
 	<div class="post-content">
 		
 			
-				题目解析
-这道题目就不淼了，变成沝了。
-写几个函数就不行了。
-真 简 单
-250lht：呜呜呜这是比赛赛题，我保龄。
-代码分析
-输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 weishu 和函数 huiwen，则加到计数器。
-这时有人就会问了，huiwen 函数中的 _itoa_s() 是神马东西，请看这里。
-代码
-
-#incl...
+				题目信息
+题目描述
+输入 $n$
+输出前 $n$ 个偶回文数之和
+偶回文数：有偶数个数位的回文数，如：11，22。
+输入格式
+输入一行 $n$。
+输出格式
+输出前 $n$ 个偶回文数之和。
+输入输出样例
+输入 #1
+3
+输出 #1
+66
+提示说明
+对于 $100%$ 的数据：
+$1$ $\le$ $n$ $\le$ $100$
+Idea：250lh...
 			
 		
 	</div>
@@ -1423,22 +1430,27 @@ in...
 <script src="/argontheme.js"></script>
 
 		
-		
-		
-			<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-			<script src="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-			<script src="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
 			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body,{
-						delimiters: [
-							{left: "$$", right: "$$", display: true},
-							{left: "$", right: "$", display: false},
-							{left: "\\(", right: "\\)", display: false}
-						]
-					});
-				});
+				window.MathJax = {
+					tex: {
+						inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+						displayMath: [['$$','$$']],
+						processEscapes: true,
+						packages: {'[+]': ['noerrors']}
+					},
+					options: {
+						skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+						ignoreHtmlClass: 'tex2jax_ignore',
+						processHtmlClass: 'tex2jax_process'
+					},
+					loader: {
+						load: ['[tex]/noerrors']
+					}
+				};
 			</script>
+			<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" id="MathJax-script" async></script>
+		
+		
 		
 
 		
