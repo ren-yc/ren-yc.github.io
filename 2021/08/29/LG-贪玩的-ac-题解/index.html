@@ -11,18 +11,20 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="代码分析 暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）  #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int bossxue,acxue,acharm,bossharm; int main()&amp;#123; 	cin&gt;&amp;gt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 贪玩的 ac - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="代码分析 暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）  #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int bossxue,acxue,acharm,bossharm; int main()&amp;#123; 	cin&gt;&amp;gt">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-29T00:25:03.000Z">
-<meta property="article:modified_time" content="2021-08-29T00:27:41.545Z">
+<meta property="article:modified_time" content="2021-09-19T04:54:28.390Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -651,7 +653,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-29 8:25:03 | 编辑于 2021-8-29 8:27:41">2021-8-29 8:25
+							<time title="发布于 2021-8-29 8:25:03 | 编辑于 2021-9-19 12:54:28">2021-8-29 8:25
 							</time>
 						</div>
 					
@@ -678,7 +680,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.6k 字
+							250 字
 						</div>
 					
 						
@@ -686,7 +688,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							8 分钟
+							1 分钟
 						</div>
 					
 		</div>
@@ -694,18 +696,46 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="a09e82c6ed8d1e3c8f394762538e9cb8ff6c6696d24b9fd28fe54bcdc1fa186b">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10637c6e81d6995515642d55a82aa31a4581728e07272a8194623d0a4f8882e2747474b413cb8c0fd97e6791ac7354cf02807b1fbee4de1846bcb65ec1994a15432f77bbaa93b1f7f161fd39fdb5820013bcd79b6ba746f515b681929164b4f69c505272fe34c0e5bbe59742fba1853e668470529db50f36204185723fd9d1525a874e49edd6940c4f99ef0150f54d250a2f07397de6a88182d52626694fedec8d939a582bdc318d829ec6d9d0857b5ac73a7086453ef27f0a698a90c4bd5280e5f32a651d7bc67709fb096efae683312a317f61667743fbdd049712866e4e151fda45f0e2e87c6418289d26af73b4eb1aa1026f57b5f12e297317172eaa90c4083b7c6cf75ed7410622b0a47f4a1c0ba820a92fc92222ae5efd1a92a356da73896a7b9a2e39d7eaa2df67b289af8a1f5cb4827c3a47be00c5aa5ec8c432b66e9328780cd3cffa3add049e2b25cdb3d6d6b8512cd08d8c2604420a437d5614252c7e6d2c8aeedb1fd9973e3e8320ea05df7266907d53b4d84340b09a480d45d5208c00e227f42a909814f905e9d87f6bfb9af702b3f5f640ff218a420ff648c1b75ac6dbd80836b504da05aa264947197bf1c0fcff6a05fa3d5a7f738320fdd7aee68ec21cceaf8c825296f0c840bab3d2ef57a0ff7e689102decbab632a516ab627c93a89591615948383542f23e6d81e02ac22521f82f9e5e95df7e4bae18a413f6ff63a86d6092cfa9eb17f7f9e514e617df00d2880bf74e95338f44d0a798033364fa00c232fcf17c5197a44f92792c8e89fa85e5553f1494986d43df107bee85e2337f508a3c9971197716c746c9ce522f00a1d0e3bbc9476ea7853a0cda17ed79cc0a815a8076ea9decee49901074ecbe4344edef473cdb0fc4268fea18cb6feb7fbc3378b08fa27cb7d21ee2a62d07a62a2c652d2361d98cf4cbd099a5dea5109f1e689e7f3ec043bf3122804aa585af6242a4cc8f40eb3678a1712ab0f9979afa7a1dd1d5900ca051856b70cea0faec887140d9775824afc9c6ed2d738e36653d9b0dfa88cfcfad19369dc7129e837378d46b2850c6422d9e8d81bdf76985c416483d38ddee46ce5735a0fe99734ec8597e0a1ce3ba7dc468af0f71c469426d3e030da44e598c6fcbcf7db243e110833bb7c38bcbb9fb875a5b6848b0870c588d6a8c5f8021479ab96bf5e5223c56ba6aee3765c2984fcb84c6e83dc3d6c2ed7c73f28249100ae3e3d7d625c1b1582d827baf5ebe81ad6921779a674735c957748ab166f8b1bfae3807028fa2fa481c2752631dc4c5183f784e20ee132a5300c490d641a55ff8899fd9f80774fdc05ece47cbe647a6ccfce87994c6b93bbde471d05925e0ff6ae76635017624d15e8575768ebeed86c2d414bc3ed3811e4aabc6bf5d5a617dcb5f8d60d52f83240f8b67e88afd04652a6358d761b6570fffbf6edf2a17a525821bcbde087ac7a71ecc3b6a386b29bcc55a959a66316a168d12e170f22639e40d3b9c1ebb3d1a7ab4c9e6a3aa51beea021cee90f415007a70f28672f686b50f15d393ac7df9f26ab69cf700e949f7b69fb192937087456de2f2b8c0a9ff164bb44be9d6fbefd8e49c91036bb18e472f9861a344eacb2463dede7a9efcbcd9259df772f98326352f9978c0179cff563175a78bed31b78a4f8526501ba20dff108e599e7a4fce5e1051d86eda4e3d1295474a4f00d3a03efa31c7234dfe9c4ceb12069adb69b9a291734a5f1dba4b1a3ef5dbadc5bb1f99c2788882cd2b589b3f9ef5fe0256339943d146a5948a8b4fbbe0e6a0accf8c06b20dca0062b3b5c99039b14376720e6e2397f699bec7effe1f91cf44cb4bfdd29103a50c5a1d98382fa17fcce5da2ea9b97748a900087c8aa0e8dbc29c4993d0fd23a89e7da2acefe9b3e354dafc67da4556d885d18c6d37155bfa16624d116d2c4a386f7d19ebedfb80fed54a74268ce3a5449617891d210fbaf46ec6c85a611e44fe9330c08853bbcd844832efc7a03a964ca000b61375083ff5b790d8ef27a103b553898864b2bab363c9f8527822c83c07172a00bb403e9f1e3207617c0da6f5cd0792bb545f25c7df0a356c875e7bbcfb2f2a38d6896b29f83b7b205ed46370d6bfeccf281c31da9a541caae415ec7f2bd4456cd7c0e2bba50e370a392a69254f04735e2ed19bf73c9d656fbc7ed0c9c2e7e08a5ebc88e6c13e88236d1afb3846deff6909c9737234bc172c3d6c51d122c25cc0a13b9122be58c0699b4abdd33fd9ef02bd78046e89ed41f7eb08119c15ac5e6d11310980ecc9b2ce8efe1d6e7a8bd4053f28f58de2f442e0793db18458d16a65efa75ad941ec5fb9d72fadf6fb864e66aea78cfb23a70c50972acc8b5b8820778a3835e15debd218da0182ba92a2521fecbede97e1ec095ec07cef2c4cb2e09aaa13ec3b5eb449bf7f45647d4b22047bd5a6c13b727bba4b1be3a2b79b818bd7657369e303dc561e250d89e674761cccd9827394941ee9a34fde06caed154e1d1181cbdeb49da0517f4faadc4eeb8b99f89091ca42b7a1222f827d4ac534ea9621c7fc2215ea3d183a1a316fcb7b10bf10c2b09db2ea173f18e10e9f40ffc1c586838c408494213136bb431f726236041a6d87219c3616fb8917b0667332d778e4537f17195e6b40c44b818</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="代码分析">代码分析</h3>
+<p>暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）</p>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int bossxue,acxue,acharm,bossharm;
+int main()&#123;
+	cin&gt;&gt;bossxue&gt;&gt;acxue&gt;&gt;acharm&gt;&gt;bossharm;
+	while(1)&#123;
+		bossxue-=acharm;
+		acxue-=bossharm;
+		if(bossxue&lt;=0 &amp;&amp; acxue&gt;0)&#123;
+			cout&lt;&lt;acxue;
+			break;
+		&#125;
+		if(acxue&lt;=0 &amp;&amp; bossxue&gt;0)&#123;
+			cout&lt;&lt;bossxue;
+			break;
+		&#125;
+		if(acxue&gt;0 &amp;&amp; bossxue&gt;0)&#123;
+			;
+		&#125;else&#123;
+			cout&lt;&lt;&quot;all&quot;;
+			break;
+		&#125;
+	&#125;
+	return 0;
+&#125;
+</code></pre>
+<p>真的没啥好说，自己领悟。</p>
+<p>$$END$$</p>
+<p><strong>本文作者 氢氧根离子的AC</strong></p>
+<p><strong>请无视下列内容</strong></p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/29/LG-贪玩的-ac-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+
+</blockquote>
+
 	</div>
 
 	
@@ -775,8 +805,8 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 贪玩的 ac - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '代码分析
+暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/'

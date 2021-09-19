@@ -11,18 +11,20 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="题目解析 其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。 状态转移方程：  if(i&#x3D;&#x3D;1 &amp;&amp; j&#x3D;&#x3D;1)&amp;#123; &#x2F;&#x2F;（1，1）不用dp 	continue; &amp;#125;else if(i&#x3D;&#x3D;1 &amp;&amp; j!&#x3D;1)&amp;#123;&#x2F;&#x2F;只可从左边来，所以加上左边的dp值 	dp[i][j]+&#x3D;dp[i][j-1];  &amp;#125;else if">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - MC 生存游戏 - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="题目解析 其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。 状态转移方程：  if(i&#x3D;&#x3D;1 &amp;&amp; j&#x3D;&#x3D;1)&amp;#123; &#x2F;&#x2F;（1，1）不用dp 	continue; &amp;#125;else if(i&#x3D;&#x3D;1 &amp;&amp; j!&#x3D;1)&amp;#123;&#x2F;&#x2F;只可从左边来，所以加上左边的dp值 	dp[i][j]+&#x3D;dp[i][j-1];  &amp;#125;else if">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-28T04:03:55.000Z">
-<meta property="article:modified_time" content="2021-08-28T04:11:45.787Z">
+<meta property="article:modified_time" content="2021-09-19T04:54:56.012Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -651,7 +653,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-28 12:03:55 | 编辑于 2021-8-28 12:11:45">2021-8-28 12:03
+							<time title="发布于 2021-8-28 12:03:55 | 编辑于 2021-9-19 12:54:56">2021-8-28 12:03
 							</time>
 						</div>
 					
@@ -678,7 +680,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							3.9k 字
+							463 字
 						</div>
 					
 						
@@ -686,7 +688,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							13 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -694,18 +696,65 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="04d58d37334ca7eee4b8be5be710e39df3716400f81c96ca5bccb64be21b8118">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c8c666749fbc83ffaf7511ffd578a80674fff5a280016d0c6c49da1c0ed09f1d54855aff47fba760e32ef95120bc85709290db79f0149afdf4cdfa8511d3441d454ed82390949c180090bd6663974785fb6b3b576ea60763c09fc4c17d83ec7fa534e500e44862425c6864f8f658ba248de82a840b748558501fc611b4fc318060e738da1c8a509ccb71c91835bccea0a4d3652490bd39478937a16f8c0cc51d3b2058cc19f5c571c5f30527d353b7981f33e9b8eec1a2a3b1d6e61a92f86bd65872575b69c5ec70e2ac48701afa3a18bb8e502a80e4c5556069112499e022aa32a172b2460c4991e333e24637b9378c5b7a16cd2c3db683f269f5b79d2e27a2feaca30af0e6a514e91ec400105f2e397eadd0b79a5295f02c14f932738f9804c88bb53b84950a01473f208f8b8f1c962169036961fc5aec6f27ecc20054d7dbb0aedc7a940d41a8b4a58ee20c9e61005411db9406a04bebb2bf6bd73fcf98b96fc1369784b2707cb2e91ba4392378df1d13b73cfed5452fd47a4657504f2206fd62c70b2001687ae0b64fe051509bbe00176a04c5ea6757174791382a3a0e911846c77308f4129c0eadf0ab38db4eaea25c96a39ef04601bfbe84f7a2cc09adeb91e1d2b04cf6f52a984907670f10341158e692c9438009cc38c7fd29e554338924efabf7a8fd2d70bbea0bdcb51ac0a2f3ea5a4454f94efc1b09f22af8647eb2e5f4af704468c4eb9710e2339d1c634fcf014998c76c0afecd5c78ce9af2a04ea93cc68720a936f5a455f3f5dc97d22b722e18a2290093db5d29affe5750fd2c56c0539155921a39560f11c9ae5173c77946a8e0102d5305ab70ca7feff1d13a57ffae0abd78545c88893e168b7c04519132f63a6834034090f848ce0a8d64c615f6573d6c12c4c6bfd7263f1066452fb3a59b79467a424dbcbbf2e531ac6706ca75740ccd9b3983280a99a57d3618abf76a27a9d158c25d74cfb10a6a76dcb2c471d57b191eed233997440f11ab6411746f566265522bf4f1946953199ab276ba9f5a5661373a2555d2de26c364b6d3ee298e097676af64bb83980ddaabe7774aaeb8b47beadd64cf6c6764513cc0a237b4c30236b69767f79f6a9a5d65ce475027ad3a1ad163828aee0040ecd60354c5f15cb8f96ba08d3de1d30e6195b0bc3206ef617959d98d3ee161378c2aaa335f50eac6b5dfd5a8ef5d8e197a76b0c7c4b0a889f92b991706ca0eade06834538d0adb0d1055cce863d454b705ad4cb4f1a443ee235c7afc82cb6bf0232f946cb7a39a360ea54b8887768491f4bd226bd8a32696877c30a580cb1bf9836b329af658432f8a3934652d4f2683d9c8a82b72ae3a92d381afe11c38d556424b134f3d1b30e33bac3143fd64bdbb4dc0d3531b90feb1fab615ed10c7cc9268ac78f9c4d68e5729431bd442e37e9ba5b763f289e45838755d5c0b1b7c29387c1cb40468b8183138500933b2841c5d76545b528918741885976ce87103ea7fb847c78df13def3458440c670ee9b0bc9eb26afccc26be9cfcfc51552e73a7f0d67879dabab340b3d1501919e79ae97a177e8a2c778033aea25666b142952d6d172ac12d9c29e4b9e2041b4217999cd4893943c4529e9b74b2964a893b1233cef98df5784c2f30df3f5bf803e20f75a9611cda7c448ede5c365e7dd33cf816b1f9e1725876ccb5f580e692446006ee3ff3ef44773aac8ce2892ca2f27134b34deaa2bfa2cfeaaeaf1c21ebc946ff72d92a2cd6b331136e6387733b6a8be37b4f2b27af936e11dcb62c5375c2abf892d6027e66b01317f5661ede67dae52c195a8c92711ebbff6cf932bc58d4396bd7adcf82f91c6ec551abeafe893eeb3d5762abf81a311012d7dc74d7b93609ad78b16a5101bf8c6420f397b8bbb317666c6fbe3532575a373c82be0507fed8e44047f006f1c5049614aaebb0aa8a6128c73f5f8653caef2a892923f171ed3639009c64199176e88e88e4d79166cbe1d67168c9b9a2eea5f2a26c3c45fced129a1590e2d459865e760bbc006769a863cec2f78028ef66f9bc2a217b16f9e0ebd2c741595d522f4029e2c8bf1c9c618b52aeb2ce660c29f61c1733032910e8f9a33ad4826b50dcec5b0ab111fdf45e8a4c5c0d7b7bd151e55df25cab76c51b1a874acad8c58532b70ed62297a7bc7825ce2bc4e3092383c1fc36565ea33a03d059f64410ca8d9873a309960eec00e43e2278ac88b9e2db849cdc396c87fd0f6118b12b8c130241e2584e9a3d046a4a9bde4b32d26c2f63b7885f9ee7b5aeb3442f34c5658126a5115a149da002aa7055cd146d1eb024339f8794111d9f4f79b4a90d55f4a1f04bf334281826fd74c4bd6d35466e9c35dd1f8732f1098a9775118a63ae2e5d8f974ec35c378e5929eb246e74e481f4177d81a94368f150311d6c10936ef6da5bf6a6156324caf26a5646a231ddb346e896b3528124f1c2ab5ac61d9c899e487fa39db05bc038fce43b99459259e9402e32f40d901fabd81dd35b62f24f4f0a7187bea31ec7ea4bc69a56d73799c8f1e5608b7eda5204cee7ddd6d043d109bdc0b21fa711336a44795eb32a8fad234698312d1be05af28eac28e3cfdba76148919d4561d9d29d8dfb1e3b2dd7479f60a419f6caf0f2c22fa7bfa19b387dd2082ee93c1d1fc7f4719dba7ef354cb8817d0316733e43f6dd97b68a14e8b9465135b0c9381f83093eb8691b90af5e453cda1c5d30a6c3ac5e0a6b2c44e8a96c1d77df1947f436021520e2ffad6a743d81ca7080b954558535171b1e5443eb947df72589a6eb855fb81416983c885849e2f2684614d33034d874daaee47392c8d561a2db3ee990c384696e1521027a2ef3836dbf3a40e6882ea252e4f57bf2275580c8e4df25ab4cf7b41a24eee4cdf33ec3122f14b6b8fa1892b49b39e7cf7c7178e3add409e106cdb68e6151086975a2b863adbe9c8041abfcdaed723d18398d01672495ba94a4dcc2381700ecbf9f4d88f70fca9871ea28730db2194d46c02022685d9d890f11b4f8b59b5d71d8736d044a783ba69944ccd7211bb1cc23f8690e311b6c9b4bde3c864ea1092fcc11e6bce47391efa51a69d2be6bc3eaa80a41712e7d314a9983029bdca04dc171230f4aeb1ca354ae93af70f910a2353f8ad8fb8d8130398b88945d73787588d3a6fe10c8ea66f13d10ed6e27d0748e16c4285de75d09a344e6a09a52f12f3670346fe6ac0efe3eb1d4f5f366096c77e428f57960fde5970301964441d5b1e1ac41ad37b1e046a6bd2db601b4429f3e8419e0448551fa9cc6b4bac38fbc1210ba6a51dabb77f970b2f163a53e3b9ba082ae50857144e4469830480b77650b6f062a2e8bc3d903d9e5fc8284d2bb0c87f62ff5bd415a8b1c976ff53bc98da2b18720f628513fa928ab0466b439792810de7e70bcb472b60d49e7573b10593302fddd36e059636a8183e09dc6a547cc2cb94419740cd30687980bf3645a028529f9baa7b6acfc94061981af220007e6124223f4af1d1dfd04d59e319caac46e9d7b454c222d04bfcb789cf2defc02850ae60d427b0e8340c4205108deeb114a45b3df913fe37f0f3b73d1c4ca118d09ad6fb4860172a36f5186676ac79d27f3a370d26a78ae20b758235204560b5ca3d6dd951ba15a6360aa6bd435fd0ef203dcce5ed87e97b40b86ea1efeb5d14158e3a66632146a8a6cab4ebaa9c091c093cd9a46bbfaa77b44072ef858612d1016ac215b2edb6904c065636d4df5a5c92adb9f401ded085fd879f1b32db6ec86df5c88a7aaadf7a49e61e21e65443e85190f0e688e59acbca8f6d2453c5f1aacba67013e347eb39203b130542ad67517ccffc4af0c1e9342ede83781b2aa54ceab083c62da4cff608407208e20bc872ce34d97f22ffed48302b503a1cfb31d826fb2cc7a28491a386d85b2976679e056efc2d47ece2a6db15b09da78644aaa15a162fb7622191f646bcc74d579043bda476369351dd481e8e1bde8398917cc8414c8285b6c71ae778ceeb33aba521d568b0f2209c28a07f1a478ca33ceac76b8fa5e25f335c2c9</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="题目解析">题目解析</h3>
+<p>其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。</p>
+<p>状态转移方程：</p>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dp
+	continue;
+&#125;else if(i==1 &amp;&amp; j!=1)&#123;//只可从左边来，所以加上左边的dp值
+	dp[i][j]+=dp[i][j-1]; 
+&#125;else if(i==m &amp;&amp; j==1)&#123; //只可从上面下来，所以加上上面的dp值
+	dp[i][j]+=dp[i-1][j];
+&#125;else&#123; // 否则选取左边和上面的dp值，并且要取dp值更大的，故用max
+	dp[i][j]+=max(dp[i][j-1],dp[i-1][j]);
+&#125;
+</code></pre>
+<h3 id="代码分析">代码分析</h3>
+<p>见上</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int n,m;
+int a[1001][1001],dp[1001][1001];
+int maxn;
+
+int main()&#123;
+	cin&gt;&gt;m&gt;&gt;n;
+	for(int i=1;i&lt;=m;i++)&#123;
+		for(int j=1;j&lt;=n;j++)&#123;
+			cin&gt;&gt;a[i][j];
+			dp[i][j]=a[i][j];
+		&#125;
+	&#125;
+	for(int i=1;i&lt;=m;i++)&#123;
+		for(int j=1;j&lt;=n;j++)&#123;
+			if(i==1 &amp;&amp; j==1)&#123;
+				continue;
+			&#125;else if(i==1 &amp;&amp; j!=1)&#123;
+				dp[i][j]+=dp[i][j-1];
+			&#125;else if(i==m &amp;&amp; j==1)&#123;
+				dp[i][j]+=dp[i-1][j];
+			&#125;else&#123;
+				dp[i][j]+=max(dp[i][j-1],dp[i-1][j]);
+			&#125;
+		&#125;
+	&#125; 
+	cout&lt;&lt;dp[m][n];
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<p><strong>本文作者 氢氧根离子的AC</strong></p>
+<p><strong>请无视下列内容</strong></p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/28/LG-MC-生存游戏-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+
+</blockquote>
+
 	</div>
 
 	
@@ -775,8 +824,11 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - MC 生存游戏 - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '题目解析
+其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。
+状态转移方程：
+
+if...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/'

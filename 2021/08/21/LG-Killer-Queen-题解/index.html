@@ -11,12 +11,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目解析深度优先搜索题（DFS），在上下左右都搜一遍就好了。 代码分析先全部读入然后标记二维数组。 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} &#x3D; 2$，则输出 YES，反之输出 NO。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int t, n, qx, qy, kx, ky, tx, ty, a[1001">
+	<meta name="description" content="题目解析 深度优先搜索题（DFS），在上下左右都搜一遍就好了。 代码分析 先全部读入然后标记二维数组。 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} &#x3D; 2$，则输出 YES，反之输出 NO。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int t, n, qx, qy, kx, ky, tx, ty, a[10">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - Killer Queen - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="题目解析深度优先搜索题（DFS），在上下左右都搜一遍就好了。 代码分析先全部读入然后标记二维数组。 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} &#x3D; 2$，则输出 YES，反之输出 NO。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int t, n, qx, qy, kx, ky, tx, ty, a[1001">
+<meta property="og:description" content="题目解析 深度优先搜索题（DFS），在上下左右都搜一遍就好了。 代码分析 先全部读入然后标记二维数组。 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} &#x3D; 2$，则输出 YES，反之输出 NO。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int t, n, qx, qy, kx, ky, tx, ty, a[10">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-21T03:49:43.000Z">
@@ -680,7 +680,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							595 字
+							597 字
 						</div>
 					
 						
@@ -696,76 +696,81 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h3><p>深度优先搜索题（<strong>DFS</strong>），在上下左右都搜一遍就好了。</p>
-<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>先全部读入然后标记二维数组。</p>
+		<h3 id="题目解析">题目解析</h3>
+<p>深度优先搜索题（<strong>DFS</strong>），在上下左右都搜一遍就好了。</p>
+<h3 id="代码分析">代码分析</h3>
+<p>先全部读入然后标记二维数组。</p>
 <p>然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} = 2$，则输出 <code>YES</code>，反之输出 <code>NO</code>。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
-<pre><code class="lang-cpp">#include &lt;bits/stdc++.h&gt;
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int t, n, qx, qy, kx, ky, tx, ty, a[1001][1001];
 
 void dfs(int p, int q) &#123;
-    int k1[8] = &#123;0, 0, 1, -1, 1, -1, -1, 1&#125;;
-    int k2[8] = &#123;1, -1, 0, 0, 1, -1, 1, -1&#125;;
-    a[p][q] = 2;
-    for (int i = 0; i &lt; 8; i++) &#123;
-        int xx = p + k1[i], yy = q + k2[i];
-        if (xx &gt;= 1 &amp;&amp; xx &lt;= n &amp;&amp; yy &lt;= n &amp;&amp; yy &gt;= 1 &amp;&amp; a[xx][yy] == 0) &#123;
-            f(xx, yy);
-        &#125;
-    &#125;
+	int k1[8] = &#123;0, 0, 1, -1, 1, -1, -1, 1&#125;;
+	int k2[8] = &#123;1, -1, 0, 0, 1, -1, 1, -1&#125;;
+	a[p][q] = 2;
+	for (int i = 0; i &lt; 8; i++) &#123;
+		int xx = p + k1[i], yy = q + k2[i];
+		if (xx &gt;= 1 &amp;&amp; xx &lt;= n &amp;&amp; yy &lt;= n &amp;&amp; yy &gt;= 1 &amp;&amp; a[xx][yy] == 0) &#123;
+			f(xx, yy);
+		&#125;
+	&#125;
 &#125;
 
 int main() &#123;
-    cin &gt;&gt; t;
-    while (t--) &#123;
-        cin &gt;&gt; n &gt;&gt; qx &gt;&gt; qy &gt;&gt; kx &gt;&gt; ky &gt;&gt; tx &gt;&gt; ty;
-        for (int j = n; j &gt;= 1; j--) &#123;
-            a[j][qy] = 1;
-            a[qx][j] = 1;
-        &#125;
-        int k = qx, l = qy;
-        while (k &gt;= 1 &amp;&amp; l &gt;= 1) &#123;
-            a[k][l] = 1;
-            k--;
-            l--;
-        &#125;
-        k = qx;
-        l = qy;
-        while (k &lt;= n &amp;&amp; l &lt;= n) &#123;
-            a[k][l] = 1;
-            k++;
-            l++;
-        &#125;
-        k = qx;
-        l = qy;
-        while (k &lt;= n &amp;&amp; l &gt;= 1) &#123;
-            a[k][l] = 1;
-            k++;
-            l--;
-        &#125;
-        k = qx;
-        l = qy;
-        while (k &gt;= 1 &amp;&amp; l &lt;= n) &#123;
-            a[k][l] = 1;
-            k--;
-            l++;
-        &#125;
-        dfs(kx, ky);
-        if (a[tx][ty] == 2) &#123;
-            cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;
-        &#125; else &#123;
-            cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;
-        &#125;
-        memset(a, 0, sizeof(a));
-    &#125;
-    return 0;
+	cin &gt;&gt; t;
+	while (t--) &#123;
+		cin &gt;&gt; n &gt;&gt; qx &gt;&gt; qy &gt;&gt; kx &gt;&gt; ky &gt;&gt; tx &gt;&gt; ty;
+		for (int j = n; j &gt;= 1; j--) &#123;
+			a[j][qy] = 1;
+			a[qx][j] = 1;
+		&#125;
+		int k = qx, l = qy;
+		while (k &gt;= 1 &amp;&amp; l &gt;= 1) &#123;
+			a[k][l] = 1;
+			k--;
+			l--;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &lt;= n &amp;&amp; l &lt;= n) &#123;
+			a[k][l] = 1;
+			k++;
+			l++;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &lt;= n &amp;&amp; l &gt;= 1) &#123;
+			a[k][l] = 1;
+			k++;
+			l--;
+		&#125;
+		k = qx;
+		l = qy;
+		while (k &gt;= 1 &amp;&amp; l &lt;= n) &#123;
+			a[k][l] = 1;
+			k--;
+			l++;
+		&#125;
+		dfs(kx, ky);
+		if (a[tx][ty] == 2) &#123;
+			cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;
+		&#125; else &#123;
+			cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;
+		&#125;
+		memset(a, 0, sizeof(a));
+	&#125;
+	return 0;
 &#125;
 </code></pre>
-<script type="math/tex; mode=display">END</script><blockquote>
-<p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-题解/">https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+<p>$$END$$</p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
 
 </blockquote>
 
@@ -838,9 +843,10 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - Killer Queen - 题解',
-	    description : '题目解析深度优先搜索题（DFS），在上下左右都搜一遍就好了。
-代码分析先全部读入然后标记二维数组。
-...',
+	    description : '题目解析
+深度优先搜索题（DFS），在上下左右都搜一遍就好了。
+代码分析
+先全部读入然后标记二维数组...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/'

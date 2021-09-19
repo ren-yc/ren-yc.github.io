@@ -11,18 +11,20 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="题目解析 这道题目十分的水，所以直接放代码（bushi 这道题其实就是简简单单的暴力 没错，就是暴力 对于这个二次三项式 来说： 我们只要满足两个整数 $x,y$ 满足两个条件：  $xy$ $&#x3D;$ $cc$ $x + y$ $&#x3D;$ $bb$  由于 $aa$ $&#x3D;$ $1$，所以不用管 可以直接写函数 $find$_$ans$ 代码分析 见注释。 代码  #include&lt;bits&#x2F;std">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 爱数学的 ac 做因式分解（弱化版） - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="题目解析 这道题目十分的水，所以直接放代码（bushi 这道题其实就是简简单单的暴力 没错，就是暴力 对于这个二次三项式 来说： 我们只要满足两个整数 $x,y$ 满足两个条件：  $xy$ $&#x3D;$ $cc$ $x + y$ $&#x3D;$ $bb$  由于 $aa$ $&#x3D;$ $1$，所以不用管 可以直接写函数 $find$_$ans$ 代码分析 见注释。 代码  #include&lt;bits&#x2F;std">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-28T03:24:45.000Z">
-<meta property="article:modified_time" content="2021-09-06T12:52:44.144Z">
+<meta property="article:modified_time" content="2021-09-19T04:53:25.776Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -651,7 +653,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-28 11:24:45 | 编辑于 2021-9-6 20:52:44">2021-8-28 11:24
+							<time title="发布于 2021-8-28 11:24:45 | 编辑于 2021-9-19 12:53:25">2021-8-28 11:24
 							</time>
 						</div>
 					
@@ -678,7 +680,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							4.7k 字
+							483 字
 						</div>
 					
 						
@@ -686,7 +688,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							15 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -694,18 +696,85 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="09f5233d1410f5b56d75244cacd86645fcd2fc2c2f3b68a318e0e09cb834c605">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c8c666749fbc83ffaf7511ffd578a80674fff5a280016d0c6c49da1c0ed09f1d54855aff47fba760e32ef95120bc85709290db79f0149afdf4cdfa8511d3441d454ed82390949c180090bd6663974785fb6b3b576ea60763c09fc4c17d83ec7fab3b3885f00846481a8b17f014c031e69b31f8c233c27a0089d8fe21e6700f1f85035b762cecbcf1531609850f7e46ffe55492ce767dd224df579efbfd7eb4101a5cb0bd34db780dd4595bd6a01f01f5b8a4ba07d84d414b4c7e3dd0156b166248466c3d58145b711bb8976d4ebfa0faaa375dc9979868c21c59ef483fb45a8ffa89f8d19ccd509815072fa4857ce03ab03092201549414fd40ae02a2709ed11046798fa76169276fdedaa3283c9eea0dff42e5cd743cefc8a84b2e4dac7af2a4581d909bf610c3c3dd81aef7774614f7de663a4243f79b1ac13db6060eaa9438360788be1ef943f5549e4b6485377724311f4216761d582bf42006606bdb64a0a63b05570a1bcfb2b0ac852fffdb83f24722535e05a9d7f09c7fd3cdd64d0151b1e2a4d63e29c315c6cf0ad0f5823036bad7b555fe8ce2baf78b90b1ceac38c1be36e6e6d6c3d4c3266d0fa7d77673902de71d5df1736793932ef96725b86801dcde47982db269e617540ac2d772da2e762f96741b2e952fc78579346e50d1646ac937b0b75372f3bf234b0530763fac04144aa636003f6f48c5aa80a21a647ab881dcc280da6ffcbe744313a72b6a13b5332e9edc3e299eda3d53638434473f916e638f21979f0293a838f944276e424260f0d0df683347a689307774ad35584a1f9ab2ec45fdfe2bedf8a356205291087438493ac6e333651649c88de08012617ebb604066a1412d274c1d24ac3f6f5f856f991b02cfdd81b97650a319a4f51ced49c1e44a47c9f726480b26e86e97794bf66dbef4b6191760b37c86277c9cdd375d9f40a3a64017162cc8a79599b2b124feb72b0178220ba7ef7b061f9a5a5bdb088c587620fda520debe8167fac6a13f714e6cff28dd27f74defe311ca9439aa7072a042abf282aadfff50c96ff8e1d399b7fb34c267052873109e302d513901e7ad819f37df450f344b90fe4589346e09f44ef98f26bf2934a463f763f8f5f6b7a10e6d36fa598846b8da5fdc897f6bcea8a105b8c504402b568eb22c73fc2c49934b3ff666f2c96ab360140a7f6695584e04365d44c1a0fc7f4a96d9f68946013d84e8c4670be854ea4cc83283671ba2148da66c37bc35f15ef134eb7cbbd8680f10d8abda371364771b55fc11bbef5dac6d793cbc2fd6532c6d9217ec737edb5937927ee21ac5bd5c71780a7abb3c34f6381139fcb139f3ff8713ddd7fa8876d9a535c73e35e6847929968e6296414df43214b9fba712fa84258322b6039f1913c85733b59aa8e589ed153826444b7ae32e75608d1100bbe00acb2d48e9b799b4bd086bf9007fc588729222ca179469b1889a0cc8dd8bfe2b9e9a2d114a064fdb0be5ae280b182283d7dfaeeee4af84365ba0f4b6b292c0748af67f2d504302798eb386f148500b9bfe5ce0cab03f70c9bff9edf8b125928b90d9a8f2ccf805953740a1ba393b01a65f732168f094917c706a9f97178c656473ac65a610658d671613f81dd968daedcc31fa6e789d309afb70bc51cb7cf3c967f7ad3236810febab513a7bdbc2724e6ed794919ebfde1fdc4503fc6957a2eaaea1625aca982ff4fc81d48ae97486905105d6aac89323678aa76625067d0549dff6065286c05995843ad66ba7ef40f37bd4e1d73e743ceb1cd1a9c5fea84baebb18c17f6497a95c4fd77ac8789f2c0470e9f1ac11b015902e77233368bb3791e0dacbe59c69065d48d3933b76e1052d5e6a023c2ddda48482f0e406b6ff3e724c629781782065d61ae107beadcc5af2c6d91cd5a07d285b31e7e236e3b3ff8317087770b57ff34a5b017241bd4adfc5d74e970038d06fed3648cf5fbae885498c09c9d980f115da73de2886dc3141f0f6a255c2cb1408a06538d55787d9618713167142befbe85b8bb1af250138fd7889b2b039016811cb48109126e01740af031f51ceee4cbab998530edfe105cf72f80a913f60630b2d80edc813b18692d4918643eebb295f8fb21204137e17a16a7be4134de84154db0d92ba515e11dad3f713a3b5cf238fe33ee586f77770cb84c8e1355880b448f65bf2dba3899ab79b175700b4a0f29e6baef78cde66b415f2b7d1e438de6c5cd63e7f015f2037356e4913e96d9df6a58e7c1049f4364072d8e6f32d7c81309e0c637ff9f8d04ecd14d23b684e993fda37608cd70c998fbe643d84ef2b63ec51aacc7daaca9230c3633526d9ada35b61e544bcfb6db71481f60cf592fdf410a98a3f4bf80e8e636c96f75eb626f48300383a8f2a86e1c6f78391dfa7197e22b7ca4ac4de416855db595cc6581f2f07033bc0c239139aee656808765ba10202bb10b9c18fa03b5e50b9fc99215d5b5f8ea23d8e35a928fbc4a8580b3fced88a33966fdbd5f821bb70fd27e2d7e923b3fe80c4d72986c37045b009a9a55f329b295e63932cb5c7ada59c5f33db8f8bb702a7456b7ef26742f1c5540585c679bdf440a1a725e550e95df844153490227754961edaaf72d6d6d9f983eb79ec327b19950b283c4ca9a4a7596cde1a4019f2d35d32a21a83479e9f801a6a1583655a2785b9bcdee99c29deb5f5daf064de8819d3ca6f1929c49bca35b1cf1c8fd4d8c7bba789cfab4c683ec069c609383444b80169da3ecc9400e95525100704080ecf7a68f2480cb98fed72d7bbfa676a4bd90633001f024a992f801d76887d35fbdcce11208387e83f7517e9ee0554088e1000c3fa140b5018435343e80522734409fd91d271ff9b2fbab8ef1a06acc4c8eea85800d271429ec88cfd689a005d9bc8f3fc32cc4670bfec2754583568aca5bf6cfb9be19e9db5e651e4def2f44ad3bbd63098fc7b173beb46ee1e524294e0ec9d8ed83ec70e33518746740b9e4db0fcc522e42c0685ebd7437cb257d474e812e35c0eb1810c17c7c7184ef3ff4f927878014e160eb31c3621c0f8ae4752ffaf03e80bfbfac828da7a7fca67683f3faf472bd2ea55275cc0fb6ddf8905a776bcc7f354cd59618a847aaabf102ef1939a705e2ed11bdabf310a262bf98ca63ae8a0d8ebcd9263ad092f3ecf8daa6d70d8efa5dff50953be67d39d0f52bde302820c9cdfd26b28627e1e3a6c17f9c0d8bb4470a10172ccaccf7c7e9b7b1250fcecc762aed2811beec4a13a290658b6bebbc29060ab08248bcada54619d848169e8cd7f576e35af20bb7986ebb67c79dce0507e207c59f5662d67acaaf286692d948d301197702876acc027cf5b46094963dd850f1981a39e3124f5f23515e3806532f17bdf2c70a4693deeddd8841a64a409807c3f22f35ff9b71469999a7c2901fc9fbdc8d0017a72dfd42a6ff310d060e6d53612beda2e5704b35a858b4b6f92b438434a4db6bee150d18f7738bea056c830c679567b5058df8e11f65498cc5b91d4a830e00dbb7e103287f21c6f386943648eced3556e9e7ef717f484adbfa220b9b055fb8ad5d7aa0cd5580bd5069b95ef005ce74ef81d9ef0f965a1232f2c88a05621b4e19191f7b3ce3ba6976fba7095889121eb033c940018b14e0b234452be372401a9602aa34e071df4e150cac648ed08ab0bc7b70742c566882793901528e1e4cafe6d708f4708b21a145e4289517635749ae8c00d0d56b971e754c7762dc5874e41e57353331a708014a15a866bda6ae8a9f11b3a9edd717c9c04325a0021debc286dd23168c3bc80e82d206865a72e3a3056e2f0bd1c4b4de7c55f2a41b3a46e5e138d3528fc8674b76d833d871013a8c305ffeca9cebc1ded3a40bd18ab936998e9a106854bf429befb879c4a8e4bbe792e3a4361ec47e4339dee144eea7444468242101a376899660282713d9108be42b7516f976462f32d467d81f63f90a6fd216aa7b030433883c0022a59e7a77b995d9fbb75728ce398077e194d089479644f7a7b919d3702bdf1f81f14ae0b8b7c3d305dd51762f6e972dcaa53bcd07af435f5afcfaadee3039a4516925318efa0c45fe12ccae7d4282fc9bef9ea4c7956a54b2a22e5dd76a69a0ca9da9b23d64b6162a8e91a141760788e5c9f464b3d5c860caeef52432480a6b000703ff8be092068fa202dd28cb474ba236029f4e758cc5213c0ea8d4b5ab9029dafe26f9ef71582ae0b3775e15a545c30e70a159291ddad33b3f42831a3bb61945898402f71b75f4acae2daaf26b6b307235a6fe4c7c5196b401c8911debcf2c39de777d7b4c65c28678a9f85896ec82f0ea2e7f543766f74dfdbb956df270db94fd7dbc46d759f7c91a21c12194ec90e443f212a4d9d7ebe4bfb12b5aa05b9c16a5e8b408e2500372a027c87104df2507010b7d603a79f0c513e754885ae11c0ae7e94c31667a0d60481576c4a4db11686ef7ff19c6ac1e0867d19ad3a52ca2838b90b6745897bef0eb1ccabba7bd0844d47cdb1ec9cb14f1f8cfad44069e1ee5aa5ed54fa8f07b51d30002c4b0bafd24de3fd43309556b78aee184e54848e5b677ce26e4ad14ea836e533b296ca50c6bdb8dd719efcc07f9a9c45a37a947529e7614597a324109ff1fb308e759e48af08d05cd0811fd387f2806ee4faa0641722d0f7fa1f7069629e4044d9f48f7622f05850b77ed082568c3bd5391b028b290b585e175363871c8bd70dfd4b7404db9aa4d4d4d9af42485e8ebd51ef4b1f8cad7e88d1ac4db9aab4251e6cecde23f105254c0ef16579c08c2976eb5ccdd4fab865ed06c3ad0f9c4bd56dffc2ba17949323b8f5349944ebc11a0fd3f6a6cabcdabb87f85ec33044af591055cdcb1611ebb8d3fb170b6dc9103d3eb6113477ed911fdc23207d4621ce8272b0d79bef9919bcb41285e18de579eb3de7</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="题目解析">题目解析</h3>
+<p>这道题目十分的<strong>水</strong>，所以直接放代码（bushi</p>
+<p>这道题其实就是简简单单的暴力</p>
+<p>没错，就是暴力</p>
+<p>对于这个二次三项式 来说：<br>
+我们只要满足两个整数 $x,y$ 满足两个条件：</p>
+<ul>
+<li>$xy$ $=$ $cc$</li>
+<li>$x + y$ $=$ $bb$</li>
+</ul>
+<p>由于 $aa$ $=$ $1$，所以不用管</p>
+<p>可以直接写函数 $find$_$ans$</p>
+<h3 id="代码分析">代码分析</h3>
+<p>见注释。</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+void find_ans(int c,int b)&#123;
+	one=-1e9-1;two=-1e9-1;
+	for(int i=1;i&lt;=sqrt(**abs(c)**);i++)&#123; // abs(c) 十分之重要，因为若c&lt;0，则会报错
+		if(**abs(c)**%i==0)&#123;  // i是abs(c)的一个因数
+			one=i;two=abs(c)/i; //x，y即可求出
+			if(c&gt;0)&#123;  // 分类 ： 1.若c为正数，即one，two为同正负
+				if(one+two==b)&#123; // 同为正数
+					return;
+				&#125;
+				if(0-one-two==b)&#123; //同为负数
+					one=-one;
+					two=-two;
+					return;
+				&#125;
+			&#125;
+			if(c&lt;0)&#123; // 2.若为负数
+				if(one-two==b)&#123; //x正，y负
+					two=-two;
+					return;
+				&#125;
+				if(two-one==b)&#123; //x负，y正
+					one=-one;
+					return;
+				&#125;
+			&#125;
+			one=-1e9-1;two=-1e9-1; // 可以运行到此，代表上面均不满足，即为现在的x，y是不能满足的，还原初始值
+		&#125;
+	&#125;
+	if(c==0)one=0,two=b; // 重点：数据范围中cc可以为0，那么必能因式分解，所以特例
+	
+	return;
+	
+&#125;
+
+int main()&#123;
+	cin&gt;&gt;n;
+	for(int i=1;i&lt;=n;i++)&#123;
+		int aa,bb,cc;
+		cin&gt;&gt;aa&gt;&gt;bb&gt;&gt;cc;
+		find_ans(cc,bb);
+		if(one==-1e9-1)&#123;
+			cout&lt;&lt;&quot;This is a wrong question&quot;&lt;&lt;endl;
+		&#125;else&#123;
+			cout&lt;&lt;max(one,two)&lt;&lt;&quot; &quot;&lt;&lt;min(one,two)&lt;&lt;endl;
+		&#125;
+	&#125;
+	return 0;
+&#125;
+</code></pre>
+<p>不做过多解释了，是不是很水呀？</p>
+<p>$$END$$</p>
+<p><strong>本文作者 氢氧根离子的AC</strong></p>
+<p><strong>请无视下列内容</strong></p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/28/LG-爱数学的-ac-做因式分解（弱化版）-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+
+</blockquote>
+
 	</div>
 
 	
@@ -775,8 +844,10 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 爱数学的 ac 做因式分解（弱化版） - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '题目解析
+这道题目十分的水，所以直接放代码（bushi
+这道题其实就是简简单单的暴力
+没错，就是暴力...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/'

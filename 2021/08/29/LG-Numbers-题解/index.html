@@ -11,18 +11,20 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="此文章需输入密码查看">
+	<meta name="description" content="题目解析 并查集，每次操作 Merge 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。 普通 DFS 也行。 代码 这里提供 DFS 版本：  #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; typedef long ll; const ll N&#x3D;200; ll T,n,m,b[N][N],f[N][N],a,e,c,d; b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - Numbers - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="此文章需输入密码查看">
+<meta property="og:description" content="题目解析 并查集，每次操作 Merge 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。 普通 DFS 也行。 代码 这里提供 DFS 版本：  #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; typedef long ll; const ll N&#x3D;200; ll T,n,m,b[N][N],f[N][N],a,e,c,d; b">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-29T00:16:57.000Z">
-<meta property="article:modified_time" content="2021-08-29T00:19:53.628Z">
+<meta property="article:modified_time" content="2021-09-19T04:55:05.945Z">
 <meta property="article:author" content="任宇宸">
 <meta property="article:tag" content="Luogu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -651,7 +653,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-29 8:16:57 | 编辑于 2021-8-29 8:19:53">2021-8-29 8:16
+							<time title="发布于 2021-8-29 8:16:57 | 编辑于 2021-9-19 12:55:05">2021-8-29 8:16
 							</time>
 						</div>
 					
@@ -678,7 +680,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							4.3k 字
+							672 字
 						</div>
 					
 						
@@ -686,7 +688,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							14 分钟
+							2 分钟
 						</div>
 					
 		</div>
@@ -694,18 +696,84 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">
-  <script id="hbeData" type="hbeData" data-hmacdigest="03f4a6c72724529bde61774d530f883222f55aa5da1b83442ea978b5a7723cd9">33c7c2007436768271a01b49189558256fdf298294ab4f08cfc60e76edbeb3390f0005c364f656d0effabe5c0346fb2b739f810af1132a60725674fb66796a7f0d549c97dd05b1d113f55281bd8f455666a9716681681fb726ea4a1025dd8661049770aafd32739bf88cd1fff955bc45f44fd154cb4038b75555f79e8c1e8147c4b877230e060e439f0363de01f6fcdd98bd63a82b0af1b8ef88661616dfc7213ba4809af894ee169a9a14397b77ec3f4615f192a073f9df1dcfc1a869d3c4880b7057694951edc3ec8ddb45e48c10636d54684bd9fdd32deb9d38b1cde4b00c8c666749fbc83ffaf7511ffd578a80674fff5a280016d0c6c49da1c0ed09f1d54855aff47fba760e32ef95120bc85709290db79f0149afdf4cdfa8511d3441d454ed82390949c180090bd6663974785fb6b3b576ea60763c09fc4c17d83ec7fa852dde2445e7e5a35edbd5494ddd9497ac02765cd81b4a57a5a1cb913149d84b6b74f642fce4a121dca7185497a645b71dfa5e07ce8b22c7402d4c456893bc975b39b8bf1206b71e2acc6fa1eebd5364b4b71b33a9aad5e79d1b09fbabfa99deb8f2019005b29058a6e9f8b3431e912f82869fd230e34741f90894c2267a0e0a9330ded301e21e5feae97efa47311139ad7d5725c836eabc97af3ad589c0b2edc2029907eb34e89118edc3a5f0ebeb41ac8016b532bbe3a7993d6f69767360dcb0dcba583a90b2078dc37d0f7b19e759a847fa7763aa11076a6ca2c774df471f9b7328ac40a9925e1b89a4523ed114966040cb363b3f6b060f0d58098ba3d4c9e65984621482b55a9a1f8e8c59716f2382d5c0cf38f814d7b4df72d150fb28a7dcdd1c832ee35a12c47805c6ac82da1dfa61fc65f1ee327e34a21d3977a864820ecd448f30859ed67d67df0adc222f9b1e94ea804a9fffc7c9e0c9b6aa4f3d7ca35b81e03ef1eac19639657500173e9cdc2c1804e2954c8cd604686d90d7be74ef7b5a1875bc4199283eed95b2de3a2d9e5960857bf7b4775636e20640a76f32489ab27dd799b5171e846ac7a37316df4dc96ab7c3ab56c3bb1371160a939c7612811a2ba281602d48bd2a91d50ba00256cd6536547d2e65cac3f27ef45527332350957b94e2b7f192c93214f48c7ef71949b02baf9c4a0c29744e56d5882cead6e8fa36f51d95b47ca2d6f7b6435271669c0418f5f08304053101631bfe804a7e9014ffaa7c0d15f254344ed5df885ed3820cd526c47d71d35c8566a238e9dd2a60d38c1a9f6644d48fbfc59008a970bb1ff4c9d86950199975e0972550b8f17af5a00338366070a17a48fad6db082d361134ed974ab3ef28f716b6c2b5034d6b2b9efd69b5ca3361327708c44761d20bcca0628a47098a8398533aa169b7ea534b93f40088365ce4a6dee4ed16de8a9fdf23bcc11b361c2d4fe193b8a5c85e30e40892b3f81c9c190bea8ffd55c7597f7b3d9af6528e8b7257eac3da4c027dcfcb7d662cd31fd95f2ce0fcc9530a804a9026cd9557934ff7eac75f894cf535da7ab713d837a4f24c014c79f6f6d756f9b96c2fd6728b2171bb3c78b043ba6054cc643e14c99ff258861e7d347483eaa973c72e13667e002232dfb7bf3595e131466101adcc780fb2a178328010b06173ad2abfb8d2d9bfdc417ccfe584ce5acfeb4722e0bce21fc01a4c1243fff926565e7a37af3e318f867ac20dee48ac7fbddab066e061ce756740ce2180831f572eb0df7e179b140856d7da331a028a83ee348395445959391a9db4a58b0e4d345bf8571730a1b4efd152d79666a6923af284faabceda741fe05dcc930bcce252781fc40cc69d5285e55ae23bce5801ff8ee2a225ceeb89271634bf59f6014ac206ee059fec6784748112f1b4d5b7e42aca49d320fd5fe168438dfd7c64885a10209d4ea4aad47ac90c0e2264ea06c0a2b61e96726e08b40b4fed1d399dc426a54b8f2ce752e51bf25a29f157492507ca44e130066feb9a4c7f1736d11b03d452a257bf2df242331d45a8f52d891a9c885a5e78ad2e0ad71eac453ec456b529fb0c77b875f6c0c085ba62846efcb400fab1075ad9c2ad4c3e47456152a806e4dbf25242fee19f1ce4ee6d96a016646597f7063509ed572a992ae61027ad292bc21b1987d5275045fa5d286431e882ff69879f0ebecc3df294cfb22ca764e5e76b29acbd46955d78fccabfa8c387e8108b68344a3d95512a658037d0ba73dbe1cef3dcb6e8fb006e2fc00600d2981916b7f7a48ee8d4a773d0af921fc9ce721cbd1613be129a1ca897845e2985736a075c81d5cc58cd4c1c66b39d1bbb59e4d7466bca797d1848b65afc7c94ac848c07401b53e97c5be411cee3f899867481ceadc003f1625f2ea24e094f1ce710475860916de70b8635a4184c125fd9aff959bc965e0f2af554b9a0f7b60c9bf92f890d414d03f3bdafb83be9c50f1f148bd654c8514feb4d7882b9bdfe6216b3f7f516239b431787ead89f9955a336450125e5e51819328901543429866d137e0d48531f9baf977ac405e875554d3bd1d1aba06b76c3264167a2648636c18a684e9728c0601a1ec1a6a51f1b7ac12d9b387fb12009727a9c581c6456c3eb33f4271d2d1931cd75abbeb42696a6277131faac6d00ed084f66f921d94f969dfa9b8bb53360021bd3c65082a58c1ff8de505b0711044f9c30c3ee0a08de7de93ff2b561957f8f961c0e18d768b5de292ab004c0a8ff7ef05fe95593f49228afa8d847f8725f96e53bd5aeee9adfd37a11e511dd53342d821c81e1508997e974c9e055b01a98be6fadd602d99e90e090cacf6e8fefd9112ad1327fe552a17cb8c7e55866f6613160a3fad74cf14f4711856e4cec10ef604c853b6b4bc74c87cfdf367127e3c63563dcc5ead86ac5015a920516d77035fe270022553879b3a8d061ffa09ef949541f88e9a8d3d2a88f4e244728790148d1b78018fa35a33f4e61db08aca4595bea3cba2e75ce9070395bbed2fdb1339b82956ed3d898807bd019115e83c7e9cffd366b2edf117e22febf20283f908b3b58eae298548de9f7d519aaf91ba8db3d4f662af3240fbd61e5f5195ef02381b593e8856e07fcd5b48030a91923f17ab483b3ed1a4ae4d11752eb786a77340c10c0299c1a24c28a7e1a630218ac40d803fd9d96e372a3cd95620594efb4b80a5e7125106cad539d895af7561e7286a6210da39aeccafe00a5a181eb7eeedb071e8763187aae9897e4054d9df42ba386cd08821e78467181dec965b2300180c9965f5a71a6cf5ef074d0420c74aed4235a93bd8723016f64097fb6ada8f23689e8f25ed1272af98447c1c708a715e06a32b4d7540e1247a752944e71033ee66539ca2e89188962fd62345c156e239c5c579939ad1b409929309630c76a84c60fb938929190006cd032fcdcea787053815173eab8cdc8cab2d2cc0f7fd9304b968c64c39f40fd35a1c694e55790bb1bedde76ad8dddad75d7602cc900c4572df2238e9d8dabe2623aa52953b2f27b46502e340e98e7a8e068dcd75fa8476c30363db2183af1e344097c685e0b7e621d030e03be5f7c2d74b7af26c0a5baedfd37910915a3d5ca2d4008a9dd21cee87a4eb1590b9ddc5ac42a106934bc6fb23d41886a063d0709858307a064ae8c4b76f6cbb306cafa9a0f9cbc24e5c9bdce65f35ce78cbcaa0c8f746c41d8756022c8cd8b989825376402649edd859a5e4d2cb51e17aee2fc8b6f1ab75b05c8c9ae3a28ea2d0d077404622cd9cfdcf4271d7258177edea9bece5f33307b245690ee6f2572e0f693ad68696a3e2e7d88e05a087c282dcd8457c2c3777d62b532cdaa9e12b971331c3d66702c2ad4fe67499f92908963a09c1ade6bffd419767d2a460d2838ea7f9d9e653ce922a951b11b9ad0ce500eb8202f3d9507f43fda1591f839352af7be5fe20cb45f80702b95eaa872f91c8c1ced6cfbbf4c72d42b1a52642296b7b9ef3c76d810bf6d486683bc90de78214b5dc2ca2cc047a0b8d3f4d22a3b371b09d5f0f66b43c748de4f23e2a432d31598a8eb26e169995c63fed5930d32a752d14208d1098ab85d5f684b0c27b2eb5359ae8564150473a42ab2bfe5b05f033c52ccaa78414fd89ec4d19cfc2dd461cd5962cff197bde54a704475611a21a2689621e5e5d09ced79e86cba5ee177ef61a84cf22fbe368b8a6b832f97fcde0107a9da7ae392390efa182c0101906594e8ca549182f3893f3bf6678c7485524100c4e0bcebcada0d9609edb0bb9e9fa027189e80fcefec2640fb7e48b622958dbc510b2527852e350d426a2d1dff55fb067a09dc5b4d78497be06f852d793aa36119d6726aa9b9bcff7393a4b2c60d3ac63cf209c4963c8c892134f55e276f060cd1e6695c038c18f45b08b18a71ebf11f54009f0922b13999f874f0956c272d5962cb1547cf271e2282a27bda8c942f47e69757f324be1909521a9d6ea31046947abc9d2b2c01b8d47eaff5eb3b594cbd55cc6b54b97a1f369f085fd9779ed494706909a03c9e94365b665f8bc0902c409277569391037aa45757f039c8febaae1791a8dda39580d5e6cd7d5a812c348f6bcd9413aa09fb939bfd2729d6282025799b81a126eaeaf340d810362145cd424650912c04d1798f9d6462eacb0550bc6408af49799320137883c64c7e8190edf16b3f626aed671effb69223393afb353ad0afe88f42894949887e64870519a8a90052f7ff99c2bc3614b2a889e806d6f173769c5924b796093537fc3c4cca</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+		<h3 id="题目解析">题目解析</h3>
+<p>并查集，每次操作 <code>Merge</code> 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。</p>
+<p>普通 DFS 也行。</p>
+<h3 id="代码">代码</h3>
+<p>这里提供 DFS 版本：</p>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long ll;
+const ll N=200;
+ll T,n,m,b[N][N],f[N][N],a,e,c,d;
+bool vst[N][N];
+ll get[N*1000],get2[N*1000];
+ll get3[N*1000],get4[N*1000];		
+bool pos;
+vector&lt;ll&gt;x[N][N],y[N][N];
+void Diverse(ll x1,ll x2,ll x3,ll x4)&#123;
+	if(vst[x1][x2]==true)return;
+	vst[x1][x2]=true;
+	if(x1==x3&amp;&amp;x2==x4)&#123;
+		pos=true;
+		return ;
+	&#125;
+	for(ll i=0;i&lt;x[x1][x2].size();i++)&#123;
+		Diverse(x[x1][x2][i],y[x1][x2][i],x3,x4);
+	&#125;
+	return;
+&#125;
+int main()&#123;
+	scanf(&quot;%d&quot;,&amp;T);
+	while(T--)&#123;
+		scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+		for(ll i=0;i&lt;=n;i++)
+			for(ll j=0;j&lt;=n;j++)
+				x[i][j].clear(),y[i][j].clear();
+		for(ll i=1;i&lt;=n;i++)
+			for(ll j=1;j&lt;=n;j++)
+				scanf(&quot;%d&quot;,&amp;b[i][j]),get[b[i][j]]=i,get2[b[i][j]]=j;
+		for(ll i=1;i&lt;=n;i++)
+			for(ll j=1;j&lt;=n;j++)
+				scanf(&quot;%d&quot;,&amp;f[i][j]),get3[f[i][j]]=i,get4[f[i][j]]=j;
+		for(ll i=1;i&lt;=m;i++)&#123;
+			scanf(&quot;%d%d%d%d&quot;,&amp;a,&amp;e,&amp;c,&amp;d);
+			x[a][e].push_back(c);
+			y[a][e].push_back(d);
+			x[c][d].push_back(a);
+			y[c][d].push_back(e);
+		&#125;
+		bool out=false;
+		for(ll i=1;i&lt;=n;i++)
+		for(ll j=1;j&lt;=n;j++)&#123;
+		if(out!=true)&#123;
+			memset(vst,false,sizeof(vst));
+			ll numx1=get3[b[i][j]],numy1=get4[b[i][j]];
+			pos=false;
+			Diverse(i,j,numx1,numy1);
+			if(pos==false)&#123;
+				printf(&quot;No\n&quot;);
+				out=true;
+				break;
+		&#125;
+		&#125;	
+	&#125;
+		if(out==false)printf(&quot;Yes\n&quot;);
+	&#125;
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<p><strong>本文作者 HJY的忠实PIG</strong></p>
+<p><strong>请无视下列内容</strong></p>
+<blockquote>
+<p>本文作者：ren-yc<br>
+本文链接： <a href="https://ren-yc.github.io/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/29/LG-Numbers-题解/</a><br>
+版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+
+</blockquote>
+
 	</div>
 
 	
@@ -775,8 +843,8 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - Numbers - 题解',
-	    description : '
-  33c7c2007436768271a01b49189558256fdf298294ab4f0...',
+	    description : '题目解析
+并查集，每次操作 Merge 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/'
