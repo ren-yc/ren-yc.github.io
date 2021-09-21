@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>『游记』CSP-J 2021 初赛</title>
+      <link href="/2021/09/19/%E3%80%8E%E6%B8%B8%E8%AE%B0%E3%80%8FCSP-J-2021-%E5%88%9D%E8%B5%9B/"/>
+      <url>/2021/09/19/%E3%80%8E%E6%B8%B8%E8%AE%B0%E3%80%8FCSP-J-2021-%E5%88%9D%E8%B5%9B/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="背景">背景</h3><p>这是这位蒟蒻第一次参加 CSP，如果你感觉这个蒟蒻太蒻了，<s>请见谅</s>。</p><p>人在 SH，目前估分 $50$~$70$。</p><h3 id="信息">信息</h3><p>本次比赛这个蒟蒻的信息：</p><p>准考证号：<code>SH-01399</code></p><p>考点：<code>华东师范大学第二附属中学紫竹校区204</code></p><p>座位号：<code>11</code></p><h3 id="距离开始-5-小时">距离开始 $5$ 小时</h3><p><s>刚起床，睡了个懒觉</s>，吃完早饭就爬去<s>复习</s>临时抱佛脚了。</p><p>看了一会儿数据结构，无聊透了，打开洛谷。乍一看，主页上全是名为 <code>RP++</code> 的帖子，<s>不是我说这些人好好复习不好吗，非要跟我一样考前摸鱼</s></p><h3 id="距离开始-3-小时">距离开始 $3$ 小时</h3><p>CSP-S 刚结束，洛谷就有一个红名蓝勾的大佬发出了 CSP-S 福建试卷，我下载下来看了看，我草居然有 $121$ 行的完善程序，还有加密算法 base64？？？（不管了反正与我无关）</p><p><img src="https://xn--wcs.tk/5" alt=""></p><h3 id="出发">出发</h3><p>我家的位置距离华二紫竹有大约 $15$ 公里，只能做地铁 $15$ 号线。</p><p>半小时后，我下了地铁走到了华二紫竹。一到门口，看到了一大堆 XXS（$10$ 岁左右）？！</p><p><img src="https://xn--wcs.tk/ga" alt=""></p><p>其中许多人的准考证上的学校写着 $shtctm$ 或者其他机构而非本人所在学校。</p><p><img src="https://xn--wcs.tk/5" alt=""></p><h3 id="考试">考试</h3><p>进了考场，基本上全是七年级$+$ 的人，只有一个看起来是四年级的 XXS。</p><p>坐了 $10$ 分钟<s>终于</s>发卷了，居然是用<s>万恶的</s>答题卡答题，<s>我也是醉了</s>。</p><p>粗略的看了一下试卷，前一大题 $30$ 分肯定是能拿接近满分的</p><p>我草！？居然有上午的 base64，后悔没有看 dalao 们的答案了（<s>话说这会不会禁三啊</s>）。</p><p>结果，base64 那题看程序写结果的题算了 $30$ 分钟，也没算出什么东西（$wtcl$），选择题全蒙的。</p><p>其他的题目还好，<s>有一定的把握</s>。</p><h3 id="考后">考后</h3><p>考后自己和民间正确答案对了一下，粗略的计算发现分数在往年 SH 分数线左右，会不会进不了复赛啊草（还是太菜了）。</p><p><strong>看了今天的内容，大家有什么想法呢？欢迎爆打小编哦。</strong></p><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/09/19/%E3%80%8E%E6%B8%B8%E8%AE%B0%E3%80%8FCSP-J-2021-%E5%88%9D%E8%B5%9B/">https://ren-yc.github.io/2021/09/19/『游记』CSP-J-2021-初赛/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Preliminary Contest </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSP-J </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>『题解』LG - UVA11559 Event Planning</title>
       <link href="/2021/09/14/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA11559-Event-Planning/"/>
       <url>/2021/09/14/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA11559-Event-Planning/</url>
