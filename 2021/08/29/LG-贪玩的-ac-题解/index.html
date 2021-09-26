@@ -11,12 +11,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="代码分析 暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）  #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int bossxue,acxue,acharm,bossharm; int main()&amp;#123; 	cin&gt;&amp;gt">
+	<meta name="description" content="代码分析暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）   #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int bossxue,acxue,acharm,bossharm; int main()&amp;#123;     cin&gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 贪玩的 ac - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="代码分析 暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）  #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int bossxue,acxue,acharm,bossharm; int main()&amp;#123; 	cin&gt;&amp;gt">
+<meta property="og:description" content="代码分析暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）   #include&lt;bits&#x2F;stdc++.h&gt; using namespace std; int bossxue,acxue,acharm,bossharm; int main()&amp;#123;     cin&gt;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-08-29T00:25:03.000Z">
@@ -680,7 +680,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							250 字
+							249 字
 						</div>
 					
 						
@@ -696,43 +696,40 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="代码分析">代码分析</h3>
-<p>暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）</p>
+		<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）</p>
 <p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+
+<pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 int bossxue,acxue,acharm,bossharm;
 int main()&#123;
-	cin&gt;&gt;bossxue&gt;&gt;acxue&gt;&gt;acharm&gt;&gt;bossharm;
-	while(1)&#123;
-		bossxue-=acharm;
-		acxue-=bossharm;
-		if(bossxue&lt;=0 &amp;&amp; acxue&gt;0)&#123;
-			cout&lt;&lt;acxue;
-			break;
-		&#125;
-		if(acxue&lt;=0 &amp;&amp; bossxue&gt;0)&#123;
-			cout&lt;&lt;bossxue;
-			break;
-		&#125;
-		if(acxue&gt;0 &amp;&amp; bossxue&gt;0)&#123;
-			;
-		&#125;else&#123;
-			cout&lt;&lt;&quot;all&quot;;
-			break;
-		&#125;
-	&#125;
-	return 0;
+    cin&gt;&gt;bossxue&gt;&gt;acxue&gt;&gt;acharm&gt;&gt;bossharm;
+    while(1)&#123;
+        bossxue-=acharm;
+        acxue-=bossharm;
+        if(bossxue&lt;=0 &amp;&amp; acxue&gt;0)&#123;
+            cout&lt;&lt;acxue;
+            break;
+        &#125;
+        if(acxue&lt;=0 &amp;&amp; bossxue&gt;0)&#123;
+            cout&lt;&lt;bossxue;
+            break;
+        &#125;
+        if(acxue&gt;0 &amp;&amp; bossxue&gt;0)&#123;
+            ;
+        &#125;else&#123;
+            cout&lt;&lt;&quot;all&quot;;
+            break;
+        &#125;
+    &#125;
+    return 0;
 &#125;
 </code></pre>
 <p>真的没啥好说，自己领悟。</p>
-<p>$$END$$</p>
-<p><strong>本文作者 氢氧根离子的AC</strong></p>
+<script type="math/tex; mode=display">END</script><p><strong>本文作者 氢氧根离子的AC</strong></p>
 <p><strong>请无视下列内容</strong></p>
 <blockquote>
-<p>本文作者：ren-yc<br>
-本文链接： <a href="https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/29/LG-贪玩的-ac-题解/</a><br>
-版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+<p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/29/LG-贪玩的-ac-题解/">https://ren-yc.github.io/2021/08/29/LG-贪玩的-ac-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
 
 </blockquote>
 
@@ -805,8 +802,7 @@ int main()&#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 贪玩的 ac - 题解',
-	    description : '代码分析
-暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量...',
+	    description : '代码分析暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/'

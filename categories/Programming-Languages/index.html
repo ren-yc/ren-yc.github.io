@@ -661,7 +661,7 @@
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
 							</span>
 						</div>
 					
@@ -670,7 +670,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							215 字
+							213 字
 						</div>
 					
 						
@@ -688,24 +688,17 @@
 	<div class="post-content">
 		
 			
-				简介
-Warfarin 是一个由 C++ 编写而成的解释型语言。
+				简介Warfarin 是一个由 C++ 编写而成的解释型语言。
 特点
-
-
 变量，支持数字、字符串、布尔、数组（允许使用 a[&quot;test&quot;] 这样的语法）；
-
 
 函数定义、调用与递归、高阶函数、lambda 表达式；
 
-
 键盘与文件的 I/O 操作；
-
 
 if for while 语句；
 
-
-大量内置函数，以及一部分操作系统 A...
+大量内置函数，以及一部分操作系统 API（仅支持W...
 			
 		
 	</div>
@@ -718,6 +711,15 @@ if for while 语句；
 	
 </article>
 
+
+
+<section id="posts" class="posts-expand">
+{% for post in page.posts %}
+	{% if post.notshow != true %}
+		{{ post_template.render(post, true) }}
+	{% endif %}
+{% endfor %}
+</section>
 
 
 

@@ -661,7 +661,7 @@
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
 							</span>
 						</div>
 					
@@ -688,8 +688,7 @@
 	<div class="post-content">
 		
 			
-				壹 chen_zhe人
-那是谁 是谁 是谁
+				壹 chen_zhe人那是谁 是谁 是谁
 那就是 chen_zhe
 chen_zhe 人 chen_zhe 人
 背负着暴政之名
@@ -698,7 +697,7 @@ chen_zhe 代码是超音波（形容很会卡常）
 chen_zhe 之眼（指管控 OIer）在洛谷飞翔
 手里掌握着 恶魔之力
 正义的英雄（
-chen_zhe 人 chen_zhe...
+chen_zhe 人 chen_zhe ...
 			
 		
 	</div>
@@ -711,6 +710,15 @@ chen_zhe 人 chen_zhe...
 	
 </article>
 
+
+
+<section id="posts" class="posts-expand">
+{% for post in page.posts %}
+	{% if post.notshow != true %}
+		{{ post_template.render(post, true) }}
+	{% endif %}
+{% endfor %}
+</section>
 
 
 

@@ -661,7 +661,7 @@
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
 							</span>
 						</div>
 					
@@ -670,7 +670,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							208 字
+							202 字
 						</div>
 					
 						
@@ -688,17 +688,14 @@
 	<div class="post-content">
 		
 			
-				背景
-这是这位蒟蒻第一次参加 CSP，如果你感觉这个蒟蒻太蒻了，请见谅。
+				背景这是这位蒟蒻第一次参加 CSP，如果你感觉这个蒟蒻太蒻了，请见谅。
 人在 SH，目前估分 $50$~$70$。
-信息
-本次比赛这个蒟蒻的信息：
+信息本次比赛这个蒟蒻的信息：
 准考证号：SH-01399
 考点：华东师范大学第二附属中学紫竹校区204
 座位号：11
-距离开始 $5$ 小时
-刚起床，睡了个懒觉，吃完早饭就爬去复习临时抱佛脚了。
-看了一会儿数据结构，无聊透了，打开...
+距离开始 $5$ 小时刚起床，睡了个懒觉，吃完早饭就爬去复习临时抱佛脚了。
+看了一会儿数据结构，无聊透了，打开洛谷。...
 			
 		
 	</div>
@@ -711,6 +708,15 @@
 	
 </article>
 
+
+
+<section id="posts" class="posts-expand">
+{% for post in page.posts %}
+	{% if post.notshow != true %}
+		{{ post_template.render(post, true) }}
+	{% endif %}
+{% endfor %}
+</section>
 
 
 
