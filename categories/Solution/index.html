@@ -265,6 +265,20 @@
 											
 										</li>
 									
+										<li class='nav-item dropdown'>
+											<a href='' class='nav-link' onclick='return false;' data-toggle='dropdown' no-pjax>
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>应用</span>
+											</a>
+											
+													<div class="dropdown-menu">
+														
+															<a href='/' class='dropdown-item'>HTML5 2048</a>
+														
+													</div>
+												
+										</li>
+									
 										<li class='nav-item'>
 											<a href='/about' class='nav-link' >
 												<i class='ni ni-book-bookmark d-lg-none'></i>
@@ -506,7 +520,7 @@
 			
 			
 				<ul id='leftbar_part1_menu' class='leftbar-menu'>
-					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/friends'>友链</a></li><li class='leftbar-menu-item'><a href='/tools'>工具</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/friends'>友链</a></li><li class='leftbar-menu-item'><a href='/tools'>工具</a></li><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>应用</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item'><a href='/apps/2048.html'>HTML5 2048</a></li></ul></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
 				</ul>
 			
 			<div class="card-body text-center leftbar-search-button">
@@ -670,7 +684,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							220 字
+							221 字
 						</div>
 					
 						
@@ -688,7 +702,8 @@
 	<div class="post-content">
 		
 			
-				题目解析本题不算太难，唯一的难点在于数据范围。
+				题目解析
+本题不算太难，唯一的难点在于数据范围。
 没错，就是数据范围，对于这个数据，应开 long long。
 一句名言：
 
@@ -697,7 +712,7 @@
 那么接下来就是纯 dp
 定义：
 $dp_{i,0}$ 为第 $i$ 颗棋子放白色棋子的情况数，$dp_{i,1}$ 为第 $i$ 颗棋子放黑色棋子的情况数。
-状态转移方...
+状态转移...
 			
 		
 	</div>
@@ -747,7 +762,7 @@ $dp_{i,0}$ 为第 $i$ 颗棋子放白色棋子的情况数，$dp_{i,1}$ 为第 $
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							249 字
+							250 字
 						</div>
 					
 						
@@ -765,8 +780,8 @@ $dp_{i,0}$ 为第 $i$ 颗棋子放白色棋子的情况数，$dp_{i,1}$ 为第 $
 	<div class="post-content">
 		
 			
-				代码分析暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）
-
+				代码分析
+暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）
 
 #include&lt;bits/stdc++.h&gt;
 using namespace std;
@@ -821,7 +836,7 @@ int...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							670 字
+							672 字
 						</div>
 					
 						
@@ -839,16 +854,17 @@ int...
 	<div class="post-content">
 		
 			
-				题目解析并查集，每次操作 Merge 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。
+				题目解析
+并查集，每次操作 Merge 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。
 普通 DFS 也行。
-代码这里提供 DFS 版本：
-
+代码
+这里提供 DFS 版本：
 
 #include&lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long ll;
 const ll N=200;
-ll T,n,m,b[...
+ll T,n,m,b...
 			
 		
 	</div>
@@ -898,7 +914,7 @@ ll T,n,m,b[...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							461 字
+							463 字
 						</div>
 					
 						
@@ -916,14 +932,14 @@ ll T,n,m,b[...
 	<div class="post-content">
 		
 			
-				题目解析其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。
+				题目解析
+其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。
 状态转移方程：
 
-
 if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dp
-    continue;
+	continue;
 &#125;else if(i==1 &amp;&amp; j!=1)&#123;//只可从左边来，所以加上左边的dp值
-    dp[i]...
+	dp[i][j]+=d...
 			
 		
 	</div>
@@ -973,7 +989,7 @@ if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dp
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							481 字
+							483 字
 						</div>
 					
 						
@@ -991,18 +1007,20 @@ if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dp
 	<div class="post-content">
 		
 			
-				题目解析这道题目十分的水，所以直接放代码（bushi
+				题目解析
+这道题目十分的水，所以直接放代码（bushi
 这道题其实就是简简单单的暴力
 没错，就是暴力
-对于这个二次三项式 来说：我们只要满足两个整数 $x,y$ 满足两个条件：
+对于这个二次三项式 来说：
+我们只要满足两个整数 $x,y$ 满足两个条件：
 
 $xy$ $=$ $cc$
 $x + y$ $=$ $bb$
 
 由于 $aa$ $=$ $1$，所以不用管
 可以直接写函数 $find$_$ans$
-代码分析见注释。
-代码...
+代码分析
+见注释。...
 			
 		
 	</div>
@@ -1052,7 +1070,7 @@ $x + y$ $=$ $bb$
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							141 字
+							143 字
 						</div>
 					
 						
@@ -1070,17 +1088,19 @@ $x + y$ $=$ $bb$
 	<div class="post-content">
 		
 			
-				题目解析简单的一匹的签到题。
-代码分析边输入边累计。
+				题目解析
+简单的一匹的签到题。
+代码分析
+边输入边累计。
 代码
 
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main() &#123;
-    long long n, x, v, g, tot = 0;
-    cin &gt;&gt; n &gt;&gt; x;
-    for...
+	long long n, x, v, g, tot = 0;
+	cin &gt;&gt; n &gt;&gt; x;
+	for (int i...
 			
 		
 	</div>
@@ -1130,7 +1150,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							221 字
+							211 字
 						</div>
 					
 						
@@ -1148,16 +1168,18 @@ int main() &#123;
 	<div class="post-content">
 		
 			
-				题目解析膜你模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，又不能跳 $0$ 格。
-代码分析双重循环膜你模拟就行了。
+				题目解析
+膜你模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，又不能跳 $0$ 格。
+代码分析
+双重循环膜你模拟就行了。
 代码
 
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main() &#123;
-    int n, sum = 0, maxn = 0;
-...
+	int n, sum = 0, maxn = 0;
+	...
 			
 		
 	</div>
@@ -1207,7 +1229,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							595 字
+							597 字
 						</div>
 					
 						
@@ -1225,15 +1247,17 @@ int main() &#123;
 	<div class="post-content">
 		
 			
-				题目解析深度优先搜索题（DFS），在上下左右都搜一遍就好了。
-代码分析先全部读入然后标记二维数组。
+				题目解析
+深度优先搜索题（DFS），在上下左右都搜一遍就好了。
+代码分析
+先全部读入然后标记二维数组。
 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} = 2$，则输出 YES，反之输出 NO。
 代码
 
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
-int t, n, qx, q...
+int t, n, qx,...
 			
 		
 	</div>
@@ -1283,7 +1307,7 @@ int t, n, qx, q...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							128 字
+							130 字
 						</div>
 					
 						
@@ -1301,18 +1325,20 @@ int t, n, qx, q...
 	<div class="post-content">
 		
 			
-				题目解析淼题，只需要逆推累加出结果。
-代码分析循环逆推。
+				题目解析
+淼题，只需要逆推累加出结果。
+代码分析
+循环逆推。
 代码
 
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main() &#123;
-    int n;
-    double tot = 0;
-    cin &gt;&gt; n;
-    for (int i = 0; ...
+	int n;
+	double tot = 0;
+	cin &gt;&gt; n;
+	for (int i = 0; i &lt; n; ...
 			
 		
 	</div>
@@ -1362,7 +1388,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							273 字
+							263 字
 						</div>
 					
 						
@@ -1380,8 +1406,10 @@ int main() &#123;
 	<div class="post-content">
 		
 			
-				题目解析满二叉树板子题。
-代码分析三个 for 循环，
+				题目解析
+满二叉树板子题。
+代码分析
+三个 for 循环，
 第一个用于计算节点的数量，
 第二个用于初始化树数组，
 第三个用于模拟。
@@ -1391,7 +1419,7 @@ int main() &#123;
 using namespace std;
 
 int main() &#123;
-    int k, q, a[10001] = &#123;0&#12...
+	int k, q, a[10001] = &#123;0&#125...
 			
 		
 	</div>
@@ -1404,15 +1432,6 @@ int main() &#123;
 	
 </article>
 
-
-
-<section id="posts" class="posts-expand">
-{% for post in page.posts %}
-	{% if post.notshow != true %}
-		{{ post_template.render(post, true) }}
-	{% endif %}
-{% endfor %}
-</section>
 
 
 <nav><ul class="pagination"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/4/">4</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/categories/Solution/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li><li class="page-item"><a aria-label="Last Page" class="page-link" href="/categories/Solution/page/4/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li></ul></nav>
@@ -1433,27 +1452,22 @@ int main() &#123;
 <script src="/argontheme.js"></script>
 
 		
+		
+		
+			<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+			<script src="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+			<script src="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
 			<script>
-				window.MathJax = {
-					tex: {
-						inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
-						displayMath: [['$$','$$']],
-						processEscapes: true,
-						packages: {'[+]': ['noerrors']}
-					},
-					options: {
-						skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-						ignoreHtmlClass: 'tex2jax_ignore',
-						processHtmlClass: 'tex2jax_process'
-					},
-					loader: {
-						load: ['[tex]/noerrors']
-					}
-				};
+				document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body,{
+						delimiters: [
+							{left: "$$", right: "$$", display: true},
+							{left: "$", right: "$", display: false},
+							{left: "\\(", right: "\\)", display: false}
+						]
+					});
+				});
 			</script>
-			<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" id="MathJax-script" async></script>
-		
-		
 		
 
 		

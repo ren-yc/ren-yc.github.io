@@ -1,0 +1,82 @@
+#gridPanel{
+    width:480px; height:480px;
+    margin:0 auto;
+    background-color:#bbada0;
+    border-radius:10px;
+    position:relative;
+}
+.grid,.cell{
+    width:100px; height:100px;
+    border-radius:6px;
+}
+.grid{
+    background-color:#ccc0b3;
+    float:left;
+    margin: 16px 0 0 16px;
+}
+.cell{
+    position:absolute;
+    text-align:center;
+    line-height:100px;
+    font-size:60px;
+    color:#fff;
+}
+/*同一行拥有统一的top*/
+#c00,#c01,#c02,#c03,#c04,#c05{top:16px}
+#c10,#c11,#c12,#c13,#c14,#c15{top:132px}
+#c20,#c21,#c22,#c23,#c24,#c25{top:248px}
+#c30,#c31,#c32,#c33,#c34,#c35{top:364px}
+#c40,#c41,#c42,#c43,#c44,#c45{top:480px}
+#c50,#c51,#c52,#c53,#c54,#c55{top:596px}
+/*同一列拥有统一的left*/
+#c00,#c10,#c20,#c30,#c40,#c50{left:16px}
+#c01,#c11,#c21,#c31,#c41,#c51{left:132px}
+#c02,#c12,#c22,#c32,#c42,#c52{left:248px}
+#c03,#c13,#c23,#c33,#c43,#c53{left:364px}
+#c04,#c14,#c24,#c34,#c44,#c54{left:480px}
+#c05,#c15,#c25,#c35,#c45,#c55{left:596px}
+
+.n2{background-color:#eee3da}
+.n4{background-color:#ede0c8}
+.n8{background-color:#f2b179}
+.n16{background-color:#f59563}
+.n32{background-color:#f67c5f}
+.n64{background-color:#f65e3b}
+.n128{background-color:#edcf72}
+.n256{background-color:#edcc61}
+.n512{background-color:#9c0}
+.n1024{background-color:#33b5e5}
+.n2048{background-color:#09c}
+.n4096{background-color:#a6c}
+.n8192{background-color:#93c}
+.n2,.n4{color:#776e65}
+.n1024,.n2048,.n4096,.n8192{font-size:40px}
+
+p{
+    width:480px; margin:0 auto;
+    font-family:Arial; font-weight:bold;
+    font-size:40px; padding-top:15px;
+}
+
+/*设置游戏结束界面*/
+#gameover{width:100%; height:100%;
+    position:absolute; top:0; left:0;
+    display:none;
+}
+#gameover div{width:100%; height:100%;
+    background-color:#555; opacity:0.5;
+}
+#gameover p{width:300px; height:200px;
+    border:1px solid #edcf72;
+    line-height:1.6em;
+    text-align:center;
+    background-color:#fff;
+    border-radius:10px;
+    position:absolute;
+    top:50%; left:50%;
+    margin-top:-100px;
+    margin-left:-150px;
+}
+.btn{padding:10px; border-radius:6px;
+    background-color:#9f8b77; color:#fff; cursor:pointer;
+}

@@ -265,6 +265,20 @@
 											
 										</li>
 									
+										<li class='nav-item dropdown'>
+											<a href='' class='nav-link' onclick='return false;' data-toggle='dropdown' no-pjax>
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>应用</span>
+											</a>
+											
+													<div class="dropdown-menu">
+														
+															<a href='/' class='dropdown-item'>HTML5 2048</a>
+														
+													</div>
+												
+										</li>
+									
 										<li class='nav-item'>
 											<a href='/about' class='nav-link' >
 												<i class='ni ni-book-bookmark d-lg-none'></i>
@@ -501,7 +515,7 @@
 			
 			
 				<ul id='leftbar_part1_menu' class='leftbar-menu'>
-					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/friends'>友链</a></li><li class='leftbar-menu-item'><a href='/tools'>工具</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/categories'>分类</a></li><li class='leftbar-menu-item'><a href='/tags'>标签</a></li><li class='leftbar-menu-item'><a href='/friends'>友链</a></li><li class='leftbar-menu-item'><a href='/tools'>工具</a></li><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>应用</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item'><a href='/apps/2048.html'>HTML5 2048</a></li></ul></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
 				</ul>
 			
 			<div class="card-body text-center leftbar-search-button">
@@ -663,7 +677,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							202 字
+							208 字
 						</div>
 					
 						
@@ -681,14 +695,17 @@
 	<div class="post-content">
 		
 			
-				背景这是这位蒟蒻第一次参加 CSP，如果你感觉这个蒟蒻太蒻了，请见谅。
+				背景
+这是这位蒟蒻第一次参加 CSP，如果你感觉这个蒟蒻太蒻了，请见谅。
 人在 SH，目前估分 $50$~$70$。
-信息本次比赛这个蒟蒻的信息：
+信息
+本次比赛这个蒟蒻的信息：
 准考证号：SH-01399
 考点：华东师范大学第二附属中学紫竹校区204
 座位号：11
-距离开始 $5$ 小时刚起床，睡了个懒觉，吃完早饭就爬去复习临时抱佛脚了。
-看了一会儿数据结构，无聊透了，打开洛谷。...
+距离开始 $5$ 小时
+刚起床，睡了个懒觉，吃完早饭就爬去复习临时抱佛脚了。
+看了一会儿数据结构，无聊透了，打开...
 			
 		
 	</div>
@@ -711,7 +728,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-9-14 8:20:26 | 编辑于 2021-9-26 19:29:54">2021-9-14 8:20
+							<time title="发布于 2021-9-14 8:20:26 | 编辑于 2021-9-26 19:34:41">2021-9-14 8:20
 							</time>
 						</div>
 					
@@ -738,7 +755,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							330 字
+							332 字
 						</div>
 					
 						
@@ -756,7 +773,8 @@
 	<div class="post-content">
 		
 			
-				题目翻译作为一次短途旅行的组织者，你需要根据参与人数、预算、酒店及其周末空余床位的情况，决定是否成行。其中旅游人数 $N$，预算 $B$，可供考虑的酒店数量 $H$，可选择的出行周末 $W$。其中 $H$ 确定之后，会输入 $H$ 组数据，每两行为一组，第一行表示该酒店的人均住店费用 $p$，第二行表示 $W$ 个周末对应每个周末该酒店的床位空余情...
+				题目翻译
+作为一次短途旅行的组织者，你需要根据参与人数、预算、酒店及其周末空余床位的情况，决定是否成行。其中旅游人数 $N$，预算 $B$，可供考虑的酒店数量 $H$，可选择的出行周末 $W$。其中 $H$ 确定之后，会输入 $H$ 组数据，每两行为一组，第一行表示该酒店的人均住店费用 $p$，第二行表示 $W$ 个周末对应每个周末该酒店的床位空余...
 			
 		
 	</div>
@@ -769,15 +787,6 @@
 	
 </article>
 
-
-
-<section id="posts" class="posts-expand">
-{% for post in page.posts %}
-	{% if post.notshow != true %}
-		{{ post_template.render(post, true) }}
-	{% endif %}
-{% endfor %}
-</section>
 
 
 
@@ -800,27 +809,22 @@
 <script src="/argontheme.js"></script>
 
 		
+		
+		
+			<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+			<script src="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+			<script src="//cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
 			<script>
-				window.MathJax = {
-					tex: {
-						inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
-						displayMath: [['$$','$$']],
-						processEscapes: true,
-						packages: {'[+]': ['noerrors']}
-					},
-					options: {
-						skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-						ignoreHtmlClass: 'tex2jax_ignore',
-						processHtmlClass: 'tex2jax_process'
-					},
-					loader: {
-						load: ['[tex]/noerrors']
-					}
-				};
+				document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body,{
+						delimiters: [
+							{left: "$$", right: "$$", display: true},
+							{left: "$", right: "$", display: false},
+							{left: "\\(", right: "\\)", display: false}
+						]
+					});
+				});
 			</script>
-			<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" id="MathJax-script" async></script>
-		
-		
 		
 
 		
