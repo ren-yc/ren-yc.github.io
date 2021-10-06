@@ -560,13 +560,13 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">45</span>
+										<span class="site-state-item-count">46</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
 								<div class="site-state-item site-state-categories">
 									<a data-toggle="modal" data-target="#blog_categories">
-										<span class="site-state-item-count">6</span>
+										<span class="site-state-item-count">7</span>
 										<span class="site-state-item-name">分类</span>
 									</a>
 								</div>      
@@ -630,7 +630,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Other/" rel="tag">Other <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Preliminary-Contest/" rel="tag">Preliminary Contest <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">37</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/Tools/" rel="tag">Tools <span class="tag-num">2</span></a>
+				<a class="badge badge-secondary tag" href="/categories/Other/" rel="tag">Other <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Preliminary-Contest/" rel="tag">Preliminary Contest <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">37</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/Tools/" rel="tag">Tools <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -645,7 +645,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/CSP-J/" rel="tag">CSP-J <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">40</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
+				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/CSP-J/" rel="tag">CSP-J <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">41</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin/" rel="tag">Warfarin <span class="tag-num">1</span></a>
 			</div>
 		</div>
 	</div>
@@ -695,7 +695,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							221 字
+							220 字
 						</div>
 					
 						
@@ -713,8 +713,7 @@
 	<div class="post-content">
 		
 			
-				题目解析
-本题不算太难，唯一的难点在于数据范围。
+				题目解析本题不算太难，唯一的难点在于数据范围。
 没错，就是数据范围，对于这个数据，应开 long long。
 一句名言：
 
@@ -723,7 +722,7 @@
 那么接下来就是纯 dp
 定义：
 $dp_{i,0}$ 为第 $i$ 颗棋子放白色棋子的情况数，$dp_{i,1}$ 为第 $i$ 颗棋子放黑色棋子的情况数。
-状态转移...
+状态转移方...
 			
 		
 	</div>
@@ -773,7 +772,7 @@ $dp_{i,0}$ 为第 $i$ 颗棋子放白色棋子的情况数，$dp_{i,1}$ 为第 $
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							250 字
+							249 字
 						</div>
 					
 						
@@ -791,8 +790,8 @@ $dp_{i,0}$ 为第 $i$ 颗棋子放白色棋子的情况数，$dp_{i,1}$ 为第 $
 	<div class="post-content">
 		
 			
-				代码分析
-暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）
+				代码分析暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）
+
 
 #include&lt;bits/stdc++.h&gt;
 using namespace std;
@@ -847,7 +846,7 @@ int...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							672 字
+							670 字
 						</div>
 					
 						
@@ -865,17 +864,16 @@ int...
 	<div class="post-content">
 		
 			
-				题目解析
-并查集，每次操作 Merge 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。
+				题目解析并查集，每次操作 Merge 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。
 普通 DFS 也行。
-代码
-这里提供 DFS 版本：
+代码这里提供 DFS 版本：
+
 
 #include&lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long ll;
 const ll N=200;
-ll T,n,m,b...
+ll T,n,m,b[...
 			
 		
 	</div>
@@ -925,7 +923,7 @@ ll T,n,m,b...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							463 字
+							461 字
 						</div>
 					
 						
@@ -943,14 +941,14 @@ ll T,n,m,b...
 	<div class="post-content">
 		
 			
-				题目解析
-其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。
+				题目解析其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。
 状态转移方程：
 
+
 if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dp
-	continue;
+    continue;
 &#125;else if(i==1 &amp;&amp; j!=1)&#123;//只可从左边来，所以加上左边的dp值
-	dp[i][j]+=d...
+    dp[i]...
 			
 		
 	</div>
@@ -1000,7 +998,7 @@ if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dp
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							483 字
+							481 字
 						</div>
 					
 						
@@ -1018,20 +1016,18 @@ if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dp
 	<div class="post-content">
 		
 			
-				题目解析
-这道题目十分的水，所以直接放代码（bushi
+				题目解析这道题目十分的水，所以直接放代码（bushi
 这道题其实就是简简单单的暴力
 没错，就是暴力
-对于这个二次三项式 来说：
-我们只要满足两个整数 $x,y$ 满足两个条件：
+对于这个二次三项式 来说：我们只要满足两个整数 $x,y$ 满足两个条件：
 
 $xy$ $=$ $cc$
 $x + y$ $=$ $bb$
 
 由于 $aa$ $=$ $1$，所以不用管
 可以直接写函数 $find$_$ans$
-代码分析
-见注释。...
+代码分析见注释。
+代码...
 			
 		
 	</div>
@@ -1081,7 +1077,7 @@ $x + y$ $=$ $bb$
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							143 字
+							141 字
 						</div>
 					
 						
@@ -1099,19 +1095,17 @@ $x + y$ $=$ $bb$
 	<div class="post-content">
 		
 			
-				题目解析
-简单的一匹的签到题。
-代码分析
-边输入边累计。
+				题目解析简单的一匹的签到题。
+代码分析边输入边累计。
 代码
 
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main() &#123;
-	long long n, x, v, g, tot = 0;
-	cin &gt;&gt; n &gt;&gt; x;
-	for (int i...
+    long long n, x, v, g, tot = 0;
+    cin &gt;&gt; n &gt;&gt; x;
+    for...
 			
 		
 	</div>
@@ -1161,7 +1155,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							211 字
+							221 字
 						</div>
 					
 						
@@ -1179,18 +1173,16 @@ int main() &#123;
 	<div class="post-content">
 		
 			
-				题目解析
-膜你模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，又不能跳 $0$ 格。
-代码分析
-双重循环膜你模拟就行了。
+				题目解析膜你模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，又不能跳 $0$ 格。
+代码分析双重循环膜你模拟就行了。
 代码
 
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main() &#123;
-	int n, sum = 0, maxn = 0;
-	...
+    int n, sum = 0, maxn = 0;
+...
 			
 		
 	</div>
@@ -1240,7 +1232,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							597 字
+							595 字
 						</div>
 					
 						
@@ -1258,17 +1250,15 @@ int main() &#123;
 	<div class="post-content">
 		
 			
-				题目解析
-深度优先搜索题（DFS），在上下左右都搜一遍就好了。
-代码分析
-先全部读入然后标记二维数组。
+				题目解析深度优先搜索题（DFS），在上下左右都搜一遍就好了。
+代码分析先全部读入然后标记二维数组。
 然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} = 2$，则输出 YES，反之输出 NO。
 代码
 
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
-int t, n, qx,...
+int t, n, qx, q...
 			
 		
 	</div>
@@ -1318,7 +1308,7 @@ int t, n, qx,...
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							130 字
+							128 字
 						</div>
 					
 						
@@ -1336,20 +1326,18 @@ int t, n, qx,...
 	<div class="post-content">
 		
 			
-				题目解析
-淼题，只需要逆推累加出结果。
-代码分析
-循环逆推。
+				题目解析淼题，只需要逆推累加出结果。
+代码分析循环逆推。
 代码
 
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main() &#123;
-	int n;
-	double tot = 0;
-	cin &gt;&gt; n;
-	for (int i = 0; i &lt; n; ...
+    int n;
+    double tot = 0;
+    cin &gt;&gt; n;
+    for (int i = 0; ...
 			
 		
 	</div>
@@ -1399,7 +1387,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							263 字
+							273 字
 						</div>
 					
 						
@@ -1417,10 +1405,8 @@ int main() &#123;
 	<div class="post-content">
 		
 			
-				题目解析
-满二叉树板子题。
-代码分析
-三个 for 循环，
+				题目解析满二叉树板子题。
+代码分析三个 for 循环，
 第一个用于计算节点的数量，
 第二个用于初始化树数组，
 第三个用于模拟。
@@ -1430,7 +1416,7 @@ int main() &#123;
 using namespace std;
 
 int main() &#123;
-	int k, q, a[10001] = &#123;0&#125...
+    int k, q, a[10001] = &#123;0&#12...
 			
 		
 	</div>

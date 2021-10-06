@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/"/>
-  <updated>2021-09-25T07:16:53.215Z</updated>
+  <updated>2021-10-06T11:40:50.584Z</updated>
   <id>https://ren-yc.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『题解』LG - CF44B Cola</title>
+    <link href="https://ren-yc.github.io/2021/10/06/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF44B-Cola/"/>
+    <id>https://ren-yc.github.io/2021/10/06/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF44B-Cola/</id>
+    <published>2021-10-06T11:39:32.000Z</published>
+    <updated>2021-10-06T11:40:50.584Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
+    
+    
+    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
+    
+  </entry>
   
   <entry>
     <title>『游记』CSP-J 2021 初赛</title>
