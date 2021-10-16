@@ -11,12 +11,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目解析 This is the waterest problem I had ever seen. 好吧 A + B 最 water。 没啥好讲的，就一个循环。 代码分析 直接读入然后来个循环，注意输出格式。 时间复杂度 $O©$，空间复杂度 $O(1)$。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;">
+	<meta name="description" content="题目解析This is the waterest problem I had ever seen. 好吧 A + B 最 water。 没啥好讲的，就一个循环。 代码分析直接读入然后来个循环，注意输出格式。 时间复杂度 $O(c)$，空间复杂度 $O(1)$。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LG - 古老的 A + B - 题解">
 <meta property="og:url" content="https://ren-yc.github.io/2021/07/26/LG-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="任宇宸的个人博客">
-<meta property="og:description" content="题目解析 This is the waterest problem I had ever seen. 好吧 A + B 最 water。 没啥好讲的，就一个循环。 代码分析 直接读入然后来个循环，注意输出格式。 时间复杂度 $O©$，空间复杂度 $O(1)$。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;">
+<meta property="og:description" content="题目解析This is the waterest problem I had ever seen. 好吧 A + B 最 water。 没啥好讲的，就一个循环。 代码分析直接读入然后来个循环，注意输出格式。 时间复杂度 $O(c)$，空间复杂度 $O(1)$。 代码  #include &lt;bits&#x2F;stdc++.h&gt; using namespace std;  int main() &amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2021-07-26T04:40:31.000Z">
@@ -721,34 +721,29 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目解析">题目解析</h3>
-<p><s>This is the waterest problem I had ever seen.</s></p>
+		<h3 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h3><p><del>This is the waterest problem I had ever seen.</del></p>
 <p>好吧 A + B 最 water。</p>
 <p>没啥好讲的，就一个循环。</p>
-<h3 id="代码分析">代码分析</h3>
-<p>直接读入然后来个循环，注意输出格式。</p>
-<p>时间复杂度 $O©$，空间复杂度 $O(1)$。</p>
-<h3 id="代码">代码</h3>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><p>直接读入然后来个循环，注意输出格式。</p>
+<p>时间复杂度 $O(c)$，空间复杂度 $O(1)$。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+
+<pre><code class="lang-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
 int main() &#123;
-	int a, b, c;
-	cin &gt;&gt; c;
-	for (int i = 0; i &lt;= c; i++) &#123;
-		a = i;
-		b = c - i;
-		cout &lt;&lt; a &lt;&lt; &quot;*&quot; &lt;&lt; b &lt;&lt; &quot;=&quot; &lt;&lt; a * b &lt;&lt; endl;
-	&#125;
-	return 0;
+    int a, b, c;
+    cin &gt;&gt; c;
+    for (int i = 0; i &lt;= c; i++) &#123;
+        a = i;
+        b = c - i;
+        cout &lt;&lt; a &lt;&lt; &quot;*&quot; &lt;&lt; b &lt;&lt; &quot;=&quot; &lt;&lt; a * b &lt;&lt; endl;
+    &#125;
+    return 0;
 &#125;
 </code></pre>
-<p>$$END$$</p>
-<blockquote>
-<p>本文作者：ren-yc<br>
-本文链接： <a href="https://ren-yc.github.io/2021/07/26/LG-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/26/LG-古老的-A-B-题解/</a><br>
-版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
+<script type="math/tex; mode=display">END</script><blockquote>
+<p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/26/LG-古老的-A-B-题解/">https://ren-yc.github.io/2021/07/26/LG-古老的-A-B-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p>
 
 </blockquote>
 
@@ -821,8 +816,8 @@ int main() &#123;
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : 'LG - 古老的 A + B - 题解',
-	    description : '题目解析
-This is the waterest problem I had ever seen....',
+	    description : '题目解析This is the waterest problem I had ever seen.
+...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2021/07/26/LG-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/'
