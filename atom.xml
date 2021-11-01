@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/"/>
-  <updated>2021-10-11T12:43:38.424Z</updated>
+  <updated>2021-11-01T09:33:49.906Z</updated>
   <id>https://ren-yc.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『置顶』RBQ - 更新日志 &amp; 公告</title>
+    <link href="https://ren-yc.github.io/2021/11/01/RBQ-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%E5%85%AC%E5%91%8A/"/>
+    <id>https://ren-yc.github.io/2021/11/01/RBQ-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%E5%85%AC%E5%91%8A/</id>
+    <published>2021-11-01T09:29:21.000Z</published>
+    <updated>2021-11-01T09:33:49.906Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Programming Languages" scheme="https://ren-yc.github.io/categories/Programming-Languages/"/>
+    
+    
+    <category term="Warfarin &amp; RBQScript" scheme="https://ren-yc.github.io/tags/Warfarin-RBQScript/"/>
+    
+  </entry>
   
   <entry>
     <title>『题解』LG - CF1598A Computer Game</title>
@@ -737,10 +762,10 @@
   
   <entry>
     <title>『置顶』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</title>
-    <link href="https://ren-yc.github.io/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/"/>
-    <id>https://ren-yc.github.io/2021/08/05/WFR-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/</id>
+    <link href="https://ren-yc.github.io/2021/08/05/WFR-&amp;-RBQ-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/"/>
+    <id>https://ren-yc.github.io/2021/08/05/WFR-&amp;-RBQ-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/</id>
     <published>2021-08-05T05:59:32.000Z</published>
-    <updated>2021-10-31T08:44:57.514Z</updated>
+    <updated>2021-11-01T09:29:48.536Z</updated>
     
     
       
@@ -1061,11 +1086,11 @@
   </entry>
   
   <entry>
-    <title>LG - gcd 与 lcm - 题解</title>
+    <title>『题解』LG - U187148 gcd 与 lcm</title>
     <link href="https://ren-yc.github.io/2021/07/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-U187148-gcd-%E4%B8%8E-lcm/"/>
     <id>https://ren-yc.github.io/2021/07/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-U187148-gcd-%E4%B8%8E-lcm/</id>
     <published>2021-07-23T00:35:49.000Z</published>
-    <updated>2021-10-31T11:16:43.796Z</updated>
+    <updated>2021-10-31T11:18:16.733Z</updated>
     
     
       
