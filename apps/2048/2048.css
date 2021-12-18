@@ -1,4 +1,4 @@
-#gridPanel{
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>#gridPanel{
     width:480px; height:480px;
     margin:0 auto;
     background-color:#bbada0;

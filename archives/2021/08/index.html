@@ -555,19 +555,19 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">48</span>
+										<span class="site-state-item-count">8</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
 								<div class="site-state-item site-state-categories">
 									<a data-toggle="modal" data-target="#blog_categories">
-										<span class="site-state-item-count">7</span>
+										<span class="site-state-item-count">6</span>
 										<span class="site-state-item-name">分类</span>
 									</a>
 								</div>      
 								<div class="site-state-item site-state-tags">
 									<a data-toggle="modal" data-target="#blog_tags">
-										<span class="site-state-item-count">4</span>
+										<span class="site-state-item-count">1</span>
 										<span class="site-state-item-name">标签</span>
 									</a>
 								</div>
@@ -625,7 +625,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/Other/" rel="tag">Other <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Preliminary-Contest/" rel="tag">Preliminary Contest <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages/" rel="tag">Programming Languages <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">37</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/Tools/" rel="tag">Tools <span class="tag-num">2</span></a>
+				<a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution/" rel="tag">Solution <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">2</span></a>
 			</div>
 		</div>
 	</div>
@@ -640,7 +640,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/APPs/" rel="tag">APPs <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/tags/CSP-J/" rel="tag">CSP-J <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">42</span></a><a class="badge badge-secondary tag" href="/tags/Warfarin-RBQScript/" rel="tag">Warfarin & RBQScript <span class="tag-num">2</span></a>
+				<a class="badge badge-secondary tag" href="/tags/Luogu/" rel="tag">Luogu <span class="tag-num">3</span></a>
 			</div>
 		</div>
 	</div>
@@ -655,467 +655,7 @@
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/31/LG-%E5%8F%8C%E8%89%B2%E6%A3%8B-%E9%A2%98%E8%A7%A3/">LG - 双色棋 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-31 18:21:49 | 编辑于 2021-9-19 12:54:21">2021-8-31 18:21
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							221 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-本题不算太难，唯一的难点在于数据范围。
-没错，就是数据范围，对于这个数据，应开 long long。
-一句名言：
-
-十年 OI 一场空，不开 long long 见祖宗。
-
-那么接下来就是纯 dp
-定义：
-$dp_{i,0}$ 为第 $i$ 颗棋子放白色棋子的情况数，$dp_{i,1}$ 为第 $i$ 颗棋子放黑色棋子的情况数。
-状态转移...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/">LG - 贪玩的 ac - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-29 8:25:03 | 编辑于 2021-9-19 12:54:28">2021-8-29 8:25
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							250 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				代码分析
-暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）
-
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int bossxue,acxue,acharm,bossharm;
-int...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/">LG - Numbers - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-29 8:16:57 | 编辑于 2021-9-19 12:55:05">2021-8-29 8:16
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							672 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-并查集，每次操作 Merge 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。
-普通 DFS 也行。
-代码
-这里提供 DFS 版本：
-
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long ll;
-const ll N=200;
-ll T,n,m,b...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/">LG - MC 生存游戏 - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-28 12:03:55 | 编辑于 2021-9-19 12:54:56">2021-8-28 12:03
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							463 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。
-状态转移方程：
-
-if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dp
-	continue;
-&#125;else if(i==1 &amp;&amp; j!=1)&#123;//只可从左边来，所以加上左边的dp值
-	dp[i][j]+=d...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/">LG - 爱数学的 ac 做因式分解（弱化版） - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-28 11:24:45 | 编辑于 2021-9-19 12:53:25">2021-8-28 11:24
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							483 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-这道题目十分的水，所以直接放代码（bushi
-这道题其实就是简简单单的暴力
-没错，就是暴力
-对于这个二次三项式 来说：
-我们只要满足两个整数 $x,y$ 满足两个条件：
-
-$xy$ $=$ $cc$
-$x + y$ $=$ $bb$
-
-由于 $aa$ $=$ $1$，所以不用管
-可以直接写函数 $find$_$ans$
-代码分析
-见注释。...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/26/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-FTQ/">『置顶』TLS - 如何使用 FTQ</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-26 19:29:53 | 编辑于 2021-10-19 20:25:22">2021-8-26 19:29
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Tools/">Tools</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							125 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				本文章所使用的方法保证在管理员账户下的 Windows 10 中有效
-本文章可能包含敏感内容，请谨慎阅读
-前言
-标题中的 FTQ 全称是 fotiaoqiang（佛跳墙，即一种名菜）。
-那么个软件的用途是什么呢，在 OI 界，这个软件是我们众所周知的 VPN。
-用了这个软件，就可以访问类似 谷歌、推特、油管 的网站了。
-你听过佛跳墙吗？只有 $1%...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/APPs/" rel="tag">APPs</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA13012-Identifying-tea/">『题解』LG - UVA13012 Identifying tea</a>
+		<a class="post-title" href="/2021/08/23/uva13012-solution/">『题解』LG - UVA13012 Identifying tea</a>
 		<div class="post-meta">
 			
 						
@@ -1148,7 +688,7 @@ $x + y$ $=$ $bb$
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							225 字
+							223 字
 						</div>
 					
 						
@@ -1189,13 +729,13 @@ $x + y$ $=$ $bb$
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/23/LG-%E6%84%9A%E5%85%AC%E7%A7%BB%E5%B1%B1-%E9%A2%98%E8%A7%A3/">LG - 愚公移山 - 题解</a>
+		<a class="post-title" href="/2021/08/12/how-to-use-idm/">TLS - 如何使用 IDM</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-23 19:32:01 | 编辑于 2021-9-19 12:54:42">2021-8-23 19:32
+							<time title="发布于 2021-8-12 19:04:33 | 编辑于 2021-12-18 19:19:01">2021-8-12 19:04
 							</time>
 						</div>
 					
@@ -1204,7 +744,7 @@ $x + y$ $=$ $bb$
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/APPs-Tools/">APPs - Tools</a>
 						</div>
 					
 						
@@ -1222,7 +762,7 @@ $x + y$ $=$ $bb$
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							143 字
+							188 字
 						</div>
 					
 						
@@ -1240,28 +780,20 @@ $x + y$ $=$ $bb$
 	<div class="post-content">
 		
 			
-				题目解析
-简单的一匹的签到题。
-代码分析
-边输入边累计。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int main() &#123;
-	long long n, x, v, g, tot = 0;
-	cin &gt;&gt; n &gt;&gt; x;
-	for (int i...
+				本文章所使用的方法保证在 IDM 6.xx 版本有效
+前言
+众所周知，IDM 是一个很好的多线程下载工具，还支持网站爬取音视频。
+IDM 能够在使用浏览器下载文件时自动捕获下载链接并添加下载任务，目前，IDM 的自动捕获功能支持以下常见的主流浏览器：
+Safari
+Chrome
+Firefox
+Opera
+Microsoft Edge
+Intern...
 			
 		
 	</div>
 
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
 	
 </article>
 
@@ -1269,13 +801,13 @@ int main() &#123;
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/">LG - 听取 WA 声一片 - 题解</a>
+		<a class="post-title" href="/2021/08/05/how-to-use-wfr-and-rbq/">『置顶』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-21 16:44:43 | 编辑于 2021-9-3 19:56:15">2021-8-21 16:44
+							<time title="发布于 2021-8-5 13:59:32 | 编辑于 2021-12-18 19:20:12">2021-8-5 13:59
 							</time>
 						</div>
 					
@@ -1284,7 +816,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/Programming-Languages-Warfarin-RBQScript/">Programming Languages - Warfarin & RBQScript</a>
 						</div>
 					
 						
@@ -1302,7 +834,7 @@ int main() &#123;
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							211 字
+							292 字
 						</div>
 					
 						
@@ -1320,111 +852,32 @@ int main() &#123;
 	<div class="post-content">
 		
 			
-				题目解析
-膜你模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，又不能跳 $0$ 格。
-代码分析
-双重循环膜你模拟就行了。
-代码
+				最新公告
+Warfarin 是一个由 C++ 编写而成的解释型语言。
+RBQScript 是一个由 C++ 编写而成的编译型语言。
+特点
 
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
 
-int main() &#123;
-	int n, sum = 0, maxn = 0;
-	...
+变量，支持数字、字符串、布尔、数组（允许使用 a[&quot;test&quot;] 这样的语法）；
+
+
+函数定义、调用与递归、高阶函数、lambda 表达式；
+
+
+键盘与文件的 I/O 操作；
+
+
+if f...
 			
 		
 	</div>
 
 	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/">LG - Killer Queen - 题解</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-21 11:49:43 | 编辑于 2021-9-3 19:56:03">2021-8-21 11:49
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution/">Solution</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							597 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目解析
-深度优先搜索题（DFS），在上下左右都搜一遍就好了。
-代码分析
-先全部读入然后标记二维数组。
-然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} = 2$，则输出 YES，反之输出 NO。
-代码
-
-#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int t, n, qx,...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Luogu/" rel="tag">Luogu</a>
-		</div>
-	
 </article>
 
 
 
-<nav><ul class="pagination"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/archives/2021/08/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/archives/2021/08/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/archives/2021/08/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/archives/2021/08/page/2/">2</a></li><li class="page-item"><a class="page-link" href="/archives/2021/08/page/3/">3</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/archives/2021/08/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
+
 
 			
 		

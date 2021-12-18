@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/"/>
-  <updated>2021-11-01T09:33:49.906Z</updated>
+  <updated>2021-12-18T11:16:12.308Z</updated>
   <id>https://ren-yc.github.io/</id>
   
   <author>
@@ -17,36 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>『置顶』RBQ - 更新日志 &amp; 公告</title>
-    <link href="https://ren-yc.github.io/2021/11/01/RBQ-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%E5%85%AC%E5%91%8A/"/>
-    <id>https://ren-yc.github.io/2021/11/01/RBQ-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%E5%85%AC%E5%91%8A/</id>
-    <published>2021-11-01T09:29:21.000Z</published>
-    <updated>2021-11-01T09:33:49.906Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Programming Languages" scheme="https://ren-yc.github.io/categories/Programming-Languages/"/>
-    
-    
-    <category term="Warfarin &amp; RBQScript" scheme="https://ren-yc.github.io/tags/Warfarin-RBQScript/"/>
-    
-  </entry>
-  
-  <entry>
     <title>『题解』LG - CF1598A Computer Game</title>
-    <link href="https://ren-yc.github.io/2021/10/11/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF1598A-Computer-Game/"/>
-    <id>https://ren-yc.github.io/2021/10/11/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF1598A-Computer-Game/</id>
+    <link href="https://ren-yc.github.io/2021/10/11/cf1598a-solution/"/>
+    <id>https://ren-yc.github.io/2021/10/11/cf1598a-solution/</id>
     <published>2021-10-11T12:33:27.000Z</published>
-    <updated>2021-10-11T12:43:38.424Z</updated>
+    <updated>2021-12-18T11:16:12.308Z</updated>
     
     
       
@@ -61,17 +36,15 @@
     
     <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
     
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
     
   </entry>
   
   <entry>
     <title>『题解』LG - CF44B Cola</title>
-    <link href="https://ren-yc.github.io/2021/10/06/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF44B-Cola/"/>
-    <id>https://ren-yc.github.io/2021/10/06/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF44B-Cola/</id>
+    <link href="https://ren-yc.github.io/2021/10/06/cf44b-solution/"/>
+    <id>https://ren-yc.github.io/2021/10/06/cf44b-solution/</id>
     <published>2021-10-06T11:39:32.000Z</published>
-    <updated>2021-10-08T10:53:36.877Z</updated>
+    <updated>2021-12-18T11:16:06.076Z</updated>
     
     
       
@@ -87,33 +60,29 @@
     <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
     
     
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
   </entry>
   
   <entry>
     <title>『游记』CSP-J 2021 初赛</title>
-    <link href="https://ren-yc.github.io/2021/09/19/%E3%80%8E%E6%B8%B8%E8%AE%B0%E3%80%8FCSP-J-2021-%E5%88%9D%E8%B5%9B/"/>
-    <id>https://ren-yc.github.io/2021/09/19/%E3%80%8E%E6%B8%B8%E8%AE%B0%E3%80%8FCSP-J-2021-%E5%88%9D%E8%B5%9B/</id>
+    <link href="https://ren-yc.github.io/2021/09/19/csp-j-2021-1/"/>
+    <id>https://ren-yc.github.io/2021/09/19/csp-j-2021-1/</id>
     <published>2021-09-19T12:39:50.000Z</published>
-    <updated>2021-10-16T04:19:43.873Z</updated>
+    <updated>2021-12-18T11:16:58.989Z</updated>
     
     
     <summary type="html">由于本蒟蒻太蒻了，本文不对外开放（</summary>
     
     
     
-    <category term="Preliminary Contest" scheme="https://ren-yc.github.io/categories/Preliminary-Contest/"/>
+    <category term="NOI Series" scheme="https://ren-yc.github.io/categories/NOI-Series/"/>
     
-    
-    <category term="CSP-J" scheme="https://ren-yc.github.io/tags/CSP-J/"/>
     
   </entry>
   
   <entry>
     <title>『题解』LG - UVA11559 Event Planning</title>
-    <link href="https://ren-yc.github.io/2021/09/14/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA11559-Event-Planning/"/>
-    <id>https://ren-yc.github.io/2021/09/14/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA11559-Event-Planning/</id>
+    <link href="https://ren-yc.github.io/2021/09/14/uva11559-solution/"/>
+    <id>https://ren-yc.github.io/2021/09/14/uva11559-solution/</id>
     <published>2021-09-14T00:20:26.000Z</published>
     <updated>2021-10-08T11:13:05.000Z</updated>
     
@@ -136,159 +105,9 @@
   </entry>
   
   <entry>
-    <title>LG - 双色棋 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/31/LG-%E5%8F%8C%E8%89%B2%E6%A3%8B-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/31/LG-%E5%8F%8C%E8%89%B2%E6%A3%8B-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-31T10:21:49.000Z</published>
-    <updated>2021-09-19T04:54:21.150Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 贪玩的 ac - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-29T00:25:03.000Z</published>
-    <updated>2021-09-19T04:54:28.390Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - Numbers - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-29T00:16:57.000Z</published>
-    <updated>2021-09-19T04:55:05.945Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - MC 生存游戏 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-28T04:03:55.000Z</published>
-    <updated>2021-09-19T04:54:56.012Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 爱数学的 ac 做因式分解（弱化版） - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-28T03:24:45.000Z</published>
-    <updated>2021-09-19T04:53:25.776Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『置顶』TLS - 如何使用 FTQ</title>
-    <link href="https://ren-yc.github.io/2021/08/26/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-FTQ/"/>
-    <id>https://ren-yc.github.io/2021/08/26/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-FTQ/</id>
-    <published>2021-08-26T11:29:53.000Z</published>
-    <updated>2021-10-19T12:25:22.762Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Tools" scheme="https://ren-yc.github.io/categories/Tools/"/>
-    
-    
-    <category term="APPs" scheme="https://ren-yc.github.io/tags/APPs/"/>
-    
-  </entry>
-  
-  <entry>
     <title>『题解』LG - UVA13012 Identifying tea</title>
-    <link href="https://ren-yc.github.io/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA13012-Identifying-tea/"/>
-    <id>https://ren-yc.github.io/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA13012-Identifying-tea/</id>
+    <link href="https://ren-yc.github.io/2021/08/23/uva13012-solution/"/>
+    <id>https://ren-yc.github.io/2021/08/23/uva13012-solution/</id>
     <published>2021-08-23T11:39:18.000Z</published>
     <updated>2021-08-25T11:05:55.198Z</updated>
     
@@ -311,136 +130,11 @@
   </entry>
   
   <entry>
-    <title>LG - 愚公移山 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/23/LG-%E6%84%9A%E5%85%AC%E7%A7%BB%E5%B1%B1-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/23/LG-%E6%84%9A%E5%85%AC%E7%A7%BB%E5%B1%B1-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-23T11:32:01.000Z</published>
-    <updated>2021-09-19T04:54:42.168Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 听取 WA 声一片 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-21T08:44:43.000Z</published>
-    <updated>2021-09-03T11:56:15.939Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - Killer Queen - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-21T03:49:43.000Z</published>
-    <updated>2021-09-03T11:56:03.670Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 李白的酒 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-14T09:32:39.000Z</published>
-    <updated>2021-09-19T04:54:03.278Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 满二叉树 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-14T01:13:10.000Z</published>
-    <updated>2021-08-14T01:40:07.371Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
     <title>TLS - 如何使用 IDM</title>
-    <link href="https://ren-yc.github.io/2021/08/12/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-IDM/"/>
-    <id>https://ren-yc.github.io/2021/08/12/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-IDM/</id>
+    <link href="https://ren-yc.github.io/2021/08/12/how-to-use-idm/"/>
+    <id>https://ren-yc.github.io/2021/08/12/how-to-use-idm/</id>
     <published>2021-08-12T11:04:33.000Z</published>
-    <updated>2021-08-15T03:56:49.865Z</updated>
+    <updated>2021-12-18T11:19:01.706Z</updated>
     
     
       
@@ -453,319 +147,17 @@
     
     
     
-    <category term="Tools" scheme="https://ren-yc.github.io/categories/Tools/"/>
+    <category term="APPs - Tools" scheme="https://ren-yc.github.io/categories/APPs-Tools/"/>
     
-    
-    <category term="APPs" scheme="https://ren-yc.github.io/tags/APPs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>四篇关于 chen_zhe 的美文</title>
-    <link href="https://ren-yc.github.io/2021/08/09/%E5%9B%9B%E7%AF%87%E5%85%B3%E4%BA%8E-chen-zhe-%E7%9A%84%E7%BE%8E%E6%96%87/"/>
-    <id>https://ren-yc.github.io/2021/08/09/%E5%9B%9B%E7%AF%87%E5%85%B3%E4%BA%8E-chen-zhe-%E7%9A%84%E7%BE%8E%E6%96%87/</id>
-    <published>2021-08-09T00:52:51.000Z</published>
-    <updated>2021-08-12T11:05:15.588Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Other" scheme="https://ren-yc.github.io/categories/Other/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 光头强砍树 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/08/LG-%E5%85%89%E5%A4%B4%E5%BC%BA%E7%A0%8D%E6%A0%91-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/08/LG-%E5%85%89%E5%A4%B4%E5%BC%BA%E7%A0%8D%E6%A0%91-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-08T03:52:37.000Z</published>
-    <updated>2021-08-08T03:54:09.517Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 不存在的 1 + 1 = 1 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/08/LG-%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84-1-1-1-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/08/LG-%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84-1-1-1-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-08T02:44:50.000Z</published>
-    <updated>2021-09-03T11:57:10.270Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 木棍 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-07T12:48:45.000Z</published>
-    <updated>2021-08-07T12:50:53.797Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 苹果树 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-07T12:16:31.000Z</published>
-    <updated>2021-08-21T03:16:38.309Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 万恶的试卷 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-07T09:58:57.000Z</published>
-    <updated>2021-08-07T10:02:41.999Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 捕食关系 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-07T09:25:28.000Z</published>
-    <updated>2021-08-23T11:43:42.286Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 负二进制 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-07T09:09:31.000Z</published>
-    <updated>2021-09-03T11:56:57.683Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 行程码 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-07T03:10:41.000Z</published>
-    <updated>2021-09-03T11:56:43.050Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - MC 之吃牛肉 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/06/LG-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/06/LG-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-06T09:25:39.000Z</published>
-    <updated>2021-08-12T05:27:17.956Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 公交车站 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-06T05:53:20.000Z</published>
-    <updated>2021-08-21T03:16:42.511Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - Hands - 题解</title>
-    <link href="https://ren-yc.github.io/2021/08/05/LG-Hands-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/08/05/LG-Hands-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-08-05T12:48:04.000Z</published>
-    <updated>2021-08-21T03:16:33.137Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
     
   </entry>
   
   <entry>
     <title>『置顶』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</title>
-    <link href="https://ren-yc.github.io/2021/08/05/WFR-&amp;-RBQ-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/"/>
-    <id>https://ren-yc.github.io/2021/08/05/WFR-&amp;-RBQ-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/</id>
+    <link href="https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/"/>
+    <id>https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/</id>
     <published>2021-08-05T05:59:32.000Z</published>
-    <updated>2021-11-01T09:29:48.536Z</updated>
+    <updated>2021-12-18T11:20:12.512Z</updated>
     
     
       
@@ -778,319 +170,17 @@
     
     
     
-    <category term="Programming Languages" scheme="https://ren-yc.github.io/categories/Programming-Languages/"/>
+    <category term="Programming Languages - Warfarin &amp; RBQScript" scheme="https://ren-yc.github.io/categories/Programming-Languages-Warfarin-RBQScript/"/>
     
-    
-    <category term="Warfarin &amp; RBQScript" scheme="https://ren-yc.github.io/tags/Warfarin-RBQScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 买二送一 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-31T11:28:13.000Z</published>
-    <updated>2021-08-10T08:10:44.781Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 方舱医院 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/31/LG-%E6%96%B9%E8%88%B1%E5%8C%BB%E9%99%A2-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/31/LG-%E6%96%B9%E8%88%B1%E5%8C%BB%E9%99%A2-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-31T11:25:09.000Z</published>
-    <updated>2021-09-19T04:53:44.073Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 开关灯 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/26/LG-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/26/LG-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-26T04:49:30.000Z</published>
-    <updated>2021-08-10T08:10:38.213Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 古老的 A + B - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/26/LG-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/26/LG-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-26T04:40:31.000Z</published>
-    <updated>2021-09-19T04:53:52.361Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 排序 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/26/LG-%E6%8E%92%E5%BA%8F-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/26/LG-%E6%8E%92%E5%BA%8F-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-26T04:36:10.000Z</published>
-    <updated>2021-08-07T08:59:44.205Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 生小虫子 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/25/LG-%E7%94%9F%E5%B0%8F%E8%99%AB%E5%AD%90-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/25/LG-%E7%94%9F%E5%B0%8F%E8%99%AB%E5%AD%90-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-25T07:39:02.000Z</published>
-    <updated>2021-08-07T08:59:27.870Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 合成大西瓜 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/25/LG-%E5%90%88%E6%88%90%E5%A4%A7%E8%A5%BF%E7%93%9C-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/25/LG-%E5%90%88%E6%88%90%E5%A4%A7%E8%A5%BF%E7%93%9C-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-25T05:15:44.000Z</published>
-    <updated>2021-08-07T09:00:15.955Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 救援争先 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/25/LG-%E6%95%91%E6%8F%B4%E4%BA%89%E5%85%88-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/25/LG-%E6%95%91%E6%8F%B4%E4%BA%89%E5%85%88-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-25T03:38:57.000Z</published>
-    <updated>2021-08-07T09:00:08.477Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 斗罗大陆之武魂融合技 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/25/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E6%AD%A6%E9%AD%82%E8%9E%8D%E5%90%88%E6%8A%80-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/25/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E6%AD%A6%E9%AD%82%E8%9E%8D%E5%90%88%E6%8A%80-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-25T01:29:59.000Z</published>
-    <updated>2021-08-07T09:00:52.914Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 前 n 个偶数位回文数之和 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/24/LG-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/24/LG-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-24T10:45:27.000Z</published>
-    <updated>2021-09-12T09:13:17.620Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 斗罗大陆之魂系辨认 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/24/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E9%AD%82%E7%B3%BB%E8%BE%A8%E8%AE%A4-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/24/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E9%AD%82%E7%B3%BB%E8%BE%A8%E8%AE%A4-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-24T10:33:08.000Z</published>
-    <updated>2021-08-07T09:01:05.346Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 王者荣耀 2 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/24/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-2-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/24/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-2-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-24T09:07:57.000Z</published>
-    <updated>2021-08-07T08:59:17.769Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
     
   </entry>
   
   <entry>
     <title>『题解』LG - U187148 gcd 与 lcm</title>
-    <link href="https://ren-yc.github.io/2021/07/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-U187148-gcd-%E4%B8%8E-lcm/"/>
-    <id>https://ren-yc.github.io/2021/07/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-U187148-gcd-%E4%B8%8E-lcm/</id>
+    <link href="https://ren-yc.github.io/2021/07/23/u187148-solution/"/>
+    <id>https://ren-yc.github.io/2021/07/23/u187148-solution/</id>
     <published>2021-07-23T00:35:49.000Z</published>
-    <updated>2021-10-31T11:18:16.733Z</updated>
+    <updated>2021-11-04T03:17:02.052Z</updated>
     
     
       
@@ -1107,102 +197,6 @@
     
     
     <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 微信（2） - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-22T13:45:33.000Z</published>
-    <updated>2021-08-07T08:58:51.335Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 微信（1） - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-22T13:31:40.000Z</published>
-    <updated>2021-08-07T08:53:37.175Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LG - 王者荣耀 - 题解</title>
-    <link href="https://ren-yc.github.io/2021/07/22/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-%E9%A2%98%E8%A7%A3/"/>
-    <id>https://ren-yc.github.io/2021/07/22/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-%E9%A2%98%E8%A7%A3/</id>
-    <published>2021-07-22T12:31:44.000Z</published>
-    <updated>2021-08-07T08:59:04.325Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution" scheme="https://ren-yc.github.io/categories/Solution/"/>
-    
-    
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://ren-yc.github.io/2021/06/03/hello-world/"/>
-    <id>https://ren-yc.github.io/2021/06/03/hello-world/</id>
-    <published>2021-06-03T11:50:57.020Z</published>
-    <updated>2021-06-03T11:50:57.020Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
     
   </entry>
   

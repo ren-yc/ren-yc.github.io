@@ -4,36 +4,11 @@
   
     
     <entry>
-      <title>『置顶』RBQ - 更新日志 &amp; 公告</title>
-      <link href="/2021/11/01/RBQ-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%E5%85%AC%E5%91%8A/"/>
-      <url>/2021/11/01/RBQ-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%E5%85%AC%E5%91%8A/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>本文所有内容均来源于 RBQScript 作者及 Github Issues</strong></p><h2 id="最新公告">最新公告</h2><p>2021-10-13 Warfarin 语言在 4.01 版本停止更新，变更为效率更高的 RBQScript</p><h2 id="BUG-漏洞-Issues（自-4-12-起）">BUG &amp; 漏洞 &amp; Issues（自 4.12 起）</h2><h3 id="4-12">4.12</h3><p>2021-10-30 RBQScript C++ 源文件中函数 <code>launch()</code> 与 C++ 17 待开发函数冲突（状态：$\color{red}{正在修复}$ 重要性：$\color{green}{一般}$）</p><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/11/01/RBQ-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%E5%85%AC%E5%91%8A/">https://ren-yc.github.io/2021/11/01/RBQ-更新日志-公告/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Programming Languages </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Warfarin &amp; RBQScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>『题解』LG - CF1598A Computer Game</title>
-      <link href="/2021/10/11/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF1598A-Computer-Game/"/>
-      <url>/2021/10/11/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF1598A-Computer-Game/</url>
+      <link href="/2021/10/11/cf1598a-solution/"/>
+      <url>/2021/10/11/cf1598a-solution/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF1598A" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/1598/A" title="点击跳转至 Codeforces">Codeforces</a></p><h3 id="题目翻译">题目翻译</h3><p>给定两行字符串，求能否从左上角走到右下角（<code>0</code> 为可走，<code>1</code> 为不可走）。<strong><s>（超简洁翻译）</s></strong></p><h3 id="题目思路">题目思路</h3><p>我们可以读入完字符串后循环遍历，两两比较，如果有 $s1_i = s2_i$，说明无法通过，则 $flag = true$（也可以输出后直接 <code>continue</code>）。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头万岁！using namespace std;int main() &#123;int t;cin &gt;&gt; t;while (t--) &#123;//几乎每道 CF 题都要int n;bool flag = false;string a, b;//不使用 char 数组（复杂、麻烦）cin &gt;&gt; n &gt;&gt; a &gt;&gt; b;for (int i = 0; i &lt; n; i++) &#123;if (a[i] == '1' &amp;&amp; b[i] == '1') &#123;//两行都为 1flag = true;//发现&#125;&#125;if (flag == 0) &#123;//若未发现cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;&#125; else &#123;//否则cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125;&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-cf1598a">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120711294">CSDN 博客</a></strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/10/11/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF1598A-Computer-Game/">https://ren-yc.github.io/2021/10/11/『题解』LG-CF1598A-Computer-Game/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF1598A" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/1598/A" title="点击跳转至 Codeforces">Codeforces</a></p><h3 id="题目翻译">题目翻译</h3><p>给定两行字符串，求能否从左上角走到右下角（<code>0</code> 为可走，<code>1</code> 为不可走）。<strong><s>（超简洁翻译）</s></strong></p><h3 id="题目思路">题目思路</h3><p>我们可以读入完字符串后循环遍历，两两比较，如果有 $s1_i = s2_i$，说明无法通过，则 $flag = true$（也可以输出后直接 <code>continue</code>）。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头万岁！using namespace std;int main() &#123;int t;cin &gt;&gt; t;while (t--) &#123;//几乎每道 CF 题都要int n;bool flag = false;string a, b;//不使用 char 数组（复杂、麻烦）cin &gt;&gt; n &gt;&gt; a &gt;&gt; b;for (int i = 0; i &lt; n; i++) &#123;if (a[i] == '1' &amp;&amp; b[i] == '1') &#123;//两行都为 1flag = true;//发现&#125;&#125;if (flag == 0) &#123;//若未发现cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;&#125; else &#123;//否则cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125;&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-cf1598a">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120711294">CSDN 博客</a></strong></p><blockquote><p>本文作者: ren-yc<br>本文链接:  <a href="https://ren-yc.github.io/2021/10/11/cf1598a-solution/">https://ren-yc.github.io/2021/10/11/cf1598a-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
       
       
       <categories>
@@ -42,12 +17,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
       
     </entry>
     
@@ -55,10 +24,10 @@
     
     <entry>
       <title>『题解』LG - CF44B Cola</title>
-      <link href="/2021/10/06/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF44B-Cola/"/>
-      <url>/2021/10/06/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF44B-Cola/</url>
+      <link href="/2021/10/06/cf44b-solution/"/>
+      <url>/2021/10/06/cf44b-solution/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF44B" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/44/B" title="点击跳转至 Codeforces">Codeforces</a></p><h3 id="题目思路">题目思路</h3><p>本题第一眼可以看出是一道暴力枚举，但是不能用三层 <code>for</code> 循环，$100%$ 超时。</p><p>所以我们可以先从 $2$ 升的可乐循环，通过前两个循环来推算出 $0.5$ 升可乐的数量。</p><p><strong>注意：本题的 $a$ 为 $0.5$ 而 $n$ 为整型，第一层循环要两个两个加</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//懒人专用using namespace std;int main() &#123;int n, a, b, c, ans = 0;cin &gt;&gt; n &gt;&gt; a &gt;&gt; b &gt;&gt; c;for (int i = 0; i &lt;= a; i += 2) &#123;//n 必须是整数，但 a 是 0.5 升，所以两个两个加for (int j = 0; j &lt;= c; j++) &#123;if (n - (i / 2 + j * 2) &lt;= b &amp;&amp; n - (i / 2 + j * 2) &gt;= 0) &#123;//算总量并判断是否小于等于 b 和 nans++;&#125;&#125;&#125;cout &lt;&lt; ans &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-cf44b">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120628543">CSDN 博客</a></strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/10/06/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-CF44B-Cola/">https://ren-yc.github.io/2021/10/06/『题解』LG-CF44B-Cola/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF44B" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/44/B" title="点击跳转至 Codeforces">Codeforces</a></p><h3 id="题目思路">题目思路</h3><p>本题第一眼可以看出是一道暴力枚举，但是不能用三层 <code>for</code> 循环，$100%$ 超时。</p><p>所以我们可以先从 $2$ 升的可乐循环，通过前两个循环来推算出 $0.5$ 升可乐的数量。</p><p><strong>注意：本题的 $a$ 为 $0.5$ 而 $n$ 为整型，第一层循环要两个两个加</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//懒人专用using namespace std;int main() &#123;int n, a, b, c, ans = 0;cin &gt;&gt; n &gt;&gt; a &gt;&gt; b &gt;&gt; c;for (int i = 0; i &lt;= a; i += 2) &#123;//n 必须是整数，但 a 是 0.5 升，所以两个两个加for (int j = 0; j &lt;= c; j++) &#123;if (n - (i / 2 + j * 2) &lt;= b &amp;&amp; n - (i / 2 + j * 2) &gt;= 0) &#123;//算总量并判断是否小于等于 b 和 nans++;&#125;&#125;&#125;cout &lt;&lt; ans &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-cf44b">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120628543">CSDN 博客</a></strong></p><blockquote><p>本文作者: ren-yc<br>本文链接:  <a href="https://ren-yc.github.io/2021/10/06/cf44b-solution/">https://ren-yc.github.io/2021/10/06/cf44b-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
       
       
       <categories>
@@ -68,36 +37,24 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
     </entry>
     
     
     
     <entry>
       <title>『游记』CSP-J 2021 初赛</title>
-      <link href="/2021/09/19/%E3%80%8E%E6%B8%B8%E8%AE%B0%E3%80%8FCSP-J-2021-%E5%88%9D%E8%B5%9B/"/>
-      <url>/2021/09/19/%E3%80%8E%E6%B8%B8%E8%AE%B0%E3%80%8FCSP-J-2021-%E5%88%9D%E8%B5%9B/</url>
+      <link href="/2021/09/19/csp-j-2021-1/"/>
+      <url>/2021/09/19/csp-j-2021-1/</url>
       
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">  <script id="hbeData" type="hbeData" data-hmacdigest="da156612e0027a5eea5037355863287a455bcea8158ecd65c7800c5fdbfebadc">8fb749fda75eae689c3df2a2a950d5eee9f7994bff8040d01a9735e92fc2453e879dfe8825d3a3b2a8dc528c0fea74d7a14410bc52522380dc4808f946bcfd233046883f8ae03ed19376f9d69c241c79015048cf630effa0447df1cf6e25a4d1db19ad315fdaa9ceb3297d7b172d82a8ce816f7787d606345a5c9a98da2305eb33c4892ad79a9e8a760b3260a82c5d1b97c8184232b5aac08999316d260033e096128416d3367172f63bd3535e159521f8406b4dce674dca118a61c2b52d0decefb610d582b98edba0966177ba7ca4428ebcf65df69e6d3c229bde4a4fd2e6defcfe8bdccc89a91f6a9af5056bb574997707d9d932f3ccd9cce1d17d9c38a7ed797dac00b8511b140e326f09dcb0143a1759ea998db1c65c7adeb43861cf5100b79cf19232a87199adcedf79b677dafd75e37877969e51a2689fcaa07b8942ee8525a2f8dce593ec8ff6a56de6dfd84bae22fb59725491549f2575d326d323b4366cf67feec82ca20a2e1a8095ac9a0a3ea2d66d4ee0243ddf969637e7ee08dfe1cd6f3ae37e5628dd6e9e94ac116af8bd9e10e87a9026637f1114021781a185d57cf82de68059453b99af2b71ac871c668d365a3b366ea94daac6c95235cec4af6fde55cb82fec48ce8fa6870b2679182986014c0052b6e0bf59d72624d70fc408c2d40605fec4fd9d2ce4e587e273f3b13e3ef432da8d2a6a1fb534edf1e9916bb8d31825fa29ff33664e67178aea224261116e398d4f194eca9aabacee76f3a47580147b21f0c10c4192d1c2b403caf2f3c18b7699866e2ed488f6a4f8c056015cc50dae59902c0de01c0214a8c6e617782b270d37a6dcb90a61be884e3d88d57446b5d677e4de62f4d0d87615906bea4b27289db2d87a7093d5c49a60cc6aacee8fccf208b450b97c2334b15c46bfa113f6af6e62a0117c75d5ff7b03edffa1b67a0f580b4ec769b8e4623a344e9bee2f6ad9bb6eba708937ae2eaffa037f1854b19d321b63451cfdc27b0e55f819aebf17b7384ac2d0b7868ed4f09319308832d2be8de80a837bd3319f408a7f02ace1449f5d39e320cb2c5acfd49a13a17032990560b50e63d9825fcd3a922c0ddd930ac9bdc0223a313744ae78eda066168401b9085b4b92d3407804bae3f07ded9bbb32a2acd8a673bd3c2d15e441e3016b16b6ed33f3445be354f9e709fef159f2183961e16636a920bc0c0cd56869fe85d5070f7ef0bcc66cd6d943c49289d6df11edf310f7132b77c224fd74fd18dbdb062036cb369cd82b7c4f7267989ecfb1bb0dd5107c41745b3bb2aae9d542388997cf697290a198b443d015a305d82e482f7d8f525e04374fd9a9aed04d0cff50fbf4a1051151e4279d60f22034409ccdea1702de5df50efa1c62b654a742b8b61cdb87960d76d014792cad0bee761ef1b66f9af33644c537d38950d1583f8db295c40334267743f348f9fdd8c5aad9c65a273a28ac2519b045de384914c6e9bd500c28f512a0ee9acbfa914a017a5e0c0227bde3f446b475a76bcf28a10efe1a8dc14b2a19d70a292550a587c87211a4de4cd2021e11117966fcebfb883873b4c6cf50565edaf5a2c250d87c628e1026019c96d6f20aace7e4bb611ec0c81a491abf7f2ef195cf1dbf409d0378b13176a0de41eea71bc11de395e80b08177bb3236d909a873a6a9567a9cba8f9214899dbd1825eef5a728edee75b59d0b94ce3637d2229adf00f43822481e9c716e6c1aaeecadeee199a1fe8b49a3d304a0172020f2ac6197a6fcb0a5301971abff3561e0ca08dfe7847ee151cf5b41aa90f211c7b23a48ba7744e2ebf85645b986f188a1717af139e896e8f7b808c3c66bdfe631279998a5a0719507d6a98148404653aac7bb8b80ca8575b918baf8f9706ac84047e8f218dce66efbc0b4df6918fc2c09578b01ba35aca768b27871289422700c97d8ae0adb6f357fdacfe9d75d4b6ad86f8b5a2b642f15d50155a7a732740a0e4cfbc2b131f7e677412cae1515a715a0bf9fba68389664fda82c3488b5343a981a97c321567641ebd3238be476b461b50ced1fdc3db6dfd3989e2b098e2d113fb538bc87191f2d198771eeab9f7773f2bb6daecbf8fe358f421190758011dbdc557cfe3720c23d76be79ab23423d0f4dc037770f0cf686f7b22f3e92e1fcfe918549d7e4539f0082f77523120e71ffd1f5ac6dfc3d482d01fab5027bf853d80a8e2281c14d01f5d9ea16a46585f169a4a15e7b5a33bc611a9f4e51903a83260355d1c05e18efe0ddb38288605dc816f722fa277bf3a5c886f14b9b8b4afc2f07d4cf74a7d05e7ef4d0e56c615d21c38a215c885fd97e1a57652abb54ea0da5b17d48f9f7de9e31ea9d4b2cc07cbf0456ddd7d220b77d74f538d2b22480b0c088f47aaa0811dc703573c58510b6461ff20e3da7f9dc3f3ac8d86c1c93e05c3391efcca9f8327f06590ba03efaf9a711d3ea9532b3c2db37669a8a6e09412a6c5090b96c18819b0347ae110a43d11ca505ec92fab6293e52ff8e185680cb4d0f437565fbe3741b564d7b0850d0ea53861fc07923b2d6b0e6ef3795c38b15012a6940e49cd3e9c9496946762b9bd06037c5cfcdd4ee5e130085456d06edb9226b4294783a859a863bdb3c73042ea293bcc6a1be33c4ec3d5330a1e6cf21a658e2f8aea07c5c5bea68c3a4091f334f5a34e1911e1ff6abb2f86d2a39612ee31d622c4157e1b3204f4134bdf169faced7dfd5de32c6a70b554d42684540edb69903f0277833b8a9b5ed86c8612b702a0f2633d5b98d2a294f1214c1ff2471122c7f470993b8939877bf333ab57d9bbc20634c12584a9ffb0a4871d84de06c1aa4e97a4dd27d0aa354ececf80081a1c6a959075f983078d5be9e02bbe50528364717f450848c08d59e28e4797ffd83c3672494fae41345e567f5613351d31796db0e1ff02eec46de505be7389319284e49a89e3b94775a686154f50ae04d6c0109967c0eb63dddaed4da10d01c56929f327fdac3565ebe07212c6149653b95072c0e593bf706265d99d6ba2a7ea0124190e92929bd099893192b091572a42ebfc8c87f9950d79a5667af5fb5d1252741e29bd9e446a236114a7ee5f2ffd4c2e9079003aeece2d6ccbc4622d338e9f30e0562a8211240a3911e6123f38d6e431d46c902277bb045f71a2bf6b631ef0f73db9ff4e2f2fd9d880e4e6b56025a5b5f170eae972080018186cb96d5f4547ccd24914f490463a8e7922f418eb834de71514696e494fbf703c552cb6c043ad88bcd6eec19bc64c40f6e570104d34cbd2327ab5e126e51fe526570fdc382e24ad17bc0756502819e73633a7f958efdffd7f5ca688befa5dcfb1f2c14968c2bd100ad07c08013e2f4470a433b423a02e9b65d983b0c9d23a027e650907c4efb69e373dd6a51b2f39a30242defccf8fd7dc7d403e2ccdd314428a554864563051e65080112b11c8286924de4e23e30c8ea7dbb89f1cd4e8c826a38c6676d2ef914450787680f0604ddd902ab4fc9070b6820cd57882f56ea66bc39422b777f6ecbd0c8f47bac31bac685bf45ea004d05d205ebd9798f761501a748c2a8fdaf3a9c39451ee10346121a72fea89c4642752a7d05919efcaf99eb540275674d42a17753a932ba56a1ff60dee9a5ae2725f2d0d6dc7c136d451c0aa03129d5c9f92f64299e951513b5595654e9dad105376c040b04feb4ddde621c211544b02878bf32598ad14607e43d57c1cbabb49a07eb2cb7a296e77f017d16f84a40995e80d3b11df62c2168d92f0a90fedc4ec047d62e622191f92404803968edb128ac5799e8a0efbc16df28f23a39afdeb07827cdb801c6d158d80e9e3e4cbfce2729fda378cd4b251b0e9c26331170ad081ce49f2b632c2d1756c2708c7dee399a860f0cd4b0eef3feab4623080275840ba1ee8e1f50837b7f616b34609c07c49754a5763509c29b856162550556a4abac5023035823e9ba7d5e77fb39c8e797c167886a87742bdfa000521f4f92f321156f08b5d8719f1c8717ecd009ce205a46b407069f9291d3b0a39a88752f2a06c4ae3b4b80f73390dff689f4e9612cf20d6c176b19d8d472169bb1176ccf68813778c80aef3135d84a748a08d854cb3b7bdc5c55f4f1d62e780589ebb05401ac3a1214eb7b48240410a68e630f61b18dfba6177410472ce43a65ce196c8cd4370ca405e28a540e22a9a5ca09cf5af4021c03dfbd3485760a261491f3dfdf96f80ee8f0b6e86afbb3bec155a880c80c2c94564b6b45b663345e23b8168223a39ebb982cf361ec0ce228a843885995cf1300735a34cc535c430058c5806ce3ebbf096cf793383e2ff49f4d8cc83d1f230f7c7fb35c536dd355c017a6aa428fdd143d2deb432ed1dfc5a8de1f4b8612e00111349b3d5f111b7596acae2266a23076dea290f290e44b1a1b042a4485c0bd3b6e57772e122c8a7667a26dcd7fe1e8f8ef2202eea64d1c849a3c060b1636da438e22e6c4e8b39104e3a467808bf828a2c0529a3b0e50e77b723af638d240420053549704d892f76aa7e2c0cdeebb4592b65ab06a3a081625400ffc290a7ef027d89e39079f6853bd5a8141e4e002cde060a5080c8c83345e549efe02d864514c33eddd4281a68918851676d603e6bed169029dd486d5b47a1c552b25e7330e86d583d28f16ebef75e694ca8628e34f6abb2b49ee23e82fb9322fa601db410ff43850f242f5f34175e8c7b9f8c9e6d92320d7de2a6c7c886f94e8a94663e887c58dbe4abb2f341aedcd3cf476829b2bc14bdf6965f8a89a292db41a704478aa4c805b7fa4e0e2858ac0588f345b247eccfc4654e81861c478a6c40fd9ece8ed998e32bfa3e35a1bfda1b973485cea75c085a8cb1a3b838e959e1766ef536264fc3ade1ef65aede1288a4c930764b9a80af6d7291dfe3f234886148f9be341974d9be7dbda5c6e3257baee02a92149af693610075bbc04ce38f219d41c7c113b0fde1b8d3d1fadf73f94dd3839b05cfa1878dffd663a6706e84f9c73787cc68ea9106b4da58820915ff1e8d5621b7d53bf588344c3befaed5da8a89dc246d925eea047a9cbfd</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请再试一次" data-whm="未知错误，请报告给博客管理员!">  <script id="hbeData" type="hbeData" data-hmacdigest="9319d817c64c98c676926931e9f72d5b5eaedbcd142a4e1393a1c23ba3c9e6a1">8fb749fda75eae689c3df2a2a950d5eee9f7994bff8040d01a9735e92fc2453e879dfe8825d3a3b2a8dc528c0fea74d7a14410bc52522380dc4808f946bcfd233046883f8ae03ed19376f9d69c241c79015048cf630effa0447df1cf6e25a4d1db19ad315fdaa9ceb3297d7b172d82a8ce816f7787d606345a5c9a98da2305eb33c4892ad79a9e8a760b3260a82c5d1b97c8184232b5aac08999316d260033e096128416d3367172f63bd3535e159521f8406b4dce674dca118a61c2b52d0decefb610d582b98edba0966177ba7ca4428ebcf65df69e6d3c229bde4a4fd2e6defcfe8bdccc89a91f6a9af5056bb574997707d9d932f3ccd9cce1d17d9c38a7ed797dac00b8511b140e326f09dcb0143a1759ea998db1c65c7adeb43861cf5100b79cf19232a87199adcedf79b677dafd75e37877969e51a2689fcaa07b8942ee8525a2f8dce593ec8ff6a56de6dfd84bae22fb59725491549f2575d326d323b4366cf67feec82ca20a2e1a8095ac9a0a3ea2d66d4ee0243ddf969637e7ee08dfe1cd6f3ae37e5628dd6e9e94ac116af8bd9e10e87a9026637f1114021781a185d57cf82de68059453b99af2b71ac871c668d365a3b366ea94daac6c95235cec4af6fde55cb82fec48ce8fa6870b2679182986014c0052b6e0bf59d72624d70fc408c2d40605fec4fd9d2ce4e587e273f3b13e3ef432da8d2a6a1fb534edf1e9916bb8d31825fa29ff33664e67178aea224261116e398d4f194eca9aabacee76f3a47580147b21f0c10c4192d1c2b403caf2f3c18b7699866e2ed488f6a4f8c056015cc50dae59902c0de01c0214a8c6e617782b270d37a6dcb90a61be884e3d88d57446b5d677e4de62f4d0d87615906bea4b27289db2d87a7093d5c49a60cc6aacee8fccf208b450b97c2334b15c46bfa113f6af6e62a0117c75d5ff7b03edffa1b67a0f580b4ec769b8e4623a344e9bee2f6ad9bb6eba708937ae2eaffa037f1854b19d321b63451cfdc27b0e55f819aebf17b7384ac2d0b7868ed4f09319308832d2be8de80a837bd3319f408a7f02ace1449f5d39e320cb2c5acfd49a13a17032990560b50e63d9825fcd3a922c0ddd930ac9bdc0223a313744ae78eda066168401b9085b4b92d3407804bae3f07ded9bbb32a2acd8a673bd3c2d15e441e3016b16b6ed33f3445be354f9e709fef159f2183961e16636a920bc0c0cd56869fe85d5070f7ef0bcc66cd6d943c49289d6df11edf310f7132b77c224fd74fd18dbdb062036cb369cd82b7c4f7267989ecfb1bb0dd5107c41745b3bb2aae9d542388997cf697290a198b443d015a305d82e482f7d8f525e04374fd9a9aed04d0cff50fbf4a1051151e4279d60f22034409ccdea1702de5df50efa1c62b654a742b8b61cdb87960d76d014792cad0bee761ef1b66f9af33644c537d38950d1583f8db295c40334267743f348f9fdd8c5aad9c65a273a28ac2519b045de384914c6e9bd500c28f512a0ee9acbfa914a017a5e0c0227bde3f446b475a76bcf28a10efe1a8dc14b2a19d70a292550a587c87211a4de4cd2021e11117966fcebfb883873b4c6cf50565edaf5a2c250d87c628e1026019c96d6f20aace7e4bb611ec0c81a491abf7f2ef195cf1dbf409d0378b13176a0de41eea71bc11de395e80b08177bb3236d909a873a6a9567a9cba8f9214899dbd1825eef5a728edee75b59d0b94ce3637d2229adf00f43822481e9c716e6c1aaeecadeee199a1fe8b49a3d304a0172020f2ac6197a6fcb0a5301971abff3561e0ca08dfe7847ee151cf5b41aa90f211c7b23a48ba7744e2ebf85645b986f188a1717af139e896e8f7b808c3c66bdfe631279998a5a0719507d6a98148404653aac7bb8b80ca8575b918baf8f9706ac84047e8f218dce66efbc0b4df6918fc2c09578b01ba35aca768b27871289422700c97d8ae0adb6f357fdacfe9d75d4b6ad86f8b5a2b642f15d50155a7a732740a0e4cfbc2b131f7e677412cae1515a715a0bf9fba68389664fda82c3488b5343a981a97c321567641ebd3238be476b461b50ced1fdc3db6dfd3989e2b098e2d113fb538bc87191f2d198771eeab9f7773f2bb6daecbf8fe358f421190758011dbdc557cfe3720c23d76be79ab23423d0f4dc037770f0cf686f7b22f3e92e1fcfe918549d7e4539f0082f77523120e71ffd1f5ac6dfc3d482d01fab5027bf853d80a8e2281c14d01f5d9ea16a46585f169a4a15e7b5a33bc611a9f4e51903a83260355d1c05e18efe0ddb38288605dc816f722fa277bf3a5c886f14b9b8b4afc2f07d4cf74a7d05e7ef4d0e56c615d21c38a215c885fd97e1a57652abb54ea0da5b17d48f9f7de9e31ea9d4b2cc07cbf0456ddd7d220b77d74f538d2b22480b0c088f47aaa0811dc703573c58510b6461ff20e3da7f9dc3f3ac8d86c1c93e05c3391efcca9f8327f06590ba03efaf9a711d3ea9532b3c2db37669a8a6e09412a6c5090b96c18819b0347ae110a43d11ca505ec92fab6293e52ff8e185680cb4d0f437565fbe3741b564d7b0850d0ea53861fc07923b2d6b0e6ef3795c38b15012a6940e49cd3e9c9496946762b9bd06037c5cfcdd4ee5e130085456d06edb9226b4294783a859a863bdb3c73042ea293bcc6a1be33c4ec3d5330a1e6cf21a658e2f8aea07c5c5bea68c3a4091f334f5a34e1911e1ff6abb2f86d2a39612ee31d622c4157e1b3204f4134bdf169faced7dfd5de32c6a70b554d42684540edb69903f0277833b8a9b5ed86c8612b702a0f2633d5b98d2a294f1214c1ff2471122c7f470993b8939877bf333ab57d9bbc20634c12584a9ffb0a4871d84de06c1aa4e97a4dd27d0aa354ececf80081a1c6a959075f983078d5be9e02bbe50528364717f450848c08d59e28e4797ffd83c3672494fae41345e567f5613351d31796db0e1ff02eec46de505be7389319284e49a89e3b94775a686154f50ae04d6c0109967c0eb63dddaed4da10d01c56929f327fdac3565ebe07212c6149653b95072c0e593bf706265d99d6ba2a7ea0124190e92929bd099893192b091572a42ebfc8c87f9950d79a5667af5fb5d1252741e29bd9e446a236114a7ee5f2ffd4c2e9079003aeece2d6ccbc4622d338e9f30e0562a8211240a3911e6123f38d6e431d46c902277bb045f71a2bf6b631ef0f73db9ff4e2f2fd9d880e4e6b56025a5b5f170eae972080018186cb96d5f4547ccd24914f490463a8e7922f418eb834de71514696e494fbf703c552cb6c043ad88bcd6eec19bc64c40f6e570104d34cbd2327ab5e126e51fe526570fdc382e24ad17bc0756502819e73633a7f958efdffd7f5ca688befa5dcfb1f2c14968c2bd100ad07c08013e2f4470a433b423a02e9b65d983b0c9d23a027e650907c4efb69e373dd6a51b2f39a30242defccf8fd7dc7d403e2ccdd314428a554864563051e65080112b11c8286924de4e23e30c8ea7dbb89f1cd4e8c826a38c6676d2ef914450787680f0604ddd902ab4fc9070b6820cd57882f56ea66bc39422b777f6ecbd0c8f47bac31bac685bf45ea004d05d205ebd9798f761501a748c2a8fdaf3a9c39451ee10346121a72fea89c4642752a7d05919efcaf99eb540275674d42a17753a932ba56a1ff60dee9a5ae2725f2d0d6dc7c136d451c0aa03129d5c9f92f64299e951513b5595654e9dad105376c040b04feb4ddde621c211544b02878bf32598ad14607e43d57c1cbabb49a07eb2cb7a296e77f017d16f84a40995e80d3b11df62c2168d92f0a90fedc4ec047d62e622191f92404803968edb128ac5799e8a0efbc16df28f23a39afdeb07827cdb801c6d158d80e9e3e4cbfce2729fda378cd4b251b0e9c26331170ad081ce49f2b632c2d1756c2708c7dee399a860f0cd4b0eef3feab4623080275840ba1ee8e1f50837b7f616b34609c07c49754a5763509c29b856162550556a4abac5023035823e9ba7d5e77fb39c8e797c167886a87742bdfa000521f4f92f321156f08b5d8719f1c8717ecd009ce205a46b407069f9291d3b0a39a88752f2a06c4ae3b4b80f73390dff689f4e9612cf20d6c176b19d8d472169bb1176ccf68813778c80aef3135d84a748a08d854cb3b7bdc5c55f4f1d62e780589ebb05401ac3a1214eb7b48240410a68e630f61b18dfba6177410472ce43a65ce196c8cd4370ca405e28a540e22a9a5ca09cf5af4021c03dfbd3485760a261491f3dfdf96f80ee8f0b6e86afbb3bec155a880c80c2c94564b6b45b663345e23b8168223a39ebb982cf361ec0ce228a843885995cf1300735a34cc535c430058c5806ce3ebbf096cf793383e2ff49f4d8cc83d1f230f7c7fb35c5310ff0f26393f320a68d2bb65d52c8169e43314fa1c27e4edfc4c4f1a3ee4e668ed0298f55cd9135da5514fa7fdd808b633613fb1cded7747c167f5d7a727714e85a4a8cb575ff30d6de2a410fec037ec17121f783371df6090b5715c2a3766cf2287800f1c43dfb7ed5100cb232fc834e7d2b11362ae937111d663af3a549cb6b449bb4e4449e3b99a151f011a5d7afe5576cd156f5be39acf4be99ae42dea936d5b7989311e8999ada7068d951b8601eb0d636f11f362937718f40d8b964f1f18a8e1abf67df8c83cd1e1362129f2b3aa9fa3ef9b1346769f6fc8228a995bb7b46c94323a8483709fb1ad428f5f532a18038dc31367a56a1b182f728858b35d898d694939284bcf5ede9efc524eb016115a0a66551210d943f4dc57a0b997613a173c213ac6ff6400ca09f5f37f4b07e07fe88ead6b001f266b034c589f95cad11e28989e57eb0baffc72c2091f9e89a701bc6a07ffe5f581dcd522a7b128f7f99cef57b1c4243ac90eb619acc509e03cbab9c5167885053efb82be387c07028a20a31eabcdfd22f4614b47270cab3b6b59420443ef6b704c0421179cf69b990b4fd578a07c7828006ca188ed1d99b1</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请点击此处输入密码，输入完请按 Enter 并刷新页面</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
           
-          <category> Preliminary Contest </category>
+          <category> NOI Series </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> CSP-J </tag>
-            
-        </tags>
       
     </entry>
     
@@ -105,10 +62,10 @@
     
     <entry>
       <title>『题解』LG - UVA11559 Event Planning</title>
-      <link href="/2021/09/14/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA11559-Event-Planning/"/>
-      <url>/2021/09/14/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA11559-Event-Planning/</url>
+      <link href="/2021/09/14/uva11559-solution/"/>
+      <url>/2021/09/14/uva11559-solution/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11559" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=27&amp;page=show_problem&amp;problem=2595" title="点击跳转至 UVA">UVA</a></p><h3 id="题目翻译">题目翻译</h3><p>作为一次短途旅行的组织者，你需要根据参与人数、预算、酒店及其周末空余床位的情况，决定是否成行。其中旅游人数 $N$，预算 $B$，可供考虑的酒店数量 $H$，可选择的出行周末 $W$。其中 $H$ 确定之后，会输入 $H$ 组数据，每两行为一组，第一行表示该酒店的人均住店费用 $p$，第二行表示 $W$ 个周末对应每个周末该酒店的床位空余情况 $a$。</p><h3 id="题目解析">题目解析</h3><p>本题很明显就能看出是一道模拟题。</p><p>只需要在输入的时候顺便计算一下是否超预算。如果有，则顺便记录下是否是更低的预算即可。如果都超预算，那么输出 <code>stay home</code>，否则就输出记录的那个更低的预算。</p><p><strong>一般 UVA 的题读入行数是不给定的，所以我们要使用</strong> <code>while (cin &gt;&gt; n)</code> <strong>或者</strong> <code>while (~scanf(&quot;%d&quot;, &amp;n))</code><strong>。</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头万岁using namespace std;int main() &#123;int N, B, H, W, p, a, Min = INT_MAX;//Min 根据个人喜好设置较大数while (cin &gt;&gt; N &gt;&gt; B &gt;&gt; H &gt;&gt; W) &#123;//如果是 scanf 可以加上 != EOFfor (int i = 0; i &lt; H; i++) &#123;cin &gt;&gt; p;for (int j = 0; j &lt; W; j++) &#123;cin &gt;&gt; a;if (a &gt;= N) Min = min(Min, p * N);//读入时求最小值&#125;&#125;if (Min &lt;= B) &#123;cout &lt;&lt; Min &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;stay home&quot; &lt;&lt; endl;&#125;Min = INT_MAX;//根据个人喜好&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-uva11559">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120657641">CSDN 博客</a></strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/09/14/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA11559-Event-Planning/">https://ren-yc.github.io/2021/09/14/『题解』LG-UVA11559-Event-Planning/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11559" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=27&amp;page=show_problem&amp;problem=2595" title="点击跳转至 UVA">UVA</a></p><h3 id="题目翻译">题目翻译</h3><p>作为一次短途旅行的组织者，你需要根据参与人数、预算、酒店及其周末空余床位的情况，决定是否成行。其中旅游人数 $N$，预算 $B$，可供考虑的酒店数量 $H$，可选择的出行周末 $W$。其中 $H$ 确定之后，会输入 $H$ 组数据，每两行为一组，第一行表示该酒店的人均住店费用 $p$，第二行表示 $W$ 个周末对应每个周末该酒店的床位空余情况 $a$。</p><h3 id="题目解析">题目解析</h3><p>本题很明显就能看出是一道模拟题。</p><p>只需要在输入的时候顺便计算一下是否超预算。如果有，则顺便记录下是否是更低的预算即可。如果都超预算，那么输出 <code>stay home</code>，否则就输出记录的那个更低的预算。</p><p><strong>一般 UVA 的题读入行数是不给定的，所以我们要使用</strong> <code>while (cin &gt;&gt; n)</code> <strong>或者</strong> <code>while (~scanf(&quot;%d&quot;, &amp;n))</code><strong>。</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头万岁using namespace std;int main() &#123;int N, B, H, W, p, a, Min = INT_MAX;//Min 根据个人喜好设置较大数while (cin &gt;&gt; N &gt;&gt; B &gt;&gt; H &gt;&gt; W) &#123;//如果是 scanf 可以加上 != EOFfor (int i = 0; i &lt; H; i++) &#123;cin &gt;&gt; p;for (int j = 0; j &lt; W; j++) &#123;cin &gt;&gt; a;if (a &gt;= N) Min = min(Min, p * N);//读入时求最小值&#125;&#125;if (Min &lt;= B) &#123;cout &lt;&lt; Min &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;stay home&quot; &lt;&lt; endl;&#125;Min = INT_MAX;//根据个人喜好&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-uva11559">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120657641">CSDN 博客</a></strong></p><blockquote><p>本文作者: ren-yc<br>本文链接:  <a href="https://ren-yc.github.io/2021/09/14/uva11559-solution/">https://ren-yc.github.io/2021/09/14/uva11559-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
       
       
       <categories>
@@ -121,156 +78,6 @@
         <tags>
             
             <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 双色棋 - 题解</title>
-      <link href="/2021/08/31/LG-%E5%8F%8C%E8%89%B2%E6%A3%8B-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/31/LG-%E5%8F%8C%E8%89%B2%E6%A3%8B-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>本题不算太难，唯一的难点在于数据范围。</p><p>没错，就是数据范围，对于这个数据，应开 long long。</p><p>一句名言：</p><blockquote><p>十年 OI 一场空，不开 long long 见祖宗。</p></blockquote><p>那么接下来就是<strong>纯 dp</strong></p><p>定义：</p><p>$dp_{i,0}$ 为第 $i$ 颗棋子放白色棋子的情况数，$dp_{i,1}$ 为第 $i$ 颗棋子放黑色棋子的情况数。</p><p>状态转移方程：</p><p>$dp_{i,0} = dp_{i-1,0} + dp_{i-1,1}$，</p><p>$dp_{i,1} = dp_{i-1,0}$。</p><p>输出：</p><p>$dp_{n,0} + dp_{n,1}$。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;using namespace std;long long dp[60][3]; //super importantint main()&#123;int r;cin&gt;&gt;r;dp[1][0]=1;dp[1][1]=1;for(int i=2;i&lt;=r;i++)&#123;dp[i][0]=dp[i-1][0]+dp[i-1][1];dp[i][1]=dp[i-1][0];&#125;cout&lt;&lt;dp[r][1]+dp[r][0];return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文作者 氢氧根离子的AC</strong></p><p><strong>请无视下列内容</strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/31/LG-%E5%8F%8C%E8%89%B2%E6%A3%8B-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/31/LG-双色棋-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 贪玩的 ac - 题解</title>
-      <link href="/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="代码分析">代码分析</h3><p>暴力枚举，时间复杂度 $O(\max{(x,y)})$（$x,y$ 分别是 Boss 血量小于等于 $0$ 的回合数和 ac 血量小于等于 $0$ 的回合数）</p><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;using namespace std;int bossxue,acxue,acharm,bossharm;int main()&#123;cin&gt;&gt;bossxue&gt;&gt;acxue&gt;&gt;acharm&gt;&gt;bossharm;while(1)&#123;bossxue-=acharm;acxue-=bossharm;if(bossxue&lt;=0 &amp;&amp; acxue&gt;0)&#123;cout&lt;&lt;acxue;break;&#125;if(acxue&lt;=0 &amp;&amp; bossxue&gt;0)&#123;cout&lt;&lt;bossxue;break;&#125;if(acxue&gt;0 &amp;&amp; bossxue&gt;0)&#123;;&#125;else&#123;cout&lt;&lt;&quot;all&quot;;break;&#125;&#125;return 0;&#125;</code></pre><p>真的没啥好说，自己领悟。</p><p>$$END$$</p><p><strong>本文作者 氢氧根离子的AC</strong></p><p><strong>请无视下列内容</strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/29/LG-%E8%B4%AA%E7%8E%A9%E7%9A%84-ac-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/29/LG-贪玩的-ac-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - Numbers - 题解</title>
-      <link href="/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>并查集，每次操作 <code>Merge</code> 两点所在的组，最后对照着原矩阵和目标矩阵，看看没点是否联通即可。</p><p>普通 DFS 也行。</p><h3 id="代码">代码</h3><p>这里提供 DFS 版本：</p><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;using namespace std;typedef long ll;const ll N=200;ll T,n,m,b[N][N],f[N][N],a,e,c,d;bool vst[N][N];ll get[N*1000],get2[N*1000];ll get3[N*1000],get4[N*1000];bool pos;vector&lt;ll&gt;x[N][N],y[N][N];void Diverse(ll x1,ll x2,ll x3,ll x4)&#123;if(vst[x1][x2]==true)return;vst[x1][x2]=true;if(x1==x3&amp;&amp;x2==x4)&#123;pos=true;return ;&#125;for(ll i=0;i&lt;x[x1][x2].size();i++)&#123;Diverse(x[x1][x2][i],y[x1][x2][i],x3,x4);&#125;return;&#125;int main()&#123;scanf(&quot;%d&quot;,&amp;T);while(T--)&#123;scanf(&quot;%d%d&quot;,&amp;n,&amp;m);for(ll i=0;i&lt;=n;i++)for(ll j=0;j&lt;=n;j++)x[i][j].clear(),y[i][j].clear();for(ll i=1;i&lt;=n;i++)for(ll j=1;j&lt;=n;j++)scanf(&quot;%d&quot;,&amp;b[i][j]),get[b[i][j]]=i,get2[b[i][j]]=j;for(ll i=1;i&lt;=n;i++)for(ll j=1;j&lt;=n;j++)scanf(&quot;%d&quot;,&amp;f[i][j]),get3[f[i][j]]=i,get4[f[i][j]]=j;for(ll i=1;i&lt;=m;i++)&#123;scanf(&quot;%d%d%d%d&quot;,&amp;a,&amp;e,&amp;c,&amp;d);x[a][e].push_back(c);y[a][e].push_back(d);x[c][d].push_back(a);y[c][d].push_back(e);&#125;bool out=false;for(ll i=1;i&lt;=n;i++)for(ll j=1;j&lt;=n;j++)&#123;if(out!=true)&#123;memset(vst,false,sizeof(vst));ll numx1=get3[b[i][j]],numy1=get4[b[i][j]];pos=false;Diverse(i,j,numx1,numy1);if(pos==false)&#123;printf(&quot;No\n&quot;);out=true;break;&#125;&#125;&#125;if(out==false)printf(&quot;Yes\n&quot;);&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文作者 HJY的忠实PIG</strong></p><p><strong>请无视下列内容</strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/29/LG-Numbers-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/29/LG-Numbers-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - MC 生存游戏 - 题解</title>
-      <link href="/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>其实这题也真的简单，最基础的动态规划题目，找到状态转移方程就行了。</p><p>状态转移方程：</p><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">if(i==1 &amp;&amp; j==1)&#123; //（1，1）不用dpcontinue;&#125;else if(i==1 &amp;&amp; j!=1)&#123;//只可从左边来，所以加上左边的dp值dp[i][j]+=dp[i][j-1]; &#125;else if(i==m &amp;&amp; j==1)&#123; //只可从上面下来，所以加上上面的dp值dp[i][j]+=dp[i-1][j];&#125;else&#123; // 否则选取左边和上面的dp值，并且要取dp值更大的，故用maxdp[i][j]+=max(dp[i][j-1],dp[i-1][j]);&#125;</code></pre><h3 id="代码分析">代码分析</h3><p>见上</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;using namespace std;int n,m;int a[1001][1001],dp[1001][1001];int maxn;int main()&#123;cin&gt;&gt;m&gt;&gt;n;for(int i=1;i&lt;=m;i++)&#123;for(int j=1;j&lt;=n;j++)&#123;cin&gt;&gt;a[i][j];dp[i][j]=a[i][j];&#125;&#125;for(int i=1;i&lt;=m;i++)&#123;for(int j=1;j&lt;=n;j++)&#123;if(i==1 &amp;&amp; j==1)&#123;continue;&#125;else if(i==1 &amp;&amp; j!=1)&#123;dp[i][j]+=dp[i][j-1];&#125;else if(i==m &amp;&amp; j==1)&#123;dp[i][j]+=dp[i-1][j];&#125;else&#123;dp[i][j]+=max(dp[i][j-1],dp[i-1][j]);&#125;&#125;&#125; cout&lt;&lt;dp[m][n];return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文作者 氢氧根离子的AC</strong></p><p><strong>请无视下列内容</strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/28/LG-MC-%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/28/LG-MC-生存游戏-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 爱数学的 ac 做因式分解（弱化版） - 题解</title>
-      <link href="/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这道题目十分的<strong>水</strong>，所以直接放代码（bushi</p><p>这道题其实就是简简单单的暴力</p><p>没错，就是暴力</p><p>对于这个二次三项式 来说：<br>我们只要满足两个整数 $x,y$ 满足两个条件：</p><ul><li>$xy$ $=$ $cc$</li><li>$x + y$ $=$ $bb$</li></ul><p>由于 $aa$ $=$ $1$，所以不用管</p><p>可以直接写函数 $find$_$ans$</p><h3 id="代码分析">代码分析</h3><p>见注释。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;using namespace std;void find_ans(int c,int b)&#123;one=-1e9-1;two=-1e9-1;for(int i=1;i&lt;=sqrt(**abs(c)**);i++)&#123; // abs(c) 十分之重要，因为若c&lt;0，则会报错if(**abs(c)**%i==0)&#123;  // i是abs(c)的一个因数one=i;two=abs(c)/i; //x，y即可求出if(c&gt;0)&#123;  // 分类 ： 1.若c为正数，即one，two为同正负if(one+two==b)&#123; // 同为正数return;&#125;if(0-one-two==b)&#123; //同为负数one=-one;two=-two;return;&#125;&#125;if(c&lt;0)&#123; // 2.若为负数if(one-two==b)&#123; //x正，y负two=-two;return;&#125;if(two-one==b)&#123; //x负，y正one=-one;return;&#125;&#125;one=-1e9-1;two=-1e9-1; // 可以运行到此，代表上面均不满足，即为现在的x，y是不能满足的，还原初始值&#125;&#125;if(c==0)one=0,two=b; // 重点：数据范围中cc可以为0，那么必能因式分解，所以特例return;&#125;int main()&#123;cin&gt;&gt;n;for(int i=1;i&lt;=n;i++)&#123;int aa,bb,cc;cin&gt;&gt;aa&gt;&gt;bb&gt;&gt;cc;find_ans(cc,bb);if(one==-1e9-1)&#123;cout&lt;&lt;&quot;This is a wrong question&quot;&lt;&lt;endl;&#125;else&#123;cout&lt;&lt;max(one,two)&lt;&lt;&quot; &quot;&lt;&lt;min(one,two)&lt;&lt;endl;&#125;&#125;return 0;&#125;</code></pre><p>不做过多解释了，是不是很水呀？</p><p>$$END$$</p><p><strong>本文作者 氢氧根离子的AC</strong></p><p><strong>请无视下列内容</strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/28/LG-%E7%88%B1%E6%95%B0%E5%AD%A6%E7%9A%84-ac-%E5%81%9A%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%88%E5%BC%B1%E5%8C%96%E7%89%88%EF%BC%89-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/28/LG-爱数学的-ac-做因式分解（弱化版）-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>『置顶』TLS - 如何使用 FTQ</title>
-      <link href="/2021/08/26/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-FTQ/"/>
-      <url>/2021/08/26/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-FTQ/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>本文章所使用的方法保证在管理员账户下的 Windows 10 中有效</strong></p><p><strong>本文章可能包含敏感内容，请谨慎阅读</strong></p><h3 id="前言">前言</h3><p>标题中的 FTQ 全称是 fotiaoqiang（佛跳墙，<s>即一种名菜</s>）。</p><p>那么个软件的用途是什么呢，在 OI 界，这个软件是我们众所周知的 <strong>VPN</strong>。</p><p>用了这个软件，就可以访问类似 谷歌、推特、油管 的网站了。<img src="https://xn--wcs.tk/5" alt=""></p><p><em>你听过佛跳墙吗？只有 $1%$ 的人答得上来！大家都知道，佛跳墙最近很火，究竟是为什么很火呢？佛跳墙到底是什么梗？相信大家对佛跳墙都很熟悉，佛跳墙就是我们每天都会经常遇到的，但是佛跳墙是怎么回事呢？今天小编就带大家来看看究竟是怎么一回事。佛跳墙最近很火，其实就是因为佛跳墙在网上火了起来。大家可能会感到很惊讶，佛跳墙为什么是这样的？佛跳墙究竟为什么火起来了呢？但事实就是这样，小编也感到非常惊讶。以上就是小编为大家带来的的关于佛跳墙是什么意思，佛跳墙是什么梗的内容。关于佛跳墙大家还有什么想说的吗？欢迎在评论区留言哦~</em></p><h3 id="下载">下载</h3><p><a href="https://xn--x8888com-ih6mv89w/#%E7%94%B1%E4%BA%8E%E6%95%8F%E6%84%9F%E8%AF%B7%E8%BD%AC%E6%8D%A2%E4%B8%AD%E6%96%87" title="请转换中文">官网</a></p><p><a href="https://ren-yc.github.io/assets/FTQ/fotiaoqiang-2.7.8-1.zip">本站下载（不保证最新）</a></p><h3 id="安装">安装</h3><p>运行下载的 <code>exe</code> 文件，</p><p>安装时一直按 Enter 就行。</p><p>启动时由于需要设置代理，所以需要管理员权限。</p><h3 id="使用">使用</h3><p>双击桌面上 $/$ 单击开始菜单上 的 fotiaoqiang，提示需要管理员权限，点击 “是”，然后在默认浏览器里会自动打开一个类似 <code>http://localhost:端口号/一些字符/connect</code> 的新标签页：</p><p><img src="https://ren-yc.github.io/assets/FTQ/final.PNG" alt=""></p><p>点击 “点击连接”，就可以愉快地使用 VPN 辣！！1<img src="https://xn--9zr.tk/gx" alt=""></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/26/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-FTQ/">https://ren-yc.github.io/2021/08/26/TLS-如何使用-FTQ/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Tools </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> APPs </tag>
             
         </tags>
       
@@ -280,140 +87,15 @@
     
     <entry>
       <title>『题解』LG - UVA13012 Identifying tea</title>
-      <link href="/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA13012-Identifying-tea/"/>
-      <url>/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA13012-Identifying-tea/</url>
+      <link href="/2021/08/23/uva13012-solution/"/>
+      <url>/2021/08/23/uva13012-solution/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p><s>太淼了</s>，一道模拟题。</p><p>一般 UVA 的题读入行数是不给定的，所以我们要使用 <code>while (cin &gt;&gt; n)</code> 或者 <code>while (~scanf(&quot;%d&quot;, &amp;n))</code>。</p><p>每次循环读入后，使用 <code>if</code> 判断这 $5$ 个数是否等于 $t$。如果是，计数器加一。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int t, a, b, c, d, e;while (cin &gt;&gt; t &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d &gt;&gt; e) &#123;//不停地读入（由于是cin,所以不用!=EOF）int ans = 0;//计数器if (a == t) ans++;//判断if (b == t) ans++;//同上if (c == t) ans++;//同上if (d == t) ans++;//同上if (e == t) ans++;//同上（草）cout &lt;&lt; ans &lt;&lt; endl;&#125;return 0;//完结撒花&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-uva13012">洛谷博客</a></strong></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-UVA13012-Identifying-tea/">https://ren-yc.github.io/2021/08/23/『题解』LG-UVA13012-Identifying-tea/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p><s>太淼了</s>，一道模拟题。</p><p>一般 UVA 的题读入行数是不给定的，所以我们要使用 <code>while (cin &gt;&gt; n)</code> 或者 <code>while (~scanf(&quot;%d&quot;, &amp;n))</code>。</p><p>每次循环读入后，使用 <code>if</code> 判断这 $5$ 个数是否等于 $t$。如果是，计数器加一。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int t, a, b, c, d, e;while (cin &gt;&gt; t &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d &gt;&gt; e) &#123;//不停地读入（由于是cin,所以不用!=EOF）int ans = 0;//计数器if (a == t) ans++;//判断if (b == t) ans++;//同上if (c == t) ans++;//同上if (d == t) ans++;//同上if (e == t) ans++;//同上（草）cout &lt;&lt; ans &lt;&lt; endl;&#125;return 0;//完结撒花&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-uva13012">洛谷博客</a></strong></p><blockquote><p>本文作者: ren-yc<br>本文链接:  <a href="https://ren-yc.github.io/2021/08/23/uva13012-solution/">https://ren-yc.github.io/2021/08/23/uva13012-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
       
       
       <categories>
           
           <category> Solution - UVA </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 愚公移山 - 题解</title>
-      <link href="/2021/08/23/LG-%E6%84%9A%E5%85%AC%E7%A7%BB%E5%B1%B1-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/23/LG-%E6%84%9A%E5%85%AC%E7%A7%BB%E5%B1%B1-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>简单的一匹的签到题。</p><h3 id="代码分析">代码分析</h3><p>边输入边累计。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;long long n, x, v, g, tot = 0;cin &gt;&gt; n &gt;&gt; x;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; v &gt;&gt; g;tot += max(v, g);&#125;cout &lt;&lt; (tot + x) * 10000 &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/23/LG-%E6%84%9A%E5%85%AC%E7%A7%BB%E5%B1%B1-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/23/LG-愚公移山-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 听取 WA 声一片 - 题解</title>
-      <link href="/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p><s>膜你</s>模拟题，要判断每次枚举需要充的最大值，最后输出的时候一定要加 $1$，<s>又不能跳 $0$ 格。</s></p><h3 id="代码分析">代码分析</h3><p>双重循环<s>膜你</s>模拟就行了。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, sum = 0, maxn = 0;string s;cin &gt;&gt; n;while (n--) &#123;cin &gt;&gt; s;for (int j = 0; j &lt; s.size(); j++) &#123;if (s[j] == 'L') &#123;sum++;for (int k = j + 1; k &lt; s.size(); k++) &#123;if (s[k] == 'L') sum++;else break;&#125;maxn = max(maxn, sum);sum = 0;&#125;&#125;cout &lt;&lt; maxn + 1 &lt;&lt; endl;maxn = 0;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/21/LG-%E5%90%AC%E5%8F%96-WA-%E5%A3%B0%E4%B8%80%E7%89%87-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/21/LG-听取-WA-声一片-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - Killer Queen - 题解</title>
-      <link href="/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>深度优先搜索题（<strong>DFS</strong>），在上下左右都搜一遍就好了。</p><h3 id="代码分析">代码分析</h3><p>先全部读入然后标记二维数组。</p><p>然后上下左右搜索，如果两个棋子重合，即 $a_{tx,ty} = 2$，则输出 <code>YES</code>，反之输出 <code>NO</code>。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int t, n, qx, qy, kx, ky, tx, ty, a[1001][1001];void dfs(int p, int q) &#123;int k1[8] = &#123;0, 0, 1, -1, 1, -1, -1, 1&#125;;int k2[8] = &#123;1, -1, 0, 0, 1, -1, 1, -1&#125;;a[p][q] = 2;for (int i = 0; i &lt; 8; i++) &#123;int xx = p + k1[i], yy = q + k2[i];if (xx &gt;= 1 &amp;&amp; xx &lt;= n &amp;&amp; yy &lt;= n &amp;&amp; yy &gt;= 1 &amp;&amp; a[xx][yy] == 0) &#123;f(xx, yy);&#125;&#125;&#125;int main() &#123;cin &gt;&gt; t;while (t--) &#123;cin &gt;&gt; n &gt;&gt; qx &gt;&gt; qy &gt;&gt; kx &gt;&gt; ky &gt;&gt; tx &gt;&gt; ty;for (int j = n; j &gt;= 1; j--) &#123;a[j][qy] = 1;a[qx][j] = 1;&#125;int k = qx, l = qy;while (k &gt;= 1 &amp;&amp; l &gt;= 1) &#123;a[k][l] = 1;k--;l--;&#125;k = qx;l = qy;while (k &lt;= n &amp;&amp; l &lt;= n) &#123;a[k][l] = 1;k++;l++;&#125;k = qx;l = qy;while (k &lt;= n &amp;&amp; l &gt;= 1) &#123;a[k][l] = 1;k++;l--;&#125;k = qx;l = qy;while (k &gt;= 1 &amp;&amp; l &lt;= n) &#123;a[k][l] = 1;k--;l++;&#125;dfs(kx, ky);if (a[tx][ty] == 2) &#123;cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125;memset(a, 0, sizeof(a));&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/21/LG-Killer-Queen-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 李白的酒 - 题解</title>
-      <link href="/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>淼题，只需要逆推累加出结果。</p><h3 id="代码分析">代码分析</h3><p>循环逆推。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n;double tot = 0;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;tot++;tot /= 2;&#125;cout &lt;&lt; fixed &lt;&lt; setprecision(5) &lt;&lt; tot &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/14/LG-%E6%9D%8E%E7%99%BD%E7%9A%84%E9%85%92-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/14/LG-李白的酒-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 满二叉树 - 题解</title>
-      <link href="/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>满二叉树板子题。</p><h3 id="代码分析">代码分析</h3><p>三个 <code>for</code> 循环，</p><p>第一个用于计算节点的数量，</p><p>第二个用于初始化树数组，</p><p>第三个用于模拟。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int k, q, a[10001] = &#123;0&#125;, p = 1;char s[101];cin &gt;&gt; k &gt;&gt; q;for (int i = 1; i &lt;= k; i++) &#123;p *= 2;&#125;for (int i = 1; i &lt;= p - 1; i++) &#123;a[i] = i;&#125;for (int i = 1; i &lt;= q; i++) &#123;cin &gt;&gt; s;int o = 1;for (int j = 0; s[j] != '\0'; j++) &#123;if (s[j] == 'L') &#123;o *= 2;&#125; else &#123;o *= 2;o++;&#125;&#125;cout &lt;&lt; o &lt;&lt; endl;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/14/LG-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/14/LG-满二叉树-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
           
       </categories>
       
@@ -430,324 +112,18 @@
     
     <entry>
       <title>TLS - 如何使用 IDM</title>
-      <link href="/2021/08/12/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-IDM/"/>
-      <url>/2021/08/12/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-IDM/</url>
+      <link href="/2021/08/12/how-to-use-idm/"/>
+      <url>/2021/08/12/how-to-use-idm/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>本文章所使用的方法保证在 IDM 6.xx 版本有效</strong></p><h3 id="前言">前言</h3><p><s>众所周知</s>，IDM 是一个很好的<strong>多线程</strong>下载工具，还支持网站爬取音视频。</p><p>IDM 能够在使用浏览器下载文件时自动捕获下载链接并添加下载任务，目前，IDM 的自动捕获功能支持以下常见的主流浏览器：</p><p>Safari</p><p>Chrome</p><p>Firefox</p><p>Opera</p><p>Microsoft Edge</p><p>Internet Explorer</p><p><s><em>我很严肃</em>：</s></p><p><s><em>IDM 破解是怎么回事呢？IDM 相信大家都很熟悉，但是 IDM 破解是怎么回事呢，下面就让小编带大家一起了解吧。IDM 破解，其实就是破解，大家可能会很惊讶 IDM 怎么破解呢？但事实就是这样，小编也感到非常惊讶。这就是关于 IDM 破解的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</em></s></p><h3 id="下载">下载</h3><p>先安装正版 IDM，再使用破解工具破解。</p><p><a href="http://www.internetdownloadmanager.com/download.html">IDM 官网下载</a></p><p><a href="https://ren-yc.github.io/assets/IDM/IDMInstall.zip">本站安装程序压缩包下载</a></p><p><a href="https://ren-yc.github.io/assets/IDM/IDMPatch.zip">本站破解工具压缩包下载</a></p><h3 id="安装">安装</h3><p>运行下载的 <code>exe</code> 文件，</p><p>安装时一直按 Enter 就行，</p><p>若安装程序提示重启，</p><p><strong>请点击 “取消”</strong>。</p><h3 id="破解">破解</h3><p>把下载的 <code>IDMPatch.zip</code> 中的 <code>Crack.exe</code> 复制到 IDM 主目录如 <code>C:\Program Files (x86)\Internet Download Manager</code>，</p><p>右键该文件，</p><p>选择 “<strong>以管理员模式运行</strong>”。</p><p>执行完毕后运行 <code>REG.exe</code>，</p><p>方法同上。</p><p>然后启动 IDM，</p><p>点击菜单栏中的 “帮助” – “关于 IDM”，</p><p>可以看到 IDM 被成功的激活了<img src="https://xn--9zr.tk/gx" alt=""></p><h6 id="若破解失败，记得在评论区留言告诉我小编哦">若破解失败，记得在评论区留言告诉我<s>小编</s>哦</h6><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/12/TLS-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-IDM/">https://ren-yc.github.io/2021/08/12/TLS-如何使用-IDM/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Tools </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> APPs </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>四篇关于 chen_zhe 的美文</title>
-      <link href="/2021/08/09/%E5%9B%9B%E7%AF%87%E5%85%B3%E4%BA%8E-chen-zhe-%E7%9A%84%E7%BE%8E%E6%96%87/"/>
-      <url>/2021/08/09/%E5%9B%9B%E7%AF%87%E5%85%B3%E4%BA%8E-chen-zhe-%E7%9A%84%E7%BE%8E%E6%96%87/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="壹-chen-zhe人">壹 chen_zhe人</h2><p>那是谁 是谁 是谁</p><p>那就是 chen_zhe</p><p>chen_zhe 人 chen_zhe 人</p><p>背负着暴政之名</p><p>抛弃了一切（指民心）而战斗（指禁言）的男人</p><p>chen_zhe 代码是超音波（形容很会卡常）</p><p>chen_zhe 之眼（指管控 OIer）在洛谷飞翔</p><p>手里掌握着 恶魔之力</p><p>正义的英雄（</p><p>chen_zhe 人 chen_zhe 人</p><p>开始知道暴政的男人</p><p>因那紫名而觉醒的男人</p><p>chen_zhe 禁言是迫害之力</p><p>chen_zhe 之眼透视一切</p><p>chen_zhe 劈砍肋骨可断</p><p>手里掌握着 管理之力</p><p>正义的英雄</p><p>chen_zhe 人 chen_zhe 人</p><h2 id="贰-少年-chen-zhe">贰 少年 chen_zhe</h2><p>明亮的机房中开着一台神秘的电脑，旁边是一个题库，都存着一望无际的 chen_zhe 做的神仙毒瘤题，其间有一个十二三岁的少年，血管里流着网络流，靠着一棵平衡树，向蒟蒻的 lhy930 尽力地踩去，lhy930 被爆踩了好久后却将身一扭，反从他的胯下跳进他家的内存池了。</p><p>这少年便是 chen_zhe。我被他爆踩时，也不过十多岁，离现在将有几年了；那时我还没开始学 OI，也很 LJ，我正是一个蒟蒻。那一年，我家是一件大比赛的值年。这比赛，说是三十多年才能轮到一回，所以很毒瘤；正月里做神仙毒瘤题，题目很多，数据很讲究，做的人也很多，数据也很要防偷去。我家只有一个忙月，忙不过来，他便对父亲说，可以叫他的儿子 chen_zhe 来出题配数据的。</p><p>我的父亲允许了；我也很高兴，因为我早听到 chen_zhe 这名字，而且知道他和我仿佛年纪，是个神犇巨佬，会做和出神仙毒瘤题，所以我们叫他巨佬。他是能 AK 所有比赛的。</p><p>我于是日日盼望新年，新年到，chen_zhe 也就到了。好容易到了年末，有一日，母亲告诉我，chen_zhe 来了，我便飞跑的去看。他正在机房里，红色的圆脸，头戴一顶小绿帽，看上去明显就是一个光头。他见人很喜欢嘲讽，唯独嘲讽我嘲讽得最过分，没有旁人的时候，来嘲讽我，于是不到半日，我便被爆踩了。</p><p>我们那时候不知道谈些什么，只记得 chen_zhe 很高兴，说是上洛谷之后，做了没有其他人会做的毒瘤题。</p><p>第二日，我便要他做题。他说：“这不能。须有神仙毒瘤题了才好。我们电脑上，有了题，我开出一块内存池来，用预处理所有的几亿个数据，打好表，看输入来了时，我立刻地将我预处理好的答案，只一输出，那正确答案 $0$ $ms$ 就输出来了。数据结构、字符串、图论、DP 什么的都是 LJ 玩意儿……”</p><p>我于是又很盼望有题。</p><p>chen_zhe 又对我说：“现在这些题太水了，你夏天到我们这里来。我们日里去网上虐人，lhy930 也有，kkk 也有，tourist 也有。晚上我和爹虐全场去，你也去。”</p><p>“要加文件输入输出吗？”</p><p>“不用。我的程序可是非常大佬的，可以自动判断要不要文件输入输出。要管的是卡时间、卡空间、卡算法。洛谷上面，你看，月赛开始了，我要 AK 了。你便写好膜拜之语，在犇犇里发出去……”</p><p>我那时并不知道这所谓月赛的是怎么一件东西——便是现在也没有知道——只是无端的觉得这肯定是神犇巨佬才能参加的比赛。</p><p>“比赛很水么？”</p><p>“有我呢。开始了，看见题了，我便 AK 了。这些题目很毒瘤，要用主席树，还要用模拟退火。但是对我来说都是不是一点的水……”</p><p>我素不知道天下有这许多新鲜事：竟然有比 A+B Problem 毒瘤的题目，而且竟然有人能够 <code>AC</code>，我先前单知道我连 A+B Problem 都过不了罢了。</p><p>“我们 CF 上，题目要来的时候，就有许多人喊着要 AK，但最后都被我给 Hack 掉了……”</p><p>阿！chen_zhe 的心里有无穷无尽的稀奇的算法，都是我往常的朋友所不知道的。他们不知道一些事，chen_zhe 在 AK 虐场时，他们都和我一样还在颓 A+B Problem。</p><p>可惜正月过去了，chen_zhe 须回家里去，我急得大哭，他也躲到厨房里，哭着不肯出门，但终于被他父亲带走了。他后来还托他的父亲带给我一堆神仙毒瘤题和它们的 <code>AC</code> 代码，我也曾送他一两道红题，但从此没有再见面。</p><h2 id="叁-chen-乙己">叁 chen 乙己</h2><p>chen_zhe 一上洛谷，所有做题的人便都看着他笑，有的叫道，“chen_zhe，你门前又长出主席树了！”他不回答，对老师说，“开两台电脑，要一堆毒瘤题。”便排出一堆 <code>AC</code> 代码。他们又故意的高声嚷道，“你一定又 AK 了人家的比赛了！”chen_zhe 睁大眼睛说，“你怎么这样凭空污人蒟蒻……”“蒟蒻？什么蒟蒻？我前天亲眼见你虐了 lhy930，吊着打。”chen_zhe 便涨红了脸，额上的青筋条条绽出，争辩道，“AK 不能算 AK……AK！……巨佬的事，能算 AK 么？”接连便是难懂的话，什么“我是神犇”，什么“lhy930 是蒟蒻”之类，引得众人都哄笑起来：机房内外充满了快活的空气。</p><p>听人家背地里谈论，chen_zhe 原来也做 IOI 的题，但终于不屑于再做，又不会出这种对他来说特别水的题目；于是做的题愈做愈难，难到我一看就吓晕了。幸而做得所有题目，便替人家做水题，换一道神仙毒瘤题做。可惜他又有一样坏脾气，便是不屑于做。做不到几天，便连人和电脑程序代码，一齐失踪。如是几次，叫他做水题的人也没有了。chen_zhe 没有法，便免不了偶然做些 AK 神仙毒瘤比赛的事。但他在洛谷里，品行却比别人都好，就是从不拖欠；虽然间或不屑于做洛谷的题，暂时记在任务计划上，但不出一小时，定然全 A，从任务计划上拭去了这些题目的名字。</p><p>chen_zhe 做过几道神仙毒瘤题，涨红的脸色渐渐复了原，旁人便又问道，“chen_zhe，你当真能 AK IOI 么？”chen_zhe 看着问他的人，显出不屑、鄙视的神气。他们便接着说道，“你怎的连洛谷的题目也不刷光呢？”chen_zhe 立刻显出藐视嘲讽模样，脸上笼上了一层红色，嘴里说些话；这回可是全是“全是水题”之类，一些不懂了。在这时候，众人也都哄笑起来：机房内外充满了快活的空气。</p><p>在这些时候，我可以附和着笑，老师是决不责备的。而且老师见了 chen_zhe，也每每这样问他，引人发笑。chen_zhe 自己知道不能和他们谈天，便只好向蒟蒻说话。有一回对我说道，“你会做 A+B Problem 么？”我略略摇一摇头。他说，“不会做，……我便考你一考。洛谷的深蓝题，怎样做的？”我想，这么大佬的人，也能考我么？便回过脸去，不再理会。chen_zhe 等了许久，很恳切的说道，“不会做罢？……我教给你，记着！这些题应该记着。将来打我出的比赛的时候，做题要用。”我暗想我和他的等级还很远呢，而且我也从不敢打他出的神仙毒瘤比赛；又好笑，又不耐烦，懒懒的答他道，“谁要你教，不是只有你才会做的题目么？”chen_zhe 显出极不高兴的样子，将两个指头的长指甲敲着键盘，点头说，“错啦错啦！……这些题目都是超级水的红题，你知道么？”我愈不耐烦了，努着嘴走远。chen_zhe 刚打了一堆毒瘤算法以及宏函数，想在 IOI 官网上 AK，见我毫不热心，便又叹一口气，显出极惋惜的样子。</p><p>有几回，邻居 main 包和 ltt 听得笑声，也赶热闹，拦住了 chen_zhe。他便给他们神仙毒瘤题，一人几十道。他们做完题，仍然不散，眼睛都望着他的个人题库。chen_zhe 着了慌，退出题目将屏幕锁住，弯腰下去说道，“太简单了了，这都太简单了。”直起身又看一看题目，自己摇头说，“简单简单！难乎哉？不难也。”于是这一群神犇巨佬都在笑声里走散了。</p><p>chen_zhe 是这样的使人快活，可是没有他，别人也便这么过。</p><p>有一天，大约是 ACM World Final 后的两三天，正在慢慢的算 <code>AC</code> 题目，取下粉板，忽然说，“chen_zhe 长久没有打洛谷的题了。任务计划里还有十九道题呢！”我才也觉得他的确长久没有打我们的题了。一个蒟蒻的 lhy930 说道，“他怎么会打我们这些水题？……他打神仙毒瘤题去了。”老师说，“哦！”“他总仍旧是 AK。这一回，是自己太强，竟 AK 到 IOI 里去了。IOI 的神仙毒瘤题，AK 得的么？”“后来怎么样？”“怎么样？先拉他去了 ACM World Final 比赛现场，后来是做题，做了几分钟，就直接 AK 了。”“后来呢？”“后来他 <code>AC</code> 完所有的神仙毒瘤题了。”“刷完了怎样呢？”“怎样？……谁晓得？许是去出神仙毒瘤题然后自己 <code>AC</code> 了。”老师也不再问，仍然不住地感叹 chen_zhe 是历史上最强的神犇大佬。</p><h2 id="肆-chen-zhe-先生">肆 chen_zhe 先生</h2><p>浙江也无非是这样。NOIP 爆 $0$ 的时节，望去确也象绯红的轻云，但 <code>WA</code> 下也缺不了成群结队的 “天朝 OIer” 的速成班，头顶上盘着大辫子，顶得绿帽的顶上高高耸起，形成一棵主席树。也有解散辫子，盘得平的，除下帽来，油光可鉴，宛如小蒟蒻的算法一般，还要将脖子扭几扭。实在标致极了。</p><p>天朝 OIer 会馆的门房里有几本《算法导论》买，有时还值得去一转；倘在上午，里面的几间洋房里倒也还可以坐坐的。但到傍晚，有一间的地板便常不免要咚咚咚地响得震天，兼以满房烟尘斗乱；问问精通时事的人，答道，“那是在学 DP。”</p><p>到别的地方去看看，如何呢？</p><p>我就往上海的 OI 专门机房去。从长沙出发，不久便到一处驿站，写道：新♂日♂暮♂里。不知怎地，我到现在还记得这名目。其次却只记得温州了，这是江南皮革厂的老板黄鹤王八蛋欠钱的地方。上海是一个强市，并不大；夏天热得利害；还没有浙江的 OIer。</p><p>大概是物以希为贵罢。北京的白菜运往浙江，便用红头绳系住菜根，倒挂在水果店头，尊为“胶菜”；福建野生着的芦荟，一到北京就请进温室，且美其名曰“龙舌兰”。我到上海也颇受了这样的优待，不但机房不收学费，几个教练还为我的食宿操心。我先是住在小黑屋旁边一个客店里的，初夏已经颇热，蚊子还多，后来用被盖了全身，用衣服包了头脸，只留两个鼻孔出气。在这呼吸不息的地方，蚊子竟无从插嘴，居然睡安稳了。饭食也不坏。但一位教练却以为这客店也包办棕名的饭食，我住在那里不相宜，几次三番，几次三番地说。我虽然觉得客店兼办棕名的饭食和我不相干，然而好意难却，也只得别寻相宜的住处了。于是搬到别一家，离小黑屋也很远，可惜每天总要喝难以下咽的蒟蒻汤。</p><p>从此就看见许多陌生的 dalao，听到许多新鲜的算法。数据结构是两个 dalao 分任的。最初是二叉树。其时进来的是一个白胖的 dalao，大饼脸，戴着眼镜，挟着一迭大大小小的书。一将书放在讲台上，便用了缓慢而很能嘲讽的声调，向学生介绍自己道：——</p><p>“我就是叫作 chen_zhe 的……。”</p><p>后面有几个人笑起来了。他接着便讲述 OI 在上海发达的历史，那些大大小小的书，便是从最初到现今关于这一门学问的著作。起初有几本是线装的；还有翻刻中国译本的，他们的翻译和研究新的医学，并不比浙江早。</p><p>那坐在后面发笑的是上次 % 你赛爆 $0$ 的留级学生，在机房已经一年，掌故颇为熟悉的了。他们便给新生讲演每个 dalao 的历史。这 chen_zhe dalao，据说是太强了，竟能 AK IOI、吊打集训队；他做的题，都是神仙毒瘤题，有一回参加 IOI，致使出题者的疑心他走后门，硬是叫他爆了 $0$。</p><p>他们的话大概是真的，我就亲见他有一次 AK IOI。</p><p>过了一星期，大约是星期六，他使助手来叫我了。到得机房，见他坐在树状数组和许多单独的线段树中间，——他其时正在研究着线段树，后来有一篇论文在本校的杂志上发表出来。</p><p>“我的代码，你能抄下来么？”他问。</p><p>“可以抄一点。”</p><p>“拿来我看！”</p><p>我交出所抄的代码去，他收下了，第二三天便还我，并且说，此后每一星期要送给他看一回。我拿下来打开看时，很吃了一惊，同时也感到一种不安和感激。原来我的代码已经从头到末，都在注释栏添改过了，不但增加了许多脱漏的地方，连语句的错误，也都一一订正。这样一直继续到教完了他所担任的功课：二叉树、线段树、主席树。</p><p>可惜我那时太不用功，有时也很任性。还记得有一回 chen_zhe dalao 将我叫到他的机房里去，翻出我那代码上的一条语句来，是递归的定义，指着，向我嘲讽的说道：——</p><p>“你看，你将这条语句移了一点位置了。——自然，这样一移，的确比较的快速些，然而代码不是竞速，题意是那么样的，我们没法改换它。现在我给你改好了，以后你要全照着PPT上那样的写。”</p><p>但是我还不服气，口头答应着，心里却想道：——</p><p>“代码还是我写的不错；至于实在的题意，我心里自然记得的。”</p><p>学年试验完毕之后，我便到 slay 颓了一夏天，秋初再回机房，成绩早已发表了，同学一百余人之中，我在中间，不过是没有爆 $0$。这回 chen_zhe dalao 所担任的功课，是 OI 实习和莫队。</p><p>OI 实习了大概一星期，他又叫我去了，很高兴地，仍用了极能嘲讽的声调对我说道：——</p><p>“我因为听说浙江 OIer 是很敬重 main 包的，所以很担心，怕你不肯次 main 包。现在总算放心了，没有这回事。”</p><p>但他也偶有使我很为难的时候。他听说蒟蒻是很菜的，但不知道详细，所以要问我怎么菜，菜到怎样的程度，还叹息道，“总要看一看才知道。究竟是怎么一回事呢？”</p><p>有一天，本级的学生会淦事到我寓里来了，要借我的代码看。我检出来交给他们，却只翻检了一通，并没有带走。但他们一走，洛谷就收到一封很长的私信，拆开看时，第一句是：——</p><p>“警告：刷屏者禁言”</p><p>这是《算法导论》上的句子罢，但经 kkksc03 新近引用过的。其时正值犇犇战争，k 老先生便写了一封给 chen_zhe 联盟和反 chen_zhe 大队的团队主的私信，开首便是这一句。文文新闻上很斥责他的不逊，爱咕青年也愤然，然而暗地里却早受了他的影响了。其次的话，大略是说上年 % 你赛的题目，是 chen_zhe dalao 代码上做了注释，我预先知道的，所以能有这样的成绩。末尾是匿名。</p><p>我这才回忆到前几天的一件事。因为要开同级会，淦事便在黑板上写广告，末一句是“请全数到会勿漏为要”，而且在“漏”字旁边加了一个圈。我当时虽然觉到圈得可笑，但是毫不介意，这回才悟出那字也在讥刺我了，犹言我得了教练漏泄出来的题目。</p><p>我便将这事告知了 chen_zhe dalao；有几个和我熟识的蒟蒻也很不平，一同去诘责淦事托辞检查的无礼，并且要求他们将检查的结果，发表出来。终于这流言消灭了，淦事却又竭力运动，要收回那一封匿名信去。结末是我便将这 kkksc03 式的信退还了他们。</p><p>浙江是弱省，所以浙江 OIer 当然是蒟蒻，分数在 $9$ 分以上，便不是自己的能力了：也无怪他们疑惑。但我接着便有参观封禁浙江 OIer 的命运了。第二年添教高级算法，算法的代码是全用电影来显示的，一段落已完而还没有到下课的时候，便影几片时事的片子，自然都是 chen_zhe 联盟战胜反 chen_zhe 大队的情形。但偏有浙江 OIer 夹在里边：在犇犇里刷屏，被管理员发现，要封禁了，围着看的也是一群浙江 OIer；在讲堂里的还有一个我。</p><p>“Hello World！”他们都拍掌欢呼起来。</p><p>这种欢呼，是每看一片都有的，但在我，这一声却特别听得刺耳。此后回到浙江来，我看见那些闲看禁言 OIer 的人们，他们也何尝不酒醉似的喝彩，——妈耶，无法可想！但在那时那地，我的意见却变化了。</p><p>到第二学年的终结，我便去寻 chen_zhe dalao，告诉他我将不学 OI，并且离开这上海。他的脸色仿佛有些悲哀，似乎想说话，但竟没有说。</p><p>“我想去学游戏设计，dalao 教给我的 C++，也还有用的。”其实我并没有决意要学游戏设计，因为看得他有些凄然，便说了一个慰安他的谎话。</p><p>“为竞赛而教的 C++ 之类，怕于游戏设计也没有什么大帮助。”他叹息说。</p><p>将走的前几天，他叫我到他家里去，交给我一道神仙毒瘤题的 <code>AC</code> 代码，后面写着两个字道：“爆踩”，还说希望将红题也送他。但我这时适值没有红题了；他便叮嘱我将来出了发给他，并且时时私信告诉他此后的状况。</p><p>我离开上海之后，就多年没有写过代码，又因为状况也无聊，说起来无非使他失望，便连信也怕敢写了。经过的年月一多，话更无从说起，所以虽然有时想写信，却又难以下笔，这样的一直到现在，竟没有寄过一封信和一张照片。从他那一面看起来，是一去之后，杳无消息了。</p><p>但不知怎地，我总还时时记起他，在我所认为我 % 的 dalao 的之中，他是最强，最骚的一个。有时我常常想：他的对于我的热心的爆踩，不倦的嘲讽，小而言之，是为浙江，就是希望浙江有新的 OI；大而言之，是为学术，就是希望新的 OI 传到浙江去。他的性格，在我的眼里和心里是伟大的，虽然他的姓名并不为许多人（除 OIer）所知道。</p><p>他所注释的代码，我曾经剪成三个 Word 文档，收藏着的，将作为永久的纪念。不幸 $9$ 年前迁居的时候，中途毁坏了一台笔记本，失去半个 F 盘的数据，恰巧这代码也遗失在内了。责成修电脑的去修复，寂无回信。只有他的神仙毒瘤题的 <code>AC</code> 代码至今还挂在我电脑的桌面上，C++ 旁边。每当夜间疲倦，正想偷懒时，仰面在灯光中瞥见他白胖的面貌，似乎正要说出嘲讽蒟蒻的话来，便使我忽又良心发现，而且增加勇气了，于是喝上一口冰阔落，再继续写些为“dalao”之流所深恶痛疾的文字。</p><p>***文章转自luogu</p><p>此文章转载于 <a href="https://www.cnblogs.com/Attention/p/9781101.html">https://www.cnblogs.com/Attention/p/9781101.html</a></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/09/%E5%9B%9B%E7%AF%87%E5%85%B3%E4%BA%8E-chen-zhe-%E7%9A%84%E7%BE%8E%E6%96%87/">https://ren-yc.github.io/2021/08/09/四篇关于-chen-zhe-的美文/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>本文章所使用的方法保证在 IDM 6.xx 版本有效</strong></p><h3 id="前言">前言</h3><p><s>众所周知</s>，IDM 是一个很好的<strong>多线程</strong>下载工具，还支持网站爬取音视频。</p><p>IDM 能够在使用浏览器下载文件时自动捕获下载链接并添加下载任务，目前，IDM 的自动捕获功能支持以下常见的主流浏览器：</p><p>Safari</p><p>Chrome</p><p>Firefox</p><p>Opera</p><p>Microsoft Edge</p><p>Internet Explorer</p><p><s><em>我很严肃</em>：</s></p><p><s><em>IDM 破解是怎么回事呢？IDM 相信大家都很熟悉，但是 IDM 破解是怎么回事呢，下面就让小编带大家一起了解吧。IDM 破解，其实就是破解，大家可能会很惊讶 IDM 怎么破解呢？但事实就是这样，小编也感到非常惊讶。这就是关于 IDM 破解的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</em></s></p><h3 id="下载">下载</h3><p>先安装正版 IDM，再使用破解工具破解。</p><p><a href="http://www.internetdownloadmanager.com/download.html">IDM 官网下载</a></p><p><a href="https://ren-yc.github.io/assets/IDM/IDMInstall.zip">本站安装程序压缩包下载</a></p><p><a href="https://ren-yc.github.io/assets/IDM/IDMPatch.zip">本站破解工具压缩包下载</a></p><h3 id="安装">安装</h3><p>运行下载的 <code>exe</code> 文件，</p><p>安装时一直按 Enter 就行，</p><p>若安装程序提示重启，</p><p><strong>请点击 “取消”</strong>。</p><h3 id="破解">破解</h3><p>把下载的 <code>IDMPatch.zip</code> 中的 <code>Crack.exe</code> 复制到 IDM 主目录如 <code>C:\Program Files (x86)\Internet Download Manager</code>，</p><p>右键该文件，</p><p>选择 “<strong>以管理员模式运行</strong>”。</p><p>执行完毕后运行 <code>REG.exe</code>，</p><p>方法同上。</p><p>然后启动 IDM，</p><p>点击菜单栏中的 “帮助” – “关于 IDM”，</p><p>可以看到 IDM 被成功的激活了<img src="https://xn--9zr.tk/gx" alt=""></p><h6 id="若破解失败，记得在评论区留言告诉我小编哦">若破解失败，记得在评论区留言告诉我<s>小编</s>哦</h6><blockquote><p>本文作者: ren-yc<br>本文链接:  <a href="https://ren-yc.github.io/2021/08/12/how-to-use-idm/">https://ren-yc.github.io/2021/08/12/how-to-use-idm/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
       
       
       <categories>
           
-          <category> Other </category>
+          <category> APPs - Tools </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 光头强砍树 - 题解</title>
-      <link href="/2021/08/08/LG-%E5%85%89%E5%A4%B4%E5%BC%BA%E7%A0%8D%E6%A0%91-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/08/LG-%E5%85%89%E5%A4%B4%E5%BC%BA%E7%A0%8D%E6%A0%91-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>很淼，读入后循环判断输出就行了。</p><h3 id="代码分析">代码分析</h3><p>时间复杂度 $O(n)$</p><p>空间复杂度 $O(n)$</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, k, a[101] = &#123;0&#125;;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; a[i];&#125;cin &gt;&gt; k;for (int i = 0; i &lt; n; i++) &#123;if (a[i] != k) cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;&#125;cout &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/08/LG-%E5%85%89%E5%A4%B4%E5%BC%BA%E7%A0%8D%E6%A0%91-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/08/LG-光头强砍树-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 不存在的 1 + 1 = 1 - 题解</title>
-      <link href="/2021/08/08/LG-%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84-1-1-1-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/08/LG-%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84-1-1-1-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>题目解法：</p><p>$\because$ 观察样例得 $ans = n \times 2 - m$。</p><p>$\therefore$ $output = ans$。</p><p><img src="https://xn--9zr.tk/xyx" alt="/huaji"><s>以上纯属搞笑</s></p><p>这题就这解法了。</p><h3 id="代码分析">代码分析</h3><p>不解释。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;unsigned long long n, m;cin &gt;&gt; n &gt;&gt; m;cout &lt;&lt; n * 2 - m &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/08/LG-%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84-1-1-1-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/08/LG-不存在的-1-1-1-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 木棍 - 题解</title>
-      <link href="/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>题目说</p><blockquote><p>Bob 想知道至少他需要去掉多少根。</p></blockquote><p>所以我们可以利用 “三角形两边之和大于第三边” 的性质来做。</p><h3 id="代码分析">代码分析</h3><p>不解释。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;long long n, tmp, a = 1, b = 2;cin &gt;&gt; n;if (n &lt; 3) &#123;cout &lt;&lt; 0 &lt;&lt; endl;return 0;&#125;for (int i = 2; a + b &lt;= n; i++) &#123;long long c = a + b;a = b;b = c;tmp = i;&#125;cout &lt;&lt; n - tmp - 1 &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E6%9C%A8%E6%A3%8D-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-木棍-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 苹果树 - 题解</title>
-      <link href="/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>典型的 $Fibonacci$ 数列题，题目居然写出来了…</p><h3 id="代码分析">代码分析</h3><p>板子题。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, i = 0, a, b = 1, s = 2;cin &gt;&gt; n;if (n &gt;= 2) &#123;n -= 2;i += 2;&#125; else &#123;cout &lt;&lt; 1 &lt;&lt; endl;return 0;&#125;while (n &gt; 0) &#123;n -= s;i % 2 == 0 ? a = s : b = s;s = a + b;i++;&#125;cout &lt;&lt; i &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E8%8B%B9%E6%9E%9C%E6%A0%91-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-苹果树-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 万恶的试卷 - 题解</title>
-      <link href="/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>既然题目说了 $a_i$ 可能很大，就是高精度了，<s>但我懒得写高精</s>，得用个不同的排序方法。</p><h3 id="代码分析">代码分析</h3><p>这题难就难在两个输出循环怎么搞，为了避免溢出，要先输出一半再输出一半。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;string a[1001];bool cmp(string a, string b) &#123;if (a.size() == b.size()) return a &gt; b;return a.size() &gt; b.size();&#125;int main() &#123;long long n;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; a[i];&#125;sort(a + 1, a + n + 1, cmp);for (int i = 1; i &lt;= n; i += 2) &#123;cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;&#125;for (int i = (n / 2) * 2; i &gt;= 1; i -= 2) &#123;cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E4%B8%87%E6%81%B6%E7%9A%84%E8%AF%95%E5%8D%B7-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-万恶的试卷-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 捕食关系 - 题解</title>
-      <link href="/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>水题一道，输入后循环查找 $a_i$ $&gt;$ $b_j$。</p><h3 id="代码分析">代码分析</h3><p>时间复杂度 $O(nm)$</p><p>空间复杂度 $O(n + m)$</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, m, s = 0;cin &gt;&gt; n &gt;&gt; m;int a[20001] = &#123;0&#125;, b[20001] = &#123;0&#125;;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; a[i];&#125;for (int i = 1; i &lt;= m; i++) &#123;cin &gt;&gt; b[i];&#125;for (int i = 1; i &lt;= n; i++) &#123;for (int j = 1; j &lt;= m; j++) &#123;if (a[i] &gt; b[j]) &#123;s++;&#125;&#125;&#125;cout &lt;&lt; s &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E6%8D%95%E9%A3%9F%E5%85%B3%E7%B3%BB-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-捕食关系-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 负二进制 - 题解</title>
-      <link href="/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>板子题。</p><h3 id="代码分析">代码分析</h3><p><s>打表出奇迹</s></p><p>由于数据出锅，本题题解使用了大佬 @<a href="https://www.luogu.com.cn/user/341650">wangwls</a> 的代码（不要脸）<img src="https://xn--9zr.tk/fad" alt=""></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, p2[50] = &#123;1, -2, 4, -8, 16, -32, 64, -128, 256, -512, 1024, -2048, 4096, -8192, 16384, -32768, 65536, -131072, 262144, -524288&#125;;void fun(int x) &#123;int ws[50], c = 0;while (x) &#123;ws[++c] = x % 2;x /= 2;&#125;for (int i = c; i &gt;= 1; i--) &#123;cout &lt;&lt; ws[i];&#125;cout &lt;&lt; endl;&#125;int main() &#123;cin &gt;&gt; n;for (int k = 0; k &lt; (1 &lt;&lt; 12); k++) &#123;int s = 0;for (int i = 0; i &lt; 12; i++) &#123;if (k &amp; (1 &lt;&lt; i)) &#123;s += p2[i];&#125;&#125;if (s == n) &#123;fun(k);return 0;&#125;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E8%B4%9F%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-负二进制-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 行程码 - 题解</title>
-      <link href="/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这就是个<s>简单的</s>模拟题，细节特别多，我调了半天才 AC <img src="https://xn--9zr.tk/kk" alt="/kk"></p><p><strong><s>毒瘤大模拟</s></strong></p><h3 id="代码分析">代码分析</h3><p>本题要点：</p><p>要俩结构体</p><p>计算月份，由于题目中说</p><blockquote><p>所有时间均在 $2021$ 年。</p></blockquote><p>直接打表</p><p>输入字符串最好不要用 <code>scanf()</code></p><p>注意处理重复的城市</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int month[13] = &#123;-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31&#125;;struct NODE1 &#123;string name;char state;//状态&#125; a[11];struct NODE2 &#123;int MM, DD, tot;string name;&#125; b[101];int f(int n, int m) &#123;//计算日期int tot = 0;for (int i = 1; i &lt; n; i++) &#123;tot += month[i];&#125;tot += m;return tot;&#125;int main() &#123;int n, m, flag = 0;string name, tmp = &quot;&quot;;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; a[i].name &gt;&gt; a[i].state;&#125;cin &gt;&gt; m;for (int i = 0; i &lt; m; i++) &#123;scanf(&quot;%d-%d&quot;, &amp;b[i].MM, &amp;b[i].DD);cin &gt;&gt; b[i].name;b[i].tot = f(b[i].MM, b[i].DD);//统一&#125;int MM, DD, tot;scanf(&quot;%d-%d&quot;, &amp;MM, &amp;DD);tot = f(MM, DD);//同上for (int i = m - 1; i &gt;= 0; i--) &#123;if (tot - b[i].tot &lt;= 14) &#123;if (tmp.find(b[i].name) != string::npos) &#123;//查找goto END;//goto大法&#125; else &#123;tmp += b[i].name;//记录&#125;cout &lt;&lt; b[i].name;for (int j = 0; j &lt; n; j++) &#123;if (a[j].name == b[i].name) &#123;cout &lt;&lt; '(' &lt;&lt; a[j].state &lt;&lt; ')';if (a[j].state == 'M') flag = 1;if (a[j].state == 'H') flag = 2;&#125;&#125;cout &lt;&lt; ',';&#125;END:;&#125;if (flag == 1) cout &lt;&lt; &quot;Yellow&quot; &lt;&lt; endl;else if (flag == 2) cout &lt;&lt; &quot;Red&quot; &lt;&lt; endl;else cout &lt;&lt; &quot;Green&quot; &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/07/LG-%E8%A1%8C%E7%A8%8B%E7%A0%81-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/07/LG-行程码-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - MC 之吃牛肉 - 题解</title>
-      <link href="/2021/08/06/LG-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/06/LG-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="来自验题人的致歉">来自验题人的致歉</h3><p>本题验题人太<strong>垃圾</strong>了，没有注意到题意矛盾，导致标程出错，而样例过于简单，无法查出部分错误。</p><h3 id="题目解析">题目解析</h3><p>这题太淼了，但我做的时候因为玩过 MC，觉得吃饱指的是不能再吃，差半个饱食度也能吃的那种。</p><p>这题就是字符串匹配。</p><p><strong><code>if</code> 出奇迹</strong></p><h3 id="代码分析">代码分析</h3><p>时间复杂度 $O(nm)$</p><p>空间复杂度 $O(1)$</p><p>要点：</p><p>$tot$ 要转换成整型再 $\div$ $3$。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, m, cnt = 0;double tot = 0;bool flag = false;string s;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; s &gt;&gt; m;for (int j = 0; j &lt; m; j++) &#123;if (s == &quot;stone&quot;) &#123;tot += 0.1;&#125;if (s == &quot;coal&quot;) &#123;tot += 0.5;&#125;if (s == &quot;iron&quot;) &#123;tot += 1;&#125;if (s == &quot;gold&quot;) &#123;tot += 1.5;&#125;if (s == &quot;diamond&quot;) &#123;tot += 1.75;&#125;if (s == &quot;obsidian&quot;) &#123;tot += 4;&#125;if (s == &quot;zombie&quot;) &#123;tot += 0.5;flag = true;&#125;if (s == &quot;skeleton&quot;) &#123;tot += 1;flag = true;&#125;if (s == &quot;creeper&quot;) &#123;tot += 2;flag = true;&#125;if (flag == true || 20 - tot &lt; 6) &#123;cnt += floor(tot / 3);tot -= floor(tot / 3) * 3;flag = false;&#125;&#125;&#125;cout &lt;&lt; cnt &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/06/LG-MC-%E4%B9%8B%E5%90%83%E7%89%9B%E8%82%89-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/06/LG-MC-之吃牛肉-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 公交车站 - 题解</title>
-      <link href="/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>题面很长，总体来说，这道题就是让你来判断每个乘客的区间中是否有车停靠。</p><h3 id="代码分析">代码分析</h3><p>本题要点：</p><p>要定义结构体，结构体中要有总时间如 <code>TOT</code></p><p>输入的时候记得用 <code>scanf()</code>，这个函数可以无视中间的 <code>:</code></p><p><code>scanf()</code> 的参数是指针类型</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;struct NODE &#123;int HH, MM, TOT;&#125; a[1001], s[10001], t[10001];int main() &#123;int n, m, tmp, d[1001] = &#123;0&#125;;cin &gt;&gt; n &gt;&gt; m;tmp = n;for (int i = 0; i &lt; n; i++) &#123;scanf(&quot;%d:%d %d&quot;, &amp;a[i].HH, &amp;a[i].MM, &amp;d[i]);//输入记得带格式a[i].TOT = a[i].HH * 60 + a[i].MM;&#125;for (int i = 0; i &lt; m; i++) &#123;scanf(&quot;%d:%d %d:%d&quot;, &amp;s[i].HH, &amp;s[i].MM, &amp;t[i].HH, &amp;t[i].MM);//同上s[i].TOT = s[i].HH * 60 + s[i].MM;t[i].TOT = t[i].HH * 60 + t[i].MM;for (int j = 0; j &lt; n; j++) &#123;if (s[i].TOT &lt;= a[j].TOT &amp;&amp; t[i].TOT &gt;= a[j].TOT &amp;&amp; d[j] != 0) &#123;cout &lt;&lt; a[j].TOT - s[i].TOT &lt;&lt; endl;d[j]--;goto END;&#125; else if (tmp != 1) &#123;//敲黑板tmp--;&#125; else &#123;cout &lt;&lt; &quot;Leave&quot; &lt;&lt; endl;tmp = n;//记得重置goto END;//goto跳转到结尾，也可以用break&#125;&#125;END:;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/06/LG-%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/06/LG-公交车站-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - Hands - 题解</title>
-      <link href="/2021/08/05/LG-Hands-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/08/05/LG-Hands-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这题看上去很难，但分析后就可以一个循环解决。</p><p>每次取牌如果有一个连续的大于 $0$ 的数列，那就全部取出，取到其中的某一个数等于 $0$。</p><h3 id="代码分析">代码分析</h3><p>边输入边累加，记住当 $x - last &lt; 0$ 时，就不要累加。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int ans = 0, n, x, last;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; x;ans += max(0, x - last);last = x;&#125;cout &lt;&lt; ans &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/05/LG-Hands-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/08/05/LG-Hands-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
       
     </entry>
     
@@ -755,324 +131,18 @@
     
     <entry>
       <title>『置顶』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</title>
-      <link href="/2021/08/05/WFR-&amp;-RBQ-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/"/>
-      <url>/2021/08/05/WFR-&amp;-RBQ-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/</url>
+      <link href="/2021/08/05/how-to-use-wfr-and-rbq/"/>
+      <url>/2021/08/05/how-to-use-wfr-and-rbq/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="最新公告"><a href="">最新公告</a></h2><h2 id="简介">简介</h2><p>Warfarin（RBQScript） 是一个由 C++ 编写而成的<strong>类 Python</strong> 解释型语言。</p><h3 id="特点">特点</h3><ul><li><p>变量，支持数字、字符串、布尔、数组（允许使用 <code>a[&quot;test&quot;]</code> 这样的语法）；</p></li><li><p>函数定义、调用与递归、高阶函数、<code>lambda</code> 表达式；</p></li><li><p>键盘与文件的 I/O 操作；</p></li><li><p><code>if for while</code> 语句；</p></li><li><p>大量内置函数，以及一部分操作系统 API（仅支持Windows）；</p></li><li><p>点语法操作，即 <code>a.test</code> 等价于 <code>a[&quot;test&quot;]</code>；</p></li><li><p>编译成特定格式的 <code>.ff0</code> 文件，支持 <code>import</code>；</p></li><li><p>支持伪代码和普通代码混写 （打开 <code>-p</code> 开关）；</p></li><li><p>支持反编译成 JavaScript（一部分内置函数不会给出对应的实现）；</p></li><li><p>支持 DLL 文件调用。</p></li><li><p><strong>支持自动更新 不需要手动下载新版本的代码，程序会自动检查并更新源代码。（仅限 3.30+ 版本）</strong></p></li><li><p>全新 Warfarin 语言编写数学库（<code>algorithm.wfr</code>）</p></li></ul><p>具体信息请看<a href="https://github.com/WarfarinBloodanger/ff0-script/blob/main/readme.md" title="点击跳转至 Github">这里（Warfarin）</a> 或 <a href="https://github.com/WarfarinBloodanger/rbqscript/blob/main/README.md" title="点击跳转至 Github">这里（RBQScript）</a></p><h2 id="使用">使用</h2><p>Warfarin 目前最新版本：<strong>4.01</strong>（已停止更新，变更为 RBQScript 继续更新）</p><p>RBQScript 目前最新版本：<strong>4.12</strong></p><h3 id="下载-配置">下载 &amp; 配置</h3><p>$1.$ <strong>下载</strong> Warfarin（RBQScript） C++ 源文件，</p><p>$2.$ 使用 g++ 编译成 exe 文件，</p><p>$3.$ <strong>把 exe 文件加入环境变量</strong>（不会的请百度）。</p><h3 id="编译-运行">编译 &amp; 运行</h3><p>运行程序有 $2$ 种方法：</p><ul><li><p>直接运行 <code>Warfarin.exe</code> / <code>fvm.exe</code></p></li><li><p>编译运行 <code>.wfr</code> 源文件（请看下文）</p></li></ul><p>Warfarin（RBQScript） 的源文件扩展名一般为 <code>.wfr</code>，</p><p>使用 <code>Warfarin.exe</code> / <code>fvm.exe</code> 编译时请在该文件夹下的命令行输入 <code>Warfarin 文件名 -cr/crj/crjp</code> / <code>fvm -i 文件名 -cr/crj/crjp (-o 文件名.rbq)</code>，</p><p>此命令会编译出一个 <code>.ff0</code> / <code>.rbq</code> 字节码文件，相当于 C++ 的 <code>.exe</code> 文件，<s>但不能双击运行</s>，请<strong>不要删除</strong>。</p><p>关于 <code>cr/crj/crjp</code> $3$ 个编译参数请看<a href="https://www.luogu.com.cn/blog/Warfarin/ff0-faq">此处</a>。</p><h2 id="相关链接">相关链接</h2><p><a href="https://ren-yc.github.io/assets/ff0/Warfarin.zip">本站下载链接（Warfarin）</a></p><p><a href="https://github.com/WarfarinBloodanger/ff0-script">作者 GitHub 仓库（Warfarin）</a></p><p><a href="https://github.com/WarfarinBloodanger/rbqscript">作者 GitHub 仓库（RBQScript）</a></p><p><a href="https://raw.githubusercontent.com/WarfarinBloodanger/ff0-script/main/user.txt">英文帮助文档</a></p><p><a href="https://marketplace.visualstudio.com/items?itemName=ren-yc.vscode-warfarin">VSCode 插件</a></p><h3 id="发布帖">发布帖</h3><p><a href="https://www.luogu.com.cn/discuss/show/349241">V3.62</a></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/08/05/WFR-&amp;-RBQ-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Warfarin-&amp;-RBQScript/">https://ren-yc.github.io/2021/08/05/WFR-&amp;-RBQ-如何使用-Warfarin-&amp;-RBQScript/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Programming Languages </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Warfarin &amp; RBQScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 买二送一 - 题解</title>
-      <link href="/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><blockquote><p>凡是顾客购买两本书，就可以免费带走第三本书，只要免费书的价格不超过两本付费书各自的价格即可。</p></blockquote><p>可以使用排序来做。</p><h3 id="代码分析">代码分析</h3><p>排序，建议偷懒使用 <code>sort</code> 函数，<strong>But</strong> 是降序排序，所以要写炒鸡简单的 <code>cmp()</code> 函数。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, a[100001], ans = 0;bool cmp(int x, int y) &#123;return x &gt; y;&#125;int main() &#123;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; a[i];&#125;sort(a + 1, a + n + 1, cmp);for (int i = 1; i &lt;= n; i += 3) &#123;ans += a[i] + a[i + 1];&#125;cout &lt;&lt; ans &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/31/LG-%E4%B9%B0%E4%BA%8C%E9%80%81%E4%B8%80-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/31/LG-买二送一-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="最新公告"><a href="https://ren-yc.github.io/2021/11/01/RBQ-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-%E5%85%AC%E5%91%8A/" title="点击跳转至 ren-yc.github.io">最新公告</a></h2><p>Warfarin 是一个由 C++ 编写而成的<strong>解释型</strong>语言。</p><p>RBQScript 是一个由 C++ 编写而成的<strong>编译型</strong>语言。</p><h3 id="特点">特点</h3><ul><li><p>变量，支持数字、字符串、布尔、数组（允许使用 <code>a[&quot;test&quot;]</code> 这样的语法）；</p></li><li><p>函数定义、调用与递归、高阶函数、<code>lambda</code> 表达式；</p></li><li><p>键盘与文件的 I/O 操作；</p></li><li><p><code>if for while</code> 语句；</p></li><li><p>大量内置函数，以及一部分操作系统 API（仅支持Windows）；</p></li><li><p>点语法操作，即 <code>a.test</code> 等价于 <code>a[&quot;test&quot;]</code>；</p></li><li><p>编译成特定格式的 <code>.ff0</code> / <code>.rbq</code> 文件，支持 <code>import</code>；</p></li><li><p>支持伪代码和普通代码混写 （打开 <code>-p</code> 开关）；</p></li><li><p>支持反编译成 JavaScript（一部分内置函数不会给出对应的实现）；</p></li><li><p>支持 DLL 文件调用。</p></li><li><p><strong>支持自动更新 不需要手动下载新版本的代码，程序会自动检查并更新源代码。（仅限 3.30+ 版本）</strong></p></li><li><p>全新 Warfarin 语言编写数学库（<code>algorithm.wfr</code>）</p></li></ul><p>具体信息请看<a href="https://github.com/WarfarinBloodanger/ff0-script/blob/main/readme.md" title="点击跳转至 Github">这里（Warfarin）</a> 或 <a href="https://github.com/WarfarinBloodanger/rbqscript/blob/main/README.md" title="点击跳转至 Github">这里（RBQScript）</a></p><h2 id="使用">使用</h2><p>Warfarin 目前最新版本：<strong>4.01</strong>（已停止更新，变更为 RBQScript 继续更新）</p><p>RBQScript 目前最新版本：<strong>4.12</strong></p><h3 id="下载-配置">下载 &amp; 配置</h3><p>$1.$ <strong>下载</strong> Warfarin（RBQScript） C++ 源文件，</p><p>$2.$ 使用 g++ 编译成 exe 文件，</p><p>$3.$ <strong>把 exe 文件加入环境变量</strong>（不会的请百度）。</p><h3 id="编译-运行">编译 &amp; 运行</h3><p>运行程序有 $2$ 种方法：</p><ul><li><p>直接运行 <code>Warfarin.exe</code> / <code>fvm.exe</code></p></li><li><p>编译运行 <code>.wfr</code> / <code>.rbq</code> 源文件（请看下文）</p></li></ul><p>Warfarin（RBQScript） 的源文件扩展名一般为 <code>.wfr</code> / <code>.rbq</code>，</p><p>使用 <code>Warfarin.exe</code> / <code>fvm.exe</code> 编译时请在该文件夹下的命令行输入 <code>Warfarin 文件名 -cr/crj/crjp</code> / <code>fvm -i 文件名 -cr/crj/crjp (-o 文件名.rbq)</code>，</p><p>此命令会编译出一个 <code>.ff0</code> / <code>.rbq</code> 字节码文件，相当于 C++ 的 <code>.exe</code> 文件，<s>但不能双击运行</s>，请<strong>不要删除</strong>。</p><p>关于 <code>cr/crj/crjp</code> $3$ 个编译参数请看<a href="https://www.luogu.com.cn/blog/Warfarin/ff0-faq">此处</a>。</p><h2 id="相关链接">相关链接</h2><p><a href="https://ren-yc.github.io/assets/ff0/Warfarin.zip" title="点击下载">本站下载链接（Warfarin）</a></p><p><a href="https://github.com/WarfarinBloodanger/ff0-script" title="点击跳转至 github.com">作者 GitHub 仓库（Warfarin）</a></p><p><a href="https://github.com/WarfarinBloodanger/rbqscript" title="点击跳转至 github.com">作者 GitHub 仓库（RBQScript）</a></p><p><a href="https://raw.githubusercontent.com/WarfarinBloodanger/ff0-script/main/user.txt" title="点击跳转至 raw.githubusercontent.com">英文帮助文档</a></p><p><a href="https://marketplace.visualstudio.com/items?itemName=ren-yc.vscode-warfarin" title="点击跳转至 VSCode 插件商店">VSCode 插件（仅支持基础语言设置，咕咕）</a></p><blockquote><p>本文作者: ren-yc<br>本文链接:  <a href="https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/">https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
       
       
       <categories>
           
-          <category> Solution </category>
+          <category> Programming Languages - Warfarin &amp; RBQScript </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 方舱医院 - 题解</title>
-      <link href="/2021/07/31/LG-%E6%96%B9%E8%88%B1%E5%8C%BB%E9%99%A2-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/31/LG-%E6%96%B9%E8%88%B1%E5%8C%BB%E9%99%A2-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这是炒鸡淼的小学一年级数学应用题（（（</p><h3 id="代码分析">代码分析</h3><p><s>由于本题过于淼所以不分析。</s></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int a, b, c;cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;cout &lt;&lt; (a / c) * (b / c) &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/31/LG-%E6%96%B9%E8%88%B1%E5%8C%BB%E9%99%A2-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/31/LG-方舱医院-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 开关灯 - 题解</title>
-      <link href="/2021/07/26/LG-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/26/LG-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>一个循环搞定。</p><h3 id="代码分析">代码分析</h3><p>一个嵌套循环 + 检查灯的状态的循环。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, x, y, a[10001] = &#123;0&#125;, sum = 0;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; x &gt;&gt; y;for (int j = x; j &lt;= y; j++) &#123;if (a[j] == 1) &#123;a[j] = 0;&#125; else &#123;a[j] = 1;&#125;&#125;&#125;for (int i = 1; i &lt;= 10000; i++) &#123;if (a[i] == 1) &#123;sum++;&#125;&#125;cout &lt;&lt; sum &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/26/LG-%E5%BC%80%E5%85%B3%E7%81%AF-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/26/LG-开关灯-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 古老的 A + B - 题解</title>
-      <link href="/2021/07/26/LG-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/26/LG-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p><s>This is the waterest problem I had ever seen.</s></p><p>好吧 A + B 最 water。</p><p>没啥好讲的，就一个循环。</p><h3 id="代码分析">代码分析</h3><p>直接读入然后来个循环，注意输出格式。</p><p>时间复杂度 $O©$，空间复杂度 $O(1)$。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int a, b, c;cin &gt;&gt; c;for (int i = 0; i &lt;= c; i++) &#123;a = i;b = c - i;cout &lt;&lt; a &lt;&lt; &quot;*&quot; &lt;&lt; b &lt;&lt; &quot;=&quot; &lt;&lt; a * b &lt;&lt; endl;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/26/LG-%E5%8F%A4%E8%80%81%E7%9A%84-A-B-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/26/LG-古老的-A-B-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 排序 - 题解</title>
-      <link href="/2021/07/26/LG-%E6%8E%92%E5%BA%8F-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/26/LG-%E6%8E%92%E5%BA%8F-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这是一道炒鸡淼的 C++ <code>if</code> 语句题（?）。</p><p>太淼了就不解释了</p><h3 id="代码分析">代码分析</h3><p>全读入完来个函数判断就行了。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int a[6], b[6], cnt1, cnt2, tot1, tot2;int mysort() &#123;if (cnt1 &gt; cnt2) &#123;return 1;&#125; else if (cnt1 == cnt2) &#123;if (tot1 &gt; tot2) &#123;return 1;&#125; else if (tot1 &lt; tot2) &#123;return 2;&#125; else &#123;return 0;&#125;&#125; else &#123;return 2;&#125;&#125;int main() &#123;for (int i = 0; i &lt; 6; i++) &#123;cin &gt;&gt; a[i];cnt1 += a[i];if (a[i] == 50) tot1++;&#125;for (int i = 0; i &lt; 6; i++) &#123;cin &gt;&gt; b[i];cnt2 += b[i];if (b[i] == 50) tot2++;&#125;cout &lt;&lt; mysort() &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/26/LG-%E6%8E%92%E5%BA%8F-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/26/LG-排序-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 生小虫子 - 题解</title>
-      <link href="/2021/07/25/LG-%E7%94%9F%E5%B0%8F%E8%99%AB%E5%AD%90-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/25/LG-%E7%94%9F%E5%B0%8F%E8%99%AB%E5%AD%90-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这道题其实就在检验 <code>for()</code> 循环的应用。</p><h3 id="代码分析">代码分析</h3><p>读入一切信息后，</p><p>写一个循环 $z$ 次的 <code>for</code> 循环，如果满足条件 <code>k == x</code>，小虫子数量增加，反之 <code>s1 = 0</code>。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int k = 0, x, y, z;cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;int s1 = 0, s2 = 0, cc = 1, cl = 0;for (int i = 1; i &lt;= z; i++) &#123;k++;cl += cc;cc = s2;s2 = s1;if (k == x) &#123;s1 = cl * y;k = 0;&#125; else &#123;s1 = 0;&#125;&#125;cout &lt;&lt; cc + cl &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/25/LG-%E7%94%9F%E5%B0%8F%E8%99%AB%E5%AD%90-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/25/LG-生小虫子-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 合成大西瓜 - 题解</title>
-      <link href="/2021/07/25/LG-%E5%90%88%E6%88%90%E5%A4%A7%E8%A5%BF%E7%93%9C-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/25/LG-%E5%90%88%E6%88%90%E5%A4%A7%E8%A5%BF%E7%93%9C-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这是一道 C++ 枚举题，只要遍历 $b$ 数组就 $ok$ 了。</p><h3 id="代码分析">代码分析</h3><p>输入正整数 $n$，然后循环输入 $x$，$b_x = b_x + 1$;</p><p>遍历 $b$ 数组。</p><p>倒着遍历，一旦发现有符合条件的数，直接输出并结束程序。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, b[201];int main() &#123;int x;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; x;b[x]++;&#125;for (int i = 0; i &lt; n; i++) &#123;b[i + 1] += b[i] / 2;&#125;for (int i = n - 1; i &gt;= 0; i--) &#123;if (b[i] != 0) &#123;cout &lt;&lt; i + 1 &lt;&lt; endl;break;&#125;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/25/LG-%E5%90%88%E6%88%90%E5%A4%A7%E8%A5%BF%E7%93%9C-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/25/LG-合成大西瓜-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 救援争先 - 题解</title>
-      <link href="/2021/07/25/LG-%E6%95%91%E6%8F%B4%E4%BA%89%E5%85%88-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/25/LG-%E6%95%91%E6%8F%B4%E4%BA%89%E5%85%88-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这是一道炒鸡不淼的 C++ 结构体排序题，我卡 <code>cmp</code> 了好久。</p><p>就俩循环读入 &amp; 输出，<code>sort()</code>，还有<strong>万恶</strong>的 <code>cmp</code>。</p><h3 id="代码分析">代码分析</h3><p>输入正整数 $n$，然后循环输入 $a_i . sh, a_i . sm, a_i . dh, a_i . dm$;</p><p>使用 <code>sort()</code> 结构体排序;</p><p>循环输出排序后的 $a_i$。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;struct Node &#123;int sh, sm, st, dh, dm, et, id;&#125; a[1001];bool cmp(Node a, Node b) &#123;return a.et &lt; b.et || a.et == b.et &amp;&amp; a.st &lt; b.st || a.et == b.et &amp;&amp; a.st == b.st &amp;&amp; a.id &lt; b.id;&#125;int main() &#123;int n;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;scanf(&quot;%d:%d %d:%d&quot;, &amp;a[i].sh, &amp;a[i].sm, &amp;a[i].dh, &amp;a[i].dm);a[i].st = a[i].sh * 60 + a[i].sm;a[i].et = a[i].st + a[i].dh * 60 + a[i].dm;a[i].id = i + 1;&#125;sort(a, a + n, cmp);for (int i = 0; i &lt; n; i++) &#123;cout &lt;&lt; a[i].id &lt;&lt; endl;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/25/LG-%E6%95%91%E6%8F%B4%E4%BA%89%E5%85%88-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/25/LG-救援争先-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 斗罗大陆之武魂融合技 - 题解</title>
-      <link href="/2021/07/25/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E6%AD%A6%E9%AD%82%E8%9E%8D%E5%90%88%E6%8A%80-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/25/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E6%AD%A6%E9%AD%82%E8%9E%8D%E5%90%88%E6%8A%80-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这是一道炒鸡淼的 C++ 模拟题，也不卡 <code>long long</code>。</p><h3 id="代码分析">代码分析</h3><p>输入正整数 $n$，然后循环输入 $x$ 和 $y$。</p><p><strong>一边输入一边计算，速度快</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, x, y, z;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; x &gt;&gt; y;z = (x + y) * 2;cout &lt;&lt; z &lt;&lt; endl;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/25/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E6%AD%A6%E9%AD%82%E8%9E%8D%E5%90%88%E6%8A%80-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/25/LG-斗罗大陆之武魂融合技-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 前 n 个偶数位回文数之和 - 题解</title>
-      <link href="/2021/07/24/LG-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/24/LG-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="题目信息">题目信息</h2><h3 id="题目描述">题目描述</h3><p>输入 $n$</p><p>输出前 $n$ 个偶回文数之和</p><p><strong>偶回文数</strong>：有<strong>偶数个数位</strong>的<strong>回文数</strong>，如：11，22。</p><h3 id="输入格式">输入格式</h3><p>输入一行 $n$。</p><h3 id="输出格式">输出格式</h3><p>输出前 $n$ 个偶回文数之和。</p><h3 id="输入输出样例">输入输出样例</h3><h4 id="输入-1">输入 #1</h4><p><code>3</code></p><h4 id="输出-1">输出 #1</h4><p><code>66</code></p><h3 id="提示说明">提示说明</h3><p>对于 $100%$ 的数据：</p><p>$1$ $\le$ $n$ $\le$ $100$</p><p>Idea：250lht，Solution：任宇宸，Code：任宇宸，Data：任宇宸</p><h3 id="题目难度">题目难度</h3><p>$\textcolor{yellow}{普及/提高-}$</p><h2 id="题目解析">题目解析</h2><p><s>这道题目就不淼了，变成沝了。</s></p><p>写几个函数就不行了。</p><p><s>真 简 单</s></p><p><s>250lht：呜呜呜这是比赛赛题，我保龄。</s></p><h2 id="代码分析">代码分析</h2><p>输入 $n$，写个循环判断从 $1$ 起的每一个数，如果满足函数 <code>weishu</code> 和函数 <code>huiwen</code>，则加到计数器。</p><p>这时有人就会问了，<code>huiwen</code> 函数中的 <code>_itoa_s()</code> 是神马东西，请看<a href="https://blog.csdn.net/smcrystal/article/details/71191335?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.base&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.base">这里</a>。</p><h2 id="代码">代码</h2><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;bool huiwen(int g) &#123;int i, j;char b[1001];_itoa_s(g, b, 10);for (int i = 0, j = strlen(b) - 1; i &lt; j; i++, j--) &#123;if (b[i] != b[j]) return false;&#125;if (i == j) return false;return true;&#125;bool weishu(int x) &#123;int cnt = 0;while (x != 0) &#123;x /= 10;cnt++;&#125;return cnt % 2 == 0;&#125;int main() &#123;long long n, i = 1, sum = 0;cin &gt;&gt; n;while (n != 0) &#123;if (weishu(i) &amp;&amp; huiwen(i)) &#123;n--;sum += i;&#125;i++;&#125;cout &lt;&lt; sum &lt;&lt; endl;return 0;&#125;</code></pre><p>以上代码交到洛谷上会 <strong><a href="https://www.luogu.com.cn/record/54096300">CE</a></strong>，你谷居然无法使用 <code>stdlib.h</code> 的 <code>_itoa_s()</code> ???</p><p><strong>偷懒失败</strong>，只好自己写转换函数。</p><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;void int_to_string(char s[], int m) &#123;int i = 0, k, n;char temp;if (m &lt; 0) &#123;s[i] = '-';m = -m;i++;&#125;while (m &gt; 0) &#123;n = m % 10;m /= 10;s[i] = n + '0';i++;&#125;s[i] = '\0';if (s[0] == '-') k = 1;else k = 0;for (int j = k; j &lt; i / 2; j++) &#123;temp = s[j];s[j] = s[i - j - 1 + k];s[i - j - 1 + k] = temp;&#125;&#125;bool huiwen(int g) &#123;int i, j;char b[1001];int_to_string(b, g);for (int i = 0, j = strlen(b) - 1; i &lt; j; i++, j--) &#123;if (b[i] != b[j]) return false;&#125;if (i == j) return false;return true;&#125;bool weishu(int x) &#123;int cnt = 0;while (x != 0) &#123;x /= 10;cnt++;&#125;return cnt % 2 == 0;&#125;int main() &#123;long long n, i = 1, sum = 0;cin &gt;&gt; n;while (n != 0) &#123;if (weishu(i) &amp;&amp; huiwen(i)) &#123;n--;sum += i;&#125;i++;&#125;cout &lt;&lt; sum &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/24/LG-%E5%89%8D-n-%E4%B8%AA%E5%81%B6%E6%95%B0%E4%BD%8D%E5%9B%9E%E6%96%87%E6%95%B0%E4%B9%8B%E5%92%8C-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/24/LG-前-n-个偶数位回文数之和-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 斗罗大陆之魂系辨认 - 题解</title>
-      <link href="/2021/07/24/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E9%AD%82%E7%B3%BB%E8%BE%A8%E8%AE%A4-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/24/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E9%AD%82%E7%B3%BB%E8%BE%A8%E8%AE%A4-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>@250lht 这道题目太淼了！</p><p>不多废话，这道题直接写一连串的 <code>if</code> 语句就行了。</p><blockquote><p><strong>P.S.由于 Windows 操作系统终端使用 GB2312，所以无法正确显示中文，但这不会影响洛谷评测结果</strong></p></blockquote><p>审题人真的良心，写了这个，不说的话我还以为我代码出 BUG 了呢。</p><h3 id="代码分析">代码分析</h3><p>输入 $n$，循环读入 $a_i$，尽量<strong>一边读入一边输出</strong>，<strong>速度快</strong>。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;void judge(int n) &#123;if (1 &lt;= n &amp;&amp; n &lt;= 4) cout &lt;&lt; &quot;魂土&quot;;if (5 &lt;= n &amp;&amp; n &lt;= 14) cout &lt;&lt; &quot;魂师&quot;;if (15 &lt;= n &amp;&amp; n &lt;= 34) cout &lt;&lt; &quot;大魂师&quot;;if (35 &lt;= n &amp;&amp; n &lt;= 39) cout &lt;&lt; &quot;魂王&quot;;if (40 &lt;= n &amp;&amp; n &lt;= 49) cout &lt;&lt; &quot;魂宗&quot;;if (50 &lt;= n &amp;&amp; n &lt;= 54) cout &lt;&lt; &quot;魂尊&quot;;if (55 &lt;= n &amp;&amp; n &lt;= 59) cout &lt;&lt; &quot;魂帝&quot;;if (60 &lt;= n &amp;&amp; n &lt;= 69) cout &lt;&lt; &quot;赤炎斗罗&quot;;if (70 &lt;= n &amp;&amp; n &lt;= 79) cout &lt;&lt; &quot;巅峰斗罗&quot;;if (80 &lt;= n &amp;&amp; n &lt;= 89) cout &lt;&lt; &quot;封号斗罗&quot;;if (90 &lt;= n &amp;&amp; n &lt;= 100) cout &lt;&lt; &quot;海神&quot;;cout &lt;&lt; endl;&#125;int main() &#123;int n, a[101] = &#123;0&#125;;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; a[i];judge(a[i]);&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/24/LG-%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86%E4%B9%8B%E9%AD%82%E7%B3%BB%E8%BE%A8%E8%AE%A4-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/24/LG-斗罗大陆之魂系辨认-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 王者荣耀 2 - 题解</title>
-      <link href="/2021/07/24/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-2-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/24/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-2-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这道题目应使用算法库函数 <s>当然自己手写也行</s> 和类型转换。</p><h3 id="代码分析">代码分析</h3><p>先输入 $x$ 和 $y$，直接输出 $\lceil x \div y \rceil$。</p><p><strong>注意本题数据范围 $10^{18}$，卡 long long。</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;long long a, b;cin &gt;&gt; a &gt;&gt; b;cout &lt;&lt; ceil((double)a / (double)b) &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/24/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-2-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/24/LG-王者荣耀-2-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
       
     </entry>
     
@@ -1080,35 +150,10 @@
     
     <entry>
       <title>『题解』LG - U187148 gcd 与 lcm</title>
-      <link href="/2021/07/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-U187148-gcd-%E4%B8%8E-lcm/"/>
-      <url>/2021/07/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-U187148-gcd-%E4%B8%8E-lcm/</url>
+      <link href="/2021/07/23/u187148-solution/"/>
+      <url>/2021/07/23/u187148-solution/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目信息">题目信息</h3><h3 id="题目描述">题目描述</h3><p>小 T 想编一个程序，<s>可是又想不出来怎么编</s>，请聪明的你来帮帮他。</p><p>这个程序可以用来计算两个数的最大公约数或最小公倍数。</p><h3 id="输入格式">输入格式</h3><p>第 $1$ 行输入一个正整数 $T$；</p><p>第 $2$ 到 $T + 1$ 行输入字符串 <code>gcd</code> 或 <code>lcm</code>，以及两个正整数 $a$ 和 $b$。</p><h3 id="输出格式">输出格式</h3><p>输出 $T$ 行结果。</p><h3 id="输入输出样例">输入输出样例</h3><h4 id="输入-1">输入 #1</h4><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>2gcd 1 1lcm 10 15</code></pre><h4 id="输出-1">输出 #1</h4><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>130</code></pre><h4 id="输入-2">输入 #2</h4><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>5lcm 6 8gcd 2 10lcm 5 7gcd 1000 500lcm 10000000000 1</code></pre><h4 id="输出-2">输出 #2</h4><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>24235500100000000000</code></pre><h3 id="提示说明">提示说明</h3><p><strong>本题采用捆绑测试</strong></p><p>对于 $100%$ 的数据：</p><p>$1 \le T \le 10^9$</p><table><thead><tr><th style="text-align:left">Subtask</th><th style="text-align:left">分值</th><th style="text-align:left">$a, b$</th><th style="text-align:left">特殊限制</th></tr></thead><tbody><tr><td style="text-align:left">$1$</td><td style="text-align:left">$1$</td><td style="text-align:left">$= 1$</td><td style="text-align:left">无</td></tr><tr><td style="text-align:left">$2$</td><td style="text-align:left">$9$</td><td style="text-align:left">$\le 10^2$</td><td style="text-align:left">无</td></tr><tr><td style="text-align:left">$3$</td><td style="text-align:left">$20$</td><td style="text-align:left">$\le 10^5$</td><td style="text-align:left">无</td></tr><tr><td style="text-align:left">$4$</td><td style="text-align:left">$30$</td><td style="text-align:left">$\le 10^9$</td><td style="text-align:left">无</td></tr><tr><td style="text-align:left">$5$</td><td style="text-align:left">$40$</td><td style="text-align:left">$\le 10^{18}$</td><td style="text-align:left">时间限制 $0.8s$</td></tr></tbody></table><p>Idea：任宇宸，Solution：任宇宸，Code：任宇宸，Data：任宇宸</p><h3 id="题目难度">题目难度</h3><p>$\textcolor{orange}{普及-}$</p><h3 id="题目地址（可能变更）">题目地址（可能变更）</h3><p><a href="https://www.luogu.com.cn/problem/U187148">https://www.luogu.com.cn/problem/U187148</a></p><h3 id="题目解析">题目解析</h3><p>这是一道典型的数论题。</p><p>题目要求我们求某两个数的<strong>最大公约数</strong>或<strong>最小公倍数</strong>。</p><p><strong>由于 $a, b \le 10^{18}$，最坏 <code>lcm</code> 结果 $a \times b$，所以要使用 <code>unsigned long long</code></strong></p><h3 id="代码分析">代码分析</h3><p>输入字符串 $mode$，然后输入两个正整数 $a$ 和 $b$。</p><p>判断 $mode$ 是否为 <code>gcd</code> 或 <code>lcm</code>。</p><p>写一个求最大公约数的函数（或者<s>你不要脸的话</s>直接调用 <code>algorithm</code> 中的 <code>__gcd</code>）。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;unsigned long long gcd(long long a, long long b) &#123;if (a % b == 0) return (unsigned long long)b;else return gcd(b, a % b);&#125;unsigned long long lcm(long long a, long long b) &#123;return (unsigned long long)a * (unsigned long long)b / gcd(a, b);&#125;int main() &#123;long long T, a, b;string mode;cin &gt;&gt; T;while (T--) &#123;cin &gt;&gt; mode &gt;&gt; a &gt;&gt; b;if (mode == &quot;gcd&quot;) &#123;cout &lt;&lt; gcd(a, b) &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; lcm(a, b) &lt;&lt; endl;&#125;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/23/%E3%80%8E%E9%A2%98%E8%A7%A3%E3%80%8FLG-U187148-gcd-%E4%B8%8E-lcm/">https://ren-yc.github.io/2021/07/23/『题解』LG-U187148-gcd-与-lcm/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 微信（2） - 题解</title>
-      <link href="/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这是一道典型的 C++ <strong>结构体</strong>排序题。</p><p>要点：题目要求<strong>从大到小</strong>排序，$a$ 一样的按 $name_0$（字符串首） 的 ASCII 码<strong>从小到大</strong>排序，所以我们还要自己写 <code>cmp</code> 函数，来比较两结构体。</p><h3 id="代码分析">代码分析</h3><p>输入正整数 $n$，然后循环输入 $a_i$。</p><p>建议使用 <code>sort</code> 函数<s>偷懒</s>，写一个 <code>cmp</code>。</p><p><s>出题人 NB！！！不卡我们 long long 了</s></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;struct node &#123;string name;int a;&#125; wx[101];bool cmp(node a, node b) &#123;if (a.a == b.a) &#123;return a.name[0] &lt; b.name[0];&#125;return a.a &gt; b.a;&#125;int main() &#123;int n;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; wx[i].name &gt;&gt; wx[i].a;&#125;sort(wx, wx + n, cmp);for (int i = 0; i &lt; n; i++) &#123;cout &lt;&lt; wx[i].name &lt;&lt; endl;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%882%EF%BC%89-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/22/LG-微信（2）-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>此题为私有题目</strong></p><h3 id="题目信息">题目信息</h3><h3 id="题目描述">题目描述</h3><p>小 T 想编一个程序，<s>可是又想不出来怎么编</s>，请聪明的你来帮帮他。</p><p>这个程序可以用来计算两个数的最大公约数或最小公倍数。</p><h3 id="输入格式">输入格式</h3><p>第 $1$ 行输入一个正整数 $T$；</p><p>第 $2$ 到 $T + 1$ 行输入字符串 <code>gcd</code> 或 <code>lcm</code>，以及两个正整数 $a$ 和 $b$。</p><h3 id="输出格式">输出格式</h3><p>输出 $T$ 行结果。</p><h3 id="输入输出样例">输入输出样例</h3><h4 id="输入-1">输入 #1</h4><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>2gcd 1 1lcm 10 15</code></pre><h4 id="输出-1">输出 #1</h4><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>130</code></pre><h4 id="输入-2">输入 #2</h4><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>5lcm 6 8gcd 2 10lcm 5 7gcd 1000 500lcm 10000000000 1</code></pre><h4 id="输出-2">输出 #2</h4><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>24235500100000000000</code></pre><h3 id="提示说明">提示说明</h3><p><strong>本题采用捆绑测试</strong></p><p>对于 $100%$ 的数据：</p><p>$1 \le T \le 10^9$</p><table><thead><tr><th style="text-align:left">Subtask</th><th style="text-align:left">分值</th><th style="text-align:left">$a, b$</th></tr></thead><tbody><tr><td style="text-align:left">$1$</td><td style="text-align:left">$1$</td><td style="text-align:left">$= 1$</td></tr><tr><td style="text-align:left">$2$</td><td style="text-align:left">$9$</td><td style="text-align:left">$\le 10^2$</td></tr><tr><td style="text-align:left">$3$</td><td style="text-align:left">$20$</td><td style="text-align:left">$\le 10^5$</td></tr><tr><td style="text-align:left">$4$</td><td style="text-align:left">$30$</td><td style="text-align:left">$\le 10^9$</td></tr><tr><td style="text-align:left">$5$</td><td style="text-align:left">$40$</td><td style="text-align:left">$\le 10^{18}$</td></tr></tbody></table><p>Idea：任宇宸，Solution：任宇宸，Code：任宇宸，Data：任宇宸</p><h3 id="题目难度">题目难度</h3><p>$\textcolor{orange}{普及-}$</p><h3 id="题目地址（可能变更）">题目地址（可能变更）</h3><p><a href="https://www.luogu.com.cn/problem/U187148">https://www.luogu.com.cn/problem/U187148</a></p><h3 id="题目解析">题目解析</h3><p>这是一道典型的数论题。</p><p>题目要求我们求某两个数的<strong>最大公约数</strong>或<strong>最小公倍数</strong>。</p><p><strong>由于 $a, b \le 10^{18}$，最坏 <code>lcm</code> 结果 $a \times b$，所以要使用 <code>unsigned long long</code></strong></p><h3 id="代码分析">代码分析</h3><p>输入字符串 $mode$，然后输入两个正整数 $a$ 和 $b$。</p><p>判断 $mode$ 是否为 <code>gcd</code> 或 <code>lcm</code>。</p><p>写一个求最大公约数的函数（或者<s>你不要脸的话</s>直接调用 <code>algorithm</code> 中的 <code>__gcd</code>）。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;unsigned long long gcd(long long a, long long b) &#123;if (a % b == 0) return (unsigned long long)b;else return gcd(b, a % b);&#125;unsigned long long lcm(long long a, long long b) &#123;return (unsigned long long)a * (unsigned long long)b / gcd(a, b);&#125;int main() &#123;long long T, a, b;string mode;cin &gt;&gt; T;while (T--) &#123;cin &gt;&gt; mode &gt;&gt; a &gt;&gt; b;if (mode == &quot;gcd&quot;) &#123;cout &lt;&lt; gcd(a, b) &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; lcm(a, b) &lt;&lt; endl;&#125;&#125;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者: ren-yc<br>本文链接:  <a href="https://ren-yc.github.io/2021/07/23/u187148-solution/">https://ren-yc.github.io/2021/07/23/u187148-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
       
       
       <categories>
@@ -1123,69 +168,6 @@
             <tag> Luogu </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 微信（1） - 题解</title>
-      <link href="/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这是一道典型的 C++ 排序题。</p><p>要点：题目要求<strong>从大到小</strong>排序，所以我们要自己写 <code>cmp</code> 函数，来判断升序。</p><h3 id="代码分析">代码分析</h3><p>输入正整数 $n$，然后循环输入 $a_i$。</p><p>建议使用 <code>sort</code> 函数<s>偷懒</s>，写一个 <code>cmp</code>。</p><p><strong>注意本题数据范围 $10^{18}$，卡 long long</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;bool cmp(long long a, long long b) &#123;return a &gt; b;&#125;int main() &#123;int n;int a[1001] = &#123;0&#125;;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; a[i];&#125;sort(a, a + n, cmp);for (int i = 0; i &lt; n; i++) &#123;cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;&#125;cout &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/22/LG-%E5%BE%AE%E4%BF%A1%EF%BC%881%EF%BC%89-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/22/LG-微信（1）-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>LG - 王者荣耀 - 题解</title>
-      <link href="/2021/07/22/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-%E9%A2%98%E8%A7%A3/"/>
-      <url>/2021/07/22/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目解析">题目解析</h3><p>这是一道典型的 C++ 语言入门题。</p><h3 id="代码分析">代码分析</h3><p>直接输入正整数 $n$ 再输出 $n \times 10$。</p><p>或者输入字符串 $n$ 再输出 $n + ‘0’$。</p><p><strong>注意本题数据范围 $10^{18}$，卡 long long（使用方法 2 可无视）</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;long long x;cin &gt;&gt; x;cout &lt;&lt; x * 10 &lt;&lt; endl;return 0;&#125;</code></pre><p>$$END$$</p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/07/22/LG-%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80-%E9%A2%98%E8%A7%A3/">https://ren-yc.github.io/2021/07/22/LG-王者荣耀-题解/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Luogu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2021/06/03/hello-world/"/>
-      <url>/2021/06/03/hello-world/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start">Quick Start</h2><h3 id="Create-a-new-post">Create a new post</h3><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server">Run server</h3><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files">Generate static files</h3><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><blockquote><p>本文作者：ren-yc<br>本文链接： <a href="https://ren-yc.github.io/2021/06/03/hello-world/">https://ren-yc.github.io/2021/06/03/hello-world/</a><br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处！</p></blockquote>]]></content>
-      
-      
       
     </entry>
     
