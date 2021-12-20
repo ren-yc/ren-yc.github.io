@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/"/>
-  <updated>2021-12-18T11:16:12.308Z</updated>
+  <updated>2021-12-19T06:27:16.734Z</updated>
   <id>https://ren-yc.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>『题解』LG - CF1598A Computer Game</title>
+    <title>『题解』Luogu - CF1598A Computer Game</title>
     <link href="https://ren-yc.github.io/2021/10/11/cf1598a-solution/"/>
     <id>https://ren-yc.github.io/2021/10/11/cf1598a-solution/</id>
     <published>2021-10-11T12:33:27.000Z</published>
-    <updated>2021-12-18T11:16:12.308Z</updated>
+    <updated>2021-12-19T06:27:16.734Z</updated>
     
     
       
@@ -40,11 +40,11 @@
   </entry>
   
   <entry>
-    <title>『题解』LG - CF44B Cola</title>
+    <title>『题解』Luogu - CF44B Cola</title>
     <link href="https://ren-yc.github.io/2021/10/06/cf44b-solution/"/>
     <id>https://ren-yc.github.io/2021/10/06/cf44b-solution/</id>
     <published>2021-10-06T11:39:32.000Z</published>
-    <updated>2021-12-18T11:16:06.076Z</updated>
+    <updated>2021-12-19T06:27:46.107Z</updated>
     
     
       
@@ -67,10 +67,10 @@
     <link href="https://ren-yc.github.io/2021/09/19/csp-j-2021-1/"/>
     <id>https://ren-yc.github.io/2021/09/19/csp-j-2021-1/</id>
     <published>2021-09-19T12:39:50.000Z</published>
-    <updated>2021-12-18T11:16:58.989Z</updated>
+    <updated>2021-12-19T06:22:22.653Z</updated>
     
     
-    <summary type="html">由于本蒟蒻太蒻了，本文不对外开放（</summary>
+    <summary type="html">本文不对外开放...</summary>
     
     
     
@@ -80,11 +80,11 @@
   </entry>
   
   <entry>
-    <title>『题解』LG - UVA11559 Event Planning</title>
+    <title>『题解』Luogu - UVA11559 Event Planning</title>
     <link href="https://ren-yc.github.io/2021/09/14/uva11559-solution/"/>
     <id>https://ren-yc.github.io/2021/09/14/uva11559-solution/</id>
     <published>2021-09-14T00:20:26.000Z</published>
-    <updated>2021-10-08T11:13:05.000Z</updated>
+    <updated>2021-12-19T06:27:01.943Z</updated>
     
     
       
@@ -105,11 +105,11 @@
   </entry>
   
   <entry>
-    <title>『题解』LG - UVA13012 Identifying tea</title>
+    <title>『题解』Luogu - UVA13012 Identifying tea</title>
     <link href="https://ren-yc.github.io/2021/08/23/uva13012-solution/"/>
     <id>https://ren-yc.github.io/2021/08/23/uva13012-solution/</id>
     <published>2021-08-23T11:39:18.000Z</published>
-    <updated>2021-08-25T11:05:55.198Z</updated>
+    <updated>2021-12-19T06:27:08.361Z</updated>
     
     
       
@@ -125,16 +125,14 @@
     <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
     
     
-    <category term="Luogu" scheme="https://ren-yc.github.io/tags/Luogu/"/>
-    
   </entry>
   
   <entry>
-    <title>TLS - 如何使用 IDM</title>
+    <title>『教程』如何使（po）用（jie） IDM</title>
     <link href="https://ren-yc.github.io/2021/08/12/how-to-use-idm/"/>
     <id>https://ren-yc.github.io/2021/08/12/how-to-use-idm/</id>
     <published>2021-08-12T11:04:33.000Z</published>
-    <updated>2021-12-18T11:19:01.706Z</updated>
+    <updated>2021-12-20T11:32:38.220Z</updated>
     
     
       
@@ -153,11 +151,11 @@
   </entry>
   
   <entry>
-    <title>『置顶』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</title>
+    <title>『置顶』『教程』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</title>
     <link href="https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/"/>
     <id>https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/</id>
     <published>2021-08-05T05:59:32.000Z</published>
-    <updated>2021-12-18T11:20:12.512Z</updated>
+    <updated>2021-12-19T06:26:03.109Z</updated>
     
     
       
@@ -176,11 +174,11 @@
   </entry>
   
   <entry>
-    <title>『题解』LG - U187148 gcd 与 lcm</title>
+    <title>『题解』Luogu - U187148 gcd 与 lcm</title>
     <link href="https://ren-yc.github.io/2021/07/23/u187148-solution/"/>
     <id>https://ren-yc.github.io/2021/07/23/u187148-solution/</id>
     <published>2021-07-23T00:35:49.000Z</published>
-    <updated>2021-11-04T03:17:02.052Z</updated>
+    <updated>2021-12-19T06:26:52.472Z</updated>
     
     
       
