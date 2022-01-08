@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>任宇宸的个人博客</title>
+  <title>Yuchen Ren&#39;s Personal Blog</title>
   
   <subtitle>renyuchen&#39;s personal blog</subtitle>
   <link href="https://ren-yc.github.io/blog/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://ren-yc.github.io/blog/</id>
   
   <author>
-    <name>任宇宸</name>
+    <name>Yuchen Ren</name>
     
   </author>
   
