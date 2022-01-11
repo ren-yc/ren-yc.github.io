@@ -6,20 +6,28 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/press.js"></script>
 	
-	<title>分类 : Solution - CF - Yuchen Ren&#39;s Personal Blog</title>
+	<title>『题解』Luogu - UVA465 Overflow - Yuchen Ren&#39;s Personal Blog</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="a personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:url" content="https://ren-yc.github.io/blog/categories/Solution-CF/index.html">
+	<meta name="description" content="题目链接洛谷 UVa Online Judge 题目大意给定两个正整数和两数之间的符号，为 $+$ 或 $\times$。 判断这两个数中的一个数或者运算结果是否大于 int 范围。 解题思路众所周知，int 的范围是 $2^{31} - 1$ 即 $2147483647$，本题使用 C++ 大概率会导致 int 溢出，也有小概率会导致 unsigned long long 溢出。 这时候，我们就">
+<meta property="og:type" content="article">
+<meta property="og:title" content="『题解』Luogu - UVA465 Overflow">
+<meta property="og:url" content="https://ren-yc.github.io/blog/2022/01/11/uva465-solution/index.html">
 <meta property="og:site_name" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:description" content="a personal blog">
+<meta property="og:description" content="题目链接洛谷 UVa Online Judge 题目大意给定两个正整数和两数之间的符号，为 $+$ 或 $\times$。 判断这两个数中的一个数或者运算结果是否大于 int 范围。 解题思路众所周知，int 的范围是 $2^{31} - 1$ 即 $2147483647$，本题使用 C++ 大概率会导致 int 溢出，也有小概率会导致 unsigned long long 溢出。 这时候，我们就">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://图.tk/a">
+<meta property="og:image" content="https://图.tk/a">
+<meta property="og:image" content="https://图.tk/a">
+<meta property="og:image" content="https://ren-yc.github.io/blog/assets/img/by-nc-sa4.0.png">
+<meta property="article:published_time" content="2022-01-11T10:30:14.000Z">
+<meta property="article:modified_time" content="2022-01-11T10:34:30.568Z">
 <meta property="article:author" content="Yuchen Ren">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://图.tk/a">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -504,19 +512,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">分类 : Solution - CF </h3>
-		
-			<p class="text-black mt-3 mb-0 opacity-8">
-				<i class="fa fa-file-o mr-1"></i>
-				5 篇文章
-			</p>
-		
-	</div>
-</div>
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -543,18 +538,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/blog/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">Yuchen Ren&#39;s Personal Blog</h6>
 							<nav class="site-state">
@@ -647,20 +663,17 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-		
-		
 			
-	<article class="post card bg-white shadow-sm border-0 ">
+	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/blog/2022/01/11/cf550a-solution/">『题解』Luogu - CF550A Two Substrings</a>
+		<a class="post-title" href="/blog/2022/01/11/uva465-solution/">『题解』Luogu - UVA465 Overflow</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 17:37:31 | 编辑于 2022-1-11 17:39:15">2022-1-11 17:37
+							<time title="发布于 2022-1-11 18:30:14 | 编辑于 2022-1-11 18:34:30">2022-1-11 18:30
 							</time>
 						</div>
 					
@@ -669,16 +682,16 @@
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/blog/categories/Solution-CF/">Solution - CF</a>
+							<a class="post-meta-detail-catagory-link" href="/blog/categories/Solution-UVA/">Solution - UVA</a>
 						</div>
 					
 						
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
+								阅读<span id="busuanzi_value_page_pv"></span>次
 							</span>
 						</div>
 					
@@ -687,7 +700,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							347 字
+							350 字
 						</div>
 					
 						
@@ -702,334 +715,194 @@
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				题目链接洛谷
-Codeforces
-思路这道题很简单，用一个字符串代替原来输入的字符串，把 BA 和 AB 用 . 代替。
-代码
+	<div class="post-content" id="post_content">
+		<h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA465" title="点击跳转至洛谷">洛谷</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/465" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给定两个正整数和两数之间的符号，为 $+$ 或 $\times$。</p>
+<p>判断这两个数中的一个数或者运算结果是否大于 <code>int</code> 范围。</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>众所周知，<code>int</code> 的范围是 $2^{31} - 1$ 即 $2147483647$，本题使用 C++ 大概率会导致 <code>int</code> 溢出，也有小概率会导致 <code>unsigned long long</code> 溢出。</p>
+<p><strong>这时候，我们就需要 Python 了！！！</strong><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  src="https://图.tk/a" alt=""><img src="https://图.tk/a" alt=""><img data-original="https://图.tk/a" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt=""></p>
 
-#include &lt;bits/stdc++.h&gt;//万能头
-using namespace std;
+<p>这样一来就好办了，可以一直输入直到 <code>End Of File</code>，并判断，写一个 <code>while True</code> 就解决了。</p>
+<p>本题使用 Python 解题的难点是<strong>如何判断 EOF？</strong></p>
+<p>众所周知，Python 有着一堆 <code>Error</code> 类，一不小心就会引发并终止程序，在 OJ 上显示为 RE，所以很难判断具体为哪个错误类。</p>
+<p>Python 不像 C++ 一样可以直接用 <code>!= EOF</code> 判断输入是否为 EOF，需要用 <code>try except</code> 语句实现。</p>
+<p>本题坑点（<strong>英语好的人自动跳过</strong>）：</p>
+<p>一个输入可以输出 $0 \sim 3$ 行判断，不是固定输出一行。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>献上简洁的 Python 代码：</p>
+<p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
 
-int main() &#123;
-    string s;
-    cin &gt;&gt; s;...
-			
-		
+<pre><code class="lang-python">import sys#可把 break 换成 sys.exit()
+
+MAX = 2147483647#2^31-1
+
+while True:#无限循环直到 EOFError
+    try:#try ... except ...
+        s = input()#尝试输入
+    except EOFError:#如果引发错误
+        break#结束程序，也可使用 sys.exit()
+    print(s)
+    l = list(s.split())#列表存储
+    if int(l[0]) &gt; MAX:#注意转换类型
+        print(&quot;first number too big&quot;)
+    if int(l[2]) &gt; MAX:#可以两个数都超 int，用 if
+        print(&quot;second number too big&quot;)
+    if l[1] == &quot;+&quot; and int(l[0]) + int(l[2]) &gt; MAX:#注意有两个条件
+        print(&quot;result too big&quot;)
+    elif l[1] == &quot;*&quot; and int(l[0]) * int(l[2]) &gt; MAX:#if 也可以
+        print(&quot;result too big&quot;)
+</code></pre>
+<script type="math/tex; mode=display">END</script><p><strong>本文章同时发布在 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/renyc/solution-uva465">洛谷博客</a></strong></p>
+<blockquote>
+<p>本文作者: ren-yc<br>本文链接:  <a href="https://ren-yc.github.io/blog/2022/01/11/uva465-solution/">https://ren-yc.github.io/blog/2022/01/11/uva465-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="https://ren-yc.github.io/blog/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p>
+
+</blockquote>
+
 	</div>
+
+	
+
+	
 
 	
 		<div class="post-tags">
 			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/blog/tags/C/" rel="tag">C++</a>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/blog/tags/Python/" rel="tag">Python</a>
 		</div>
 	
 </article>
 
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/blog/2022/01/11/cf268a-solution/">『题解』Luogu - CF268A Games</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 17:33:40 | 编辑于 2022-1-11 17:36:15">2022-1-11 17:33
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/blog/categories/Solution-CF/">Solution - CF</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							222 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目链接洛谷
-Codeforces
-题目大意球队间打比赛，分主场和客场，要求一场比赛中两支队伍服装不能相同，求满足条件的场数。
-思路暴力枚举。
-详细解析见下注释。
-代码
-
-#include &lt;bits/stdc++.h&gt;//万能头
-using namespace std;
-
-int main() &#123;
-    int n, a[...
-			
-		
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/blog/2022/01/11/uva465-solution/&text=『题解』Luogu - UVA465 Overflow" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
 	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : '『题解』Luogu - UVA465 Overflow',
+	    description : '题目链接洛谷
+UVa Online Judge
+题目大意给定两个正整数和两数之间的符号，为 $+$ ...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://ren-yc.github.io/blog/2022/01/11/uva465-solution/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
 
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/blog/tags/C/" rel="tag">C++</a>
-		</div>
-	
-</article>
+
+<div id="post_comment" class="card shadow-sm">
+	<div id="gitalk-container"></div>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+		clientID: 'aea63c24701c1f7f0815',
+		clientSecret: '3f33573a77bf4349dbee91c4897f9ac37bbf16e5',
+		repo: 'blog-comments',
+		owner: 'ren-yc',
+		admin: ['ren-yc'],
+		id: decodeURI('{{ page.url }}'),
+		distractionFreeMode: false
+	})
+	gitalk.render('gitalk-container');
+</script>
+
+</div>
 
 
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/blog/2022/01/11/uva10041-solution/" rel="prev"> 『题解』Luogu - UVA10041 Vito's Family</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/blog/2022/01/11/uva11727-solution/" rel="next"> 『题解』Luogu - UVA11727 Cost Cutting</a></div></div>
+
+
+
 		
-		<a class="post-title" href="/blog/2022/01/11/cf1475a-solution/">『题解』Luogu - CF1475A Odd Divisor</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 17:28:24 | 编辑于 2022-1-11 17:36:58">2022-1-11 17:28
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/blog/categories/Solution-CF/">Solution - CF</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							232 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
 		
-	</header>
-
-	<div class="post-content">
 		
-			
-				题目链接洛谷
-Codeforces
-题目大意判断一个数能否被一个大于 $1$ 的数整除。
-我们最先想到能一直除以 $2$，如果余数为 $1$，那么输出 NO，否则输出 YES。
-还要注意一点 $n$ 的范围是 $10$ 的 $14$ 次方，$\mathrm{INT_MAX} \approx 10^9$，所以要用 long long。
-代码
-
-#in...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/blog/tags/C/" rel="tag">C++</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/blog/2021/10/11/cf1598a-solution/">『题解』Luogu - CF1598A Computer Game</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-10-11 20:33:27 | 编辑于 2022-1-11 18:17:33">2021-10-11 20:33
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/blog/categories/Solution-CF/">Solution - CF</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							288 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目链接洛谷
-Codeforces
-题目翻译给定两行字符串，求能否从左上角走到右下角（0 为可走，1 为不可走）。（超简洁翻译）
-题目思路我们可以读入完字符串后循环遍历，两两比较，如果有 $s1_i = s2_i$，说明无法通过，则 $flag = true$（也可以输出后直接 continue）。
-代码
-
-#include &lt;bits/st...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/blog/tags/C/" rel="tag">C++</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/blog/2021/10/06/cf44b-solution/">『题解』Luogu - CF44B Cola</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-10-6 19:39:32 | 编辑于 2021-12-19 14:27:46">2021-10-6 19:39
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/blog/categories/Solution-CF/">Solution - CF</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							236 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目链接洛谷
-Codeforces
-题目思路本题第一眼可以看出是一道暴力枚举，但是不能用三层 for 循环，$100\%$ 超时。
-所以我们可以先从 $2$ 升的可乐开始循环，通过前两个循环来推算出 $0.5$ 升可乐的数量。
-注意：本题的 $a$ 为 $0.5$ 而 $n$ 为整型，第一层循环要两个两个加
-代码
-
-#include &lt;bit...
-			
-		
-	</div>
-
-	
-</article>
-
-
-
-
-
 		
 
 					<footer id="footer" class="site-footer card shadow-sm border-0">

@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/blog/"/>
-  <updated>2021-12-19T06:27:16.734Z</updated>
+  <updated>2022-01-11T10:38:56.481Z</updated>
   <id>https://ren-yc.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,161 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>『题解』Luogu - CF1598A Computer Game</title>
-    <link href="https://ren-yc.github.io/blog/2021/10/11/cf1598a-solution/"/>
-    <id>https://ren-yc.github.io/blog/2021/10/11/cf1598a-solution/</id>
-    <published>2021-10-11T12:33:27.000Z</published>
-    <updated>2021-12-19T06:27:16.734Z</updated>
+    <title>『题解』Luogu - UVA10041 Vito&#39;s Family</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/uva10041-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/uva10041-solution/</id>
+    <published>2022-01-11T10:35:21.000Z</published>
+    <updated>2022-01-11T10:38:56.481Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA465 Overflow</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/uva465-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/uva465-solution/</id>
+    <published>2022-01-11T10:30:14.000Z</published>
+    <updated>2022-01-11T10:34:30.568Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11727 Cost Cutting</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/uva11727-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/uva11727-solution/</id>
+    <published>2022-01-11T10:27:48.000Z</published>
+    <updated>2022-01-11T10:29:32.094Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - SP7733 HPYNOS - Happy Numbers I</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/sp7733-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/sp7733-solution/</id>
+    <published>2022-01-11T10:22:35.000Z</published>
+    <updated>2022-01-11T10:27:11.269Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - SP" scheme="https://ren-yc.github.io/blog/categories/Solution-SP/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA12503 Robot Instructions</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/uva12503-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/uva12503-solution/</id>
+    <published>2022-01-11T10:18:04.000Z</published>
+    <updated>2022-01-11T10:20:07.824Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA10035 Primary Arithmetic</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/uva10035-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/uva10035-solution/</id>
+    <published>2022-01-11T09:43:37.000Z</published>
+    <updated>2022-01-11T10:16:57.393Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF550A Two Substrings</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/cf550a-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/cf550a-solution/</id>
+    <published>2022-01-11T09:37:31.000Z</published>
+    <updated>2022-01-11T09:39:15.306Z</updated>
     
     
       
@@ -36,6 +186,83 @@
     
     <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
     
+    
+    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF268A Games</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/cf268a-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/cf268a-solution/</id>
+    <published>2022-01-11T09:33:40.000Z</published>
+    <updated>2022-01-11T09:36:15.401Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF1475A Odd Divisor</title>
+    <link href="https://ren-yc.github.io/blog/2022/01/11/cf1475a-solution/"/>
+    <id>https://ren-yc.github.io/blog/2022/01/11/cf1475a-solution/</id>
+    <published>2022-01-11T09:28:24.000Z</published>
+    <updated>2022-01-11T09:36:58.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF1598A Computer Game</title>
+    <link href="https://ren-yc.github.io/blog/2021/10/11/cf1598a-solution/"/>
+    <id>https://ren-yc.github.io/blog/2021/10/11/cf1598a-solution/</id>
+    <published>2021-10-11T12:33:27.000Z</published>
+    <updated>2022-01-11T10:17:33.772Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
     
   </entry>
   
@@ -84,7 +311,7 @@
     <link href="https://ren-yc.github.io/blog/2021/09/14/uva11559-solution/"/>
     <id>https://ren-yc.github.io/blog/2021/09/14/uva11559-solution/</id>
     <published>2021-09-14T00:20:26.000Z</published>
-    <updated>2021-12-19T06:27:01.943Z</updated>
+    <updated>2022-01-11T10:08:53.640Z</updated>
     
     
       
@@ -100,7 +327,7 @@
     <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
     
     
-    <category term="Luogu" scheme="https://ren-yc.github.io/blog/tags/Luogu/"/>
+    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
     
   </entry>
   
@@ -109,7 +336,7 @@
     <link href="https://ren-yc.github.io/blog/2021/08/23/uva13012-solution/"/>
     <id>https://ren-yc.github.io/blog/2021/08/23/uva13012-solution/</id>
     <published>2021-08-23T11:39:18.000Z</published>
-    <updated>2021-12-19T06:27:08.361Z</updated>
+    <updated>2022-01-11T10:20:44.481Z</updated>
     
     
       
@@ -124,6 +351,8 @@
     
     <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
     
+    
+    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
     
   </entry>
   
@@ -178,7 +407,7 @@
     <link href="https://ren-yc.github.io/blog/2021/07/23/u187148-solution/"/>
     <id>https://ren-yc.github.io/blog/2021/07/23/u187148-solution/</id>
     <published>2021-07-23T00:35:49.000Z</published>
-    <updated>2021-12-19T06:26:52.472Z</updated>
+    <updated>2022-01-11T10:23:45.917Z</updated>
     
     
       
@@ -191,10 +420,10 @@
     
     
     
-    <category term="Solution" scheme="https://ren-yc.github.io/blog/categories/Solution/"/>
+    <category term="Solution - U" scheme="https://ren-yc.github.io/blog/categories/Solution-U/"/>
     
     
-    <category term="Luogu" scheme="https://ren-yc.github.io/blog/tags/Luogu/"/>
+    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
     
   </entry>
   
