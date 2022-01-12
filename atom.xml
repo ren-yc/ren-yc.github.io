@@ -3,11 +3,11 @@
   <title>Yuchen Ren&#39;s Personal Blog</title>
   
   <subtitle>renyuchen&#39;s personal blog</subtitle>
-  <link href="https://ren-yc.github.io/blog/atom.xml" rel="self"/>
+  <link href="https://renyuchen.vercel.app/atom.xml" rel="self"/>
   
-  <link href="https://ren-yc.github.io/blog/"/>
+  <link href="https://renyuchen.vercel.app/"/>
   <updated>2022-01-11T10:38:56.481Z</updated>
-  <id>https://ren-yc.github.io/blog/</id>
+  <id>https://renyuchen.vercel.app/</id>
   
   <author>
     <name>Yuchen Ren</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>『题解』Luogu - UVA10041 Vito&#39;s Family</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/uva10041-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/uva10041-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/uva10041-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/uva10041-solution/</id>
     <published>2022-01-11T10:35:21.000Z</published>
     <updated>2022-01-11T10:38:56.481Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    <category term="Solution - UVA" scheme="https://renyuchen.vercel.app/categories/Solution-UVA/"/>
     
     
-    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    <category term="Python" scheme="https://renyuchen.vercel.app/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - UVA465 Overflow</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/uva465-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/uva465-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/uva465-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/uva465-solution/</id>
     <published>2022-01-11T10:30:14.000Z</published>
     <updated>2022-01-11T10:34:30.568Z</updated>
     
@@ -59,17 +59,17 @@
     
     
     
-    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    <category term="Solution - UVA" scheme="https://renyuchen.vercel.app/categories/Solution-UVA/"/>
     
     
-    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    <category term="Python" scheme="https://renyuchen.vercel.app/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - UVA11727 Cost Cutting</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/uva11727-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/uva11727-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/uva11727-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/uva11727-solution/</id>
     <published>2022-01-11T10:27:48.000Z</published>
     <updated>2022-01-11T10:29:32.094Z</updated>
     
@@ -84,17 +84,17 @@
     
     
     
-    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    <category term="Solution - UVA" scheme="https://renyuchen.vercel.app/categories/Solution-UVA/"/>
     
     
-    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    <category term="Python" scheme="https://renyuchen.vercel.app/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - SP7733 HPYNOS - Happy Numbers I</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/sp7733-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/sp7733-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/sp7733-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/sp7733-solution/</id>
     <published>2022-01-11T10:22:35.000Z</published>
     <updated>2022-01-11T10:27:11.269Z</updated>
     
@@ -109,17 +109,17 @@
     
     
     
-    <category term="Solution - SP" scheme="https://ren-yc.github.io/blog/categories/Solution-SP/"/>
+    <category term="Solution - SP" scheme="https://renyuchen.vercel.app/categories/Solution-SP/"/>
     
     
-    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    <category term="Python" scheme="https://renyuchen.vercel.app/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - UVA12503 Robot Instructions</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/uva12503-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/uva12503-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/uva12503-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/uva12503-solution/</id>
     <published>2022-01-11T10:18:04.000Z</published>
     <updated>2022-01-11T10:20:07.824Z</updated>
     
@@ -134,17 +134,17 @@
     
     
     
-    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    <category term="Solution - UVA" scheme="https://renyuchen.vercel.app/categories/Solution-UVA/"/>
     
     
-    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    <category term="Python" scheme="https://renyuchen.vercel.app/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - UVA10035 Primary Arithmetic</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/uva10035-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/uva10035-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/uva10035-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/uva10035-solution/</id>
     <published>2022-01-11T09:43:37.000Z</published>
     <updated>2022-01-11T10:16:57.393Z</updated>
     
@@ -159,17 +159,17 @@
     
     
     
-    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    <category term="Solution - UVA" scheme="https://renyuchen.vercel.app/categories/Solution-UVA/"/>
     
     
-    <category term="Python" scheme="https://ren-yc.github.io/blog/tags/Python/"/>
+    <category term="Python" scheme="https://renyuchen.vercel.app/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - CF550A Two Substrings</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/cf550a-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/cf550a-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/cf550a-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/cf550a-solution/</id>
     <published>2022-01-11T09:37:31.000Z</published>
     <updated>2022-01-11T09:39:15.306Z</updated>
     
@@ -184,17 +184,17 @@
     
     
     
-    <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
+    <category term="Solution - CF" scheme="https://renyuchen.vercel.app/categories/Solution-CF/"/>
     
     
-    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    <category term="C++" scheme="https://renyuchen.vercel.app/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - CF268A Games</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/cf268a-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/cf268a-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/cf268a-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/cf268a-solution/</id>
     <published>2022-01-11T09:33:40.000Z</published>
     <updated>2022-01-11T09:36:15.401Z</updated>
     
@@ -209,17 +209,17 @@
     
     
     
-    <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
+    <category term="Solution - CF" scheme="https://renyuchen.vercel.app/categories/Solution-CF/"/>
     
     
-    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    <category term="C++" scheme="https://renyuchen.vercel.app/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - CF1475A Odd Divisor</title>
-    <link href="https://ren-yc.github.io/blog/2022/01/11/cf1475a-solution/"/>
-    <id>https://ren-yc.github.io/blog/2022/01/11/cf1475a-solution/</id>
+    <link href="https://renyuchen.vercel.app/2022/01/11/cf1475a-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/11/cf1475a-solution/</id>
     <published>2022-01-11T09:28:24.000Z</published>
     <updated>2022-01-11T10:48:44.528Z</updated>
     
@@ -234,17 +234,17 @@
     
     
     
-    <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
+    <category term="Solution - CF" scheme="https://renyuchen.vercel.app/categories/Solution-CF/"/>
     
     
-    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    <category term="C++" scheme="https://renyuchen.vercel.app/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - CF1598A Computer Game</title>
-    <link href="https://ren-yc.github.io/blog/2021/10/11/cf1598a-solution/"/>
-    <id>https://ren-yc.github.io/blog/2021/10/11/cf1598a-solution/</id>
+    <link href="https://renyuchen.vercel.app/2021/10/11/cf1598a-solution/"/>
+    <id>https://renyuchen.vercel.app/2021/10/11/cf1598a-solution/</id>
     <published>2021-10-11T12:33:27.000Z</published>
     <updated>2022-01-11T10:17:33.772Z</updated>
     
@@ -259,17 +259,17 @@
     
     
     
-    <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
+    <category term="Solution - CF" scheme="https://renyuchen.vercel.app/categories/Solution-CF/"/>
     
     
-    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    <category term="C++" scheme="https://renyuchen.vercel.app/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - CF44B Cola</title>
-    <link href="https://ren-yc.github.io/blog/2021/10/06/cf44b-solution/"/>
-    <id>https://ren-yc.github.io/blog/2021/10/06/cf44b-solution/</id>
+    <link href="https://renyuchen.vercel.app/2021/10/06/cf44b-solution/"/>
+    <id>https://renyuchen.vercel.app/2021/10/06/cf44b-solution/</id>
     <published>2021-10-06T11:39:32.000Z</published>
     <updated>2021-12-19T06:27:46.107Z</updated>
     
@@ -284,15 +284,15 @@
     
     
     
-    <category term="Solution - CF" scheme="https://ren-yc.github.io/blog/categories/Solution-CF/"/>
+    <category term="Solution - CF" scheme="https://renyuchen.vercel.app/categories/Solution-CF/"/>
     
     
   </entry>
   
   <entry>
     <title>『游记』CSP-J 2021 初赛</title>
-    <link href="https://ren-yc.github.io/blog/2021/09/19/csp-j-2021-1/"/>
-    <id>https://ren-yc.github.io/blog/2021/09/19/csp-j-2021-1/</id>
+    <link href="https://renyuchen.vercel.app/2021/09/19/csp-j-2021-1/"/>
+    <id>https://renyuchen.vercel.app/2021/09/19/csp-j-2021-1/</id>
     <published>2021-09-19T12:39:50.000Z</published>
     <updated>2021-12-19T06:22:22.653Z</updated>
     
@@ -301,15 +301,15 @@
     
     
     
-    <category term="NOI Series" scheme="https://ren-yc.github.io/blog/categories/NOI-Series/"/>
+    <category term="NOI Series" scheme="https://renyuchen.vercel.app/categories/NOI-Series/"/>
     
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - UVA11559 Event Planning</title>
-    <link href="https://ren-yc.github.io/blog/2021/09/14/uva11559-solution/"/>
-    <id>https://ren-yc.github.io/blog/2021/09/14/uva11559-solution/</id>
+    <link href="https://renyuchen.vercel.app/2021/09/14/uva11559-solution/"/>
+    <id>https://renyuchen.vercel.app/2021/09/14/uva11559-solution/</id>
     <published>2021-09-14T00:20:26.000Z</published>
     <updated>2022-01-11T10:08:53.640Z</updated>
     
@@ -324,17 +324,17 @@
     
     
     
-    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    <category term="Solution - UVA" scheme="https://renyuchen.vercel.app/categories/Solution-UVA/"/>
     
     
-    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    <category term="C++" scheme="https://renyuchen.vercel.app/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - UVA13012 Identifying tea</title>
-    <link href="https://ren-yc.github.io/blog/2021/08/23/uva13012-solution/"/>
-    <id>https://ren-yc.github.io/blog/2021/08/23/uva13012-solution/</id>
+    <link href="https://renyuchen.vercel.app/2021/08/23/uva13012-solution/"/>
+    <id>https://renyuchen.vercel.app/2021/08/23/uva13012-solution/</id>
     <published>2021-08-23T11:39:18.000Z</published>
     <updated>2022-01-11T10:20:44.481Z</updated>
     
@@ -349,17 +349,17 @@
     
     
     
-    <category term="Solution - UVA" scheme="https://ren-yc.github.io/blog/categories/Solution-UVA/"/>
+    <category term="Solution - UVA" scheme="https://renyuchen.vercel.app/categories/Solution-UVA/"/>
     
     
-    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    <category term="C++" scheme="https://renyuchen.vercel.app/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>『教程』如何使（po）用（jie） IDM</title>
-    <link href="https://ren-yc.github.io/blog/2021/08/12/how-to-use-idm/"/>
-    <id>https://ren-yc.github.io/blog/2021/08/12/how-to-use-idm/</id>
+    <link href="https://renyuchen.vercel.app/2021/08/12/how-to-use-idm/"/>
+    <id>https://renyuchen.vercel.app/2021/08/12/how-to-use-idm/</id>
     <published>2021-08-12T11:04:33.000Z</published>
     <updated>2021-12-20T12:10:25.813Z</updated>
     
@@ -374,15 +374,15 @@
     
     
     
-    <category term="APPs - Tools" scheme="https://ren-yc.github.io/blog/categories/APPs-Tools/"/>
+    <category term="APPs - Tools" scheme="https://renyuchen.vercel.app/categories/APPs-Tools/"/>
     
     
   </entry>
   
   <entry>
     <title>『置顶』『教程』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</title>
-    <link href="https://ren-yc.github.io/blog/2021/08/05/how-to-use-wfr-and-rbq/"/>
-    <id>https://ren-yc.github.io/blog/2021/08/05/how-to-use-wfr-and-rbq/</id>
+    <link href="https://renyuchen.vercel.app/2021/08/05/how-to-use-wfr-and-rbq/"/>
+    <id>https://renyuchen.vercel.app/2021/08/05/how-to-use-wfr-and-rbq/</id>
     <published>2021-08-05T05:59:32.000Z</published>
     <updated>2021-12-20T12:10:39.461Z</updated>
     
@@ -397,15 +397,15 @@
     
     
     
-    <category term="Programming Languages - Warfarin &amp; RBQScript" scheme="https://ren-yc.github.io/blog/categories/Programming-Languages-Warfarin-RBQScript/"/>
+    <category term="Programming Languages - Warfarin &amp; RBQScript" scheme="https://renyuchen.vercel.app/categories/Programming-Languages-Warfarin-RBQScript/"/>
     
     
   </entry>
   
   <entry>
     <title>『题解』Luogu - U187148 gcd 与 lcm</title>
-    <link href="https://ren-yc.github.io/blog/2021/07/23/u187148-solution/"/>
-    <id>https://ren-yc.github.io/blog/2021/07/23/u187148-solution/</id>
+    <link href="https://renyuchen.vercel.app/2021/07/23/u187148-solution/"/>
+    <id>https://renyuchen.vercel.app/2021/07/23/u187148-solution/</id>
     <published>2021-07-23T00:35:49.000Z</published>
     <updated>2022-01-11T10:23:45.917Z</updated>
     
@@ -420,10 +420,10 @@
     
     
     
-    <category term="Solution - U" scheme="https://ren-yc.github.io/blog/categories/Solution-U/"/>
+    <category term="Solution - U" scheme="https://renyuchen.vercel.app/categories/Solution-U/"/>
     
     
-    <category term="C++" scheme="https://ren-yc.github.io/blog/tags/C/"/>
+    <category term="C++" scheme="https://renyuchen.vercel.app/tags/C/"/>
     
   </entry>
   
