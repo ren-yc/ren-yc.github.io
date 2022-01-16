@@ -6,7 +6,7 @@
   <link href="https://renyuchen.vercel.app/atom.xml" rel="self"/>
   
   <link href="https://renyuchen.vercel.app/"/>
-  <updated>2022-01-11T10:38:56.481Z</updated>
+  <updated>2022-01-16T04:41:28.194Z</updated>
   <id>https://renyuchen.vercel.app/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『题解』Luogu - U198094 前 n 个偶数位回文数之和</title>
+    <link href="https://renyuchen.vercel.app/2022/01/16/u198094-solution/"/>
+    <id>https://renyuchen.vercel.app/2022/01/16/u198094-solution/</id>
+    <published>2022-01-16T04:33:17.000Z</published>
+    <updated>2022-01-16T04:41:28.194Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - U" scheme="https://renyuchen.vercel.app/categories/Solution-U/"/>
+    
+    
+    <category term="C++" scheme="https://renyuchen.vercel.app/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>『题解』Luogu - UVA10041 Vito&#39;s Family</title>
@@ -407,7 +432,7 @@
     <link href="https://renyuchen.vercel.app/2021/07/23/u187148-solution/"/>
     <id>https://renyuchen.vercel.app/2021/07/23/u187148-solution/</id>
     <published>2021-07-23T00:35:49.000Z</published>
-    <updated>2022-01-11T10:23:45.917Z</updated>
+    <updated>2022-01-16T04:04:47.030Z</updated>
     
     
       
