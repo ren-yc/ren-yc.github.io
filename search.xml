@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>『题解』Luogu - UVA10281 Average Speed</title>
+      <link href="/2022/01/17/uva10281-solution/"/>
+      <url>/2022/01/17/uva10281-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA10281" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/10281" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p><h3 id="前置知识">前置知识</h3><p><a href="https://www.runoob.com/cprogramming/c-function-sscanf.html">sscanf() 的用法</a></p><h3 id="题目大意">题目大意</h3><p>给出时间和速度，计算所走的路程。<s>（超级简洁是不是？）</s></p><h3 id="思路">思路</h3><p>这题是一道计算题，依据公式模拟即可。</p><p>将前面的速度与时间和现在的分别存放，最后计算即可。</p><p><strong>本题重点：</strong></p><ul><li>本题的输入格式较特殊，需要先读入一行整个字符串然后再通过 <code>sscanf()</code> 函数进行拆分。</li></ul><h3 id="代码">代码</h3><p><strong>详细思路在注释中</strong></p><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;char tmp[101];//sscanf() 仅支持字符数组int sum, hour, minute, second, t_prv = 0, t_nxt = 0;//英语自行理解double distance = 0.0, v_prv = 0.0, v_nxt = 0.0;//记得要加 &quot;.0&quot;while (gets(tmp)) &#123;//字符数组读入用 gets()sum = sscanf(tmp, &quot;%d:%d:%d %lf&quot;, &amp;hour, &amp;minute, &amp;second, &amp;v_nxt);//sscanf() 的返回值为拆分的个数t_nxt = hour * 3600 + minute * 60 + second;//计算distance += v_prv * (t_nxt - t_prv) / 3600.0;//距离t_prv = t_nxt;//更新值if (sum == 3) &#123;//如果拆 3 块printf(&quot;%.2d:%.2d:%.2d %.2lf km\n&quot;, hour, minute, second, distance);//注意格式&#125; else &#123;v_prv = v_nxt;//更新值&#125;&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-uva10281">洛谷博客</a></strong></p><blockquote><p>本文作者: ren-yc<br>本文链接:  <a href="https://renyuchen.vercel.app/2022/01/17/uva10281-solution/">https://renyuchen.vercel.app/2022/01/17/uva10281-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>『题解』Luogu - U198288 元素插入</title>
       <link href="/2022/01/17/u198288-solution/"/>
       <url>/2022/01/17/u198288-solution/</url>
