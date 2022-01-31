@@ -975,7 +975,7 @@ int main() &#123;
 		repo: 'ren-yc.github.io',
 		owner: 'ren-yc',
 		admin: ['ren-yc'],
-		id: decodeURI('{{ page.url }}'),
+		id: location.pathname,
 		distractionFreeMode: false
 	})
 	gitalk.render('gitalk-container');

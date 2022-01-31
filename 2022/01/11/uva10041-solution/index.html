@@ -878,7 +878,7 @@ Python 中列表（数组）的基本使用
 		repo: 'ren-yc.github.io',
 		owner: 'ren-yc',
 		admin: ['ren-yc'],
-		id: decodeURI('{{ page.url }}'),
+		id: location.pathname,
 		distractionFreeMode: false
 	})
 	gitalk.render('gitalk-container');
