@@ -6,7 +6,7 @@
   <link href="https://renyuchen.vercel.app/atom.xml" rel="self"/>
   
   <link href="https://renyuchen.vercel.app/"/>
-  <updated>2022-01-17T09:38:19.276Z</updated>
+  <updated>2022-03-05T03:24:41.437Z</updated>
   <id>https://renyuchen.vercel.app/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github &amp; Git 入门指南</title>
+    <link href="https://renyuchen.vercel.app/2022/03/05/gitHub-guide/"/>
+    <id>https://renyuchen.vercel.app/2022/03/05/gitHub-guide/</id>
+    <published>2022-03-05T02:49:39.000Z</published>
+    <updated>2022-03-05T03:24:41.437Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="APPs - Tools" scheme="https://renyuchen.vercel.app/categories/APPs-Tools/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>『题解』Luogu - UVA10281 Average Speed</title>
