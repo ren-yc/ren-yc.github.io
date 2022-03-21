@@ -11,12 +11,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目链接洛谷 UVa Online Judge 题目大意给定两个整数，请你求两数相加时进位的个数。$^*$ $^*$ 上文为转载: https:&#x2F;&#x2F;keaidexiaoyu.blog.luogu.org&#x2F;solution-uva10035 前置知识Python 3 中的各种赋值运算符 题目解法由于使用的是 Python，无法使用 while (cin &gt;&gt; a &gt;&gt; b)，">
+	<meta name="description" content="题目链接 洛谷 UVa Online Judge 题目大意 给定两个整数，请你求两数相加时进位的个数。$^*$ $^*$ 上文为转载: https:&#x2F;&#x2F;keaidexiaoyu.blog.luogu.org&#x2F;solution-uva10035 前置知识 Python 3 中的各种赋值运算符 题目解法 由于使用的是 Python，无法使用 while (cin &gt;&gt; a &gt;&gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『题解』Luogu - UVA10035 Primary Arithmetic">
 <meta property="og:url" content="https://renyuchen.vercel.app/2022/01/11/uva10035-solution/index.html">
 <meta property="og:site_name" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:description" content="题目链接洛谷 UVa Online Judge 题目大意给定两个整数，请你求两数相加时进位的个数。$^*$ $^*$ 上文为转载: https:&#x2F;&#x2F;keaidexiaoyu.blog.luogu.org&#x2F;solution-uva10035 前置知识Python 3 中的各种赋值运算符 题目解法由于使用的是 Python，无法使用 while (cin &gt;&gt; a &gt;&gt; b)，">
+<meta property="og:description" content="题目链接 洛谷 UVa Online Judge 题目大意 给定两个整数，请你求两数相加时进位的个数。$^*$ $^*$ 上文为转载: https:&#x2F;&#x2F;keaidexiaoyu.blog.luogu.org&#x2F;solution-uva10035 前置知识 Python 3 中的各种赋值运算符 题目解法 由于使用的是 Python，无法使用 while (cin &gt;&gt; a &gt;&gt;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://renyuchen.vercel.app/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2022-01-11T09:43:37.000Z">
@@ -697,7 +697,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							274 字
+							281 字
 						</div>
 					
 						
@@ -713,24 +713,30 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA10035" title="点击跳转至洛谷">洛谷</a></p>
+		<h3 id="题目链接">题目链接</h3>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA10035" title="点击跳转至洛谷">洛谷</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/10035" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p>
-<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给定两个整数，请你求两数相加时进位的个数。$^*$</p>
+<h3 id="题目大意">题目大意</h3>
+<p>给定两个整数，请你求两数相加时进位的个数。$^*$</p>
 <p>$^*$ 上文为转载: <a target="_blank" rel="noopener" href="https://keaidexiaoyu.blog.luogu.org/solution-uva10035">https://keaidexiaoyu.blog.luogu.org/solution-uva10035</a></p>
-<h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><p><strong><a target="_blank" rel="noopener" href="https://blog.csdn.net/cjx14060307101/article/details/103168330">Python 3 中的各种赋值运算符</a></strong></p>
-<h3 id="题目解法"><a href="#题目解法" class="headerlink" title="题目解法"></a>题目解法</h3><p>由于使用的是 Python，无法使用 <code>while (cin &gt;&gt; a &gt;&gt; b)</code>，我们可以先套一层 <code>while True</code>，遇到 $a, b = 0$ 直接 <code>break</code>，由于 $a, b \le 10^{10}$，所以我们写一个循环 $10$ 次的 <code>for i in range(10)</code> 判断每一位的进位情况：</p>
+<h3 id="前置知识">前置知识</h3>
+<p><strong><a target="_blank" rel="noopener" href="https://blog.csdn.net/cjx14060307101/article/details/103168330">Python 3 中的各种赋值运算符</a></strong></p>
+<h3 id="题目解法">题目解法</h3>
+<p>由于使用的是 Python，无法使用 <code>while (cin &gt;&gt; a &gt;&gt; b)</code>，我们可以先套一层 <code>while True</code>，遇到 $a, b = 0$ 直接 <code>break</code>，由于 $a, b \le 10^{10}$，所以我们写一个循环 $10$ 次的 <code>for i in range(10)</code> 判断每一位的进位情况：</p>
 <ul>
-<li><p>如果 $&gt; 9$ 计数器加一；</p>
+<li>
+<p>如果 $&gt; 9$ 计数器加一；</p>
 </li>
-<li><p>其他情况 计数器不变。</p>
+<li>
+<p>其他情况 计数器不变。</p>
 </li>
 </ul>
 <p>我们可以使用 <code>//=</code>，用于把 $a, b$ 都减少一位。</p>
 <p>输出就不讲了，只有一个关键点：C++ 的 <code>else if</code> 在 Python 中为 <code>elif</code>，并且他们不是函数而是关键字，可以不带括号。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>不需要导入任何模块</p>
+<h3 id="代码">代码</h3>
+<p>不需要导入任何模块</p>
 <p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
-<pre><code class="lang-python">while True:
+<pre><code class="language-python">while True:
     a, b = map(int, input().split())
     cnt = 0
     if (a == 0 and b == 0):
@@ -752,9 +758,12 @@
     else:
       print(&quot;%d carry operations.&quot; % cnt)#毒（jian）瘤（dan）的输出格式
 </code></pre>
-<script type="math/tex; mode=display">END</script><p><strong>本文章同时发布在 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/renyc/solution-uva10035">洛谷博客</a></strong></p>
+<p>$$END$$</p>
+<p><strong>本文章同时发布在 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/renyc/solution-uva10035">洛谷博客</a></strong></p>
 <blockquote>
-<p>本文作者: ren-yc<br>本文链接:  <a href="https://renyuchen.vercel.app/2022/01/11/uva10035-solution/">https://renyuchen.vercel.app/2022/01/11/uva10035-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA"></a> 许可协议。转载请注明出处!</p>
+<p>本文作者: Yuchen Ren<br>
+本文链接:  <a href="https://renyuchen.vercel.app/2022/01/11/uva10035-solution/">https://renyuchen.vercel.app/2022/01/11/uva10035-solution/</a><br>
+版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p>
 
 </blockquote>
 
@@ -827,9 +836,11 @@
 <script type="text/javascript">
 	socialShare("#share", {
 	    title : '『题解』Luogu - UVA10035 Primary Arithmetic',
-	    description : '题目链接洛谷
+	    description : '题目链接
+洛谷
 UVa Online Judge
-题目大意给定两个整数，请你求两数相加时进位的个数。$...',
+题目大意
+给定两个整数，请你求两数相加时进位的个数...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://renyuchen.vercel.app/2022/01/11/uva10035-solution/'
