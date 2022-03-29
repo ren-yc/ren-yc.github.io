@@ -6,7 +6,7 @@
   <link href="https://renyuchen.vercel.app/atom.xml" rel="self"/>
   
   <link href="https://renyuchen.vercel.app/"/>
-  <updated>2022-03-15T10:14:08.726Z</updated>
+  <updated>2022-03-29T06:31:55.795Z</updated>
   <id>https://renyuchen.vercel.app/</id>
   
   <author>
@@ -17,9 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>『置顶』『教程』Class Tools 系列应用使用指南</title>
+    <link href="https://renyuchen.vercel.app/2022/03/29/guide-of-class-tools/"/>
+    <id>https://renyuchen.vercel.app/2022/03/29/guide-of-class-tools/</id>
+    <published>2022-03-29T05:33:37.000Z</published>
+    <updated>2022-03-29T06:31:55.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="APPs - Self Developed" scheme="https://renyuchen.vercel.app/categories/APPs-Self-Developed/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>『置顶』『教程』Github &amp; Git 入门指南</title>
-    <link href="https://renyuchen.vercel.app/2022/03/05/github-guide/"/>
-    <id>https://renyuchen.vercel.app/2022/03/05/github-guide/</id>
+    <link href="https://renyuchen.vercel.app/2022/03/05/guide-of-github/"/>
+    <id>https://renyuchen.vercel.app/2022/03/05/guide-of-github/</id>
     <published>2022-03-05T02:49:39.000Z</published>
     <updated>2022-03-15T10:14:08.726Z</updated>
     

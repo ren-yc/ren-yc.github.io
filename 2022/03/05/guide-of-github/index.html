@@ -6,20 +6,24 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/press.js"></script>
 	
-	<title>归档 : 2021/8 - Yuchen Ren&#39;s Personal Blog</title>
+	<title>『置顶』『教程』Github &amp; Git 入门指南 - Yuchen Ren&#39;s Personal Blog</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="a personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:url" content="https://renyuchen.vercel.app/archives/2021/08/index.html">
+	<meta name="description" content="本文适合刚使用 Github &amp; Git 的开发者参考。 什么是 Github GitHub 是世界上最大的代码托管平台，超 5 千万开发者正在使用。被称为开发者最大的社区。因只支持 Git 作为唯一的版本库格式进行托管而被取名为 Github。 Git 入门 安装 从 此处 选择合适的平台版本安装即可。 可以输入以下命令进行验证。  $ git --version  配置个人信息 use">
+<meta property="og:type" content="article">
+<meta property="og:title" content="『置顶』『教程』Github &amp; Git 入门指南">
+<meta property="og:url" content="https://renyuchen.vercel.app/2022/03/05/guide-of-github/index.html">
 <meta property="og:site_name" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:description" content="a personal blog">
+<meta property="og:description" content="本文适合刚使用 Github &amp; Git 的开发者参考。 什么是 Github GitHub 是世界上最大的代码托管平台，超 5 千万开发者正在使用。被称为开发者最大的社区。因只支持 Git 作为唯一的版本库格式进行托管而被取名为 Github。 Git 入门 安装 从 此处 选择合适的平台版本安装即可。 可以输入以下命令进行验证。  $ git --version  配置个人信息 use">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://renyuchen.vercel.app/assets/img/by-nc-sa4.0.png">
+<meta property="article:published_time" content="2022-03-05T02:49:39.000Z">
+<meta property="article:modified_time" content="2022-03-15T10:14:08.726Z">
 <meta property="article:author" content="Yuchen Ren">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://renyuchen.vercel.app/assets/img/by-nc-sa4.0.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -504,14 +508,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">归档 : 2021/8 </h3>
-		
-	</div>
-</div>
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -538,18 +534,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">Yuchen Ren&#39;s Personal Blog</h6>
 							<nav class="site-state">
@@ -642,92 +659,17 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-				
-	<article class="post card bg-white shadow-sm border-0 ">
+			
+	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/23/uva13012-solution/">『题解』Luogu - UVA13012 Identifying tea</a>
+		<a class="post-title" href="/2022/03/05/guide-of-github/">『置顶』『教程』Github &amp; Git 入门指南</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-23 19:39:18 | 编辑于 2022-1-11 18:20:44">2021-8-23 19:39
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							235 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目链接
-洛谷
-UVa Online Judge
-题目解析
-太淼了，一道模拟题。
-一般 UVA 的题读入行数是不给定的，所以我们要使用 while (cin &gt;&gt; n) 或者 while (~scanf(&quot;%d&quot;, &amp;n))。
-每次循环读入后，使用 if 判断这 $5$ 个数是否等于 $t$。如果是，计数器加...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/12/how-to-use-idm/">『教程』如何使（po）用（jie） IDM</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-12 19:04:33 | 编辑于 2022-1-12 16:56:57">2021-8-12 19:04
+							<time title="发布于 2022-3-5 10:49:39 | 编辑于 2022-3-15 18:14:08">2022-3-5 10:49
 							</time>
 						</div>
 					
@@ -743,9 +685,9 @@ UVa Online Judge
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
+								阅读<span id="busuanzi_value_page_pv"></span>次
 							</span>
 						</div>
 					
@@ -754,7 +696,7 @@ UVa Online Judge
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							191 字
+							377 字
 						</div>
 					
 						
@@ -769,106 +711,205 @@ UVa Online Judge
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				本文章所使用的方法保证在 IDM 6.xx 版本有效
-前言
-众所周知，IDM 是一个很好的多线程下载工具，还支持网站爬取音视频。
-IDM 能够在使用浏览器下载文件时自动捕获下载链接并添加下载任务，目前，IDM 的自动捕获功能支持以下常见的主流浏览器：
-Safari
-Chrome
-Firefox
-Opera
-Microsoft Edge
-Intern...
-			
-		
+	<div class="post-content" id="post_content">
+		<p><strong>本文适合刚使用 Github &amp; Git 的开发者参考。</strong></p>
+<h2 id="什么是-Github">什么是 Github</h2>
+<p>GitHub 是世界上最大的代码托管平台，超 5 千万开发者正在使用。被称为开发者最大的社区。因只支持 Git 作为唯一的版本库格式进行托管而被取名为 Github。</p>
+<h2 id="Git-入门">Git 入门</h2>
+<h3 id="安装">安装</h3>
+<p>从 <a target="_blank" rel="noopener" href="http://git-scm.com/downloads" title="点击跳转至 git-scm.com">此处</a> 选择合适的平台版本安装即可。</p>
+<p>可以输入以下命令进行验证。</p>
+<p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-bash">$ git --version
+</code></pre>
+<h3 id="配置个人信息">配置个人信息</h3>
+<p><code>user.name</code> 是你注册 Github 的用户名。</p>
+<p><code>user.email</code> 是你注册 Github 的邮箱。</p>
+<p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-bash">$ git config --global user.name &quot;yourname&quot;
+$ git config --global user.email yourname@example.com
+</code></pre>
+<h3 id="常用命令">常用命令</h3>
+<h4 id="git-init"><code>git init</code></h4>
+<p><code>git init</code> 用于初始化本地存储库。</p>
+<p>即创建一个包含存储库信息的<strong>隐藏状态</strong> <code>.git</code> 文件夹。</p>
+<h4 id="git-add"><code>git add</code></h4>
+<p><code>git add $&#123;filename&#125;</code> 用于添加指定文件至暂存区。</p>
+<p>一般使用 <code>git add .</code> 用于添加除在 <code>.gitignore</code> 文件中注明忽略的文件外的所有文件。</p>
+<h4 id="git-commit"><code>git commit</code></h4>
+<p><code>git commit</code> 用于清除暂存区文件并提交。</p>
+<p>用法 1：</p>
+<p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-bash">$ git commit
+</code></pre>
+<p>然后命令行会调用 vim 进行提交信息的多行输入。</p>
+<p><strong>一般第一行为标题，第二行为空，第三行为附加内容。</strong></p>
+<p>用法 2：</p>
+<p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-bash">$ git commit -m &quot;$&#123;commit message&#125;&quot;
+</code></pre>
+<p><code>$&#123;commit message&#125;</code> 为提交信息。（即多行提交信息的标题）</p>
+<p><strong>最常用的有这 2 种用法。</strong></p>
+<p><strong>上述用法均可带 <code>-S</code> 参数以使用 GPG 签名认证提交。（具体配置本文暂不说明）</strong></p>
+<h4 id="git-clone"><code>git clone</code></h4>
+<p><code>git clone $&#123;remote repository url&#125;</code> 为把远程 Git 仓库克隆至本地。</p>
+<p><strong><code>$&#123;remote repository url&#125;</code> 可为 HTTP 或 SSH。（一般来说 SSH 在国内更快）</strong></p>
+<p>SSH 需生成密钥后才可使用。（具体配置本文暂不说明）</p>
+<h4 id="git-remote"><code>git remote</code></h4>
+<p><code>git remote add $&#123;origin repository short name&#125; $&#123;remote repository url&#125;</code> 用于配置远程存储库以进行远程操作。</p>
+<p>一般来说 <code>$&#123;origin repository short name&#125;</code> 为 <code>origin</code>。</p>
+<h4 id="git-push"><code>git push</code></h4>
+<p><code>git push $&#123;origin repository short name&#125; $&#123;branch&#125;</code> 用于同步本地存储库至远程存储库。</p>
+<p><code>$&#123;origin repository short name&#125;</code> 使用与 <code>git remote</code> 配置的 <code>$&#123;origin repository short name&#125;</code> 一样。</p>
+<p><code>$&#123;branch&#125;</code> 为远程存储库的分支。</p>
+<p><strong>切记 <code>$&#123;branch&#125;</code> 分支要在远程存储库存在，否则会报错。</strong></p>
+<p><strong>本文持续更新……</strong></p>
+<blockquote>
+<p>本文作者: Yuchen Ren<br>
+本文链接:  <a href="https://renyuchen.vercel.app/2022/03/05/guide-of-github/">https://renyuchen.vercel.app/2022/03/05/guide-of-github/</a><br>
+版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p>
+
+</blockquote>
+
 	</div>
+
+	
+
+	
 
 	
 </article>
 
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/05/how-to-use-wfr-and-rbq/">『置顶』『教程』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-5 13:59:32 | 编辑于 2022-1-12 16:56:57">2021-8-5 13:59
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Programming-Languages-Warfarin-RBQScript/">Programming Languages - Warfarin & RBQScript</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							298 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				帮助文档 &amp; Wiki
-Warfarin 是一个由 C++ 编写而成的解释型语言。
-RBQScript 是一个由 C++ 编写而成的编译型语言。
-特点
-
-
-变量，支持数字、字符串、布尔、数组（允许使用 a[&quot;test&quot;] 这样的语法）；
-
-
-函数定义、调用与递归、高阶函数、lambda 表达式；
-
-
-键盘与文件的 I/O...
-			
-		
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://renyuchen.vercel.app/2022/03/05/guide-of-github/&text=『置顶』『教程』Github &amp; Git 入门指南" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
 	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : '『置顶』『教程』Github &amp; Git 入门指南',
+	    description : '本文适合刚使用 Github &amp;amp; Git 的开发者参考。
+什么是 Github
+GitHub...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://renyuchen.vercel.app/2022/03/05/guide-of-github/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
 
-	
-</article>
+
+<div id="post_comment" class="card shadow-sm">
+	<div id="gitalk-container"></div>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+		clientID: 'aea63c24701c1f7f0815',
+		clientSecret: '3f33573a77bf4349dbee91c4897f9ac37bbf16e5',
+		repo: 'ren-yc.github.io',
+		owner: 'ren-yc',
+		admin: ['ren-yc'],
+		id: location.pathname,
+		distractionFreeMode: false
+	})
+	gitalk.render('gitalk-container');
+</script>
+
+</div>
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/03/29/guide-of-class-tools/" rel="prev"> 『置顶』『教程』Class Tools 系列应用使用指南</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/01/17/uva10281-solution/" rel="next"> 『题解』Luogu - UVA10281 Average Speed</a></div></div>
 
 
 
-
-
-			
+		
+		
 		
 		
 
