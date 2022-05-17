@@ -547,7 +547,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">23</span>
+										<span class="site-state-item-count">25</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -609,7 +609,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">8</span></a>
+				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">10</span></a>
 			</div>
 		</div>
 	</div>
@@ -624,7 +624,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">10</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
+				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">12</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
 			</div>
 		</div>
 	</div>
@@ -703,6 +703,165 @@ Class Tools 系列应用是 Class Tools Develop Team 使用 C++ / Python 等常�
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
+		<a class="post-title" href="/2022/05/17/uva10193-solution/">『题解』Luogu - UVA10193 All You Need Is Love</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2022-5-17 15:20:14 | 编辑于 2022-5-17 15:21:17">2022-5-17 15:20
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							461 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							2 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目链接
+洛谷
+UVa Online Judge
+题目翻译
+共有 $N$ 组数据，给定两个二进制数（字符串），判断将它们分别转化为十进制数后是否互质。
+题目思路
+我们按照题意模拟即可。
+求最大公约数可以使用 C++ 标准库头文件中的 __gcd() 或使用自己手写的函数。
+辗转相除法求最大公约数模板：
+
+int gcd(int a, int b) ...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
+		</div>
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 ">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2022/05/17/uva11498-solution/">『题解』Luogu - UVA11498 Division of Nlogonia</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2022-5-17 12:49:17 | 编辑于 2022-5-17 12:50:47">2022-5-17 12:49
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							486 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							2 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目链接
+洛谷
+UVa Online Judge
+题目翻译
+给定基准点的坐标和若干个点，请你输出它分别与基准点的位置关系。
+
+
+若点的位置与基准点在一条水平线或垂直线上，输出 divisa（即 $n = x$ 或 $m = y$）。
+
+
+若点的位置在基准点的西北，输出 NO（即 $n &gt; x$ 且 $m &gt; y$）。
+
+
+若点的位置在基...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
+		</div>
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 ">
+	<header class="post-header text-center">
+		
 		<a class="post-title" href="/2022/04/04/class-tools-develop-team-rule/">『规范』Class Tools Develop Team 团队规则</a>
 		<div class="post-meta">
 			
@@ -772,7 +931,7 @@ Class Tools 系列应用是 Class Tools Develop Team 使用 C++ / Python 等常�
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-5 10:49:39 | 编辑于 2022-4-3 15:05:09">2022-3-5 10:49
+							<time title="发布于 2022-3-5 10:49:39 | 编辑于 2022-5-15 15:07:52">2022-3-5 10:49
 							</time>
 						</div>
 					
@@ -1227,166 +1386,6 @@ UVa Online Judge
 判断这两个数中的一个数或者运算结果是否大于 int 范围。
 解题思路
 众所周知，int 的范围是 $2^{31} - 1$ 即 $2147483647$，本题使用 C++ 大概率会导致 int 溢出，也有小概率会导致 un...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Python/" rel="tag">Python</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2022/01/11/uva11727-solution/">『题解』Luogu - UVA11727 Cost Cutting</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 18:27:48 | 编辑于 2022-1-11 18:29:32">2022-1-11 18:27
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							139 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目链接
-洛谷
-UVa Online Judge
-题目大意
-给定 $3$ 个整数，求中间数。
-解题思路
-循环输入 $3$ 个数（循环值从 $1$ 开始），再存入列表（数组），输出排序后的列表的第 $2$ 项值（即中间数）。
-代码
-Python 代码简洁又明了。
-
-t = int(input())#注意默认输入为字符串，要强制类型转换
-for i i...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Python/" rel="tag">Python</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2022/01/11/sp7733-solution/">『题解』Luogu - SP7733 HPYNOS - Happy Numbers I</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 18:22:35 | 编辑于 2022-1-11 18:27:11">2022-1-11 18:22
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution-SP/">Solution - SP</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							181 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目链接
-洛谷
-Sphere online judge
-思路
-Happy Number 的分裂规则是每次分裂的都不同，最终分裂成 $1$，如果重复输出 $-1$。
-直接按照题意模拟即可。
-代码
-Python 的代码极度简洁:
-
-import sys#退出程序用到的模块
-
-a = []#数组初始化
-cnt = 0#次数归零
-n = int(input...
 			
 		
 	</div>

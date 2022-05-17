@@ -6,20 +6,25 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/press.js"></script>
 	
-	<title>归档 : 2022/3 - Yuchen Ren&#39;s Personal Blog</title>
+	<title>『题解』Luogu - UVA11498 Division of Nlogonia - Yuchen Ren&#39;s Personal Blog</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="a personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:url" content="https://ren-yc.github.io/archives/2022/03/index.html">
+	<meta name="description" content="题目链接 洛谷 UVa Online Judge 题目翻译 给定基准点的坐标和若干个点，请你输出它分别与基准点的位置关系。   若点的位置与基准点在一条水平线或垂直线上，输出 divisa（即 $n &#x3D; x$ 或 $m &#x3D; y$）。   若点的位置在基准点的西北，输出 NO（即 $n &gt; x$ 且 $m &gt; y$）。   若点的位置在基准点的东北，输出 NE（即 $n &gt; x$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="『题解』Luogu - UVA11498 Division of Nlogonia">
+<meta property="og:url" content="https://ren-yc.github.io/2022/05/17/uva11498-solution/index.html">
 <meta property="og:site_name" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:description" content="a personal blog">
+<meta property="og:description" content="题目链接 洛谷 UVa Online Judge 题目翻译 给定基准点的坐标和若干个点，请你输出它分别与基准点的位置关系。   若点的位置与基准点在一条水平线或垂直线上，输出 divisa（即 $n &#x3D; x$ 或 $m &#x3D; y$）。   若点的位置在基准点的西北，输出 NO（即 $n &gt; x$ 且 $m &gt; y$）。   若点的位置在基准点的东北，输出 NE（即 $n &gt; x$">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
+<meta property="article:published_time" content="2022-05-17T04:49:17.000Z">
+<meta property="article:modified_time" content="2022-05-17T04:50:47.373Z">
 <meta property="article:author" content="Yuchen Ren">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 
 	<meta name="theme-color" content="#5e72e4">
 	<meta name="theme-color-rgb" content="94,114,228">
@@ -504,14 +509,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">归档 : 2022/3 </h3>
-		
-	</div>
-</div>
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -538,18 +535,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">Yuchen Ren&#39;s Personal Blog</h6>
 							<nav class="site-state">
@@ -642,18 +660,17 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-				
-	<article class="post card bg-white shadow-sm border-0 ">
+			
+	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2022/03/29/guide-of-class-tools/">『置顶』『教程』Class Tools 简介</a>
+		<a class="post-title" href="/2022/05/17/uva11498-solution/">『题解』Luogu - UVA11498 Division of Nlogonia</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-29 13:33:37 | 编辑于 2022-4-6 14:10:55">2022-3-29 13:33
+							<time title="发布于 2022-5-17 12:49:17 | 编辑于 2022-5-17 12:50:47">2022-5-17 12:49
 							</time>
 						</div>
 					
@@ -662,16 +679,16 @@
 						
 						<div class="post-meta-detail post-meta-detail-categories">
 							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/APPs-Self-Developed/">APPs - Self Developed</a>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
 						</div>
 					
 						
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
+								阅读<span id="busuanzi_value_page_pv"></span>次
 							</span>
 						</div>
 					
@@ -680,7 +697,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							295 字
+							486 字
 						</div>
 					
 						
@@ -688,103 +705,226 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
+							2 分钟
 						</div>
 					
 		</div>
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				简介
-Class Tools 系列应用是 Class Tools Develop Team 使用 C++ / Python 等常见编程语言开发的，均开放源代码并使用 MIT 许可证。
-这个团队是 ren-yc 为提升课堂的高效、趣味性而设计的一系列辅助应用，最初只有 RandomRollCall (随机点名) 一个应用。
-目前，这个团队已经有 8+...
-			
-		
+	<div class="post-content" id="post_content">
+		<h3 id="题目链接">题目链接</h3>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA11498" title="点击跳转至洛谷">洛谷</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11498" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p>
+<h3 id="题目翻译">题目翻译</h3>
+<p>给定基准点的坐标和若干个点，请你输出它分别与基准点的位置关系。</p>
+<ul>
+<li>
+<p>若点的位置与基准点在一条水平线或垂直线上，输出 <code>divisa</code>（即 $n = x$ 或 $m = y$）。</p>
+</li>
+<li>
+<p>若点的位置在基准点的西北，输出 <code>NO</code>（即 $n &gt; x$ 且 $m &gt; y$）。</p>
+</li>
+<li>
+<p>若点的位置在基准点的东北，输出 <code>NE</code>（即 $n &gt; x$ 且 $m &lt; y$）。</p>
+</li>
+<li>
+<p>若点的位置在基准点的东南，输出 <code>SE</code>（即 $n &lt; x$ 且 $m &gt; y$）。</p>
+</li>
+<li>
+<p>若点的位置在基准点的西南，输出 <code>SO</code>（即 $n &lt; x$ 且 $m &lt; y$）。</p>
+</li>
+</ul>
+<p><strong>$k = 0$ 则结束输入。</strong></p>
+<h3 id="题目思路">题目思路</h3>
+<p>直接按照基准点与若个点的坐标值分别进行比较即可。</p>
+<p>我们可以运用 <code>while (~scanf(&quot;%d&quot;, &amp;n))</code> / <code>while (cin &gt;&gt; n)</code> 重复输入直到 EOF。</p>
+<h3 id="代码">代码</h3>
+<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int k, n, m, x, y;
+
+int main() &#123;
+	while (cin &gt;&gt; k) &#123; // 重复输入直到 EOF
+		if (k == 0) &#123; // 判断 k 是否为 0
+			break; // 跳出循环
+		&#125;
+		cin &gt;&gt; n &gt;&gt; m; // 输入基准点坐标
+		for (int i = 1; i &lt;= k; i++) &#123; // 可使用 while (k--) 代替
+			cin &gt;&gt; x &gt;&gt; y; // 输入若干个点的坐标
+			if (x == n || y == m) &#123; // 在一条水平线或垂直线上
+				cout &lt;&lt; &quot;divisa&quot; &lt;&lt; endl;
+			&#125; else if (x &lt; n &amp;&amp; y &lt; m) &#123; // 西南
+				cout &lt;&lt; &quot;SO&quot; &lt;&lt; endl;
+			&#125; else if (x &lt; n &amp;&amp; y &gt; m) &#123; // 西北
+				cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;
+			&#125; else if (x &gt; n &amp;&amp; y &lt; m) &#123; // 东南
+				cout &lt;&lt; &quot;SE&quot; &lt;&lt; endl;
+			&#125; else if (x &gt; n &amp;&amp; y &gt; m) &#123; // 东北
+				cout &lt;&lt; &quot;NE&quot; &lt;&lt; endl;
+			&#125;
+		&#125;
+	&#125;
+	return 0;
+&#125;
+</code></pre>
+<p>$$END$$</p>
+<p><strong>本文章同时发布在 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/renyc/solution-uva11498">洛谷博客</a></strong></p>
+<blockquote>
+<p>本文作者: Yuchen Ren<br>
+本文链接:  <a href="https://ren-yc.github.io/2022/05/17/uva11498-solution/">https://ren-yc.github.io/2022/05/17/uva11498-solution/</a><br>
+版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p>
+
+</blockquote>
+
 	</div>
 
 	
-</article>
 
+	
 
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2022/03/05/guide-of-github/">『教程』Github &amp; Git 入门指南</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-3-5 10:49:39 | 编辑于 2022-5-15 15:07:52">2022-3-5 10:49
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/APPs-Tools/">APPs - Tools</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							378 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
 		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				本文适合刚使用 Github &amp; Git 的开发者参考。
-什么是 Github
-GitHub 是世界上最大的代码托管平台，超 5 千万开发者正在使用。被称为开发者最大的社区。因只支持 Git 作为唯一的版本库格式进行托管而被取名为 Github。
-Git 入门
-安装
-从 此处 选择合适的平台版本安装即可。
-可以输入以下命令进行验证。
-
-$ ...
-			
-		
-	</div>
-
 	
 </article>
 
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2022/05/17/uva11498-solution/&text=『题解』Luogu - UVA11498 Division of Nlogonia" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : '『题解』Luogu - UVA11498 Division of Nlogonia',
+	    description : '题目链接
+洛谷
+UVa Online Judge
+题目翻译
+给定基准点的坐标和若干个点，请你输出它分...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'https://ren-yc.github.io/2022/05/17/uva11498-solution/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+
+
+<div id="post_comment" class="card shadow-sm">
+	<div id="gitalk-container"></div>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+		clientID: 'aea63c24701c1f7f0815',
+		clientSecret: '3f33573a77bf4349dbee91c4897f9ac37bbf16e5',
+		repo: 'ren-yc.github.io',
+		owner: 'ren-yc',
+		admin: ['ren-yc'],
+		id: location.pathname,
+		distractionFreeMode: false
+	})
+	gitalk.render('gitalk-container');
+</script>
+
+</div>
+
+
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2022/05/17/uva10193-solution/" rel="prev"> 『题解』Luogu - UVA10193 All You Need Is Love</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/04/04/class-tools-develop-team-rule/" rel="next"> 『规范』Class Tools Develop Team 团队规则</a></div></div>
 
 
 
-
-			
+		
+		
 		
 		
 

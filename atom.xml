@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/"/>
-  <updated>2022-04-04T06:47:24.570Z</updated>
+  <updated>2022-05-17T07:21:17.561Z</updated>
   <id>https://ren-yc.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『题解』Luogu - UVA10193 All You Need Is Love</title>
+    <link href="https://ren-yc.github.io/2022/05/17/uva10193-solution/"/>
+    <id>https://ren-yc.github.io/2022/05/17/uva10193-solution/</id>
+    <published>2022-05-17T07:20:14.000Z</published>
+    <updated>2022-05-17T07:21:17.561Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11498 Division of Nlogonia</title>
+    <link href="https://ren-yc.github.io/2022/05/17/uva11498-solution/"/>
+    <id>https://ren-yc.github.io/2022/05/17/uva11498-solution/</id>
+    <published>2022-05-17T04:49:17.000Z</published>
+    <updated>2022-05-17T04:50:47.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>『规范』Class Tools Develop Team 团队规则</title>
@@ -61,7 +111,7 @@
     <link href="https://ren-yc.github.io/2022/03/05/guide-of-github/"/>
     <id>https://ren-yc.github.io/2022/03/05/guide-of-github/</id>
     <published>2022-03-05T02:49:39.000Z</published>
-    <updated>2022-04-03T07:05:09.343Z</updated>
+    <updated>2022-05-15T07:07:52.994Z</updated>
     
     
       

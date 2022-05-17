@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>『题解』Luogu - UVA10193 All You Need Is Love</title>
+      <link href="/2022/05/17/uva10193-solution/"/>
+      <url>/2022/05/17/uva10193-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA10193" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/10193" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>共有 $N$ 组数据，给定两个二进制数（字符串），判断将它们分别转化为十进制数后是否互质。</p><h3 id="题目思路">题目思路</h3><p>我们按照题意模拟即可。</p><p>求最大公约数可以使用 C++ 标准库头文件中的 <code>__gcd()</code> 或使用自己手写的函数。</p><p>辗转相除法求最大公约数模板：</p><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">int gcd(int a, int b) &#123;return b == 0 ? a : gcd(b, a % b);&#125;</code></pre><p>二进制转十进制模板：</p><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">int bin2dec(const string &amp;s) &#123;int res = 0, cnt = 0;for (int i = (int)s.size() - 1; i &gt;= 0; i--) &#123;if (s[i] == '1') &#123;res += (int)pow(2, cnt);&#125;cnt++;&#125;return res;&#125;</code></pre><p><strong>此函数的 <code>string</code> 类形参可加 <code>&amp;</code> 取地址符也可不加，具体可以参见 <a href="http://t.csdn.cn/Z3kVY">C++ 中 string 作为参数的传递（string 类型的引用）</a>。</strong></p><h3 id="代码实现">代码实现</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, a, b;string s1, s2;int bin2dec(const string &amp;s) &#123; // 模板int res = 0, cnt = 0; // 记得赋初值for (int i = (int)s.size() - 1; i &gt;= 0; i--) &#123;if (s[i] == '1') &#123;res += (int)pow(2, cnt);&#125;cnt++;&#125;return res;&#125;int main() &#123;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123;cin &gt;&gt; s1 &gt;&gt; s2;a = bin2dec(s1);b = bin2dec(s2);cout &lt;&lt; &quot;Pair #&quot; &lt;&lt; i &lt;&lt; &quot;: &quot;; // 格式if (__gcd(a, b) != 1) &#123; // 判断是否互质cout &lt;&lt; &quot;All you need is love!&quot; &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;Love is not all you need!&quot; &lt;&lt; endl;&#125;&#125;return 0; // 好习惯&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-uva10193">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/05/17/uva10193-solution/">https://ren-yc.github.io/2022/05/17/uva10193-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA11498 Division of Nlogonia</title>
+      <link href="/2022/05/17/uva11498-solution/"/>
+      <url>/2022/05/17/uva11498-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11498" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11498" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>给定基准点的坐标和若干个点，请你输出它分别与基准点的位置关系。</p><ul><li><p>若点的位置与基准点在一条水平线或垂直线上，输出 <code>divisa</code>（即 $n = x$ 或 $m = y$）。</p></li><li><p>若点的位置在基准点的西北，输出 <code>NO</code>（即 $n &gt; x$ 且 $m &gt; y$）。</p></li><li><p>若点的位置在基准点的东北，输出 <code>NE</code>（即 $n &gt; x$ 且 $m &lt; y$）。</p></li><li><p>若点的位置在基准点的东南，输出 <code>SE</code>（即 $n &lt; x$ 且 $m &gt; y$）。</p></li><li><p>若点的位置在基准点的西南，输出 <code>SO</code>（即 $n &lt; x$ 且 $m &lt; y$）。</p></li></ul><p><strong>$k = 0$ 则结束输入。</strong></p><h3 id="题目思路">题目思路</h3><p>直接按照基准点与若个点的坐标值分别进行比较即可。</p><p>我们可以运用 <code>while (~scanf(&quot;%d&quot;, &amp;n))</code> / <code>while (cin &gt;&gt; n)</code> 重复输入直到 EOF。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int k, n, m, x, y;int main() &#123;while (cin &gt;&gt; k) &#123; // 重复输入直到 EOFif (k == 0) &#123; // 判断 k 是否为 0break; // 跳出循环&#125;cin &gt;&gt; n &gt;&gt; m; // 输入基准点坐标for (int i = 1; i &lt;= k; i++) &#123; // 可使用 while (k--) 代替cin &gt;&gt; x &gt;&gt; y; // 输入若干个点的坐标if (x == n || y == m) &#123; // 在一条水平线或垂直线上cout &lt;&lt; &quot;divisa&quot; &lt;&lt; endl;&#125; else if (x &lt; n &amp;&amp; y &lt; m) &#123; // 西南cout &lt;&lt; &quot;SO&quot; &lt;&lt; endl;&#125; else if (x &lt; n &amp;&amp; y &gt; m) &#123; // 西北cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125; else if (x &gt; n &amp;&amp; y &lt; m) &#123; // 东南cout &lt;&lt; &quot;SE&quot; &lt;&lt; endl;&#125; else if (x &gt; n &amp;&amp; y &gt; m) &#123; // 东北cout &lt;&lt; &quot;NE&quot; &lt;&lt; endl;&#125;&#125;&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/renyc/solution-uva11498">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/05/17/uva11498-solution/">https://ren-yc.github.io/2022/05/17/uva11498-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>『规范』Class Tools Develop Team 团队规则</title>
       <link href="/2022/04/04/class-tools-develop-team-rule/"/>
       <url>/2022/04/04/class-tools-develop-team-rule/</url>
