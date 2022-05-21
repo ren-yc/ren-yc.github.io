@@ -11,16 +11,16 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目链接 洛谷 UVa Online Judge 题目翻译 共有 $N$ 组数据，给定两个二进制数（字符串），判断将它们分别转化为十进制数后是否互质。 题目思路 我们按照题意模拟即可。 求最大公约数可以使用 C++ 标准库头文件中的 __gcd() 或使用自己手写的函数。 辗转相除法求最大公约数模板：  int gcd(int a, int b) &amp;#123; 	return b &#x3D;&#x3D; 0 ? a">
+	<meta name="description" content="题目链接 洛谷 UVa Online Judge 题目翻译 一个人给出一个二进制字符串 $S_1$，机器再给出另一个字符串 $S_2$，若一直从 $S_1$ 和 $S_2$ 中分别减去若干个 $L$ 能正好为 $L$，则输出 All you need is love!，反之则输出 Love is not all you need!。 “减法”指与十进制类似的在二进制中使用的减法运算。 数据保证输入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『题解』Luogu - UVA10193 All You Need Is Love">
 <meta property="og:url" content="https://ren-yc.github.io/2022/05/17/uva10193-solution/index.html">
 <meta property="og:site_name" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:description" content="题目链接 洛谷 UVa Online Judge 题目翻译 共有 $N$ 组数据，给定两个二进制数（字符串），判断将它们分别转化为十进制数后是否互质。 题目思路 我们按照题意模拟即可。 求最大公约数可以使用 C++ 标准库头文件中的 __gcd() 或使用自己手写的函数。 辗转相除法求最大公约数模板：  int gcd(int a, int b) &amp;#123; 	return b &#x3D;&#x3D; 0 ? a">
+<meta property="og:description" content="题目链接 洛谷 UVa Online Judge 题目翻译 一个人给出一个二进制字符串 $S_1$，机器再给出另一个字符串 $S_2$，若一直从 $S_1$ 和 $S_2$ 中分别减去若干个 $L$ 能正好为 $L$，则输出 All you need is love!，反之则输出 Love is not all you need!。 “减法”指与十进制类似的在二进制中使用的减法运算。 数据保证输入">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2022-05-17T07:20:14.000Z">
-<meta property="article:modified_time" content="2022-05-17T07:21:17.561Z">
+<meta property="article:modified_time" content="2022-05-21T06:25:48.865Z">
 <meta property="article:author" content="Yuchen Ren">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -670,7 +670,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-5-17 15:20:14 | 编辑于 2022-5-17 15:21:17">2022-5-17 15:20
+							<time title="发布于 2022-5-17 15:20:14 | 编辑于 2022-5-21 14:25:48">2022-5-17 15:20
 							</time>
 						</div>
 					
@@ -697,7 +697,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							461 字
+							412 字
 						</div>
 					
 						
@@ -705,7 +705,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							1 分钟
 						</div>
 					
 		</div>
@@ -717,59 +717,44 @@
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA10193" title="点击跳转至洛谷">洛谷</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/10193" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p>
 <h3 id="题目翻译">题目翻译</h3>
-<p>共有 $N$ 组数据，给定两个二进制数（字符串），判断将它们分别转化为十进制数后是否互质。</p>
+<p>一个人给出一个二进制字符串 $S_1$，机器再给出另一个字符串 $S_2$，若一直从 $S_1$ 和 $S_2$ 中分别减去若干个 $L$ 能正好为 $L$，则输出 <code>All you need is love!</code>，反之则输出 <code>Love is not all you need!</code>。</p>
+<p><strong>“减法”指与十进制类似的在二进制中使用的减法运算。</strong></p>
+<p>数据保证输入的二进制字符串不含有前导零。</p>
 <h3 id="题目思路">题目思路</h3>
-<p>我们按照题意模拟即可。</p>
+<p>将题意用通俗的语言表示：</p>
+<p>判断将它们分别转化为十进制数后是否互质。</p>
+<h3 id="题目解法">题目解法</h3>
 <p>求最大公约数可以使用 C++ 标准库头文件中的 <code>__gcd()</code> 或使用自己手写的函数。</p>
-<p>辗转相除法求最大公约数模板：</p>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">int gcd(int a, int b) &#123;
-	return b == 0 ? a : gcd(b, a % b);
-&#125;
-</code></pre>
-<p>二进制转十进制模板：</p>
-<p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">int bin2dec(const string &amp;s) &#123;
-	int res = 0, cnt = 0;
-	for (int i = (int)s.size() - 1; i &gt;= 0; i--) &#123;
-		if (s[i] == '1') &#123;
-			res += (int)pow(2, cnt);
-		&#125;
-		cnt++;
-	&#125;
-	return res;
-&#125;
-</code></pre>
-<p><strong>此函数的 <code>string</code> 类形参可加 <code>&amp;</code> 取地址符也可不加，具体可以参见 <a target="_blank" rel="noopener" href="http://t.csdn.cn/Z3kVY">C++ 中 string 作为参数的传递（string 类型的引用）</a>。</strong></p>
+<p><strong><code>bin2dec()</code> 函数的 <code>string</code> 类形参可加 <code>&amp;</code> 取地址符也可不加，具体可以参见 <a target="_blank" rel="noopener" href="http://t.csdn.cn/Z3kVY">C++ 中 string 作为参数的传递（string 类型的引用）</a>。</strong></p>
 <h3 id="代码实现">代码实现</h3>
 <p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt; // 万能头
+using namespace std; // 引入 C++ 标准命名空间
 
 int n, a, b;
 string s1, s2;
 
 int bin2dec(const string &amp;s) &#123; // 模板
 	int res = 0, cnt = 0; // 记得赋初值
-	for (int i = (int)s.size() - 1; i &gt;= 0; i--) &#123;
-		if (s[i] == '1') &#123;
-			res += (int)pow(2, cnt);
+	for (int i = (int)s.size() - 1; i &gt;= 0; i--) &#123; // 逆序遍历二进制字符串
+		if (s[i] == '1') &#123; // 如果此位的二进制字符串为 1
+			res += (int)pow(2, cnt); // 将进制的当前位数次幂加入十进制结果
 		&#125;
-		cnt++;
+		cnt++; // 下一个二进制字符串的位置
 	&#125;
-	return res;
+	return res; // 返回十进制结果
 &#125;
 
 int main() &#123;
 	cin &gt;&gt; n;
-	for (int i = 1; i &lt;= n; i++) &#123;
-		cin &gt;&gt; s1 &gt;&gt; s2;
-		a = bin2dec(s1);
-		b = bin2dec(s2);
+	for (int i = 1; i &lt;= n; i++) &#123; // 建议此题不要使用 while (n--)
+		cin &gt;&gt; s1 &gt;&gt; s2; // 输入二进制字符串
+		a = bin2dec(s1); // 转换
+		b = bin2dec(s2); // 同上
 		cout &lt;&lt; &quot;Pair #&quot; &lt;&lt; i &lt;&lt; &quot;: &quot;; // 格式
 		if (__gcd(a, b) != 1) &#123; // 判断是否互质
 			cout &lt;&lt; &quot;All you need is love!&quot; &lt;&lt; endl;
-		&#125; else &#123;
+		&#125; else &#123; // 反之
 			cout &lt;&lt; &quot;Love is not all you need!&quot; &lt;&lt; endl;
 		&#125;
 	&#125;
@@ -858,7 +843,7 @@ int main() &#123;
 洛谷
 UVa Online Judge
 题目翻译
-共有 $N$ 组数据，给定两个二进制数（...',
+一个人给出一个二进制字符串 $S_1$，...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
 	    source : 'https://ren-yc.github.io/2022/05/17/uva10193-solution/'
