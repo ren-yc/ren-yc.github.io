@@ -130,7 +130,7 @@
 	tinymce.create('tinymce.plugins.github', {
 		init : function(ed, url){
 			ed.addButton('github', {
-				title : 'Github 信息卡',
+				title : 'GitHub 信息卡',
 				image : url+'/github.svg',
 				onclick : function(){
 					ed.selection.setContent('[github author="" project="" /]');

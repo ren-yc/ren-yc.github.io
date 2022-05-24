@@ -746,7 +746,7 @@ $(document).on("click" , ".collapse-block .collapse-block-title" , function(){
 	$("html").trigger("scroll");
 });
 
-/*获得 Github Repo Shortcode 信息卡内容*/
+/*获得 GitHub Repo Shortcode 信息卡内容*/
 function getGithubInfoCardContent(){
 	$(".github-info-card").each(function(){
 		(function($this){
