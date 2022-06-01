@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/"/>
-  <updated>2022-05-21T06:25:48.865Z</updated>
+  <updated>2022-06-01T11:16:13.095Z</updated>
   <id>https://ren-yc.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>『题解』Luogu - UVA11713 Abstract Names</title>
+    <link href="https://ren-yc.github.io/2022/06/01/uva11713-solution/"/>
+    <id>https://ren-yc.github.io/2022/06/01/uva11713-solution/</id>
+    <published>2022-06-01T11:16:17.000Z</published>
+    <updated>2022-06-01T11:16:13.095Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>『题解』Luogu - UVA10193 All You Need Is Love</title>
     <link href="https://ren-yc.github.io/2022/05/17/uva10193-solution/"/>
     <id>https://ren-yc.github.io/2022/05/17/uva10193-solution/</id>
     <published>2022-05-17T07:20:14.000Z</published>
-    <updated>2022-05-21T06:25:48.865Z</updated>
+    <updated>2022-06-01T11:15:44.919Z</updated>
     
     
       
@@ -46,7 +71,7 @@
     <link href="https://ren-yc.github.io/2022/05/17/uva11498-solution/"/>
     <id>https://ren-yc.github.io/2022/05/17/uva11498-solution/</id>
     <published>2022-05-17T04:49:17.000Z</published>
-    <updated>2022-05-17T04:50:47.373Z</updated>
+    <updated>2022-06-01T11:15:44.924Z</updated>
     
     
       
@@ -134,7 +159,7 @@
     <link href="https://ren-yc.github.io/2022/01/17/uva10281-solution/"/>
     <id>https://ren-yc.github.io/2022/01/17/uva10281-solution/</id>
     <published>2022-01-17T09:35:51.000Z</published>
-    <updated>2022-01-17T09:38:19.276Z</updated>
+    <updated>2022-06-01T11:15:44.928Z</updated>
     
     
       
@@ -209,7 +234,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/uva10041-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/uva10041-solution/</id>
     <published>2022-01-11T10:35:21.000Z</published>
-    <updated>2022-01-11T10:38:56.481Z</updated>
+    <updated>2022-06-01T11:15:44.925Z</updated>
     
     
       
@@ -234,7 +259,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/uva465-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/uva465-solution/</id>
     <published>2022-01-11T10:30:14.000Z</published>
-    <updated>2022-01-11T10:34:30.568Z</updated>
+    <updated>2022-06-01T11:15:44.922Z</updated>
     
     
       
@@ -259,7 +284,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/uva11727-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/uva11727-solution/</id>
     <published>2022-01-11T10:27:48.000Z</published>
-    <updated>2022-01-11T10:29:32.094Z</updated>
+    <updated>2022-06-01T11:15:44.919Z</updated>
     
     
       
@@ -284,7 +309,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/sp7733-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/sp7733-solution/</id>
     <published>2022-01-11T10:22:35.000Z</published>
-    <updated>2022-01-11T10:27:11.269Z</updated>
+    <updated>2022-06-01T11:15:44.929Z</updated>
     
     
       
@@ -309,7 +334,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/uva12503-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/uva12503-solution/</id>
     <published>2022-01-11T10:18:04.000Z</published>
-    <updated>2022-01-11T10:20:07.824Z</updated>
+    <updated>2022-06-01T11:15:44.935Z</updated>
     
     
       
@@ -334,7 +359,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/uva10035-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/uva10035-solution/</id>
     <published>2022-01-11T09:43:37.000Z</published>
-    <updated>2022-01-11T10:16:57.393Z</updated>
+    <updated>2022-06-01T11:15:44.928Z</updated>
     
     
       
@@ -359,7 +384,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/cf550a-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/cf550a-solution/</id>
     <published>2022-01-11T09:37:31.000Z</published>
-    <updated>2022-01-11T09:39:15.306Z</updated>
+    <updated>2022-06-01T11:15:44.929Z</updated>
     
     
       
@@ -384,7 +409,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/cf268a-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/cf268a-solution/</id>
     <published>2022-01-11T09:33:40.000Z</published>
-    <updated>2022-01-11T09:36:15.401Z</updated>
+    <updated>2022-06-01T11:15:44.929Z</updated>
     
     
       
@@ -409,7 +434,7 @@
     <link href="https://ren-yc.github.io/2022/01/11/cf1475a-solution/"/>
     <id>https://ren-yc.github.io/2022/01/11/cf1475a-solution/</id>
     <published>2022-01-11T09:28:24.000Z</published>
-    <updated>2022-01-11T10:48:44.528Z</updated>
+    <updated>2022-06-01T11:15:44.937Z</updated>
     
     
       
@@ -434,7 +459,7 @@
     <link href="https://ren-yc.github.io/2021/10/11/cf1598a-solution/"/>
     <id>https://ren-yc.github.io/2021/10/11/cf1598a-solution/</id>
     <published>2021-10-11T12:33:27.000Z</published>
-    <updated>2022-01-11T10:17:33.772Z</updated>
+    <updated>2022-06-01T11:15:44.929Z</updated>
     
     
       
@@ -459,7 +484,7 @@
     <link href="https://ren-yc.github.io/2021/10/06/cf44b-solution/"/>
     <id>https://ren-yc.github.io/2021/10/06/cf44b-solution/</id>
     <published>2021-10-06T11:39:32.000Z</published>
-    <updated>2021-12-19T06:27:46.107Z</updated>
+    <updated>2022-06-01T11:15:44.929Z</updated>
     
     
       
@@ -499,7 +524,7 @@
     <link href="https://ren-yc.github.io/2021/09/14/uva11559-solution/"/>
     <id>https://ren-yc.github.io/2021/09/14/uva11559-solution/</id>
     <published>2021-09-14T00:20:26.000Z</published>
-    <updated>2022-01-11T10:08:53.640Z</updated>
+    <updated>2022-06-01T11:15:44.923Z</updated>
     
     
       
@@ -524,7 +549,7 @@
     <link href="https://ren-yc.github.io/2021/08/23/uva13012-solution/"/>
     <id>https://ren-yc.github.io/2021/08/23/uva13012-solution/</id>
     <published>2021-08-23T11:39:18.000Z</published>
-    <updated>2022-01-11T10:20:44.481Z</updated>
+    <updated>2022-06-01T11:15:44.919Z</updated>
     
     
       

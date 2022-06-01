@@ -511,7 +511,7 @@
 		
 			<p class="text-black mt-3 mb-0 opacity-8">
 				<i class="fa fa-file-o mr-1"></i>
-				10 篇文章
+				11 篇文章
 			</p>
 		
 	</div>
@@ -560,7 +560,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">25</span>
+										<span class="site-state-item-count">26</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -630,7 +630,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">10</span></a>
+				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">11</span></a>
 			</div>
 		</div>
 	</div>
@@ -645,7 +645,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">12</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
+				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">13</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
 			</div>
 		</div>
 	</div>
@@ -662,13 +662,89 @@
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
+		<a class="post-title" href="/2022/06/01/uva11713-solution/">『题解』Luogu - UVA11713 Abstract Names</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2022-6-1 19:16:17 | 编辑于 2022-6-1 19:16:13">2022-6-1 19:16
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							353 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目链接
+洛谷
+UVa Online Judge
+题目翻译
+给定 $n$ 组数据，每组包含两个字符串，若这两个字符串去掉元音（位置相同内容可不同）后是否完全相同。
+元音：即 a 或 i 或 e 或 o 或 u。
+题目思路
+由元音每对位置相同可知输入的字符串长度一定相等，所以我们可以在输入后进行字符串长度比较。
+然后遍历两个字符串的每一个元素，若相同...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
+		</div>
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 ">
+	<header class="post-header text-center">
+		
 		<a class="post-title" href="/2022/05/17/uva10193-solution/">『题解』Luogu - UVA10193 All You Need Is Love</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-5-17 15:20:14 | 编辑于 2022-5-21 14:25:48">2022-5-17 15:20
+							<time title="发布于 2022-5-17 15:20:14 | 编辑于 2022-6-1 19:15:44">2022-5-17 15:20
 							</time>
 						</div>
 					
@@ -741,7 +817,7 @@ UVa Online Judge
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-5-17 12:49:17 | 编辑于 2022-5-17 12:50:47">2022-5-17 12:49
+							<time title="发布于 2022-5-17 12:49:17 | 编辑于 2022-6-1 19:15:44">2022-5-17 12:49
 							</time>
 						</div>
 					
@@ -822,7 +898,7 @@ UVa Online Judge
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-17 17:35:51 | 编辑于 2022-1-17 17:38:19">2022-1-17 17:35
+							<time title="发布于 2022-1-17 17:35:51 | 编辑于 2022-6-1 19:15:44">2022-1-17 17:35
 							</time>
 						</div>
 					
@@ -902,7 +978,7 @@ sscanf() 的用法
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 18:35:21 | 编辑于 2022-1-11 18:38:56">2022-1-11 18:35
+							<time title="发布于 2022-1-11 18:35:21 | 编辑于 2022-6-1 19:15:44">2022-1-11 18:35
 							</time>
 						</div>
 					
@@ -981,7 +1057,7 @@ $\therefore$ 编写代码求中位数即可
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 18:30:14 | 编辑于 2022-1-11 18:34:30">2022-1-11 18:30
+							<time title="发布于 2022-1-11 18:30:14 | 编辑于 2022-6-1 19:15:44">2022-1-11 18:30
 							</time>
 						</div>
 					
@@ -1056,7 +1132,7 @@ UVa Online Judge
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 18:27:48 | 编辑于 2022-1-11 18:29:32">2022-1-11 18:27
+							<time title="发布于 2022-1-11 18:27:48 | 编辑于 2022-6-1 19:15:44">2022-1-11 18:27
 							</time>
 						</div>
 					
@@ -1135,7 +1211,7 @@ for i i...
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 18:18:04 | 编辑于 2022-1-11 18:20:07">2022-1-11 18:18
+							<time title="发布于 2022-1-11 18:18:04 | 编辑于 2022-6-1 19:15:44">2022-1-11 18:18
 							</time>
 						</div>
 					
@@ -1210,7 +1286,7 @@ UVa Online Judge
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 17:43:37 | 编辑于 2022-1-11 18:16:57">2022-1-11 17:43
+							<time title="发布于 2022-1-11 17:43:37 | 编辑于 2022-6-1 19:15:44">2022-1-11 17:43
 							</time>
 						</div>
 					
@@ -1287,7 +1363,7 @@ Python 3 中的各种赋值运算符
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-9-14 8:20:26 | 编辑于 2022-1-11 18:08:53">2021-9-14 8:20
+							<time title="发布于 2021-9-14 8:20:26 | 编辑于 2022-6-1 19:15:44">2021-9-14 8:20
 							</time>
 						</div>
 					
@@ -1350,82 +1426,8 @@ UVa Online Judge
 </article>
 
 
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/08/23/uva13012-solution/">『题解』Luogu - UVA13012 Identifying tea</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-23 19:39:18 | 编辑于 2022-1-11 18:20:44">2021-8-23 19:39
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							236 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
 
-	<div class="post-content">
-		
-			
-				题目链接
-洛谷
-UVa Online Judge
-题目解析
-太淼了，一道模拟题。
-一般 UVA 的题读入行数是不给定的，所以我们要使用 while (cin &gt;&gt; n) 或者 while (~scanf(&quot;%d&quot;, &amp;n))。
-每次循环读入后，使用 if 判断这 $5$ 个数是否等于 $t$。如果是，计数器加...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
-		</div>
-	
-</article>
-
-
-
-
+<nav><ul class="pagination"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/categories/Solution-UVA/page/2/">2</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution-UVA/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav><nav><ul class="pagination pagination-mobile"><li class="page-item active"><span class="page-link" style="cursor: default;">1</span></li><li class="page-item"><a class="page-link" href="/categories/Solution-UVA/page/2/">2</a></li><li class="page-item"><a aria-label="Next Page" class="page-link" href="/categories/Solution-UVA/page/2/"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></nav>
 
 		
 
