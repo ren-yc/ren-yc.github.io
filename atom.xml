@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/"/>
-  <updated>2022-06-01T11:16:13.095Z</updated>
+  <updated>2022-06-02T08:21:29.626Z</updated>
   <id>https://ren-yc.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11278 One-Handed Typist</title>
+    <link href="https://ren-yc.github.io/2022/06/02/uva11278-solution/"/>
+    <id>https://ren-yc.github.io/2022/06/02/uva11278-solution/</id>
+    <published>2022-06-02T08:21:03.000Z</published>
+    <updated>2022-06-02T08:21:29.626Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11581 Grid Successors</title>
+    <link href="https://ren-yc.github.io/2022/06/02/uva11581-solution/"/>
+    <id>https://ren-yc.github.io/2022/06/02/uva11581-solution/</id>
+    <published>2022-06-02T04:38:12.000Z</published>
+    <updated>2022-06-02T08:20:49.599Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>『题解』Luogu - UVA11713 Abstract Names</title>
@@ -525,31 +575,6 @@
     <id>https://ren-yc.github.io/2021/09/14/uva11559-solution/</id>
     <published>2021-09-14T00:20:26.000Z</published>
     <updated>2022-06-01T11:15:44.923Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
-    
-    
-    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『题解』Luogu - UVA11581 Grid Successors</title>
-    <link href="https://ren-yc.github.io/2021/08/23/uva11581-solution/"/>
-    <id>https://ren-yc.github.io/2021/08/23/uva11581-solution/</id>
-    <published>2021-08-23T11:39:18.000Z</published>
-    <updated>2022-06-01T23:42:04.022Z</updated>
     
     
       

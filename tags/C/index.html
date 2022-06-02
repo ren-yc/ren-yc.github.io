@@ -511,7 +511,7 @@
 		
 			<p class="text-black mt-3 mb-0 opacity-8">
 				<i class="fa fa-file-o mr-1"></i>
-				14 篇文章
+				15 篇文章
 			</p>
 		
 	</div>
@@ -560,7 +560,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">27</span>
+										<span class="site-state-item-count">28</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -630,7 +630,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">12</span></a>
+				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">13</span></a>
 			</div>
 		</div>
 	</div>
@@ -645,7 +645,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">14</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
+				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">15</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
 			</div>
 		</div>
 	</div>
@@ -658,6 +658,156 @@
 		
 		
 			
+	<article class="post card bg-white shadow-sm border-0 ">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2022/06/02/uva11278-solution/">『题解』Luogu - UVA11278 One-Handed Typist</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2022-6-2 16:21:03 | 编辑于 2022-6-2 16:21:29">2022-6-2 16:21
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							366 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目链接
+洛谷
+UVa Online Judge
+题目翻译
+给定若干行可能包含空格的字符串，按照题面后两张图片的方法（简单加密）来进行对字符串的每个元素进行变换。
+题目解法
+我们可以定义两个常量字符串作为键值对（当然也可以使用 map &lt;char, char&gt;）。
+若使用常量字符串，则可以查找出该元素在键值字符串中的位置，并使用该下标访...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
+		</div>
+	
+</article>
+
+
+	<article class="post card bg-white shadow-sm border-0 ">
+	<header class="post-header text-center">
+		
+		<a class="post-title" href="/2022/06/02/uva11581-solution/">『题解』Luogu - UVA11581 Grid Successors</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2022-6-2 12:38:12 | 编辑于 2022-6-2 16:20:49">2022-6-2 12:38
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-categories">
+							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							<a class="post-meta-detail-catagory-link" href="/categories/Solution-UVA/">Solution - UVA</a>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读 <span id="busuanzi_value_page_pv"></span> 次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							586 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							2 分钟
+						</div>
+					
+		</div>
+		
+	</header>
+
+	<div class="post-content">
+		
+			
+				题目链接
+洛谷
+UVa Online Judge
+题目翻译
+定义 $f()$ 为把矩阵的每一个元素替换为它相邻的元素之和对 $2$ 取模所得的结果。
+给定一个 $n$ 组 $3 \times 3$ 的仅包含 $0$ 和 $1$ 的矩阵，求经过多少次 $f()$ 后矩阵的每一个元素都为 $0$，若无需变换则输出 $-1$。
+题目思路
+我们可以按照题意...
+			
+		
+	</div>
+
+	
+		<div class="post-tags">
+			<i class="fa fa-tags" aria-hidden="true"></i>
+			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
+		</div>
+	
+</article>
+
+
 	<article class="post card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
@@ -1290,157 +1440,6 @@ using namespace std;
 
 int main() &#123;
 	int n, a[...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2022/01/11/cf1475a-solution/">『题解』Luogu - CF1475A Odd Divisor</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2022-1-11 17:28:24 | 编辑于 2022-6-1 19:15:44">2022-1-11 17:28
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution-CF/">Solution - CF</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							238 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目链接
-洛谷
-Codeforces
-题目大意
-判断一个数能否被一个大于 $1$ 的数整除。
-我们最先想到能一直除以 $2$，如果余数为 $1$，那么输出 NO，否则输出 YES。
-还要注意一点 $n$ 的范围是 $10$ 的 $14$ 次方，$\mathrm{INT}$_$\mathrm{MAX} \approx 10^9$，所以要用 long ...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/C/" rel="tag">C++</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/10/11/cf1598a-solution/">『题解』Luogu - CF1598A Computer Game</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-10-11 20:33:27 | 编辑于 2022-6-1 19:15:44">2021-10-11 20:33
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-categories">
-							<i class="fa fa-bookmark-o" aria-hidden="true"></i>
-							<a class="post-meta-detail-catagory-link" href="/categories/Solution-CF/">Solution - CF</a>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读 <span id="busuanzi_value_page_pv"></span> 次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							281 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				题目链接
-洛谷
-Codeforces
-题目翻译
-给定两行字符串，求能否从左上角走到右下角（0 为可走，1 为不可走）。（超简洁翻译）
-题目思路
-我们可以读入完字符串后循环遍历，两两比较，如果有 $s1_i = s2_i$，说明无法通过，则 $flag = true$（也可以输出后直接 continue）。
-代码
-
-#include &lt;bits...
 			
 		
 	</div>

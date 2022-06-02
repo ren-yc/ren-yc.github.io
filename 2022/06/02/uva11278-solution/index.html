@@ -6,21 +6,21 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="/assets/js/press.js"></script>
 	
-	<title>『题解』Luogu - UVA11581 Grid Successors - Yuchen Ren&#39;s Personal Blog</title>
+	<title>『题解』Luogu - UVA11278 One-Handed Typist - Yuchen Ren&#39;s Personal Blog</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="题目链接 洛谷 UVa Online Judge 题目翻译 定义 $f()$ 为把矩阵的每一个元素替换为它相邻的元素之和对 $2$ 取模所得的结果。 给定一个 $n$ 组 $3 \times 3$ 的仅包含 $0$ 和 $1$ 的矩阵，求经过多少次 $f()$ 后矩阵的每一个元素都为 $0$，若无需变换则输出 $-1$。 题目思路 我们可以按照题意模拟 $f()$ 并在每次变换之后检测矩阵的元素是">
+	<meta name="description" content="题目链接 洛谷 UVa Online Judge 题目翻译 给定若干行可能包含空格的字符串，按照题面后两张图片的方法（简单加密）来进行对字符串的每个元素进行变换。 题目解法 我们可以定义两个常量字符串作为键值对（当然也可以使用 map &lt;char, char&gt;）。 若使用常量字符串，则可以查找出该元素在键值字符串中的位置，并使用该下标访问该键值的值，就可以得出该元素在解密后的值。 代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="『题解』Luogu - UVA11581 Grid Successors">
-<meta property="og:url" content="https://ren-yc.github.io/2021/08/23/uva11581-solution/index.html">
+<meta property="og:title" content="『题解』Luogu - UVA11278 One-Handed Typist">
+<meta property="og:url" content="https://ren-yc.github.io/2022/06/02/uva11278-solution/index.html">
 <meta property="og:site_name" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:description" content="题目链接 洛谷 UVa Online Judge 题目翻译 定义 $f()$ 为把矩阵的每一个元素替换为它相邻的元素之和对 $2$ 取模所得的结果。 给定一个 $n$ 组 $3 \times 3$ 的仅包含 $0$ 和 $1$ 的矩阵，求经过多少次 $f()$ 后矩阵的每一个元素都为 $0$，若无需变换则输出 $-1$。 题目思路 我们可以按照题意模拟 $f()$ 并在每次变换之后检测矩阵的元素是">
+<meta property="og:description" content="题目链接 洛谷 UVa Online Judge 题目翻译 给定若干行可能包含空格的字符串，按照题面后两张图片的方法（简单加密）来进行对字符串的每个元素进行变换。 题目解法 我们可以定义两个常量字符串作为键值对（当然也可以使用 map &lt;char, char&gt;）。 若使用常量字符串，则可以查找出该元素在键值字符串中的位置，并使用该下标访问该键值的值，就可以得出该元素在解密后的值。 代码">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
-<meta property="article:published_time" content="2021-08-23T11:39:18.000Z">
-<meta property="article:modified_time" content="2022-06-01T23:42:04.022Z">
+<meta property="article:published_time" content="2022-06-02T08:21:03.000Z">
+<meta property="article:modified_time" content="2022-06-02T08:21:29.626Z">
 <meta property="article:author" content="Yuchen Ren">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -573,7 +573,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">27</span>
+										<span class="site-state-item-count">28</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -643,7 +643,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">12</span></a>
+				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/NOI-Series/" rel="tag">NOI Series <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">5</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">13</span></a>
 			</div>
 		</div>
 	</div>
@@ -658,7 +658,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">14</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
+				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">15</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
 			</div>
 		</div>
 	</div>
@@ -672,13 +672,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/08/23/uva11581-solution/">『题解』Luogu - UVA11581 Grid Successors</a>
+		<a class="post-title" href="/2022/06/02/uva11278-solution/">『题解』Luogu - UVA11278 One-Handed Typist</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-8-23 19:39:18 | 编辑于 2022-6-2 7:42:04">2021-8-23 19:39
+							<time title="发布于 2022-6-2 16:21:03 | 编辑于 2022-6-2 16:21:29">2022-6-2 16:21
 							</time>
 						</div>
 					
@@ -705,7 +705,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							586 字
+							366 字
 						</div>
 					
 						
@@ -713,7 +713,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							2 分钟
+							1 分钟
 						</div>
 					
 		</div>
@@ -722,75 +722,54 @@
 
 	<div class="post-content" id="post_content">
 		<h3 id="题目链接">题目链接</h3>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA11581" title="点击跳转至洛谷">洛谷</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11581" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA11278" title="点击跳转至洛谷">洛谷</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11278" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p>
 <h3 id="题目翻译">题目翻译</h3>
-<p>定义 $f()$ 为把矩阵的每一个元素替换为它相邻的元素之和对 $2$ 取模所得的结果。</p>
-<p>给定一个 $n$ 组 $3 \times 3$ 的仅包含 $0$ 和 $1$ 的矩阵，求经过多少次 $f()$ 后矩阵的每一个元素都为 $0$，若无需变换则输出 $-1$。</p>
-<h3 id="题目思路">题目思路</h3>
-<p>我们可以按照题意模拟 $f()$ 并在每次变换之后检测矩阵的元素是否全部为 $0$，最终输出变换的次数。</p>
-<h3 id="代码">代码</h3>
+<p>给定若干行<strong>可能包含空格的</strong>字符串，按照题面后两张图片的方法（简单加密）来进行对字符串的每个元素进行变换。</p>
+<h3 id="题目解法">题目解法</h3>
+<p>我们可以定义两个常量字符串作为键值对（当然也可以使用 <code>map &lt;char, char&gt;</code>）。</p>
+<p>若使用常量字符串，则可以查找出该元素在键值字符串中的位置，并使用该下标访问该键值的值，就可以得出该元素在解密后的值。</p>
+<h3 id="代码要点">代码要点</h3>
+<ul>
+<li>
+<p><code>while (getline(任意输入流, basic_string &lt;该输入流所支持的字符类型&gt;))</code>。</p>
+<ul>
+<li>读入若干个整行带空格的字符串直到 EOF。</li>
+</ul>
+</li>
+<li>
+<p><code>basic_string &lt;任意类型&gt;.find(该类型)</code></p>
+<ul>
+<li>查找该类型的字符串中某个元素的位置，若不存在则返回 <code>string::npos</code>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>附注：<code>string</code> 本质上是 <code>basic_string &lt;char&gt;</code>。</strong></p>
+<h3 id="完整代码">完整代码</h3>
 <p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt; // 万能头
+using namespace std; // 标准命名空间
 
-int n, ans;
-int g[3][3];
+const string s1 = &quot; `1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./~!@#$%^&amp;*()_+QWERTYUIOP&#123;&#125;|ASDFGHJKL:\&quot;ZXCVBNM&lt;&gt;?&quot;; // 键值
+const string s2 = &quot; `123qjlmfp/[]456.orsuyb;=\\789aehtdck-0zx,inwvg'~!@#QJLMFP?&#123;&#125;$%^&gt;ORSUYB:+|&amp;*(AEHTDCK_)ZX&lt;INWVG\&quot;&quot;; // 键值的值
 
-void func() &#123;
-	int h[3][3];
-	h[0][0] = (g[0][1] + g[1][0]) % 2; // 模拟矩阵变换
-	h[0][1] = (g[0][0] + g[1][1] + g[0][2]) % 2;
-	h[0][2] = (g[0][1] + g[1][2]) % 2;
-	h[1][0] = (g[0][0] + g[1][1] + g[2][0]) % 2;
-	h[1][1] = (g[0][1] + g[1][0] + g[1][2] + g[2][1]) % 2;
-	h[1][2] = (g[1][1] + g[0][2] + g[2][2]) % 2;
-	h[2][0] = (g[2][1] + g[1][0]) % 2;
-	h[2][1] = (g[2][0] + g[1][1] + g[2][2]) % 2;
-	h[2][2] = (g[2][1] + g[1][2]) % 2;
-	for (int i = 0; i &lt; 3; i++) &#123;
-		for (int j = 0; j &lt; 3; j++) &#123;
-			g[i][j] = h[i][j]; // 最后再赋值
-		&#125;
-	&#125;
-&#125;
-
-bool isZero() &#123;
-	for (int i = 0; i &lt; 3; i++) &#123;
-		for (int j = 0; j &lt; 3; j++) &#123;
-			if (g[i][j] == 1) &#123;
-				return false; // 一旦有非零（为 1）的元素则直接返回假
-			&#125;
-		&#125;
-	&#125;
-	return true; // 没有非零（为 1）的元素
-&#125;
+string in; // 输入的字符串
 
 int main() &#123;
-	cin &gt;&gt; n;
-	while (n--) &#123;
-		ans = -1; // 计数器初始化
-		for (int i = 0; i &lt; 3; i++) &#123;
-			for (int j = 0; j &lt; 3; j++) &#123;
-				char ch; // 这里使用字符进行读取并转换为整型
-				cin &gt;&gt; ch;
-				g[i][j] = ch - '0'; // 转换
-			&#125;
+	while (getline(cin, in)) &#123; // 使用此方法可读入若干行带空格字符串直到 EOF
+		for (int i = 0; i &lt; (int)in.size(); i++) &#123; // 遍历
+			cout &lt;&lt; s2[s1.find(in[i])]; // 求出解密后的值
 		&#125;
-		while (!isZero()) &#123; // 切记要用 while，不断变换直到全部为零
-			func(); // 变换
-			ans++; // 次数
-		&#125;
-		cout &lt;&lt; ans &lt;&lt; endl; // 输出
+		cout &lt;&lt; endl; // 记得换行
 	&#125;
-	return 0;
+	return 0; // 返回运行无误
 &#125;
 </code></pre>
 <p>$$END$$</p>
-<p><strong>本文章同时发布在 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11581">洛谷博客</a></strong></p>
+<p><strong>本文章同时发布在 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11278">洛谷博客</a></strong></p>
 <blockquote>
 <p>本文作者: Yuchen Ren<br>
-本文链接:  <a href="https://ren-yc.github.io/2021/08/23/uva11581-solution/">https://ren-yc.github.io/2021/08/23/uva11581-solution/</a><br>
+本文链接:  <a href="https://ren-yc.github.io/2022/06/02/uva11278-solution/">https://ren-yc.github.io/2022/06/02/uva11278-solution/</a><br>
 版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p>
 
 </blockquote>
@@ -846,7 +825,7 @@ int main() &#123;
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2021/08/23/uva11581-solution/&text=『题解』Luogu - UVA11581 Grid Successors" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2022/06/02/uva11278-solution/&text=『题解』Luogu - UVA11278 One-Handed Typist" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -863,15 +842,15 @@ int main() &#123;
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : '『题解』Luogu - UVA11581 Grid Successors',
+	    title : '『题解』Luogu - UVA11278 One-Handed Typist',
 	    description : '题目链接
 洛谷
 UVa Online Judge
 题目翻译
-定义 $f()$ 为把矩阵的每一个元素替...',
+给定若干行可能包含空格的字符串，按照题面...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://ren-yc.github.io/2021/08/23/uva11581-solution/'
+	    source : 'https://ren-yc.github.io/2022/06/02/uva11278-solution/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -935,7 +914,7 @@ UVa Online Judge
 </div>
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2021/09/14/uva11559-solution/" rel="prev"> 『题解』Luogu - UVA11559 Event Planning</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/08/23/uva13012-solution/" rel="next"> 『题解』Luogu - UVA13012 Identifying tea</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/06/02/uva11581-solution/" rel="next"> 『题解』Luogu - UVA11581 Grid Successors</a></div></div>
 
 
 

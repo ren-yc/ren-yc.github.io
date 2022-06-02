@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>『题解』Luogu - UVA11278 One-Handed Typist</title>
+      <link href="/2022/06/02/uva11278-solution/"/>
+      <url>/2022/06/02/uva11278-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11278" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11278" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>给定若干行<strong>可能包含空格的</strong>字符串，按照题面后两张图片的方法（简单加密）来进行对字符串的每个元素进行变换。</p><h3 id="题目解法">题目解法</h3><p>我们可以定义两个常量字符串作为键值对（当然也可以使用 <code>map &lt;char, char&gt;</code>）。</p><p>若使用常量字符串，则可以查找出该元素在键值字符串中的位置，并使用该下标访问该键值的值，就可以得出该元素在解密后的值。</p><h3 id="代码要点">代码要点</h3><ul><li><p><code>while (getline(任意输入流, basic_string &lt;该输入流所支持的字符类型&gt;))</code>。</p><ul><li>读入若干个整行带空格的字符串直到 EOF。</li></ul></li><li><p><code>basic_string &lt;任意类型&gt;.find(该类型)</code></p><ul><li>查找该类型的字符串中某个元素的位置，若不存在则返回 <code>string::npos</code>。</li></ul></li></ul><p><strong>附注：<code>string</code> 本质上是 <code>basic_string &lt;char&gt;</code>。</strong></p><h3 id="完整代码">完整代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt; // 万能头using namespace std; // 标准命名空间const string s1 = &quot; `1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./~!@#$%^&amp;*()_+QWERTYUIOP&#123;&#125;|ASDFGHJKL:\&quot;ZXCVBNM&lt;&gt;?&quot;; // 键值const string s2 = &quot; `123qjlmfp/[]456.orsuyb;=\\789aehtdck-0zx,inwvg'~!@#QJLMFP?&#123;&#125;$%^&gt;ORSUYB:+|&amp;*(AEHTDCK_)ZX&lt;INWVG\&quot;&quot;; // 键值的值string in; // 输入的字符串int main() &#123;while (getline(cin, in)) &#123; // 使用此方法可读入若干行带空格字符串直到 EOFfor (int i = 0; i &lt; (int)in.size(); i++) &#123; // 遍历cout &lt;&lt; s2[s1.find(in[i])]; // 求出解密后的值&#125;cout &lt;&lt; endl; // 记得换行&#125;return 0; // 返回运行无误&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11278">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/06/02/uva11278-solution/">https://ren-yc.github.io/2022/06/02/uva11278-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA11581 Grid Successors</title>
+      <link href="/2022/06/02/uva11581-solution/"/>
+      <url>/2022/06/02/uva11581-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11581" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11581" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>定义 $f()$ 为把矩阵的每一个元素替换为它相邻的元素之和对 $2$ 取模所得的结果。</p><p>给定一个 $n$ 组 $3 \times 3$ 的仅包含 $0$ 和 $1$ 的矩阵，求经过多少次 $f()$ 后矩阵的每一个元素都为 $0$，若无需变换则输出 $-1$。</p><h3 id="题目思路">题目思路</h3><p>我们可以按照题意模拟 $f()$ 并在每次变换之后检测矩阵的元素是否全部为 $0$，最终输出变换的次数。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, ans;int g[3][3];void func() &#123;int h[3][3];h[0][0] = (g[0][1] + g[1][0]) % 2; // 模拟矩阵变换h[0][1] = (g[0][0] + g[1][1] + g[0][2]) % 2;h[0][2] = (g[0][1] + g[1][2]) % 2;h[1][0] = (g[0][0] + g[1][1] + g[2][0]) % 2;h[1][1] = (g[0][1] + g[1][0] + g[1][2] + g[2][1]) % 2;h[1][2] = (g[1][1] + g[0][2] + g[2][2]) % 2;h[2][0] = (g[2][1] + g[1][0]) % 2;h[2][1] = (g[2][0] + g[1][1] + g[2][2]) % 2;h[2][2] = (g[2][1] + g[1][2]) % 2;for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;g[i][j] = h[i][j]; // 最后再赋值&#125;&#125;&#125;bool isZero() &#123;for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;if (g[i][j] == 1) &#123;return false; // 一旦有非零（为 1）的元素则直接返回假&#125;&#125;&#125;return true; // 没有非零（为 1）的元素&#125;int main() &#123;cin &gt;&gt; n;while (n--) &#123;ans = -1; // 计数器初始化for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;char ch; // 这里使用字符进行读取并转换为整型cin &gt;&gt; ch;g[i][j] = ch - '0'; // 转换&#125;&#125;while (!isZero()) &#123; // 切记要用 while，不断变换直到全部为零func(); // 变换ans++; // 次数&#125;cout &lt;&lt; ans &lt;&lt; endl; // 输出&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11581">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/06/02/uva11581-solution/">https://ren-yc.github.io/2022/06/02/uva11581-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>『题解』Luogu - UVA11713 Abstract Names</title>
       <link href="/2022/06/01/uva11713-solution/"/>
       <url>/2022/06/01/uva11713-solution/</url>
@@ -504,31 +554,6 @@
       <url>/2021/09/14/uva11559-solution/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11559" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11559" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>作为一次短途旅行的组织者，你需要根据参与人数、预算、酒店及其周末空余床位的情况，决定是否成行。其中旅游人数 $N$，预算 $B$，可供考虑的酒店数量 $H$，可选择的出行周末 $W$。其中 $H$ 确定之后，会输入 $H$ 组数据，每两行为一组，第一行表示该酒店的人均住店费用 $p$，第二行表示 $W$ 个周末对应每个周末该酒店的床位空余情况 $a$。</p><h3 id="题目解析">题目解析</h3><p>本题很明显就能看出是一道模拟题。</p><p>只需要在输入的时候顺便计算一下是否超预算。如果有，则顺便记录下是否是更低的预算即可。如果都超预算，那么输出 <code>stay home</code>，否则就输出记录的那个更低的预算。</p><p><strong>一般 UVA 的题读入行数是不给定的，所以我们要使用</strong> <code>while (cin &gt;&gt; n)</code> <strong>或者</strong> <code>while (~scanf(&quot;%d&quot;, &amp;n))</code><strong>。</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头万岁using namespace std;int main() &#123;int N, B, H, W, p, a, Min = INT_MAX;//Min 根据个人喜好设置较大数while (cin &gt;&gt; N &gt;&gt; B &gt;&gt; H &gt;&gt; W) &#123;//如果是 scanf 可以加上 != EOFfor (int i = 0; i &lt; H; i++) &#123;cin &gt;&gt; p;for (int j = 0; j &lt; W; j++) &#123;cin &gt;&gt; a;if (a &gt;= N) Min = min(Min, p * N);//读入时求最小值&#125;&#125;if (Min &lt;= B) &#123;cout &lt;&lt; Min &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;stay home&quot; &lt;&lt; endl;&#125;Min = INT_MAX;//根据个人喜好&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11559">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120657641">CSDN 博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/09/14/uva11559-solution/">https://ren-yc.github.io/2021/09/14/uva11559-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution - UVA </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>『题解』Luogu - UVA11581 Grid Successors</title>
-      <link href="/2021/08/23/uva11581-solution/"/>
-      <url>/2021/08/23/uva11581-solution/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11581" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11581" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>定义 $f()$ 为把矩阵的每一个元素替换为它相邻的元素之和对 $2$ 取模所得的结果。</p><p>给定一个 $n$ 组 $3 \times 3$ 的仅包含 $0$ 和 $1$ 的矩阵，求经过多少次 $f()$ 后矩阵的每一个元素都为 $0$，若无需变换则输出 $-1$。</p><h3 id="题目思路">题目思路</h3><p>我们可以按照题意模拟 $f()$ 并在每次变换之后检测矩阵的元素是否全部为 $0$，最终输出变换的次数。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, ans;int g[3][3];void func() &#123;int h[3][3];h[0][0] = (g[0][1] + g[1][0]) % 2; // 模拟矩阵变换h[0][1] = (g[0][0] + g[1][1] + g[0][2]) % 2;h[0][2] = (g[0][1] + g[1][2]) % 2;h[1][0] = (g[0][0] + g[1][1] + g[2][0]) % 2;h[1][1] = (g[0][1] + g[1][0] + g[1][2] + g[2][1]) % 2;h[1][2] = (g[1][1] + g[0][2] + g[2][2]) % 2;h[2][0] = (g[2][1] + g[1][0]) % 2;h[2][1] = (g[2][0] + g[1][1] + g[2][2]) % 2;h[2][2] = (g[2][1] + g[1][2]) % 2;for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;g[i][j] = h[i][j]; // 最后再赋值&#125;&#125;&#125;bool isZero() &#123;for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;if (g[i][j] == 1) &#123;return false; // 一旦有非零（为 1）的元素则直接返回假&#125;&#125;&#125;return true; // 没有非零（为 1）的元素&#125;int main() &#123;cin &gt;&gt; n;while (n--) &#123;ans = -1; // 计数器初始化for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;char ch; // 这里使用字符进行读取并转换为整型cin &gt;&gt; ch;g[i][j] = ch - '0'; // 转换&#125;&#125;while (!isZero()) &#123; // 切记要用 while，不断变换直到全部为零func(); // 变换ans++; // 次数&#125;cout &lt;&lt; ans &lt;&lt; endl; // 输出&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11581">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/08/23/uva11581-solution/">https://ren-yc.github.io/2021/08/23/uva11581-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
       
       
       <categories>
