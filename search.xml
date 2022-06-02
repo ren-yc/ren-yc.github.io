@@ -524,6 +524,31 @@
     
     
     <entry>
+      <title>『题解』Luogu - UVA11581 Grid Successors</title>
+      <link href="/2021/08/23/uva11581-solution/"/>
+      <url>/2021/08/23/uva11581-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11581" title="点击跳转至洛谷">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11581" title="点击跳转至 UVa Online Judge">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>定义 $f()$ 为把矩阵的每一个元素替换为它相邻的元素之和对 $2$ 取模所得的结果。</p><p>给定一个 $n$ 组 $3 \times 3$ 的仅包含 $0$ 和 $1$ 的矩阵，求经过多少次 $f()$ 后矩阵的每一个元素都为 $0$，若无需变换则输出 $-1$。</p><h3 id="题目思路">题目思路</h3><p>我们可以按照题意模拟 $f()$ 并在每次变换之后检测矩阵的元素是否全部为 $0$，最终输出变换的次数。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, ans;int g[3][3];void func() &#123;int h[3][3];h[0][0] = (g[0][1] + g[1][0]) % 2; // 模拟矩阵变换h[0][1] = (g[0][0] + g[1][1] + g[0][2]) % 2;h[0][2] = (g[0][1] + g[1][2]) % 2;h[1][0] = (g[0][0] + g[1][1] + g[2][0]) % 2;h[1][1] = (g[0][1] + g[1][0] + g[1][2] + g[2][1]) % 2;h[1][2] = (g[1][1] + g[0][2] + g[2][2]) % 2;h[2][0] = (g[2][1] + g[1][0]) % 2;h[2][1] = (g[2][0] + g[1][1] + g[2][2]) % 2;h[2][2] = (g[2][1] + g[1][2]) % 2;for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;g[i][j] = h[i][j]; // 最后再赋值&#125;&#125;&#125;bool isZero() &#123;for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;if (g[i][j] == 1) &#123;return false; // 一旦有非零（为 1）的元素则直接返回假&#125;&#125;&#125;return true; // 没有非零（为 1）的元素&#125;int main() &#123;cin &gt;&gt; n;while (n--) &#123;ans = -1; // 计数器初始化for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;char ch; // 这里使用字符进行读取并转换为整型cin &gt;&gt; ch;g[i][j] = ch - '0'; // 转换&#125;&#125;while (!isZero()) &#123; // 切记要用 while，不断变换直到全部为零func(); // 变换ans++; // 次数&#125;cout &lt;&lt; ans &lt;&lt; endl; // 输出&#125;return 0;&#125;</code></pre><p>$$END$$</p><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11581">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/08/23/uva11581-solution/">https://ren-yc.github.io/2021/08/23/uva11581-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>『题解』Luogu - UVA13012 Identifying tea</title>
       <link href="/2021/08/23/uva13012-solution/"/>
       <url>/2021/08/23/uva13012-solution/</url>
