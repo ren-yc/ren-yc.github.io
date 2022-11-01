@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yuchen Ren&#39;s Personal Blog</title>
+  
+  <subtitle>renyuchen&#39;s personal blog</subtitle>
+  <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://ren-yc.github.io/"/>
+  <updated>2022-10-31T23:49:19.373Z</updated>
+  <id>https://ren-yc.github.io/</id>
+  
+  <author>
+    <name>Yuchen Ren</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『题解』Luogu - UVA12643 Tennis Rounds</title>
+    <link href="https://ren-yc.github.io/2022/10/29/uva12643-solution/"/>
+    <id>https://ren-yc.github.io/2022/10/29/uva12643-solution/</id>
+    <published>2022-10-29T11:46:16.000Z</published>
+    <updated>2022-10-31T23:49:19.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA12592 Identifying tea</title>
+    <link href="https://ren-yc.github.io/2022/10/29/uva12592-solution/"/>
+    <id>https://ren-yc.github.io/2022/10/29/uva12592-solution/</id>
+    <published>2022-10-29T11:17:52.000Z</published>
+    <updated>2022-10-31T23:49:19.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『教程』如何升级 Ubuntu 到 22.04 LTS</title>
+    <link href="https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/"/>
+    <id>https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/</id>
+    <published>2022-06-29T06:19:47.000Z</published>
+    <updated>2022-06-29T07:21:11.394Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="APPs - Tools" scheme="https://ren-yc.github.io/categories/APPs-Tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF1692A Marathon</title>
+    <link href="https://ren-yc.github.io/2022/06/22/cf1692a-solution/"/>
+    <id>https://ren-yc.github.io/2022/06/22/cf1692a-solution/</id>
+    <published>2022-06-22T12:46:12.000Z</published>
+    <updated>2022-10-31T23:33:02.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11278 One-Handed Typist</title>
+    <link href="https://ren-yc.github.io/2022/06/02/uva11278-solution/"/>
+    <id>https://ren-yc.github.io/2022/06/02/uva11278-solution/</id>
+    <published>2022-06-02T08:21:03.000Z</published>
+    <updated>2022-10-31T23:49:19.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11581 Grid Successors</title>
+    <link href="https://ren-yc.github.io/2022/06/02/uva11581-solution/"/>
+    <id>https://ren-yc.github.io/2022/06/02/uva11581-solution/</id>
+    <published>2022-06-02T04:38:12.000Z</published>
+    <updated>2022-10-31T23:49:19.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11713 Abstract Names</title>
+    <link href="https://ren-yc.github.io/2022/06/01/uva11713-solution/"/>
+    <id>https://ren-yc.github.io/2022/06/01/uva11713-solution/</id>
+    <published>2022-06-01T11:16:17.000Z</published>
+    <updated>2022-10-31T23:49:19.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA10193 All You Need Is Love</title>
+    <link href="https://ren-yc.github.io/2022/05/17/uva10193-solution/"/>
+    <id>https://ren-yc.github.io/2022/05/17/uva10193-solution/</id>
+    <published>2022-05-17T07:20:14.000Z</published>
+    <updated>2022-10-31T23:49:19.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11498 Division of Nlogonia</title>
+    <link href="https://ren-yc.github.io/2022/05/17/uva11498-solution/"/>
+    <id>https://ren-yc.github.io/2022/05/17/uva11498-solution/</id>
+    <published>2022-05-17T04:49:17.000Z</published>
+    <updated>2022-10-31T23:49:19.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『规范』Class Tools Develop Team 团队规则</title>
+    <link href="https://ren-yc.github.io/2022/04/04/class-tools-develop-team-rule/"/>
+    <id>https://ren-yc.github.io/2022/04/04/class-tools-develop-team-rule/</id>
+    <published>2022-04-04T01:29:28.000Z</published>
+    <updated>2022-05-24T05:44:34.376Z</updated>
+    
+    
+    <summary type="html">本文不对外开放...</summary>
+    
+    
+    
+    <category term="Rules - Team" scheme="https://ren-yc.github.io/categories/Rules-Team/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>『置顶』『教程』Class Tools 简介</title>
+    <link href="https://ren-yc.github.io/2022/03/29/guide-of-class-tools/"/>
+    <id>https://ren-yc.github.io/2022/03/29/guide-of-class-tools/</id>
+    <published>2022-03-29T05:33:37.000Z</published>
+    <updated>2022-10-31T23:50:18.166Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="APPs - Self Developed" scheme="https://ren-yc.github.io/categories/APPs-Self-Developed/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>『教程』GitHub &amp; Git 入门指南</title>
+    <link href="https://ren-yc.github.io/2022/03/05/guide-of-github/"/>
+    <id>https://ren-yc.github.io/2022/03/05/guide-of-github/</id>
+    <published>2022-03-05T02:49:39.000Z</published>
+    <updated>2022-10-31T23:50:29.337Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="APPs - Tools" scheme="https://ren-yc.github.io/categories/APPs-Tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA10281 Average Speed</title>
+    <link href="https://ren-yc.github.io/2022/01/17/uva10281-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/17/uva10281-solution/</id>
+    <published>2022-01-17T09:35:51.000Z</published>
+    <updated>2022-10-31T23:49:19.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - U198288 元素插入</title>
+    <link href="https://ren-yc.github.io/2022/01/17/u198288-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/17/u198288-solution/</id>
+    <published>2022-01-17T04:34:17.000Z</published>
+    <updated>2022-10-31T23:32:52.290Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - U" scheme="https://ren-yc.github.io/categories/Solution-U/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - U198094 前 n 个偶数位回文数之和</title>
+    <link href="https://ren-yc.github.io/2022/01/16/u198094-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/16/u198094-solution/</id>
+    <published>2022-01-16T04:33:17.000Z</published>
+    <updated>2022-10-31T23:32:52.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - U" scheme="https://ren-yc.github.io/categories/Solution-U/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA10041 Vito&#39;s Family</title>
+    <link href="https://ren-yc.github.io/2022/01/11/uva10041-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/uva10041-solution/</id>
+    <published>2022-01-11T10:35:21.000Z</published>
+    <updated>2022-10-31T23:49:19.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA465 Overflow</title>
+    <link href="https://ren-yc.github.io/2022/01/11/uva465-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/uva465-solution/</id>
+    <published>2022-01-11T10:30:14.000Z</published>
+    <updated>2022-10-31T23:49:19.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11727 Cost Cutting</title>
+    <link href="https://ren-yc.github.io/2022/01/11/uva11727-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/uva11727-solution/</id>
+    <published>2022-01-11T10:27:48.000Z</published>
+    <updated>2022-10-31T23:49:19.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - SP7733 HPYNOS - Happy Numbers I</title>
+    <link href="https://ren-yc.github.io/2022/01/11/sp7733-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/sp7733-solution/</id>
+    <published>2022-01-11T10:22:35.000Z</published>
+    <updated>2022-10-31T23:51:05.442Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - SP" scheme="https://ren-yc.github.io/categories/Solution-SP/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA12503 Robot Instructions</title>
+    <link href="https://ren-yc.github.io/2022/01/11/uva12503-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/uva12503-solution/</id>
+    <published>2022-01-11T10:18:04.000Z</published>
+    <updated>2022-10-31T23:49:19.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA10035 Primary Arithmetic</title>
+    <link href="https://ren-yc.github.io/2022/01/11/uva10035-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/uva10035-solution/</id>
+    <published>2022-01-11T09:43:37.000Z</published>
+    <updated>2022-10-31T23:49:19.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="Python" scheme="https://ren-yc.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF550A Two Substrings</title>
+    <link href="https://ren-yc.github.io/2022/01/11/cf550a-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/cf550a-solution/</id>
+    <published>2022-01-11T09:37:31.000Z</published>
+    <updated>2022-10-31T23:33:02.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF268A Games</title>
+    <link href="https://ren-yc.github.io/2022/01/11/cf268a-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/cf268a-solution/</id>
+    <published>2022-01-11T09:33:40.000Z</published>
+    <updated>2022-10-31T23:33:02.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF1475A Odd Divisor</title>
+    <link href="https://ren-yc.github.io/2022/01/11/cf1475a-solution/"/>
+    <id>https://ren-yc.github.io/2022/01/11/cf1475a-solution/</id>
+    <published>2022-01-11T09:28:24.000Z</published>
+    <updated>2022-10-31T23:33:02.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF1598A Computer Game</title>
+    <link href="https://ren-yc.github.io/2021/10/11/cf1598a-solution/"/>
+    <id>https://ren-yc.github.io/2021/10/11/cf1598a-solution/</id>
+    <published>2021-10-11T12:33:27.000Z</published>
+    <updated>2022-10-31T23:33:02.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - CF44B Cola</title>
+    <link href="https://ren-yc.github.io/2021/10/06/cf44b-solution/"/>
+    <id>https://ren-yc.github.io/2021/10/06/cf44b-solution/</id>
+    <published>2021-10-06T11:39:32.000Z</published>
+    <updated>2022-10-31T23:33:02.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - CF" scheme="https://ren-yc.github.io/categories/Solution-CF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA11559 Event Planning</title>
+    <link href="https://ren-yc.github.io/2021/09/14/uva11559-solution/"/>
+    <id>https://ren-yc.github.io/2021/09/14/uva11559-solution/</id>
+    <published>2021-09-14T00:20:26.000Z</published>
+    <updated>2022-10-31T23:49:19.370Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - UVA13012 Identifying tea</title>
+    <link href="https://ren-yc.github.io/2021/08/23/uva13012-solution/"/>
+    <id>https://ren-yc.github.io/2021/08/23/uva13012-solution/</id>
+    <published>2021-08-23T11:39:18.000Z</published>
+    <updated>2022-10-31T23:49:19.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - UVA" scheme="https://ren-yc.github.io/categories/Solution-UVA/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『教程』如何使（po）用（jie） IDM</title>
+    <link href="https://ren-yc.github.io/2021/08/12/how-to-use-idm/"/>
+    <id>https://ren-yc.github.io/2021/08/12/how-to-use-idm/</id>
+    <published>2021-08-12T11:04:33.000Z</published>
+    <updated>2022-06-22T12:57:04.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="APPs - Tools" scheme="https://ren-yc.github.io/categories/APPs-Tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>『教程』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</title>
+    <link href="https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/"/>
+    <id>https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/</id>
+    <published>2021-08-05T05:59:32.000Z</published>
+    <updated>2022-10-31T23:50:56.859Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Programming Languages - Warfarin &amp; RBQScript" scheme="https://ren-yc.github.io/categories/Programming-Languages-Warfarin-RBQScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>『题解』Luogu - U187148 gcd 与 lcm</title>
+    <link href="https://ren-yc.github.io/2021/07/23/u187148-solution/"/>
+    <id>https://ren-yc.github.io/2021/07/23/u187148-solution/</id>
+    <published>2021-07-23T00:35:49.000Z</published>
+    <updated>2022-10-31T23:32:52.301Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Solution - U" scheme="https://ren-yc.github.io/categories/Solution-U/"/>
+    
+    
+    <category term="C++" scheme="https://ren-yc.github.io/tags/C/"/>
+    
+  </entry>
+  
+</feed>

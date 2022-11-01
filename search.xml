@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>『题解』Luogu - UVA12643 Tennis Rounds</title>
+      <link href="/2022/10/29/uva12643-solution/"/>
+      <url>/2022/10/29/uva12643-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA12643">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/12643">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p><img src="./problem.png" alt=""></p><p>在共 $N$ 轮的网球锦标赛中，第一轮有 $2^N$ 名球员被随机分配。随机分配意味着每个球员被分配一个介于 $1$ 和 $2^N$ 之间的数字，这个分配确定了两个球员之间是否会进行比赛。</p><p>特别地，第一轮的球员被编号为 $1,\ 2,\ …,\ 2^{N - 1}$。</p><p>在第 $k$ 轮中，编号为 $2 \cdot k - 1$ 的球员与编号为 $2 \cdot k$ 的球员进行比赛。</p><p>每一轮中的获胜者将晋升至下一轮，而输者将被淘汰，所以，下一轮中的球员数量会是当前轮的 $\frac{1}{2}$。每一轮中球员将会被重新编号，直到那一轮仅剩下一位选手，该选手就是冠军。</p><p>现在你需要得出在第一轮时编号为 $i$ 的选手与该轮时编号为 $j$ 的选手在第几轮可能会进行比赛。</p><h3 id="题目解析">题目解析</h3><p>本题实际上就是一个二分答案，对球员编号<strong>从最后一轮往前</strong>不断二分直到满足 $i \leq mid$ 且 $j \geq mid$。</p><p>在进行二分答案前，需先保证 $i &lt; j$，不满足则将 $i$ 与 $j$ 的值互换。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, i, j, l, r, mid;int main() &#123;while (cin &gt;&gt; n &gt;&gt; i &gt;&gt; j) &#123;if (i &gt; j) &#123;swap(i, j); // 不满足 i &lt; j 则将值互换&#125;l = 1;r = pow(2, n); // 2^N (数据量较小直接 pow，也可使用 1 &lt;&lt; N)mid = r / 2;while (true) &#123;if (i &lt;= mid &amp;&amp; j &gt; mid) &#123; // 满足 i&lt;= mid 且 j &gt; midcout &lt;&lt; n &lt;&lt; endl;break;&#125;if (j &lt;= mid) &#123;r = mid;&#125; else &#123;l = mid + 1;&#125;mid = (l + r - 1) / 2;n--; // 轮数往前推&#125;&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva12643">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/10/29/uva12643-solution/">https://ren-yc.github.io/2022/10/29/uva12643-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA12592 Identifying tea</title>
+      <link href="/2022/10/29/uva12592-solution/"/>
+      <url>/2022/10/29/uva12592-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA12592">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/12592">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>王子去找公主，遇到处决犯人，这时人们在喊口号，王子把口号告诉公主，监斩官喊出口号时，公主也要喊出该口号。</p><h3 id="题目解析">题目解析</h3><p>使用键值映射容器 <code>map&lt;string, string&gt;</code>，将公主应喊的口号映射到监斩官喊的口号。</p><p>可以使用 STL <code>map</code> 容器提供的 <code>[]</code> 运算符简便地进行操作。</p><p><strong>注意若要在 <code>cin</code> 后使用 <code>getline</code>，务必在两者之间执行 <code>cin.ignore()</code>。</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, q;string a, b;map&lt;string, string&gt; mp; // STL map 容器int main() &#123;cin &gt;&gt; n;cin.ignore(); // 切记while (n--) &#123;getline(cin, a);getline(cin, b);mp[a] = b; // 使用 [] 运算符进行映射操作&#125;cin &gt;&gt; q;cin.ignore(); // 切记while (q--) &#123;getline(cin, a);cout &lt;&lt; mp[a] &lt;&lt; endl; // 使用 [] 运算符读取并输出&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva12592">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/10/29/uva12592-solution/">https://ren-yc.github.io/2022/10/29/uva12592-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『教程』如何升级 Ubuntu 到 22.04 LTS</title>
+      <link href="/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/"/>
+      <url>/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="前言">前言</h3><p>2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。</p><p><s>而作为 IT 狂热爱好者怎能不升级呢？</s></p><p>于是就开始努力<s>作死</s>尝试把手头上的 WSL 2 Ubuntu 20.04 升级。</p><p><strong>若您在这之前还未安装 Ubuntu 的旧版本，可以直接从 Microsoft Store / WSL 安装 Ubuntu 22.04 LTS。</strong></p><h3 id="环境">环境</h3><ul><li><p>WSL 2</p></li><li><p>Ubuntu</p></li></ul><h3 id="升级软件">升级软件</h3><p>使用下列命令获取软件更新。</p><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ sudo apt update</code></pre><p>再使用下列命令升级软件。</p><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ sudo apt upgrade</code></pre><h3 id="配置">配置</h3><p>使用下列命令打开系统升级版本配置文件。</p><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ sudo vim /etc/update-manager/release-upgrades</code></pre><p>请保证最后一行<strong>不</strong>为下列内容，否则将无法更新系统版本。</p><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>Prompt=never</code></pre><h3 id="升级">升级</h3><p>若在您当前的日期 Ubuntu 暂未推送 22.04 LTS，请在命令之后加入选项 <code>-d</code> 以强制使用开发版本。</p><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ sudo do-release-upgrade</code></pre><p>若提示是否要开始升级系统版本，请输入 <code>Y</code> 确认。</p><p><img src="./start.png" alt=""></p><p><strong>若提示需要 Reboot，请用管理员模式打开 PowerShell，运行下列命令，因为 WSL 2 本质上是虚拟机没法直接重启。</strong></p><p><strong>运行中的 Ubuntu 将自动终止，再次打开即可完成这一操作。</strong></p><p class="code-caption" data-lang="shell" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-shell">PS C:\&gt; Get-Service LxssManager | Restart-Service</code></pre><h3 id="完成">完成</h3><p>过大概二十分钟（取决于网速及计算机性能）后，Ubuntu 会提示无法自动 Reboot，请再次使用上述命令完成这一操作。</p><p>最后，可以运行 <code>neofetch</code> 软件查看系统信息（需先安装此软件）。</p><p><img src="./finish.png" alt=""></p><p>至此就全部完成了，若有任何疑问欢迎回复！</p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/">https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> APPs - Tools </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - CF1692A Marathon</title>
+      <link href="/2022/06/22/cf1692a-solution/"/>
+      <url>/2022/06/22/cf1692a-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF1692A">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/1692/A">Codeforces</a></p><h3 id="题目解析">题目解析</h3><p>直接按照题意模拟即可。</p><p>分别判断 $b, c, d$ 是否 $\gt$ $a$，并将条件成立的次数输出。</p><h3 id="代码解释">代码解释</h3><p>通过 <code>while (t--)</code> 实现 $t$ 组数据的输入（前提为不需输出测试组序号）。</p><p>记得每轮前把 <code>cnt</code> 清零。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int t, a, b, c, d, cnt; // 个人习惯全局int main() &#123;cin &gt;&gt; t; // 读入测试组数while (t--) &#123; // 测试组数cnt = 0; // 清零cin &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d; // 读入if (b &gt; a) &#123; // 分别判断cnt++;&#125;if (c &gt; a) &#123;cnt++;&#125;if (d &gt; a) &#123;cnt++;&#125;cout &lt;&lt; cnt &lt;&lt; endl; // 输出&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-cf1692a">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/06/22/cf1692a-solution/">https://ren-yc.github.io/2022/06/22/cf1692a-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - CF </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA11278 One-Handed Typist</title>
+      <link href="/2022/06/02/uva11278-solution/"/>
+      <url>/2022/06/02/uva11278-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11278">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11278">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>给定若干行<strong>可能包含空格的</strong>字符串，按照题面后两张图片的方法（简单加密）来进行对字符串的每个元素进行变换。</p><h3 id="题目解法">题目解法</h3><p>我们可以定义两个常量字符串作为键值对（当然也可以使用 <code>map &lt;char, char&gt;</code>）。</p><p>若使用常量字符串，则可以查找出该元素在键值字符串中的位置，并使用该下标访问该键值的值，就可以得出该元素在解密后的值。</p><h3 id="代码要点">代码要点</h3><ul><li><p><code>while (getline(任意输入流, basic_string &lt;该输入流所支持的字符类型&gt;))</code>。</p><ul><li>读入若干个整行带空格的字符串直到 EOF。</li></ul></li><li><p><code>basic_string &lt;任意类型&gt;.find(该类型)</code></p><ul><li>查找该类型的字符串中某个元素的位置，若不存在则返回 <code>string::npos</code>。</li></ul></li></ul><p><strong>附注：<code>string</code> 本质上是 <code>basic_string &lt;char&gt;</code>。</strong></p><h3 id="完整代码">完整代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt; // 万能头using namespace std; // 标准命名空间const string s1 = &quot; `1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./~!@#$%^&amp;*()_+QWERTYUIOP&#123;&#125;|ASDFGHJKL:\&quot;ZXCVBNM&lt;&gt;?&quot;; // 键值const string s2 = &quot; `123qjlmfp/[]456.orsuyb;=\\789aehtdck-0zx,inwvg'~!@#QJLMFP?&#123;&#125;$%^&gt;ORSUYB:+|&amp;*(AEHTDCK_)ZX&lt;INWVG\&quot;&quot;; // 键值的值string in; // 输入的字符串int main() &#123;while (getline(cin, in)) &#123; // 使用此方法可读入若干行带空格字符串直到 EOFfor (int i = 0; i &lt; (int)in.size(); i++) &#123; // 遍历cout &lt;&lt; s2[s1.find(in[i])]; // 求出解密后的值&#125;cout &lt;&lt; endl; // 记得换行&#125;return 0; // 返回运行无误&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11278">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/06/02/uva11278-solution/">https://ren-yc.github.io/2022/06/02/uva11278-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA11581 Grid Successors</title>
+      <link href="/2022/06/02/uva11581-solution/"/>
+      <url>/2022/06/02/uva11581-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11581">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11581">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>定义 $f()$ 为把矩阵的每一个元素替换为它相邻的元素之和对 $2$ 取模所得的结果。</p><p>给定一个 $n$ 组 $3 \times 3$ 的仅包含 $0$ 和 $1$ 的矩阵，求经过多少次 $f()$ 后矩阵的每一个元素都为 $0$，若无需变换则输出 $-1$。</p><h3 id="题目思路">题目思路</h3><p>我们可以按照题意模拟 $f()$ 并在每次变换之后检测矩阵的元素是否全部为 $0$，最终输出变换的次数。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, ans;int g[3][3];void func() &#123;int h[3][3];h[0][0] = (g[0][1] + g[1][0]) % 2; // 模拟矩阵变换h[0][1] = (g[0][0] + g[1][1] + g[0][2]) % 2;h[0][2] = (g[0][1] + g[1][2]) % 2;h[1][0] = (g[0][0] + g[1][1] + g[2][0]) % 2;h[1][1] = (g[0][1] + g[1][0] + g[1][2] + g[2][1]) % 2;h[1][2] = (g[1][1] + g[0][2] + g[2][2]) % 2;h[2][0] = (g[2][1] + g[1][0]) % 2;h[2][1] = (g[2][0] + g[1][1] + g[2][2]) % 2;h[2][2] = (g[2][1] + g[1][2]) % 2;for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;g[i][j] = h[i][j]; // 最后再赋值&#125;&#125;&#125;bool isZero() &#123;for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;if (g[i][j] == 1) &#123;return false; // 一旦有非零（为 1）的元素则直接返回假&#125;&#125;&#125;return true; // 没有非零（为 1）的元素&#125;int main() &#123;cin &gt;&gt; n;while (n--) &#123;ans = -1; // 计数器初始化for (int i = 0; i &lt; 3; i++) &#123;for (int j = 0; j &lt; 3; j++) &#123;char ch; // 这里使用字符进行读取并转换为整型cin &gt;&gt; ch;g[i][j] = ch - '0'; // 转换&#125;&#125;while (!isZero()) &#123; // 切记要用 while，不断变换直到全部为零func(); // 变换ans++; // 次数&#125;cout &lt;&lt; ans &lt;&lt; endl; // 输出&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11581">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/06/02/uva11581-solution/">https://ren-yc.github.io/2022/06/02/uva11581-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA11713 Abstract Names</title>
+      <link href="/2022/06/01/uva11713-solution/"/>
+      <url>/2022/06/01/uva11713-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11713">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11713">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>给定 $n$ 组数据，每组包含两个字符串，若这两个字符串去掉元音（位置相同内容可不同）后是否完全相同。</p><p>元音：即 <code>a</code> 或 <code>i</code> 或 <code>e</code> 或 <code>o</code> 或 <code>u</code>。</p><h3 id="题目思路">题目思路</h3><p>由元音每对位置相同可知输入的字符串长度一定相等，所以我们可以在输入后进行字符串长度比较。</p><p>然后遍历两个字符串的每一个元素，若相同则直接忽略（因为是不是元音都不影响最后的结论）；若不同则判断是否其中有且仅有一者是元音，若成立则这个字符串不满足条件。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt; // 万能头（注意 MSVC 没有）using namespace std; // 小型代码用这个（大型项目可能会和第三方库命名空间冲突）int n;bool flag;string s1, s2; // 全局变量inline bool check(char ch) &#123; // 使用函数简化return ch == 'a' || ch == 'i' || ch == 'e' || ch == 'o' || ch == 'u';&#125;int main() &#123; // 控制台窄字符参数用 main（是不是太详细了）cin &gt;&gt; n;cin.ignore(); // cin 和 getline 之间要忽略换行符while (n--) &#123;flag = true; // 每轮初始值getline(cin, s1); // 这里我不知道它是不是带空格的所以用了 getlinegetline(cin, s2);if (s1.size() != s2.size()) &#123;flag = false; // 这里可以直接跳到输出&#125;for (int i = 0; i &lt; (int)s1.size(); i++) &#123;if (s1[i] != s2[i]) &#123;if (!check(s1[i]) || !check(s2[i])) &#123;flag = false; // 这里也可以直接跳出循环&#125;&#125;&#125;if (flag) &#123; // 输出结论cout &lt;&lt; &quot;Yes&quot; &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;No&quot; &lt;&lt; endl;&#125;&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11713">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/06/01/uva11713-solution/">https://ren-yc.github.io/2022/06/01/uva11713-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA10193 All You Need Is Love</title>
+      <link href="/2022/05/17/uva10193-solution/"/>
+      <url>/2022/05/17/uva10193-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA10193">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/10193">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>一个人给出一个二进制字符串 $S_1$，机器再给出另一个字符串 $S_2$，若一直从 $S_1$ 和 $S_2$ 中分别减去若干个 $L$ 能正好为 $L$，则输出 <code>All you need is love!</code>，反之则输出 <code>Love is not all you need!</code>。</p><p><strong>“减法”指与十进制类似的在二进制中使用的减法运算。</strong></p><p>数据保证输入的二进制字符串不含有前导零。</p><h3 id="题目思路">题目思路</h3><p>将题意用通俗的语言表示：</p><p>判断将它们分别转化为十进制数后是否互质。</p><h3 id="题目解法">题目解法</h3><p>求最大公约数可以使用 C++ 标准库头文件中的 <code>__gcd()</code> 或使用自己手写的函数。</p><p><strong><code>bin2dec()</code> 函数的 <code>string</code> 类形参可加 <code>&amp;</code> 取地址符也可不加，具体可以参见 <a href="http://t.csdn.cn/Z3kVY">C++ 中 string 作为参数的传递（string 类型的引用）</a>。</strong></p><h3 id="代码实现">代码实现</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt; // 万能头using namespace std; // 引入 C++ 标准命名空间int n, a, b;string s1, s2;int bin2dec(const string &amp;s) &#123; // 模板int res = 0, cnt = 0; // 记得赋初值for (int i = (int)s.size() - 1; i &gt;= 0; i--) &#123; // 逆序遍历二进制字符串if (s[i] == '1') &#123; // 如果此位的二进制字符串为 1res += (int)pow(2, cnt); // 将进制的当前位数次幂加入十进制结果&#125;cnt++; // 下一个二进制字符串的位置&#125;return res; // 返回十进制结果&#125;int main() &#123;cin &gt;&gt; n;for (int i = 1; i &lt;= n; i++) &#123; // 建议此题不要使用 while (n--)cin &gt;&gt; s1 &gt;&gt; s2; // 输入二进制字符串a = bin2dec(s1); // 转换b = bin2dec(s2); // 同上cout &lt;&lt; &quot;Pair #&quot; &lt;&lt; i &lt;&lt; &quot;: &quot;; // 格式if (__gcd(a, b) != 1) &#123; // 判断是否互质cout &lt;&lt; &quot;All you need is love!&quot; &lt;&lt; endl;&#125; else &#123; // 反之cout &lt;&lt; &quot;Love is not all you need!&quot; &lt;&lt; endl;&#125;&#125;return 0; // 好习惯&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva10193">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/05/17/uva10193-solution/">https://ren-yc.github.io/2022/05/17/uva10193-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA11498 Division of Nlogonia</title>
+      <link href="/2022/05/17/uva11498-solution/"/>
+      <url>/2022/05/17/uva11498-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11498">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11498">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>给定基准点的坐标和若干个点，请你输出它分别与基准点的位置关系。</p><ul><li><p>若点的位置与基准点在一条水平线或垂直线上，输出 <code>divisa</code>（即 $n = x$ 或 $m = y$）。</p></li><li><p>若点的位置在基准点的西北，输出 <code>NO</code>（即 $n &gt; x$ 且 $m &gt; y$）。</p></li><li><p>若点的位置在基准点的东北，输出 <code>NE</code>（即 $n &gt; x$ 且 $m &lt; y$）。</p></li><li><p>若点的位置在基准点的东南，输出 <code>SE</code>（即 $n &lt; x$ 且 $m &gt; y$）。</p></li><li><p>若点的位置在基准点的西南，输出 <code>SO</code>（即 $n &lt; x$ 且 $m &lt; y$）。</p></li></ul><p><strong>$k = 0$ 则结束输入。</strong></p><h3 id="题目思路">题目思路</h3><p>直接按照基准点与若个点的坐标值分别进行比较即可。</p><p>我们可以运用 <code>while (~scanf(&quot;%d&quot;, &amp;n))</code> / <code>while (cin &gt;&gt; n)</code> 重复输入直到 EOF。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int k, n, m, x, y;int main() &#123;while (cin &gt;&gt; k) &#123; // 重复输入直到 EOFif (k == 0) &#123; // 判断 k 是否为 0break; // 跳出循环&#125;cin &gt;&gt; n &gt;&gt; m; // 输入基准点坐标for (int i = 1; i &lt;= k; i++) &#123; // 可使用 while (k--) 代替cin &gt;&gt; x &gt;&gt; y; // 输入若干个点的坐标if (x == n || y == m) &#123; // 在一条水平线或垂直线上cout &lt;&lt; &quot;divisa&quot; &lt;&lt; endl;&#125; else if (x &lt; n &amp;&amp; y &lt; m) &#123; // 西南cout &lt;&lt; &quot;SO&quot; &lt;&lt; endl;&#125; else if (x &lt; n &amp;&amp; y &gt; m) &#123; // 西北cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125; else if (x &gt; n &amp;&amp; y &lt; m) &#123; // 东南cout &lt;&lt; &quot;SE&quot; &lt;&lt; endl;&#125; else if (x &gt; n &amp;&amp; y &gt; m) &#123; // 东北cout &lt;&lt; &quot;NE&quot; &lt;&lt; endl;&#125;&#125;&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11498">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/05/17/uva11498-solution/">https://ren-yc.github.io/2022/05/17/uva11498-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『规范』Class Tools Develop Team 团队规则</title>
+      <link href="/2022/04/04/class-tools-develop-team-rule/"/>
+      <url>/2022/04/04/class-tools-develop-team-rule/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="The password is incorrect. Please try again." data-whm="Unknown error, please report to the blog administrator!">  <script id="hbeData" type="hbeData" data-hmacdigest="40459e6d041e678fc8f42b55e2cb3dcd6403cb2ce1526748705751ede0e519cd">d33e1d127650cfb597045162f2b9782d3c69252699b232ee7b4f916a7032882d0b3456bc4ce3a84062bebbfb0767a7ce71d63e1c56012964d1a910b4b7a8e8f946eb8cd3eceadfdaa01dcbbe234c871eeed94c09ce65bfc8a031d8c56b4b404118d79c84b592cffa5ff62f7cddbe31f3e88de4da4a6cb405974a383fdbc0f0c74b00b26e044acc11a940571f19834458dd93392dc3bda16e0eb8c205cc62cf1306cd0e7b97a06f1e77b1ab28dd38cf3f35733e27d307729c84aba4eaca563dbc363d1ccb2ca28873dd1546f5370dbe3716afaf92ab00ea5a30fb8a5a8e4329c918155b97baa438095a1d0764f50a83e19df238289d9f3d808062b9e702c529ba6edfe7e77a4b91efa50c770ddbe92131d429111fcc9047e2b75a68b9732a5b0fedc26c36058811683578bdcba625a7e323c1009e949b634cf7d945082c5f2c5806055fa0416ea72bb255d8f6f5590ec4efd2a6edb630ed9d9eac28ca4a0fab5f36713bd7ab14d8081bcb2af49b6f581546d7e616f4fed60235169fa74abceaf2c0a5b887490fab87bb35ef5ccb6ecd83c7fe2709a63fe53bb9a75056645117c6f0de9ca11681b88d7cdeb4a2cecdbd2954d80f55c62d73d8215cad48d63ad8a060a93dad151dc0c5c388c4051916a2041befff3e27b359329bde635d4da61d87459f34c2fa3f735a23010c2b6bc35c78f45b67972f63f10eba4310019719e16bf28f5f92112452280f2537b080ef826d4837067a026f8aa9ed0b772e96f4be1654b44ebf14a5e790360f413aa5517268fdaa807a7e4b6cdb9708c51c7dcc5f0d621665ed8802b4aeace9429e6af7b1f2ab9efc595d74adcc0a5a2ed808aa710b2893cfafab22535f42d88c136a0bc5d2924ac6371b68dc298204fa18b42608f10595596f1f5322bf8db4ab03f8b5a54656844e44420959ab3d44d58c86dddf534c3e50cbd3644af2e780925f2c9d1b5e9d59cd34483742d5c6f82ebe8af16093542c55b17f597cbaa6c08b6fc12235335b0828af1274d68af49e26daa70a272c82178b155439c368df2bff28346d16b615a831eb92d62bcff3499133c433eb586aa19176c8353487c852eecc88ab7c42ae08ffc3909d4043b5df7552e64d135b0f1ce523d5274b24bf9d71fea88b88c9f2b77ec9254143427469478a2f66e1c3c598d28ee967a629a5260af31de7012691161e228b8293f9ebc87cb7a84ec756c82ff21ec0c46a35a71b24f41fc8d8498a60738671584cf7b23c831ea2f1b7383b14efb1b70e747dd72d228a82760551595a8130959b60682182a773f0561d5560bd2ff83267fd519dd51f3fb5bd8a117d42287e0a70bf7e15086962e529900f7e05b39000c75bc7a578b40ff937bdee5ed75e19c859b93d6b27c3b2c3a16dcf3495ec37f945a1a116156fc52b8bbcbd3d7d6587c76679e0cfa4dcda014f774e57849e63e3ecf94d83bbdc55c5bf085817b23ec7a89a304af9c37056bfa33a98faa7eec5f11a703b111e7d63448f03f1c15114a9754347e8a02ee316628693f1aa0af2131d625c6f11de5ccef4a7d497b308767177c4ec55d14cc9bed7a6836719fb75a4a90e2b0d46c25b9117511afd2633af7a8dab45a90a2b07286fe4d843aa78b33b4614d58059627e6d992c8d205834edd5c659fa5ede27fd3bdbff0586f36ecccf28592516ebd225f7c889a8e40762fdaa0027ef937ec1850a85cb5d08a9cf7c5371f5c9b484164d8732a238ff21602e344aa0f704a7db37fd221e61d8e77696d6fed99f3e7a73631263c72e0489064ff15a71606bf3c0ffedb018969ac85a3b95c489b79daa067db9a2dbeed145226abf173011486f58284928c6b9f30750b64b3fecebf942cd5dcad9df958f6eb9ee592ea8de248e94f28d5dcd9c1009f57d2c1ed532df905829fcbf6e986e2c8e1c684fb1827ae3ebb65ade73ab229869c4efd17e44fc08b0e0e2d3b09a597f22d969b720264c3d15376f717b7cc3991d37fb1f7f5e76a1a074278b6a25411494adb0a9b9c4dc058b0758605eae033ca141e1538893ee5f8cade10b953b100d76c5544a486f231abd9b8926234ac8ec8f95343ca9333f4306720258aae93811c6b822e926dd615eebbf6c8ae2d335198d7e2e554b0ddd0de1577f1517c5c2b3e9f76a6260a68c52f681bef985b1901e61f2f1a0fdd7f67d575f396b8db15dc112271563c0f2aa8660adf504be1bbcc99aef09856138098f3eabe6bbd277ce6360d9e32536f9107f748901e3d4902eeae4c766443dca6ad556132bd1ad8a7ef7085c12c9e0456739ef4cebb96fc940eb838d2ae854a4941e4b4d56a4b78a93874ab385e50838af62def9f1b275bd56afc70a4a2b89d110add03aab2b9cea1a3a1bbe85faa62a0999cfe2903b7dc9b9bfee242aa9a6565d39a4b4dceb7a311d26812bd76691a0e64b9a260ca063feab12a65b0e402cde2b521f2031330137650d95074d16af1ad7288d4a9909f0a327be29259f293e4e048494c385d61e74489b3beb6757c1cbf96ffe63d1ee7b047f5873e1ec6a71a8dd10e3d6bd059c54684bec6b0a613b48f1d22c1f6a424f630cf869fd18d41eab2d057d58306124c12cbdf3db751533eb019e6067865d58b2364d53a77f0cfd8344dec808c389a928195e53797b09b44d77f99c8563cbb734c96c4e6a636b45f140f17368a68aa63eb0c2276748df7e4d1357b5ed421d3f3df20e936c5658d0d80db69b2013f833d362840967451aa013acc9f61b689fb4b0abc760625111395753da94cf3b638ee9be328a0492a65da21ffedd7ad09d50ef6156efe2125a0d584c74f6f817c4f2ed88253e3bf31dafcb0ca14ff480d6eb0c147d657e782dc4c618fc22fcb19c4dc4fb749f41dd96869cdad623d9370a0eabd61ef4f132aafe0792831f69441a0e6ff351873efd58a4175f52f0469c0e59ba90bb8871d6813dc78eda890b7fb87afd807f5303722c46207f23f7f98ea73292f055ec0d46e5a03690802a1a5b58e6ca4777943d1a57df5a29957eb8304e8ed13821eb00bd61ef654a37f1da4614ad8f442aab2dc59bdaf1a02710bed0233b2491231517ec0bb91d8c032ad084a54b9ffa811df1cbe004c018daa431d7ca7f5c91e193f55530c18b213b2478554b768bec7f54db0538457de0ec3c6d23cf581ba7f7a6dce7fd31371c5eaaff3afd431cafc223062d429a9ce3127ab41414254701e6fa4338a4cd1466f668da4fedaa2c750acd3594b76dfda3d042398b0d2e86e3b6a86da8f11a169f520a34ef41a5e0f747ed3d8d710f3d222ad7195f1e0dd2c0e951a60f1c06cfb18056393172870531ca77929d933cf3ee53d872f15240f9974cae66c6534fdd6333a622fc5d89c869e51ad098fb4865ae38b0abe796e87c678ffd3fbcbc49e9f6e09623f05ea1326967e31b34177128f0b62a2898eac173664a019f10f039e0f6362216059976c8396e009280925aade5ac4cbcbf37b852a13bf1c8c4f8a306662b4e19cf080949d56d0c5ce850323c14390e2119d931e860130a4f95879df23a8bde105e68913c4931b89025b16fa6178a6bf6cf93fbb1b0e20f72065a6bc879a3dfd02c0bc703e8037a92977c8ec410880c45fcf85c7d1f930ba7a4eae18b842abffba10b833bf300e90abc489518944a0a75cae0bdeaeb9a7b6e307b270c86f9973b2c011bf358d597bcd176292aa88c094f755ab27824f7e49686ed9341937eecca700221b5a3e683eac46d0dd983688224ebb6843434e91762d33157fcc79e5e3386e6716638373f6ba515100fd149f9dca84006137863c9bb4aa5653151ba51de5dfa3445da78e13b4c8d3d526d40ae44e8f61bf00e002866d588d629487fd53978d34062bcd8d1313dfdf083eb3489effbf4001e1cd3871a9d94114ddf5bab2560525acede7a9a9d1f99d2af1dcdb6ec2166a240088d508fec43bf67a62bbcd7f0e67ff509fc7024324636dda7a862b9600615210824941ef47e1364c7eccdd6c89f89aab7119bb4d24dce52986a16d86b906dd74a0f7f10207995a89637e6c48ec10b9d904092351edf68acabfbbf78670a755ac03724567a50a7afc72a60db7ef7a7e2471827b45b63d72e5bfc0844a42062efb655a71a86906eeb4559fd388d7ec5068791f5983be2ddfcf4ae84c539d8cacedc390ba9fae8aa3fbb50bcea441dae67b3c80de6a28e3c7d3cd11baba6cd63cc0db3e0cd5e5bf991cf29f4f87c6c0311e1b2eda6be06f3bbd48a540a6c5872fb0b5f584abde90bee7387a90dce8a32fd1aa152ba1426f8f7449b9c302880dfe536bc3ab1fc13765e1a32bfe184c7c93856cf027114a2a28b7c76ab826fa7663e42ad82ead794c432a485e624ec5ff28af94dd4c8480a86089867fd8524da2bddc7357985b573d2b1d00444113ce0844bac4abcd96356e88ffb1f57c71ed82d264486d0ed66e504fd6563ed6ab6ce4e1cf3e46529b8d93fb66d100e03fc1ee5c77e5f27da27b109afffed558ef3af7f824eb128106d7c0d9adcdfe71034e77c72b179c67186ede3dafc6e18e4dd9caebb9e07d2a3c1d28315efdd235e323b14cce2cfa92fedd28c51c6c48644b5d4fe50f8e56ab0ef6e45b8a5d9b85a5e130041f58d3507c82db19d24ea11cb392ddfe9c436502e905553f951134dcd8d338fbeb2057e1dc8963d27b015d8fb7c387e1a49834dac549a6a80ede791b0d708593a2d299bf3039181e19e1a583bf276b9ab7a28af4e590fe1eb0b4ab36f35974ad6163bb3aa75dc8a04537290135c0000935d328c10b9437bb41ea2c9846dd39c23bb60d0ecf9dec18a9f5f8648827159e4a84e8e755d9ba19cf7fd7b48f8629aa1de7ce2c9f102f8f70c70b567edf1124f21c8323ecb14c723a37804ceeca6d3a0df60b7d3f09bd7235973425329f74db1f1e49b98a67f81ca051a706c0c7eea344c58d00c954d1f68af9fcb096a847978054db939cd656696f259887d35be4b1360f1e947e1a2e20bfa015761ee0eec0d394863cf56e523882599eaa52ac94a2837e0d1b89c3d3807190fbe6d763414b4786a17749efda02f27d1ff1cd0649892549e9745efdcd0323422f75e2b6b6cc592e5b5db3a306ca71e7a3204948105b521359ccc776cf9fd2391fc5655b6caa2dfaf2039b8bb323b25b4eddb41871884f805f3c5d8ce0983212e0c18ab5ce119df7f1384542d701f293bf90a647bdce0e9cacb6b63fa3502926f24db57d1daf4092f4eeee11a36c7b047a50133004e359622cc9ae133698641b7fc1723c639b479837d63e03fb3551adbc6cb181d8e32e3ee38991bc1f516ece0ade6f2cdfe8c425235df97d0adc89171306fd09ca7cdfd0e74f1a3165b085a8310655ab156891af47b887bd37e39b919ea1b6c4c42ff742b0e3424d9f2ba04d2fe2c271e8442ee7a68803ccab58e2d994552e454add7530c919f5abc55d3b6c0ce26949770531bac8d1dd7922236e0c178cd9860e937636515844f5becfa7c0287699de85fe729b13f9fa020c6b3b828a78f4d32a50ccdbd078b78d48ec0a0bcf6f759389d008aa446bf190db096de0e734c22c7282e7ed726502c716f4aa986c00ce56d08f71168622c5e167326ef0a188973144885304e9c0c2578294480ca2cc114ea0dd3eaaca4a39b68a781f370089783858dc747261dfd5cffd19925e3dc22649f3013108b635baa3dc2963c151423576967a24b0554a512ace86e3601b5ab1d093e32230e7f86338463f4013feaad7d04d98d1d0ee75189be03500a5be73bcc960199925d172a1b2d5554f2f130313ce651270e21a11eb9be7fc6d225674cb241f903f9e5f2f4a504c457828b1053f651a4b4c90e76b6a94be55ebd1f3860595aae72b0ce671fb3eb939c0fdc6f06d8c5efb74ba2311fad0e1ae1776f8442c80fbb1c034d1511a0fdf394f1e7458c31bb5bf4d880382c846b221eca04e728cc3d337c94a8067929578a7d0c459b5e6a6049bc694005929ca64c30e34ea5bbf130d884f9e1986db7bbe62c08a97d5d87e14bce48ea760fe717489a4c52f9042d709774a1</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-blink">      <input class="hbe hbe-input-field hbe-input-field-blink" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-blink" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-blink" data-content="Please enter the password.">Please enter the password.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> Rules - Team </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『置顶』『教程』Class Tools 简介</title>
+      <link href="/2022/03/29/guide-of-class-tools/"/>
+      <url>/2022/03/29/guide-of-class-tools/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="简介">简介</h3><p>Class Tools 系列应用是 <a href="https://github.com/class-tools/">Class Tools Develop Team</a> 使用 C++ / Python 等常见编程语言开发的，均开放源代码并使用 <a href="https://opensource.org/licenses/MIT">MIT 许可证</a>。</p><p>这个团队是 <a href="https://github.com/ren-yc/">ren-yc</a> 为提升课堂的高效、趣味性而设计的一系列辅助应用，最初只有 <a href="https://github.com/class-tools/RandomRollCall/">RandomRollCall (随机点名)</a> 一个应用。</p><p>目前，这个团队已经有 5+ 位开发人员、5+ 位测试人员，欢迎您的加入！（具体加入方法请见文章底部）</p><p>我们也欢迎各位为我们提供建议。（具体提供方法请见文章底部）</p><h3 id="下载">下载</h3><p>每个开发完成的应用均有一个 Releases (发布) 页面。</p><p>下图中红框部分就是 Releases 页面的入口。</p><p><img src="./releases-enter.png" alt=""></p><p>最新版本的说明以及安装程序的下载链接都在 Releases 中。</p><p>如下图中红框部分。</p><p><img src="./releases-info.png" alt=""></p><p><strong>提示：大部分安装程序都是 <code>x64</code> 的（若无后缀 <code>x86</code> / <code>ARM</code> / <code>ARM64</code>），小部分支持 <code>x86</code> / <code>ARM</code> / <code>ARM64</code>，请仔细辨别后再下载。</strong></p><h3 id="安装">安装</h3><p>双击运行下载后的安装程序即可。若安装后程序无法正常运行，请尝试重新安装，确认上述方法均无效后可发送邮件至 <a href="mailto:ldfx_ryc@163.com" title="点击使用默认邮件客户端向 ldfx_ryc@163.com 发送邮件">ldfx_ryc@163.com</a> 寻求技术人员的支持（具体格式请见文章底部）。</p><h3 id="使用">使用</h3><p>每个应用基本上均配有 Wiki 页面，具体位置见下图。</p><p><img src="./wiki-enter.png" alt=""></p><p>进入后有详细的说明介绍。</p><p><img src="./wiki-info.png" alt=""></p><h3 id="有用的信息">有用的信息</h3><p><a href="https://class-tools.github.io/">官方网站</a></p><p><a href="https://github.com/class-tools/">GitHub 组织</a></p><p><a href="mailto:ldfx_ryc@163.com">负责人 E-mail</a></p><p>报告错误邮件格式（建议在该项目存储库 Issues 中报告）：</p><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>应用：xxx版本：xxx系统版本：xxx截图（如果有）：xxx详细说明：xxx联系方式（默认为发送邮箱）：xxx</code></pre><p>提供建议邮件格式（建议在该项目存储库 Issues 中报告）：</p><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>应用：xxx草图（如果有）：xxx详细说明：xxx联系方式（默认为发送邮箱）：xxx</code></pre><h3 id="申请加入-Class-Tools-Develop-Team">申请加入 Class Tools Develop Team</h3><p>若您对本团队感兴趣，可加入 <a href="https://jq.qq.com/?_wv=1027&amp;k=PYH4ldDF">Class Tools Develop Team QQ 分群</a> 进行交流合作（门槛低于“测试组”）。</p><h4 id="开发组">开发组</h4><p>首先，请确保您有着扎实的计算机使用与代码编写能力。其次，请确保您对软件开发有兴趣且专门学习过任意计算机语言（列表见下）。然后，加入后需遵守一系列的规范及要求（包括但不限于代码格式方面）。最后，您应有足够的时间来对我们的项目作贡献。</p><table><thead><tr><th style="text-align:center">计算机语言名称 $/$ 计算机代码工具</th><th style="text-align:center">权重</th></tr></thead><tbody><tr><td style="text-align:center">$\text{Java}$ $\text{(Common / Windows API / GUI)}$</td><td style="text-align:center">$2$ $/$ $3$ $/$ $4$</td></tr><tr><td style="text-align:center">$\text{Python}$ $\text{(Common / GUI / Network / AI (All))}$</td><td style="text-align:center">$2$ $/$ $3$ $/$ $4$ $/$ $5$</td></tr><tr><td style="text-align:center">$\text{C / C++ / C}\sharp$ $\text{(Common / Windows API / Data Files IO / AI (CV))}$</td><td style="text-align:center">$2$ $/$ $3$ $/$ $4$ $/$ $5$</td></tr><tr><td style="text-align:center">$\text{Git}$ $\text{(All)}$</td><td style="text-align:center">$5$</td></tr><tr><td style="text-align:center">$\text{GitHub}$ $\text{(All)}$</td><td style="text-align:center">$5$</td></tr></tbody></table><p><strong>注：当对于您擅长的计算机语言的权重之和 $\le$ $15$ 时，可申请加入。</strong></p><p>当您确认要加入开发组后，请附 <a href="./Class%20Tools%20Develop%20Team%20%E5%85%A5%E5%9B%A2%E7%94%B3%E8%AF%B7%E8%A1%A8.docx">Class Tools Develop Team 入团申请表.docx</a> 向 <a href="mailto:ldfx_ryc@163.com?subject=%E7%94%B3%E8%AF%B7%E5%8A%A0%E5%85%A5%E5%BC%80%E5%8F%91%E7%BB%84">ldfx_ryc@163.com</a> 发送邮件，我们的管理员会在 3 个工作日内做出回复。</p><h4 id="测试组">测试组</h4><p>本组的加入门槛较低，您只需有足够的时间接收来自开发组的测试请求（频率为正常工作周 0 ~ 3 次、假期周 0 ~ 5 次，测试项目不限，可仅专注测试某个项目）。</p><p>使用 Mac OS / ARM 架构 CPU / 精通虚拟机者优先。</p><p>当您确认要加入测试组后，请发送邮件至 <a href="mailto:ldfx_ryc@163.com?subject=%E7%94%B3%E8%AF%B7%E5%8A%A0%E5%85%A5%E6%B5%8B%E8%AF%95%E7%BB%84">ldfx_ryc@163.com</a>，邮件内容注明您使用的主机配置信息（若使用虚拟机，则注明可测试的系统镜像版本）、联系方式（GitHub 账号及其它），我们的管理员会在 7 个工作日内做出回复。</p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/03/29/guide-of-class-tools/">https://ren-yc.github.io/2022/03/29/guide-of-class-tools/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> APPs - Self Developed </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『教程』GitHub &amp; Git 入门指南</title>
+      <link href="/2022/03/05/guide-of-github/"/>
+      <url>/2022/03/05/guide-of-github/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>本文适合刚使用 GitHub &amp; Git 的开发者参考。</strong></p><h2 id="什么是-GitHub">什么是 GitHub</h2><p>GitHub 是世界上最大的代码托管平台，超 5 千万开发者正在使用。被称为开发者最大的社区。因只支持 Git 作为唯一的版本库格式进行托管而被取名为 GitHub。</p><h2 id="Git-入门">Git 入门</h2><h3 id="安装">安装</h3><p>从 <a href="http://git-scm.com/downloads">此处</a> 选择合适的平台版本安装即可。</p><p>可以输入以下命令进行验证。</p><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ git --version</code></pre><h3 id="配置个人信息">配置个人信息</h3><p><code>user.name</code> 是你注册 GitHub 的用户名。</p><p><code>user.email</code> 是你注册 GitHub 的邮箱。</p><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ git config --global user.name &quot;yourname&quot;$ git config --global user.email yourname@example.com</code></pre><h3 id="常用命令">常用命令</h3><h4 id="git-init"><code>git init</code></h4><p><code>git init</code> 用于初始化本地存储库。</p><p>即创建一个包含存储库信息的<strong>隐藏状态</strong> <code>.git</code> 文件夹。</p><h4 id="git-add"><code>git add</code></h4><p><code>git add $&#123;filename&#125;</code> 用于添加指定文件至暂存区。</p><p>一般使用 <code>git add .</code> 用于添加除在 <code>.gitignore</code> 文件中注明忽略的文件外的所有文件。</p><h4 id="git-commit"><code>git commit</code></h4><p><code>git commit</code> 用于清除暂存区文件并提交。</p><p>用法 1：</p><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ git commit</code></pre><p>然后命令行会调用 vim 进行提交信息的多行输入。</p><p><strong>一般第一行为标题，第二行为空，第三行为附加内容。</strong></p><p>用法 2：</p><p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-bash">$ git commit -m &quot;$&#123;commit message&#125;&quot;</code></pre><p><code>$&#123;commit message&#125;</code> 为提交信息。（即多行提交信息的标题）</p><p><strong>最常用的有这 2 种用法。</strong></p><p><strong>上述用法均可带 <code>-S</code> 参数以使用 GPG 签名认证提交。（具体配置本文暂不说明）</strong></p><h4 id="git-clone"><code>git clone</code></h4><p><code>git clone $&#123;remote repository url&#125;</code> 为把远程 Git 仓库克隆至本地。</p><p><strong><code>$&#123;remote repository url&#125;</code> 可为 HTTP 或 SSH。（一般来说 SSH 在国内更快）</strong></p><p>SSH 需生成密钥后才可使用。（具体配置本文暂不说明）</p><h4 id="git-remote"><code>git remote</code></h4><p><code>git remote add $&#123;origin repository short name&#125; $&#123;remote repository url&#125;</code> 用于配置远程存储库以进行远程操作。</p><p>一般来说 <code>$&#123;origin repository short name&#125;</code> 为 <code>origin</code>。</p><h4 id="git-push"><code>git push</code></h4><p><code>git push $&#123;origin repository short name&#125; $&#123;branch&#125;</code> 用于同步本地存储库至远程存储库。</p><p><code>$&#123;origin repository short name&#125;</code> 使用与 <code>git remote</code> 配置的 <code>$&#123;origin repository short name&#125;</code> 一样。</p><p><code>$&#123;branch&#125;</code> 为远程存储库的分支。</p><p><strong>切记 <code>$&#123;branch&#125;</code> 分支要在远程存储库存在，否则会报错。</strong></p><p><strong>本文持续更新……</strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/03/05/guide-of-github/">https://ren-yc.github.io/2022/03/05/guide-of-github/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> APPs - Tools </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA10281 Average Speed</title>
+      <link href="/2022/01/17/uva10281-solution/"/>
+      <url>/2022/01/17/uva10281-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA10281">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/10281">UVa Online Judge</a></p><h3 id="前置知识">前置知识</h3><p><a href="https://www.runoob.com/cprogramming/c-function-sscanf.html">sscanf() 的用法</a></p><h3 id="题目大意">题目大意</h3><p>给出时间和速度，计算所走的路程。<s>（超级简洁是不是？）</s></p><h3 id="思路">思路</h3><p>这题是一道计算题，依据公式模拟即可。</p><p>将前面的速度与时间和现在的分别存放，最后计算即可。</p><p><strong>本题重点：</strong></p><ul><li>本题的输入格式较特殊，需要先读入一行整个字符串然后再通过 <code>sscanf()</code> 函数进行拆分。</li></ul><h3 id="代码">代码</h3><p><strong>详细思路在注释中</strong></p><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;char tmp[101];//sscanf() 仅支持字符数组int sum, hour, minute, second, t_prv = 0, t_nxt = 0;//英语自行理解double distance = 0.0, v_prv = 0.0, v_nxt = 0.0;//记得要加 &quot;.0&quot;while (gets(tmp)) &#123;//字符数组读入用 gets()sum = sscanf(tmp, &quot;%d:%d:%d %lf&quot;, &amp;hour, &amp;minute, &amp;second, &amp;v_nxt);//sscanf() 的返回值为拆分的个数t_nxt = hour * 3600 + minute * 60 + second;//计算distance += v_prv * (t_nxt - t_prv) / 3600.0;//距离t_prv = t_nxt;//更新值if (sum == 3) &#123;//如果拆 3 块printf(&quot;%.2d:%.2d:%.2d %.2lf km\n&quot;, hour, minute, second, distance);//注意格式&#125; else &#123;v_prv = v_nxt;//更新值&#125;&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva10281">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/17/uva10281-solution/">https://ren-yc.github.io/2022/01/17/uva10281-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - U198288 元素插入</title>
+      <link href="/2022/01/17/u198288-solution/"/>
+      <url>/2022/01/17/u198288-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>此题为私有题目</strong></p><h3 id="题目信息">题目信息</h3><h4 id="题目描述">题目描述</h4><p>指定位置的插入：</p><p>在一个数组的第 $x$ 位置<strong>前</strong>插入一个新的 $y$。</p><h4 id="输入格式">输入格式</h4><p>第一个有一个整数 $n$;</p><p>第二行有 $n$ 个整数 $a_i$；</p><p>第三行有一个整数 $x$；</p><p>第四行有一个整数 $y$，为要插入的整数。</p><h4 id="输出格式">输出格式</h4><p>元素插入后的 $a_i$ $\sim$ $a_{n+i}$。</p><h4 id="输入输出样例">输入输出样例</h4><h5 id="输入-1">输入 #1</h5><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>57 2 3 4 529</code></pre><h5 id="输出-1">输出 #1</h5><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>7 9 2 3 4 5</code></pre><h4 id="提示说明">提示说明</h4><p><strong>本题采用捆绑测试</strong></p><p>对于 $100%$ 的测试点：</p><p>$1$ $\le$ $x$ $\le$ $n$ $\le$ $10^2$，</p><p>$1$ $\le$ $a_i,y$ $\le$ $10^9$。</p><table><thead><tr><th style="text-align:left">Subtask</th><th style="text-align:left">分值</th><th style="text-align:left">特殊范围</th></tr></thead><tbody><tr><td style="text-align:left">$0$</td><td style="text-align:left">$10$</td><td style="text-align:left">$x = 1$</td></tr><tr><td style="text-align:left">$1$</td><td style="text-align:left">$10$</td><td style="text-align:left">$x = n$</td></tr><tr><td style="text-align:left">$2$</td><td style="text-align:left">$80$</td><td style="text-align:left"><strong>无特殊范围</strong></td></tr></tbody></table><p>Idea：贾小宇</p><p>Solution：任宇宸</p><p>Code：贾小宇</p><p>Data：任宇宸</p><h4 id="题目难度">题目难度</h4><p>$\textcolor{red}{入门}$</p><h4 id="题目地址（可能变更）">题目地址（可能变更）</h4><p><a href="https://www.luogu.com.cn/problem/U198288">洛谷</a></p><h3 id="题目解析">题目解析</h3><p>简单模拟，不用多说了。</p><p>我们可以将在这个数组 $a_n$ 种插入元素分为 $2$ 种情况：</p><ol><li><p>在元素 $a_0$ 前</p></li><li><p>在数组 $a_n$ 的中间</p></li></ol><p>这题也没必要骗 $\text{Subtask}$ 的分。（尽管部分分很多）</p><h3 id="代码分析">代码分析</h3><p>不用专门写一个插入元素的函数，直接全输入完然后遍历输出，当前下标为要插入元素的下标时，多输出要插入的那个元素即可。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int n, x, y, a[101] = &#123;0&#125;;cin &gt;&gt; n;for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; a[i];&#125;cin &gt;&gt; x &gt;&gt; y;for (int i = 0; i &lt; n; i++) &#123;if (i == x - 1) cout &lt;&lt; y &lt;&lt; &quot; &quot;;cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;&#125;cout &lt;&lt; endl;return 0;&#125;</code></pre><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/17/u198288-solution/">https://ren-yc.github.io/2022/01/17/u198288-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - U </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - U198094 前 n 个偶数位回文数之和</title>
+      <link href="/2022/01/16/u198094-solution/"/>
+      <url>/2022/01/16/u198094-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>此题为私有题目</strong></p><h3 id="题目信息">题目信息</h3><h4 id="题目描述">题目描述</h4><p>给定一个正整数 $n$，输出前 $n$ 个偶回文数之和。</p><p>偶回文数：</p><ul><li>有偶数个数位的回文数，如：$11, 22$。</li></ul><h4 id="输入格式">输入格式</h4><p>一行一个正整数 $n$。</p><h4 id="输出格式">输出格式</h4><p>一行一个正整数，表示前 $n$ 个偶回文数之和。</p><h4 id="输入输出样例">输入输出样例</h4><h5 id="输入-1">输入 #1</h5><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>3</code></pre><h5 id="输出-1">输出 #1</h5><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>66</code></pre><h4 id="提示说明">提示说明</h4><p>对于 $100%$ 的数据：</p><p>$1$ $\le$ $n$ $\le$ $100$</p><p>Idea：250lht</p><p>Solution：任宇宸</p><p>Code：任宇宸</p><p>Data：任宇宸</p><h4 id="题目难度">题目难度</h4><p>$\textcolor{red}{入门}$</p><h4 id="题目地址（可能变更）">题目地址（可能变更）</h4><p><a href="https://www.luogu.com.cn/problem/U198094">洛谷</a></p><h3 id="题目解析">题目解析</h3><p>这是一道回文数 $+$ 字符串 &amp; 整数的转换题。</p><p>我们只需写一个整数转换字符串、判断整数位数为偶数和判断字符串回文的函数即可。</p><h3 id="代码分析">代码分析</h3><p><code>int_to_string</code> 是<s>网上抄的</s>模板函数。<s>当然在 Python 中直接 <code>str()</code> 就可以转换</s>（可能有些不必要的如判断负数的多余内容）</p><p><code>huiwen</code> 是判断回文字符串的函数。</p><p><code>weishu</code> 是判断整数位数是否为偶数的函数。</p><p><code>main</code> 里面就按照题目模拟即可。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;void int_to_string(char s[], int m) &#123;int i = 0, k, n;char temp;if (m &lt; 0) &#123;s[i] = '-';m = -m;i++;&#125;while (m &gt; 0) &#123;n = m % 10;m /= 10;s[i] = n + '0';i++;&#125;s[i] = '\0';if (s[0] == '-') k = 1;else k = 0;for (int j = k; j &lt; i / 2; j++) &#123;temp = s[j];s[j] = s[i - j - 1 + k];s[i - j - 1 + k] = temp;&#125;&#125;bool huiwen(int g) &#123;int i, j;char b[101] = &#123;0&#125;;int_to_string(b, g);for (i = 0, j = strlen(b) - 1; i &lt; j; i++, j--) &#123;if (b[i] != b[j]) return false;&#125;if (i == j) return false;return true;&#125;bool weishu(int x) &#123;int cnt = 0;while (x != 0) &#123;x /= 10;cnt++;&#125;return cnt % 2 == 0;&#125;int main() &#123;long long n, i = 1, sum = 0;cin &gt;&gt; n;while (n != 0) &#123;if (weishu(i) &amp;&amp; huiwen(i)) &#123;n--;sum += i;&#125;i++;&#125;cout &lt;&lt; sum &lt;&lt; endl;return 0;&#125;</code></pre><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/16/u198094-solution/">https://ren-yc.github.io/2022/01/16/u198094-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - U </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA10041 Vito&#39;s Family</title>
+      <link href="/2022/01/11/uva10041-solution/"/>
+      <url>/2022/01/11/uva10041-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA10041">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/10041">UVa Online Judge</a></p><h3 id="前置知识">前置知识</h3><p><a href="https://www.runoob.com/python/python-lists.html">Python 中列表（数组）的基本使用</a></p><h3 id="题目大意">题目大意</h3><p>给定每个点所在的位置，求任意一个点到其他点的最短路程和。（点都在一条直线上）</p><h3 id="题目思路">题目思路</h3><p>$\because$ 多个点直接中位数点距离各个点的距离和最短</p><p>$\therefore$ 编写代码求中位数即可</p><h3 id="代码">代码</h3><p>献上<s>简洁的</s> Python 3 代码：</p><p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-python">n = int(input())#记得强转for _ in range(n):#可以变成 while n &gt; 0:...n -= 1    b = list(map(int, input().split()))#Python 的独特输入方式    del b[0]#对于 Python 来说第一个数据没用    b.sort()#排序    s = 0#定义并清零    c = b[len(b) // 2]#中位数，'//' 为整除    for i in range(len(b)):#默认由 0 至 len(b)        s += abs(c - b[i])#计算距离    print(s)#输出总和</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva10041">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/uva10041-solution/">https://ren-yc.github.io/2022/01/11/uva10041-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA465 Overflow</title>
+      <link href="/2022/01/11/uva465-solution/"/>
+      <url>/2022/01/11/uva465-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA465">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/465">UVa Online Judge</a></p><h3 id="题目大意">题目大意</h3><p>给定两个正整数和两数之间的符号，为 $+$ 或 $\times$。</p><p>判断这两个数中的一个数或者运算结果是否大于 <code>int</code> 范围。</p><h3 id="解题思路">解题思路</h3><p>众所周知，<code>int</code> 的范围是 $2^{31} - 1$ 即 $2147483647$，本题使用 C++ 大概率会导致 <code>int</code> 溢出，也有小概率会导致 <code>unsigned long long</code> 溢出。</p><p><strong>这时候，我们就需要 Python 了！！！</strong><img src="https://xn--wcs.tk/a" alt=""><img src="https://xn--wcs.tk/a" alt=""><img src="https://xn--wcs.tk/a" alt=""></p><p>这样一来就好办了，可以一直输入直到 <code>End Of File</code>，并判断，写一个 <code>while True</code> 就解决了。</p><p>本题使用 Python 解题的难点是<strong>如何判断 EOF？</strong></p><p>众所周知，Python 有着一堆 <code>Error</code> 类，一不小心就会引发并终止程序，在 OJ 上显示为 RE，所以很难判断具体为哪个错误类。</p><p>Python 不像 C++ 一样可以直接用 <code>!= EOF</code> 判断输入是否为 EOF，需要用 <code>try except</code> 语句实现。</p><p>本题坑点（<strong>英语好的人自动跳过</strong>）：</p><p>一个输入可以输出 $0 \sim 3$ 行判断，不是固定输出一行。</p><h3 id="代码">代码</h3><p>献上简洁的 Python 代码：</p><p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-python">import sys#可把 break 换成 sys.exit()MAX = 2147483647#2^31-1while True:#无限循环直到 EOFError    try:#try ... except ...        s = input()#尝试输入    except EOFError:#如果引发错误        break#结束程序，也可使用 sys.exit()    print(s)    l = list(s.split())#列表存储    if int(l[0]) &gt; MAX:#注意转换类型        print(&quot;first number too big&quot;)    if int(l[2]) &gt; MAX:#可以两个数都超 int，用 if        print(&quot;second number too big&quot;)    if l[1] == &quot;+&quot; and int(l[0]) + int(l[2]) &gt; MAX:#注意有两个条件        print(&quot;result too big&quot;)    elif l[1] == &quot;*&quot; and int(l[0]) * int(l[2]) &gt; MAX:#if 也可以        print(&quot;result too big&quot;)</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva465">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/uva465-solution/">https://ren-yc.github.io/2022/01/11/uva465-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA11727 Cost Cutting</title>
+      <link href="/2022/01/11/uva11727-solution/"/>
+      <url>/2022/01/11/uva11727-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11727">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11727">UVa Online Judge</a></p><h3 id="题目大意">题目大意</h3><p>给定 $3$ 个整数，求中间数。</p><h3 id="解题思路">解题思路</h3><p>循环输入 $3$ 个数（<strong>循环值从 $1$ 开始</strong>），再存入列表（数组），输出排序后的列表的第 $2$ 项值（即中间数）。</p><h3 id="代码">代码</h3><p>Python 代码简洁又明了。</p><p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-python">t = int(input())#注意默认输入为字符串，要强制类型转换for i in range(1, t + 1):#由 1 开始    a, b, c = map(int, input().split())#Python 无法一行直接输入多个值    l = [a, b, c]#存入    l.sort()#排序    print(&quot;Case &quot; + str(i) + &quot;: &quot; + str(l[1]))#非字符串无法合并，所以要强制类型转换</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11727">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/uva11727-solution/">https://ren-yc.github.io/2022/01/11/uva11727-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - SP7733 HPYNOS - Happy Numbers I</title>
+      <link href="/2022/01/11/sp7733-solution/"/>
+      <url>/2022/01/11/sp7733-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/SP7733">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/spoj/7733">Sphere online judge</a></p><h3 id="思路">思路</h3><p>Happy Number 的分裂规则是<strong>每次分裂的都不同</strong>，<strong>最终分裂成</strong> $1$，如果重复输出 $-1$。</p><p>直接按照题意模拟即可。</p><h3 id="代码">代码</h3><p>Python 的代码极度简洁:</p><p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-python">import sys#退出程序用到的模块a = []#数组初始化cnt = 0#次数归零n = int(input())#切记int()，默认输入字符串while True:#无限循环直到退出    s = 0#归零    m = n#临时变量    while m &gt; 0:#m的位数次        x = m % 10#取模        s += x * x        m //= 10#整除    cnt += 1#次数    if s == 1:#和为1        print(cnt)#输出次数        sys.exit(0)#退出    a.append(s)#在末尾添加    n = s#更新    for i in range(0, len(a) - 1):#不包括当前的        if a[i] == s:#重复            print(-1)            sys.exit(0)#退出，相当于 CPP return 0;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-sp7733">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/sp7733-solution/">https://ren-yc.github.io/2022/01/11/sp7733-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - SP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA12503 Robot Instructions</title>
+      <link href="/2022/01/11/uva12503-solution/"/>
+      <url>/2022/01/11/uva12503-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA12503">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/12503">UVa Online Judge</a></p><h3 id="题目大意">题目大意</h3><p>一只机器人站在一条线的零点，<code>LEFT</code> 命令使它向左走一格，<code>RIGHT</code> 命令则是向右走一格，求机器人最终所在的位置。</p><h3 id="解题方法">解题方法</h3><p>我们可以定义一个 $a$ 数组，用于存放命令，且只能有 $-1$ 和 $1$ 两个值，分别代表往左和往右。</p><p>读入的话可以写一个函数，使用 Python 数组的 <code>append</code> 函数在数组末尾追加数值。</p><h3 id="代码">代码</h3><p>详细解释在注释中。</p><p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-python">a = []def f(c):#输入函数    if c == &quot;LEFT&quot;:#判断        a.append(-1)#追加        return -1    elif c == &quot;RIGHT&quot;:        a.append(1)#追加        return 1    else:        a.append(a[int(c) - 1])#追加        return a[-1]t = int(input())for _ in range(t):#循环    m = int(input())#输入    a = []#清空数组    now = 0#清零    for i in range(m):        k = list(input().split())        if len(k) == 1:            now += f(k[0])#移动        else:            now += f(k[2])#同上    print(now)#输出</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva12503">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/uva12503-solution/">https://ren-yc.github.io/2022/01/11/uva12503-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA10035 Primary Arithmetic</title>
+      <link href="/2022/01/11/uva10035-solution/"/>
+      <url>/2022/01/11/uva10035-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA10035">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/10035">UVa Online Judge</a></p><h3 id="题目大意">题目大意</h3><p>给定两个整数，请你求两数相加时进位的个数。$^*$</p><p>$^*$ 上文为转载: <a href="https://keaidexiaoyu.blog.luogu.org/solution-uva10035">https://keaidexiaoyu.blog.luogu.org/solution-uva10035</a></p><h3 id="前置知识">前置知识</h3><p><strong><a href="https://blog.csdn.net/cjx14060307101/article/details/103168330">Python 3 中的各种赋值运算符</a></strong></p><h3 id="题目解法">题目解法</h3><p>由于使用的是 Python，无法使用 <code>while (cin &gt;&gt; a &gt;&gt; b)</code>，我们可以先套一层 <code>while True</code>，遇到 $a, b = 0$ 直接 <code>break</code>，由于 $a, b \le 10^{10}$，所以我们写一个循环 $10$ 次的 <code>for i in range(10)</code> 判断每一位的进位情况：</p><ul><li><p>如果 $&gt; 9$ 计数器加一；</p></li><li><p>其他情况 计数器不变。</p></li></ul><p>我们可以使用 <code>//=</code>，用于把 $a, b$ 都减少一位。</p><p>输出就不讲了，只有一个关键点：C++ 的 <code>else if</code> 在 Python 中为 <code>elif</code>，并且他们不是函数而是关键字，可以不带括号。</p><h3 id="代码">代码</h3><p>不需要导入任何模块</p><p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-python">while True:    a, b = map(int, input().split())    cnt = 0    if (a == 0 and b == 0):      break    c = 0    for i in range(10):      c = a % 10 + b % 10 + c      if c &gt; 9:        c = 1      else:        c = 0      cnt += c      a //= 10      b //= 10    if cnt == 0:      print(&quot;No carry operation.&quot;)    elif cnt == 1:      print(&quot;%d carry operation.&quot; % cnt)    else:      print(&quot;%d carry operations.&quot; % cnt)#毒（jian）瘤（dan）的输出格式</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva10035">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/uva10035-solution/">https://ren-yc.github.io/2022/01/11/uva10035-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - CF550A Two Substrings</title>
+      <link href="/2022/01/11/cf550a-solution/"/>
+      <url>/2022/01/11/cf550a-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF550A">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/550/A">Codeforces</a></p><h3 id="思路">思路</h3><p>这道题很简单，用一个字符串代替原来输入的字符串，把 <code>BA</code> 和 <code>AB</code> 用 <code>.</code> 代替。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头using namespace std;int main() &#123;string s;cin &gt;&gt; s;int AB = s.find(&quot;AB&quot;);//定义&quot;AB&quot;的位置int BA = s.find(&quot;BA&quot;);//定义&quot;BA&quot;的位置if (AB != -1) &#123;string temp = s;//定义临时字符串temptemp.replace(AB, 2, &quot;.&quot;);//用&quot;.&quot;代替int BA = temp.find(&quot;BA&quot;);if (BA != -1) &#123;cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;//如果没有输出YESreturn 0;//结束程序&#125;&#125;if (BA != -1) &#123;//同上string temp = s;temp.replace(BA, 2,&quot;.&quot;);int AB = temp.find(&quot;AB&quot;);if (AB != -1) &#123;cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;return 0;&#125;&#125;cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;//如果都没有找到输出NOreturn 0;//华丽结束&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-cf550a">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/cf550a-solution/">https://ren-yc.github.io/2022/01/11/cf550a-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - CF </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - CF268A Games</title>
+      <link href="/2022/01/11/cf268a-solution/"/>
+      <url>/2022/01/11/cf268a-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF268A">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/268/A">Codeforces</a></p><h3 id="题目大意">题目大意</h3><p>球队间打比赛，分主场和客场，要求一场比赛中两支队伍服装不能相同，求满足条件的场数。</p><h3 id="思路">思路</h3><p>暴力枚举。</p><p>详细解析见下注释。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头using namespace std;int main() &#123;int n, a[101] = &#123;0&#125;, b[101] = &#123;0&#125;, cnt = 0;cin &gt;&gt; n;//输入场数for (int i = 0; i &lt; n; i++) &#123;cin &gt;&gt; a[i] &gt;&gt; b[i];//输入两支队伍服装的颜色&#125;for (int i = 0; i &lt; n; i++) &#123;//枚举for (int j = 0; j &lt; n; j++) &#123;if (a[i] == b[j]) cnt++;//计数器自增&#125;&#125;cout &lt;&lt; cnt &lt;&lt; endl;//输出计数器return 0;//好习惯&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-cf268a">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/cf268a-solution/">https://ren-yc.github.io/2022/01/11/cf268a-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - CF </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - CF1475A Odd Divisor</title>
+      <link href="/2022/01/11/cf1475a-solution/"/>
+      <url>/2022/01/11/cf1475a-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF1475A">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/1475/A">Codeforces</a></p><h3 id="题目大意">题目大意</h3><p>判断一个数能否被一个大于 $1$ 的数整除。</p><p>我们最先想到能一直除以 $2$，如果余数为 $1$，那么输出 <code>NO</code>，否则输出 <code>YES</code>。</p><p>还要注意一点 $n$ 的范围是 $10$ 的 $14$ 次方，$\mathrm{INT}$_$\mathrm{MAX} \approx 10^9$，所以要用 <code>long long</code>。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;long long t, n;cin &gt;&gt; t;for (int i = 1; i &lt;= t; i++) &#123;cin &gt;&gt; n;while (n % 2 == 0) &#123;n /= 2;&#125;if (n == 1) &#123;cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;&#125;&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-cf1475a">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/01/11/cf1475a-solution/">https://ren-yc.github.io/2022/01/11/cf1475a-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - CF </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - CF1598A Computer Game</title>
+      <link href="/2021/10/11/cf1598a-solution/"/>
+      <url>/2021/10/11/cf1598a-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF1598A">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/1598/A">Codeforces</a></p><h3 id="题目翻译">题目翻译</h3><p>给定两行字符串，求能否从左上角走到右下角（<code>0</code> 为可走，<code>1</code> 为不可走）。<strong><s>（超简洁翻译）</s></strong></p><h3 id="题目思路">题目思路</h3><p>我们可以读入完字符串后循环遍历，两两比较，如果有 $s1_i = s2_i$，说明无法通过，则 $flag = true$（也可以输出后直接 <code>continue</code>）。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头万岁！using namespace std;int main() &#123;int t;cin &gt;&gt; t;while (t--) &#123;//几乎每道 CF 题都要int n;bool flag = false;string a, b;//不使用 char 数组（复杂、麻烦）cin &gt;&gt; n &gt;&gt; a &gt;&gt; b;for (int i = 0; i &lt; n; i++) &#123;if (a[i] == '1' &amp;&amp; b[i] == '1') &#123;//两行都为 1flag = true;//发现&#125;&#125;if (flag == 0) &#123;//若未发现cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;&#125; else &#123;//否则cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;&#125;&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-cf1598a">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120711294">CSDN 博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/10/11/cf1598a-solution/">https://ren-yc.github.io/2021/10/11/cf1598a-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - CF </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - CF44B Cola</title>
+      <link href="/2021/10/06/cf44b-solution/"/>
+      <url>/2021/10/06/cf44b-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/CF44B">洛谷</a></p><p><a href="https://codeforces.com/problemset/problem/44/B">Codeforces</a></p><h3 id="题目思路">题目思路</h3><p>本题第一眼可以看出是一道暴力枚举，但是不能用三层 <code>for</code> 循环，$100%$ 超时。</p><p>所以我们可以先从 $2$ 升的可乐开始循环，通过前两个循环来推算出 $0.5$ 升可乐的数量。</p><p><strong>注意：本题的 $a$ 为 $0.5$ 而 $n$ 为整型，第一层循环要两个两个加</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//懒人专用using namespace std;int main() &#123;int n, a, b, c, ans = 0;cin &gt;&gt; n &gt;&gt; a &gt;&gt; b &gt;&gt; c;for (int i = 0; i &lt;= a; i += 2) &#123;//n 必须是整数，但 a 是 0.5 升，所以两个两个加for (int j = 0; j &lt;= c; j++) &#123;if (n - (i / 2 + j * 2) &lt;= b &amp;&amp; n - (i / 2 + j * 2) &gt;= 0) &#123;//算总量并判断是否小于等于 b 和 nans++;&#125;&#125;&#125;cout &lt;&lt; ans &lt;&lt; endl;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-cf44b">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120628543">CSDN 博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/10/06/cf44b-solution/">https://ren-yc.github.io/2021/10/06/cf44b-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - CF </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA11559 Event Planning</title>
+      <link href="/2021/09/14/uva11559-solution/"/>
+      <url>/2021/09/14/uva11559-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA11559">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/11559">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p>作为一次短途旅行的组织者，你需要根据参与人数、预算、酒店及其周末空余床位的情况，决定是否成行。其中旅游人数 $N$，预算 $B$，可供考虑的酒店数量 $H$，可选择的出行周末 $W$。其中 $H$ 确定之后，会输入 $H$ 组数据，每两行为一组，第一行表示该酒店的人均住店费用 $p$，第二行表示 $W$ 个周末对应每个周末该酒店的床位空余情况 $a$。</p><h3 id="题目解析">题目解析</h3><p>本题很明显就能看出是一道模拟题。</p><p>只需要在输入的时候顺便计算一下是否超预算。如果有，则顺便记录下是否是更低的预算即可。如果都超预算，那么输出 <code>stay home</code>，否则就输出记录的那个更低的预算。</p><p><strong>一般 UVA 的题读入行数是不给定的，所以我们要使用</strong> <code>while (cin &gt;&gt; n)</code> <strong>或者</strong> <code>while (~scanf(&quot;%d&quot;, &amp;n))</code><strong>。</strong></p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;//万能头万岁using namespace std;int main() &#123;int N, B, H, W, p, a, Min = INT_MAX;//Min 根据个人喜好设置较大数while (cin &gt;&gt; N &gt;&gt; B &gt;&gt; H &gt;&gt; W) &#123;//如果是 scanf 可以加上 != EOFfor (int i = 0; i &lt; H; i++) &#123;cin &gt;&gt; p;for (int j = 0; j &lt; W; j++) &#123;cin &gt;&gt; a;if (a &gt;= N) Min = min(Min, p * N);//读入时求最小值&#125;&#125;if (Min &lt;= B) &#123;cout &lt;&lt; Min &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; &quot;stay home&quot; &lt;&lt; endl;&#125;Min = INT_MAX;//根据个人喜好&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva11559">洛谷博客</a> 和 <a href="https://blog.csdn.net/Renyuchen_/article/details/120657641">CSDN 博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/09/14/uva11559-solution/">https://ren-yc.github.io/2021/09/14/uva11559-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - UVA13012 Identifying tea</title>
+      <link href="/2021/08/23/uva13012-solution/"/>
+      <url>/2021/08/23/uva13012-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA13012">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/13012">UVa Online Judge</a></p><h3 id="题目解析">题目解析</h3><p><s>太淼了</s>，一道模拟题。</p><p>一般 UVA 的题读入行数是不给定的，所以我们要使用 <code>while (cin &gt;&gt; n)</code> 或者 <code>while (~scanf(&quot;%d&quot;, &amp;n))</code>。</p><p>每次循环读入后，使用 <code>if</code> 判断这 $5$ 个数是否等于 $t$。如果是，计数器加一。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int main() &#123;int t, a, b, c, d, e;while (cin &gt;&gt; t &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d &gt;&gt; e) &#123;//不停地读入（由于是cin,所以不用!=EOF）int ans = 0;//计数器if (a == t) ans++;//判断if (b == t) ans++;//同上if (c == t) ans++;//同上if (d == t) ans++;//同上if (e == t) ans++;//同上（草）cout &lt;&lt; ans &lt;&lt; endl;&#125;return 0;//完结撒花&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva13012">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/08/23/uva13012-solution/">https://ren-yc.github.io/2021/08/23/uva13012-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - UVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『教程』如何使（po）用（jie） IDM</title>
+      <link href="/2021/08/12/how-to-use-idm/"/>
+      <url>/2021/08/12/how-to-use-idm/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>本文章所使用的方法保证在 IDM 6.xx 版本有效</strong></p><h3 id="前言">前言</h3><p><s>众所周知</s>，IDM 是一个很好的<strong>多线程</strong>下载工具，还支持网站爬取音视频。</p><p>IDM 能够在使用浏览器下载文件时自动捕获下载链接并添加下载任务，目前，IDM 的自动捕获功能支持以下常见的主流浏览器：</p><p>Safari</p><p>Chrome</p><p>Firefox</p><p>Opera</p><p>Microsoft Edge</p><p>Internet Explorer</p><p><s><em>我很严肃</em>：</s></p><p><s><em>IDM 破解是怎么回事呢？IDM 相信大家都很熟悉，但是 IDM 破解是怎么回事呢，下面就让小编带大家一起了解吧。IDM 破解，其实就是破解，大家可能会很惊讶 IDM 怎么破解呢？但事实就是这样，小编也感到非常惊讶。这就是关于 IDM 破解的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</em></s></p><h3 id="下载">下载</h3><p>先安装正版 IDM，再使用破解工具破解。</p><p><a href="http://www.internetdownloadmanager.com/download.html">IDM 官网下载</a></p><p><a href="/assets/IDM/IDMInstall.zip">本站安装程序压缩包下载</a></p><p><a href="/assets/IDM/IDMPatch.zip">本站破解工具压缩包下载</a></p><h3 id="安装">安装</h3><p>运行下载的 <code>.exe</code> 文件，</p><p>安装时一直按 Enter 就行，</p><p>若安装程序提示重启，</p><p><strong>请点击 “取消”</strong>。</p><h3 id="破解">破解</h3><p>把下载的 <code>IDMPatch.zip</code> 中的 <code>Crack.exe</code> 复制到 IDM 安装目录如 <code>C:\Program Files (x86)\Internet Download Manager</code>，</p><p>右键该文件，</p><p>选择 “<strong>以管理员模式运行</strong>”。</p><p>执行完毕后运行 <code>REG.exe</code>，</p><p><strong>方法同上</strong>。</p><p>然后启动 IDM，</p><p>点击菜单栏中的 “帮助” – “关于 IDM”，</p><p>可以看到 IDM 被成功的激活了<img src="https://xn--9zr.tk/gx" alt=""></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/08/12/how-to-use-idm/">https://ren-yc.github.io/2021/08/12/how-to-use-idm/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> APPs - Tools </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『教程』WFR &amp; RBQ - 如何使用 Warfarin &amp; RBQScript</title>
+      <link href="/2021/08/05/how-to-use-wfr-and-rbq/"/>
+      <url>/2021/08/05/how-to-use-wfr-and-rbq/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://github.com/WarfarinBloodanger/rbqscript/blob/main/README.md">帮助文档 &amp; Wiki</a></p><p>Warfarin 是一个由 C++ 编写而成的<strong>解释型</strong>语言。</p><p>RBQScript 是一个由 C++ 编写而成的<strong>编译型</strong>语言。</p><h3 id="特点">特点</h3><ul><li><p>变量，支持数字、字符串、布尔、数组（允许使用 <code>a[&quot;test&quot;]</code> 这样的语法）；</p></li><li><p>函数定义、调用与递归、高阶函数、<code>lambda</code> 表达式；</p></li><li><p>键盘与文件的 I/O 操作；</p></li><li><p><code>if for while</code> 语句；</p></li><li><p>大量内置函数，以及一部分操作系统 API（仅支持Windows）；</p></li><li><p>点语法操作，即 <code>a.test</code> 等价于 <code>a[&quot;test&quot;]</code>；</p></li><li><p>编译成特定格式的 <code>.ff0</code> / <code>.rbq</code> 文件，支持 <code>import</code>；</p></li><li><p>支持伪代码和普通代码混写 （打开 <code>-p</code> 开关）；</p></li><li><p>支持反编译成 JavaScript（一部分内置函数不会给出对应的实现）；</p></li><li><p>支持 DLL 文件调用。</p></li><li><p><strong>支持自动更新 不需要手动下载新版本的代码，程序会自动检查并更新源代码。（仅限 3.30+ 版本）</strong></p></li><li><p>全新 Warfarin 语言编写数学库（<code>algorithm.wfr</code>）</p></li></ul><p>具体信息请看<a href="https://github.com/WarfarinBloodanger/ff0-script/blob/main/readme.md">这里（Warfarin）</a> 或 <a href="https://github.com/WarfarinBloodanger/rbqscript/blob/main/README.md">这里（RBQScript）</a></p><h2 id="使用">使用</h2><p>Warfarin 目前最新版本：<strong>4.01</strong>（已停止更新，变更为 RBQScript 继续更新）</p><p>RBQScript 目前最新版本：<strong>4.12</strong></p><h3 id="下载-配置">下载 &amp; 配置</h3><p>$1.$ <strong>下载</strong> Warfarin（RBQScript） C++ 源文件，</p><p>$2.$ 使用 g++ 编译成 exe 文件，</p><p>$3.$ <strong>把 exe 文件加入环境变量</strong>（不会的请百度）。</p><h3 id="编译-运行">编译 &amp; 运行</h3><p>运行程序有 $2$ 种方法：</p><ul><li><p>直接运行 <code>Warfarin.exe</code> / <code>fvm.exe</code></p></li><li><p>编译运行 <code>.wfr</code> / <code>.rbq</code> 源文件（请看下文）</p></li></ul><p>Warfarin（RBQScript） 的源文件扩展名一般为 <code>.wfr</code> / <code>.rbq</code>，</p><p>使用 <code>Warfarin.exe</code> / <code>fvm.exe</code> 编译时请在该文件夹下的命令行输入 <code>Warfarin 文件名 -cr/crj/crjp</code> / <code>fvm -i 文件名 -cr/crj/crjp (-o 文件名.rbq)</code>，</p><p>此命令会编译出一个 <code>.ff0</code> / <code>.rbq</code> 字节码文件，相当于 C++ 的 <code>.exe</code> 文件，<s>但不能双击运行</s>，请<strong>不要删除</strong>。</p><p>关于 <code>cr/crj/crjp</code> $3$ 个编译参数请看<a href="https://www.luogu.com.cn/blog/Warfarin/ff0-faq">此处</a>。</p><h2 id="相关链接">相关链接</h2><p><a href="/assets/ff0/Warfarin.zip">本站下载链接（Warfarin）</a></p><p><a href="https://github.com/WarfarinBloodanger/ff0-script">作者 GitHub 仓库（Warfarin）</a></p><p><a href="https://github.com/WarfarinBloodanger/rbqscript">作者 GitHub 仓库（RBQScript）</a></p><p><a href="https://raw.githubusercontent.com/WarfarinBloodanger/ff0-script/main/user.txt">英文帮助文档</a></p><p><a href="https://marketplace.visualstudio.com/items?itemName=ren-yc.vscode-warfarin">VSCode 插件（仅支持基础语言设置，咕咕）</a></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/">https://ren-yc.github.io/2021/08/05/how-to-use-wfr-and-rbq/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Programming Languages - Warfarin &amp; RBQScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>『题解』Luogu - U187148 gcd 与 lcm</title>
+      <link href="/2021/07/23/u187148-solution/"/>
+      <url>/2021/07/23/u187148-solution/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>此题为私有题目</strong></p><h3 id="题目信息">题目信息</h3><h4 id="题目描述">题目描述</h4><p>小 T 想编一个程序，<s>可是又想不出来怎么编</s>，请聪明的你来帮帮他。</p><p>这个程序可以用来计算两个数的最大公约数或最小公倍数。</p><h4 id="输入格式">输入格式</h4><p>第 $1$ 行输入一个正整数 $T$；</p><p>第 $2$ 到 $T + 1$ 行输入字符串 <code>gcd</code> 或 <code>lcm</code>，以及两个正整数 $a$ 和 $b$。</p><h4 id="输出格式">输出格式</h4><p>输出 $T$ 行结果。</p><h4 id="输入输出样例">输入输出样例</h4><h5 id="输入-1">输入 #1</h5><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>2gcd 1 1lcm 10 15</code></pre><h5 id="输出-1">输出 #1</h5><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>130</code></pre><h5 id="输入-2">输入 #2</h5><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>5lcm 6 8gcd 2 10lcm 5 7gcd 1000 500lcm 10000000000 1</code></pre><h5 id="输出-2">输出 #2</h5><p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code>24235500100000000000</code></pre><h4 id="提示说明">提示说明</h4><p><strong>本题采用捆绑测试</strong></p><p>对于 $100%$ 的数据：</p><p>$1 \le T \le 10^9$</p><table><thead><tr><th style="text-align:left">Subtask</th><th style="text-align:left">分值</th><th style="text-align:left">$a, b$</th></tr></thead><tbody><tr><td style="text-align:left">$1$</td><td style="text-align:left">$1$</td><td style="text-align:left">$= 1$</td></tr><tr><td style="text-align:left">$2$</td><td style="text-align:left">$9$</td><td style="text-align:left">$\le 10^2$</td></tr><tr><td style="text-align:left">$3$</td><td style="text-align:left">$20$</td><td style="text-align:left">$\le 10^5$</td></tr><tr><td style="text-align:left">$4$</td><td style="text-align:left">$30$</td><td style="text-align:left">$\le 10^9$</td></tr><tr><td style="text-align:left">$5$</td><td style="text-align:left">$40$</td><td style="text-align:left">$\le 10^{18}$</td></tr></tbody></table><p>Idea：任宇宸</p><p>Solution：任宇宸</p><p>Code：任宇宸</p><p>Data：任宇宸</p><h4 id="题目难度">题目难度</h4><p>$\textcolor{orange}{普及-}$</p><h4 id="题目地址（可能变更）">题目地址（可能变更）</h4><p><a href="https://www.luogu.com.cn/problem/U187148">洛谷</a></p><h3 id="题目解析">题目解析</h3><p>这是一道典型的数论题。</p><p>题目要求我们求某两个数的<strong>最大公约数</strong>或<strong>最小公倍数</strong>。</p><p><strong>由于 $a, b \le 10^{18}$，最坏 <code>lcm</code> 结果 $a \times b$，所以要使用 <code>unsigned long long</code></strong></p><h3 id="代码分析">代码分析</h3><p>输入字符串 $mode$，然后输入两个正整数 $a$ 和 $b$。</p><p>判断 $mode$ 是否为 <code>gcd</code> 或 <code>lcm</code>。</p><p>写一个求最大公约数的函数（或者<s>你不要脸的话</s>直接调用 <code>algorithm</code> 中的 <code>__gcd</code>）。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;unsigned long long gcd(long long a, long long b) &#123;if (a % b == 0) return (unsigned long long)b;else return gcd(b, a % b);&#125;unsigned long long lcm(long long a, long long b) &#123;return (unsigned long long)a * (unsigned long long)b / gcd(a, b);&#125;int main() &#123;long long T, a, b;string mode;cin &gt;&gt; T;while (T--) &#123;cin &gt;&gt; mode &gt;&gt; a &gt;&gt; b;if (mode == &quot;gcd&quot;) &#123;cout &lt;&lt; gcd(a, b) &lt;&lt; endl;&#125; else &#123;cout &lt;&lt; lcm(a, b) &lt;&lt; endl;&#125;&#125;return 0;&#125;</code></pre><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2021/07/23/u187148-solution/">https://ren-yc.github.io/2021/07/23/u187148-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Solution - U </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
