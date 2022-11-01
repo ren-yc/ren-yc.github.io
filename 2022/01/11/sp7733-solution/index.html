@@ -731,67 +731,67 @@ while True:#无限循环直到退出
 
 	<div id="share_container">
 	<div id="share" data-initialized="true">
-		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+		<a class="no-pjax icon-wechat" tooltip="Share to WeChat">
 			<button class="btn btn-icon btn-success">
 				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+		<a target="_blank" class="no-pjax icon-douban" tooltip="Share to Douban">
 			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
 				豆
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+		<a target="_blank" class="no-pjax icon-qq" tooltip="Share to QQ">
 			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="Share to QQ Zone">
 			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="Share to Weibo">
 			<button class="btn btn-icon btn-warning">
 				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="Share to Facebook">
 			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="Share to Twitter">
 			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2022/01/11/sp7733-solution/&text=『题解』Luogu - SP7733 HPYNOS - Happy Numbers I" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://ren-yc.github.io/2022/01/11/sp7733-solution/&text=『题解』Luogu - SP7733 HPYNOS - Happy Numbers I" tooltip="Share to Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="Copy Link">
 			<button class="btn btn-icon btn-default">
 				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
 			</button>
 		</a>
 	</div>
-	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="Share">
 		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
 	</button>
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : '『题解』Luogu - SP7733 HPYNOS - Happy Numbers I',
-	    description : '题目链接
+		title : '『题解』Luogu - SP7733 HPYNOS - Happy Numbers I',
+		description : '题目链接
 洛谷
 Sphere online judge
 思路
 Happy Number 的分裂规则是...',
-	    wechatQrcodeTitle : "分享到微信",
-	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://ren-yc.github.io/2022/01/11/sp7733-solution/'
+		wechatQrcodeTitle : "Share to WeChat",
+		wechatQrcodeHelper : 'Scan QR Code in WeChat',
+		source : 'https://ren-yc.github.io/2022/01/11/sp7733-solution/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -805,8 +805,8 @@ Happy Number 的分裂规则是...',
 		input.select();
 		if (document.execCommand('copy')){
 			iziToast.show({
-				title: '链接已复制',
-				message: "链接已复制到剪贴板",
+				title: 'Link Copied',
+				message: "Link Has Been Copied to the Clipboard",
 				class: 'shadow',
 				position: 'topRight',
 				backgroundColor: '#2dce89',
@@ -819,8 +819,8 @@ Happy Number 的分裂规则是...',
 			});
 		}else{
 			iziToast.show({
-				title: '复制失败',
-				message: "请手动复制链接",
+				title: 'Link Copying Failed',
+				message: "Please Copy the Link Manually",
 				class: 'shadow',
 				position: 'topRight',
 				backgroundColor: '#f5365c',
