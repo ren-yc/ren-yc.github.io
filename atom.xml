@@ -6,7 +6,7 @@
   <link href="https://ren-yc.github.io/atom.xml" rel="self"/>
   
   <link href="https://ren-yc.github.io/"/>
-  <updated>2022-10-31T23:49:19.373Z</updated>
+  <updated>2022-11-05T04:12:40.810Z</updated>
   <id>https://ren-yc.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>『记录』在 Ubuntu (WSL2) 上安装 PyTorch</title>
+    <link href="https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/"/>
+    <id>https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/</id>
+    <published>2022-11-05T03:19:04.000Z</published>
+    <updated>2022-11-05T04:12:40.810Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="APPs - Tools" scheme="https://ren-yc.github.io/categories/APPs-Tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>『题解』Luogu - UVA12643 Tennis Rounds</title>
     <link href="https://ren-yc.github.io/2022/10/29/uva12643-solution/"/>
     <id>https://ren-yc.github.io/2022/10/29/uva12643-solution/</id>
     <published>2022-10-29T11:46:16.000Z</published>
-    <updated>2022-10-31T23:49:19.373Z</updated>
+    <updated>2022-11-05T03:17:03.727Z</updated>
     
     
       

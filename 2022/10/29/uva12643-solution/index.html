@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://ren-yc.github.io/2022/10/29/uva12643-solution/problem.png">
 <meta property="og:image" content="https://ren-yc.github.io/assets/img/by-nc-sa4.0.png">
 <meta property="article:published_time" content="2022-10-29T11:46:16.000Z">
-<meta property="article:modified_time" content="2022-10-31T23:49:19.373Z">
+<meta property="article:modified_time" content="2022-11-05T03:17:03.727Z">
 <meta property="article:author" content="Yuchen Ren">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -538,7 +538,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">31</span>
+										<span class="site-state-item-count">32</span>
 										<span class="site-state-item-name">Posts</span>
 									</a>
 								</div>
@@ -608,7 +608,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">15</span></a>
+				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">15</span></a>
 			</div>
 		</div>
 	</div>
@@ -643,7 +643,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="Published at 2022-10-29 19:46:16 | Modified at 2022-11-1 7:49:19">2022-10-29 19:46
+							<time title="Published at 2022-10-29 19:46:16 | Modified at 2022-11-5 11:17:03">2022-10-29 19:46
 							</time>
 						</div>
 					
@@ -660,7 +660,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							341 Word(s)
+							340 Word(s)
 						</div>
 					
 						
@@ -686,9 +686,9 @@
 <p>特别地，第一轮的球员被编号为 $1,\ 2,\ …,\ 2^{N - 1}$。</p>
 <p>在第 $k$ 轮中，编号为 $2 \cdot k - 1$ 的球员与编号为 $2 \cdot k$ 的球员进行比赛。</p>
 <p>每一轮中的获胜者将晋升至下一轮，而输者将被淘汰，所以，下一轮中的球员数量会是当前轮的 $\frac{1}{2}$。每一轮中球员将会被重新编号，直到那一轮仅剩下一位选手，该选手就是冠军。</p>
-<p>现在你需要得出在第一轮时编号为 $i$ 的选手与该轮时编号为 $j$ 的选手在第几轮可能会进行比赛。</p>
+<p>现在你需要求出在第一轮时编号为 $i$ 的选手与第一轮时编号为 $j$ 的选手在第几轮可能会进行比赛。</p>
 <h3 id="题目解析">题目解析</h3>
-<p>本题实际上就是一个二分答案，对球员编号<strong>从最后一轮往前</strong>不断二分直到满足 $i \leq mid$ 且 $j \geq mid$。</p>
+<p>本题实际上就是一个二分答案，对球员编号（轮数 $N$ 不断递减）不断二分直到满足 $i \leq mid$ 且 $j &gt; mid$，即在该轮中 $i$ 与 $j$ 可能会进行比赛。</p>
 <p>在进行二分答案前，需先保证 $i &lt; j$，不满足则将 $i$ 与 $j$ 的值互换。</p>
 <h3 id="代码">代码</h3>
 <p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
@@ -706,7 +706,7 @@ int main() &#123;
 		r = pow(2, n); // 2^N (数据量较小直接 pow，也可使用 1 &lt;&lt; N)
 		mid = r / 2;
 		while (true) &#123;
-			if (i &lt;= mid &amp;&amp; j &gt; mid) &#123; // 满足 i&lt;= mid 且 j &gt; mid
+			if (i &lt;= mid &amp;&amp; j &gt; mid) &#123; // 可能会进行比赛
 				cout &lt;&lt; n &lt;&lt; endl;
 				break;
 			&#125;
@@ -871,7 +871,7 @@ UVa Online Judge
 </div>
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">Next Post <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/10/29/uva12592-solution/" rel="next"> 『题解』Luogu - UVA12592 Identifying tea</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>Previous Post</span><a href="/2022/11/05/pytorch-ubuntu-installation/" rel="prev"> 『记录』在 Ubuntu (WSL2) 上安装 PyTorch</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">Next Post <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2022/10/29/uva12592-solution/" rel="next"> 『题解』Luogu - UVA12592 Identifying tea</a></div></div>
 
 
 
