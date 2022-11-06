@@ -23,31 +23,6 @@
     
     
     <entry>
-      <title>『题解』Luogu - UVA12643 Tennis Rounds</title>
-      <link href="/2022/10/29/uva12643-solution/"/>
-      <url>/2022/10/29/uva12643-solution/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目链接">题目链接</h3><p><a href="https://www.luogu.com.cn/problem/UVA12643">洛谷</a></p><p><a href="https://www.luogu.com.cn/remoteJudgeRedirect/uva/12643">UVa Online Judge</a></p><h3 id="题目翻译">题目翻译</h3><p><img src="./problem.png" alt=""></p><p>在共 $N$ 轮的网球锦标赛中，第一轮有 $2^N$ 名球员被随机分配。随机分配意味着每个球员被分配一个介于 $1$ 和 $2^N$ 之间的数字，这个分配确定了两个球员之间是否会进行比赛。</p><p>特别地，第一轮的球员被编号为 $1,\ 2,\ …,\ 2^{N - 1}$。</p><p>在第 $k$ 轮中，编号为 $2 \cdot k - 1$ 的球员与编号为 $2 \cdot k$ 的球员进行比赛。</p><p>每一轮中的获胜者将晋升至下一轮，而输者将被淘汰，所以，下一轮中的球员数量会是当前轮的 $\frac{1}{2}$。每一轮中球员将会被重新编号，直到那一轮仅剩下一位选手，该选手就是冠军。</p><p>现在你需要求出在第一轮时编号为 $i$ 的选手与第一轮时编号为 $j$ 的选手在第几轮可能会进行比赛。</p><h3 id="题目解析">题目解析</h3><p>本题实际上就是一个二分答案，对球员编号（轮数 $N$ 不断递减）不断二分直到满足 $i \leq mid$ 且 $j &gt; mid$，即在该轮中 $i$ 与 $j$ 可能会进行比赛。</p><p>在进行二分答案前，需先保证 $i &lt; j$，不满足则将 $i$ 与 $j$ 的值互换。</p><h3 id="代码">代码</h3><p class="code-caption" data-lang="cpp" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p><pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;using namespace std;int n, i, j, l, r, mid;int main() &#123;while (cin &gt;&gt; n &gt;&gt; i &gt;&gt; j) &#123;if (i &gt; j) &#123;swap(i, j); // 不满足 i &lt; j 则将值互换&#125;l = 1;r = pow(2, n); // 2^N (数据量较小直接 pow，也可使用 1 &lt;&lt; N)mid = r / 2;while (true) &#123;if (i &lt;= mid &amp;&amp; j &gt; mid) &#123; // 可能会进行比赛cout &lt;&lt; n &lt;&lt; endl;break;&#125;if (j &lt;= mid) &#123;r = mid;&#125; else &#123;l = mid + 1;&#125;mid = (l + r - 1) / 2;n--; // 轮数往前推&#125;&#125;return 0;&#125;</code></pre><p><strong>本文章同时发布在 <a href="https://www.luogu.com.cn/blog/yuchenren/solution-uva12643">洛谷博客</a></strong></p><blockquote><p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/10/29/uva12643-solution/">https://ren-yc.github.io/2022/10/29/uva12643-solution/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/assets/img/by-nc-sa4.0.png" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Solution - UVA </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>『题解』Luogu - UVA12592 Identifying tea</title>
       <link href="/2022/10/29/uva12592-solution/"/>
       <url>/2022/10/29/uva12592-solution/</url>
