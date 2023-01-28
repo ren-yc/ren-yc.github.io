@@ -11,12 +11,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="前言 本蒟蒻发现 Windows 对某些深度学习框架例如 PyTorch 的支持不够完善，遂想到使用 WSL2 模拟 Ubuntu 环境进行深度学习模型训练与推理。 参考信息 环境   Ubuntu 22.04.1 (WSL2)   Miniconda3 4.12.0 (Python 3.8)   CUDA Toolkit 11.6.2 (WSL2)   目标   PyTorch 1.12.1 (">
+	<meta name="description" content="前言本蒟蒻发现 Windows 对某些深度学习框架例如 PyTorch 的支持不够完善，遂想到使用 WSL2 模拟 Ubuntu 环境进行深度学习模型训练与推理。 参考信息环境 Ubuntu 22.04.1 (WSL2)  Miniconda3 4.12.0 (Python 3.8)  CUDA Toolkit 11.6.2 (WSL2)   目标 PyTorch 1.12.1 (GPU)  Py">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『记录』在 Ubuntu (WSL2) 上安装 PyTorch">
 <meta property="og:url" content="https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/index.html">
 <meta property="og:site_name" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:description" content="前言 本蒟蒻发现 Windows 对某些深度学习框架例如 PyTorch 的支持不够完善，遂想到使用 WSL2 模拟 Ubuntu 环境进行深度学习模型训练与推理。 参考信息 环境   Ubuntu 22.04.1 (WSL2)   Miniconda3 4.12.0 (Python 3.8)   CUDA Toolkit 11.6.2 (WSL2)   目标   PyTorch 1.12.1 (">
+<meta property="og:description" content="前言本蒟蒻发现 Windows 对某些深度学习框架例如 PyTorch 的支持不够完善，遂想到使用 WSL2 模拟 Ubuntu 环境进行深度学习模型训练与推理。 参考信息环境 Ubuntu 22.04.1 (WSL2)  Miniconda3 4.12.0 (Python 3.8)  CUDA Toolkit 11.6.2 (WSL2)   目标 PyTorch 1.12.1 (GPU)  Py">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/cuda-path.png">
 <meta property="og:image" content="https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/miniconda-bashrc.png">
@@ -538,7 +538,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">31</span>
+										<span class="site-state-item-count">30</span>
 										<span class="site-state-item-name">Posts</span>
 									</a>
 								</div>
@@ -608,7 +608,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">3</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">14</span></a>
+				<a class="badge badge-secondary tag" href="/categories/APPs-Self-Developed/" rel="tag">APPs - Self Developed <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/APPs-Tools/" rel="tag">APPs - Tools <span class="tag-num">4</span></a><a class="badge badge-secondary tag" href="/categories/Programming-Languages-Warfarin-RBQScript/" rel="tag">Programming Languages - Warfarin & RBQScript <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Rules-Team/" rel="tag">Rules - Team <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-CF/" rel="tag">Solution - CF <span class="tag-num">6</span></a><a class="badge badge-secondary tag" href="/categories/Solution-SP/" rel="tag">Solution - SP <span class="tag-num">1</span></a><a class="badge badge-secondary tag" href="/categories/Solution-U/" rel="tag">Solution - U <span class="tag-num">2</span></a><a class="badge badge-secondary tag" href="/categories/Solution-UVA/" rel="tag">Solution - UVA <span class="tag-num">14</span></a>
 			</div>
 		</div>
 	</div>
@@ -623,7 +623,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">16</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
+				<a class="badge badge-secondary tag" href="/tags/C/" rel="tag">C++ <span class="tag-num">15</span></a><a class="badge badge-secondary tag" href="/tags/Python/" rel="tag">Python <span class="tag-num">6</span></a>
 			</div>
 		</div>
 	</div>
@@ -660,7 +660,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							939 Word(s)
+							935 Word(s)
 						</div>
 					
 						
@@ -676,53 +676,45 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="前言">前言</h3>
-<p>本蒟蒻发现 Windows 对某些深度学习框架例如 PyTorch 的支持不够完善，遂想到使用 WSL2 模拟 Ubuntu 环境进行深度学习模型训练与推理。</p>
-<h3 id="参考信息">参考信息</h3>
-<h4 id="环境">环境</h4>
-<ul>
-<li>
-<p>Ubuntu 22.04.1 (WSL2)</p>
+		<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本蒟蒻发现 Windows 对某些深度学习框架例如 PyTorch 的支持不够完善，遂想到使用 WSL2 模拟 Ubuntu 环境进行深度学习模型训练与推理。</p>
+<h3 id="参考信息"><a href="#参考信息" class="headerlink" title="参考信息"></a>参考信息</h3><h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><ul>
+<li><p>Ubuntu 22.04.1 (WSL2)</p>
 </li>
-<li>
-<p>Miniconda3 4.12.0 (Python 3.8)</p>
+<li><p>Miniconda3 4.12.0 (Python 3.8)</p>
 </li>
-<li>
-<p>CUDA Toolkit 11.6.2 (WSL2)</p>
+<li><p>CUDA Toolkit 11.6.2 (WSL2)</p>
 </li>
 </ul>
-<h4 id="目标">目标</h4>
-<ul>
-<li>
-<p>PyTorch 1.12.1 (GPU)</p>
+<h4 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h4><ul>
+<li><p>PyTorch 1.12.1 (GPU)</p>
 </li>
-<li>
-<p>PyTorch Vision 0.13.1 (GPU)</p>
+<li><p>PyTorch Vision 0.13.1 (GPU)</p>
 </li>
-<li>
-<p>PyTorch Audio 0.12.1 (GPU)</p>
+<li><p>PyTorch Audio 0.12.1 (GPU)</p>
 </li>
 </ul>
-<h3 id="配置环境">配置环境</h3>
-<h4 id="安装-CUDA-Toolkit">安装 CUDA Toolkit</h4>
-<p>若在您的 WSL2 中执行下列命令有正确的 NVCC 版本号，则可忽略这一步骤：</p>
+<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><h4 id="安装-CUDA-Toolkit"><a href="#安装-CUDA-Toolkit" class="headerlink" title="安装 CUDA Toolkit"></a>安装 CUDA Toolkit</h4><p>若在您的 WSL2 中执行下列命令有正确的 NVCC 版本号，则可忽略这一步骤：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ nvcc -V
+
+<pre><code class="lang-bash">$ nvcc -V
 </code></pre>
 <p>首先到 <a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-11-6-2-download-archive">CUDA Toolkit 11.6 Update 2 Downloads (NVIDIA 官方)</a> 下载 Linux 版的安装程序（建议使用 Local Runfile）。</p>
 <p>例如：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ wget https://developer.download.nvidia.com/compute/cuda/11.6.2/local_installers/cuda_11.6.2_510.47.03_linux.run
+
+<pre><code class="lang-bash">$ wget https://developer.download.nvidia.com/compute/cuda/11.6.2/local_installers/cuda_11.6.2_510.47.03_linux.run
 $ sudo sh cuda_11.6.2_510.47.03_linux.run
 </code></pre>
 <p>执行后等待一会儿会出现安装界面，同意许可协议后，选择 <code>Install</code> 进行安装。</p>
 <p>安装完成后会提示在 <code>~/.bashrc</code> 配置文件中将 CUDA 的 <code>bin</code> 目录加入环境变量 <code>$PATH</code>，按照下列命令操作即可：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ vim ~/.bashrc
+
+<pre><code class="lang-bash">$ vim ~/.bashrc
 </code></pre>
 <p>添加几行配置：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">export PATH=/usr/local/cuda-11.6/bin$&#123;PATH:+:$&#123;PATH&#125;&#125;
+
+<pre><code class="lang-bash">export PATH=/usr/local/cuda-11.6/bin$&#123;PATH:+:$&#123;PATH&#125;&#125;
 export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64$&#123;LD_LIBRARY_PATH:+:$&#123;LD_LIBRARY_PATH&#125;&#125;
 </code></pre>
 <p><img class="lazyload lazyload-style-none" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="./cuda-path.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt=""></p>
@@ -730,18 +722,20 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64$&#123;LD_LIBRARY_PATH:+:$&#123
 <p>然后按下 <code>ESC</code> 输入 <code>:wq</code> 对配置文件进行保存。</p>
 <p>执行以下命令或重新打开 Bash 后查看 NVCC 的版本是否正常：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ source ~/.bashrc
+
+<pre><code class="lang-bash">$ source ~/.bashrc
 $ nvcc -V
 </code></pre>
 <p>完成安装 CUDA Toolkit！</p>
-<h4 id="安装-Miniconda3">安装 Miniconda3</h4>
-<p>先从 Anaconda 官网下载对应 Miniconda 版本的 Linux Shell 可执行脚本文件，如：</p>
+<h4 id="安装-Miniconda3"><a href="#安装-Miniconda3" class="headerlink" title="安装 Miniconda3"></a>安装 Miniconda3</h4><p>先从 Anaconda 官网下载对应 Miniconda 版本的 Linux Shell 可执行脚本文件，如：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh
+
+<pre><code class="lang-bash">$ wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh
 </code></pre>
 <p>再赋予其可执行权限并执行：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ sudo chmod +x Miniconda3-py38_4.12.0-Linux-x86_64.sh
+
+<pre><code class="lang-bash">$ sudo chmod +x Miniconda3-py38_4.12.0-Linux-x86_64.sh
 $ ./Miniconda3-py38_4.12.0-Linux-x86_64.sh
 </code></pre>
 <p>安装时许可协议和安装配置都按 <code>ENTER</code> 或输入 <code>yes</code>，默认配置不用改变。</p>
@@ -751,7 +745,8 @@ $ ./Miniconda3-py38_4.12.0-Linux-x86_64.sh
 <p>重启 Bash 后，进行更换 Conda 下载源的操作。</p>
 <p>新建 <code>~/.condarc</code> 文件并加入以下内容：</p>
 <p class="code-caption" data-lang="yaml" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-yaml">channels: # 通道列表
+
+<pre><code class="lang-yaml">channels: # 通道列表
   - defaults
 show_channel_urls: true # 下载时显示通道的 URL
 default_channels: # 默认通道链接 (常规)
@@ -770,31 +765,31 @@ custom_channels: # 自定义通道连接 (PyTorch 相关)
 auto_activate_base: false # 启动 Bash 时不自动激活 base 虚拟环境
 </code></pre>
 <p>大功告成！</p>
-<h3 id="安装-PyTorch">安装 PyTorch</h3>
-<p>打开 <a target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">PyTorch 官网</a>，找到目标 PyTorch 版本并执行对应命令：</p>
+<h3 id="安装-PyTorch"><a href="#安装-PyTorch" class="headerlink" title="安装 PyTorch"></a>安装 PyTorch</h3><p>打开 <a target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">PyTorch 官网</a>，找到目标 PyTorch 版本并执行对应命令：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
+
+<pre><code class="lang-bash">$ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
 </code></pre>
 <p>若安装失败，则使用 PIP 加载预构建 Wheel 安装：</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
+
+<pre><code class="lang-bash">$ pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
 </code></pre>
 <p><strong>若下载过慢可手动下载，并使用下列命令加载 Wheel：</strong></p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-bash">$ pip install torch-1.12.1+cu116-cp38-cp38-linux_x86_64.whl torchvision-0.13.1+cu116-cp38-cp38-linux_x86_64.whl torchaudio-0.12.1+cu116-cp38-cp38-linux_x86_64.whl
+
+<pre><code class="lang-bash">$ pip install torch-1.12.1+cu116-cp38-cp38-linux_x86_64.whl torchvision-0.13.1+cu116-cp38-cp38-linux_x86_64.whl torchaudio-0.12.1+cu116-cp38-cp38-linux_x86_64.whl
 </code></pre>
 <p>至此安装过程全部结束。</p>
-<h3 id="验证安装">验证安装</h3>
-<p>打开 Conda 虚拟环境下的 Python，在交互式解释器中输入下列代码并执行：</p>
+<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><p>打开 Conda 虚拟环境下的 Python，在交互式解释器中输入下列代码并执行：</p>
 <p class="code-caption" data-lang="python" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-<pre><code class="language-python">from torch import cuda
+
+<pre><code class="lang-python">from torch import cuda
 print(cuda.is_available())
 </code></pre>
 <p>若返回值为 <code>True</code>，则安装无问题。</p>
 <blockquote>
-<p>本文作者: Yuchen Ren<br>
-本文链接:  <a href="https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/">https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/</a><br>
-版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-none" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p>
+<p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/">https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-none" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p>
 
 </blockquote>
 
@@ -862,8 +857,7 @@ print(cuda.is_available())
 <script type="text/javascript">
 	socialShare("#share", {
 		title : '『记录』在 Ubuntu (WSL2) 上安装 PyTorch',
-		description : '前言
-本蒟蒻发现 Windows 对某些深度学习框架例如 PyTorch 的支持不够完善，遂想到使用...',
+		description : '前言本蒟蒻发现 Windows 对某些深度学习框架例如 PyTorch 的支持不够完善，遂想到使用 ...',
 		wechatQrcodeTitle : "Share to WeChat",
 		wechatQrcodeHelper : 'Scan QR Code in WeChat',
 		source : 'https://ren-yc.github.io/2022/11/05/pytorch-ubuntu-installation/'
