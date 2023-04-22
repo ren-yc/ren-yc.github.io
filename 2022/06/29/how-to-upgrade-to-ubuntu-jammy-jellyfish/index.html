@@ -11,12 +11,12 @@
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="前言2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。 而作为 IT 狂热爱好者怎能不升级呢？ 于是就开始努力作死尝试把手头上的 WSL 2 Ubuntu 20.04 升级。 若您在这之前还未安装 Ubuntu 的旧版本，可以直接从 Microsoft Store &#x2F; WSL 安装 Ubuntu 22.04 LTS。 环境 WSL 2  Ubuntu">
+	<meta name="description" content="前言 2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。 而作为 IT 狂热爱好者怎能不升级呢？ 于是就开始努力作死尝试把手头上的 WSL 2 Ubuntu 20.04 升级。 若您在这之前还未安装 Ubuntu 的旧版本，可以直接从 Microsoft Store &#x2F; WSL 安装 Ubuntu 22.04 LTS。 环境   WSL 2   Ubun">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『教程』如何升级 Ubuntu 到 22.04 LTS">
 <meta property="og:url" content="https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/index.html">
 <meta property="og:site_name" content="Yuchen Ren&#39;s Personal Blog">
-<meta property="og:description" content="前言2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。 而作为 IT 狂热爱好者怎能不升级呢？ 于是就开始努力作死尝试把手头上的 WSL 2 Ubuntu 20.04 升级。 若您在这之前还未安装 Ubuntu 的旧版本，可以直接从 Microsoft Store &#x2F; WSL 安装 Ubuntu 22.04 LTS。 环境 WSL 2  Ubuntu">
+<meta property="og:description" content="前言 2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。 而作为 IT 狂热爱好者怎能不升级呢？ 于是就开始努力作死尝试把手头上的 WSL 2 Ubuntu 20.04 升级。 若您在这之前还未安装 Ubuntu 的旧版本，可以直接从 Microsoft Store &#x2F; WSL 安装 Ubuntu 22.04 LTS。 环境   WSL 2   Ubun">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/start.png">
 <meta property="og:image" content="https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/finish.png">
@@ -660,7 +660,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							227 Word(s)
+							231 Word(s)
 						</div>
 					
 						
@@ -676,39 +676,42 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。</p>
-<p><del>而作为 IT 狂热爱好者怎能不升级呢？</del></p>
-<p>于是就开始努力<del>作死</del>尝试把手头上的 WSL 2 Ubuntu 20.04 升级。</p>
+		<h3 id="前言">前言</h3>
+<p>2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。</p>
+<p><s>而作为 IT 狂热爱好者怎能不升级呢？</s></p>
+<p>于是就开始努力<s>作死</s>尝试把手头上的 WSL 2 Ubuntu 20.04 升级。</p>
 <p><strong>若您在这之前还未安装 Ubuntu 的旧版本，可以直接从 Microsoft Store / WSL 安装 Ubuntu 22.04 LTS。</strong></p>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><ul>
-<li><p>WSL 2</p>
+<h3 id="环境">环境</h3>
+<ul>
+<li>
+<p>WSL 2</p>
 </li>
-<li><p>Ubuntu</p>
+<li>
+<p>Ubuntu</p>
 </li>
 </ul>
-<h3 id="升级软件"><a href="#升级软件" class="headerlink" title="升级软件"></a>升级软件</h3><p>使用下列命令获取软件更新。</p>
+<h3 id="升级软件">升级软件</h3>
+<p>使用下列命令获取软件更新。</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
-<pre><code class="lang-bash">$ sudo apt update
+<pre><code class="language-bash">$ sudo apt update
 </code></pre>
 <p>再使用下列命令升级软件。</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
-<pre><code class="lang-bash">$ sudo apt upgrade
+<pre><code class="language-bash">$ sudo apt upgrade
 </code></pre>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>使用下列命令打开系统升级版本配置文件。</p>
+<h3 id="配置">配置</h3>
+<p>使用下列命令打开系统升级版本配置文件。</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
-<pre><code class="lang-bash">$ sudo vim /etc/update-manager/release-upgrades
+<pre><code class="language-bash">$ sudo vim /etc/update-manager/release-upgrades
 </code></pre>
 <p>请保证最后一行<strong>不</strong>为下列内容，否则将无法更新系统版本。</p>
 <p class="code-caption" data-lang="" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
 <pre><code>Prompt=never
-</code></pre><h3 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h3><p>若在您当前的日期 Ubuntu 暂未推送 22.04 LTS，请在命令之后加入选项 <code>-d</code> 以强制使用开发版本。</p>
+</code></pre>
+<h3 id="升级">升级</h3>
+<p>若在您当前的日期 Ubuntu 暂未推送 22.04 LTS，请在命令之后加入选项 <code>-d</code> 以强制使用开发版本。</p>
 <p class="code-caption" data-lang="bash" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
-<pre><code class="lang-bash">$ sudo do-release-upgrade
+<pre><code class="language-bash">$ sudo do-release-upgrade
 </code></pre>
 <p>若提示是否要开始升级系统版本，请输入 <code>Y</code> 确认。</p>
 <p><img class="lazyload lazyload-style-none" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="./start.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt=""></p>
@@ -716,16 +719,18 @@
 <p><strong>若提示需要 Reboot，请用管理员模式打开 PowerShell，运行下列命令，因为 WSL 2 本质上是虚拟机没法直接重启。</strong></p>
 <p><strong>运行中的 Ubuntu 将自动终止，再次打开即可完成这一操作。</strong></p>
 <p class="code-caption" data-lang="shell" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy=""><span class="code-caption-label"></span></p>
-
-<pre><code class="lang-shell">PS C:\&gt; Get-Service LxssManager | Restart-Service
+<pre><code class="language-shell">PS C:\&gt; Get-Service LxssManager | Restart-Service
 </code></pre>
-<h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>过大概二十分钟（取决于网速及计算机性能）后，Ubuntu 会提示无法自动 Reboot，请再次使用上述命令完成这一操作。</p>
+<h3 id="完成">完成</h3>
+<p>过大概二十分钟（取决于网速及计算机性能）后，Ubuntu 会提示无法自动 Reboot，请再次使用上述命令完成这一操作。</p>
 <p>最后，可以运行 <code>neofetch</code> 软件查看系统信息（需先安装此软件）。</p>
 <p><img class="lazyload lazyload-style-none" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="./finish.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt=""></p>
 
 <p>至此就全部完成了，若有任何疑问欢迎回复！</p>
 <blockquote>
-<p>本文作者: Yuchen Ren<br>本文链接:  <a href="https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/">https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/</a><br>版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-none" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p>
+<p>本文作者: Yuchen Ren<br>
+本文链接:  <a href="https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/">https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/</a><br>
+版权声明: 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="lazyload lazyload-style-none" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="/assets/img/by-nc-sa4.0.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="CC-BY-NC-SA 4.0"></a> 许可协议。转载请注明出处!</p>
 
 </blockquote>
 
@@ -793,8 +798,8 @@
 <script type="text/javascript">
 	socialShare("#share", {
 		title : '『教程』如何升级 Ubuntu 到 22.04 LTS',
-		description : '前言2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。
-...',
+		description : '前言
+2022 年 4 月中下旬，Ubuntu 新的一个 LTS 长期支持版本 22.04 发布了。...',
 		wechatQrcodeTitle : "Share to WeChat",
 		wechatQrcodeHelper : 'Scan QR Code in WeChat',
 		source : 'https://ren-yc.github.io/2022/06/29/how-to-upgrade-to-ubuntu-jammy-jellyfish/'
